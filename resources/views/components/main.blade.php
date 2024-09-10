@@ -18,17 +18,23 @@
 
     <!-- If using Vite, include the Vite directive -->
     @vite('resources/css/app.css')
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 
-<body class="bg-gray-100 text-gray-900">
+<body class=" text-gray-900">
 
     {{-- Include the header --}}
     @include('components.header')
 
     {{-- Main content section --}}
-    <main class="container mx-auto py-8">
+    
         @yield('content')
-    </main>
+    
 
     {{-- Include the footer --}}
     @include('components.footer')
