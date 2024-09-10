@@ -32,6 +32,11 @@ class HomeController extends Controller
         return view('frontend.cart');
     }
 
+    public function wishlist()
+    {
+        return view('frontend.wishlist');
+    }
+
     // Method for login page
     public function login()
     {
@@ -42,5 +47,20 @@ class HomeController extends Controller
     public function signup()
     {
         return view('frontend.signup');
+    }
+
+    public function profile()
+    {
+        return view('frontend.profile');
+    }
+
+    public function orderhistory()
+    {
+        return view('frontend.orderhistory');
+    }
+
+    public function cancel()
+    {
+        return view('frontend.cancel');
     }
 }
