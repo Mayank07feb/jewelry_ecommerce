@@ -115,7 +115,7 @@
     <!-- Header -->
     <header class="relative bg-white shadow-sm">
         <!-- Promo Banner -->
-        <div class="bg-purple-900 text-white text-sm py-2 hidden lg:flex">
+        <div class="bg-[#601042] text-white text-sm py-2 hidden lg:flex">
             <div class="container mx-auto flex justify-between items-center">
                 <div class="flex items-center space-x-4">
                     <a href="#"
@@ -435,7 +435,7 @@
                         <div class="hidden lg:flex lg:items-center lg:space-x-6">
                             <div class="account-wrapper relative inline-block">
                                 <!-- Account Link -->
-                                <a href="#"
+                                <a href="{{route('profile')}}"
                                     class="text-sm font-medium text-gray-700 hover:text-[#d4af37] flex items-center space-x-2">
                                     <i class="fas fa-user text-lg"></i>
                                     <span>Account</span>
@@ -463,7 +463,7 @@
 
                             </div>
 
-                            <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">
+                            <a href="{{route('wishlist')}}" class="text-sm font-medium text-gray-700 hover:text-gray-800">
                                 <i class="fas fa-heart"></i> Wishlist
                             </a>
                             <a href="{{route('cart')}}" class="text-sm font-medium text-gray-700 hover:text-gray-800">
