@@ -33,6 +33,9 @@
     {{-- Include the footer --}}
     @include('components.footer')
 
+    <!-- Include your JS files here -->
+    <script src="{{ asset('js/app.js') }}"></scrip>
+
     <!-- Include Vite JS -->
     @vite('resources/js/app.js')
 
@@ -92,7 +95,12 @@
 
 
 
+
 <script src="{{asset('asset/js/script.js')}}"></script>
+
+
+
+
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+
 <style>
     /* Wrapper and Account Hover Effect */
     .account-wrapper:hover .account-details {
@@ -499,3 +500,4 @@
     openMobileMenuBtn.addEventListener('click', openMobileMenu);
     closeMobileMenuBtn.addEventListener('click', closeMobileMenu);
 </script>
+
