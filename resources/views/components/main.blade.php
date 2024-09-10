@@ -26,9 +26,9 @@
     @include('components.header')
 
     {{-- Main content section --}}
-    <main class="container mx-auto py-8">
+    
         @yield('content')
-    </main>
+
 
     {{-- Include the footer --}}
     @include('components.footer')
