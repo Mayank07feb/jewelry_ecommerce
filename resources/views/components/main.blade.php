@@ -9,7 +9,8 @@
 
     <!-- Tailwind CSS via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
+    {{-- css  --}}
+    <link rel="stylesheet" href="style.css">
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -91,7 +92,7 @@
 
 
 
-
+<script src="{{asset('asset/js/script.js')}}"></script>
 </body>
 
 </html>
