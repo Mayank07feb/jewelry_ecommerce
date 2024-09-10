@@ -1,4 +1,4 @@
-<!-- Footer -->
+{{-- <!-- Footer -->
 <footer class="bg-purple-50 text-gray-800 py-10">
     <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
       <!-- Know Us -->
@@ -90,4 +90,4 @@
   
   <!-- FontAwesome link for icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  
+   --}}
