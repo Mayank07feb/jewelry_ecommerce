@@ -117,7 +117,9 @@
 
     <!-- Additional JS Files -->
     <script src="{{ asset('asset/js/script.js') }}"></script>
+{{-- apine js --}}
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>

@@ -42,6 +42,245 @@
         </div>
     </div>  
 </div>
+
+
+{{-- 
+    <div class="container mx-auto px-4 py-8" x-data="{ activeTab: 'new' }">
+        <header class="mb-8 flex  items-center">
+            <button 
+                @click="activeTab = 'new'" 
+                :class="{ 'text-[#601042] border-b-2 border-[#601042]': activeTab === 'new' }"
+                class="text-2xl font-bold px-4 py-2">
+                New Ins
+            </button>
+            <button 
+                @click="activeTab = 'best'" 
+                :class="{ 'text-[#601042] border-b-2 border-[#601042]': activeTab === 'best' }"
+                class="text-2xl font-bold px-4 py-2">
+                Best Sellers
+            </button>
+        </header>
+        
+        <main>
+            <div x-show="activeTab === 'new'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <!-- New Ins products -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Maharashtrian Himali Gold Nath</h2>
+                        <p class="text-gray-600 line-through">₹23,408</p>
+                        <p class="text-xl font-bold text-gray-900">₹22,136</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Maharashtrian Himali Gold Nath</h2>
+                        <p class="text-gray-600 line-through">₹23,408</p>
+                        <p class="text-xl font-bold text-gray-900">₹22,136</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Maharashtrian Himali Gold Nath</h2>
+                        <p class="text-gray-600 line-through">₹23,408</p>
+                        <p class="text-xl font-bold text-gray-900">₹22,136</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Maharashtrian Himali Gold Nath</h2>
+                        <p class="text-gray-600 line-through">₹23,408</p>
+                        <p class="text-xl font-bold text-gray-900">₹22,136</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Maharashtrian Himali Gold Nath</h2>
+                        <p class="text-gray-600 line-through">₹23,408</p>
+                        <p class="text-xl font-bold text-gray-900">₹22,136</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Maharashtrian Himali Gold Nath</h2>
+                        <p class="text-gray-600 line-through">₹23,408</p>
+                        <p class="text-xl font-bold text-gray-900">₹22,136</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Maharashtrian Himali Gold Nath</h2>
+                        <p class="text-gray-600 line-through">₹23,408</p>
+                        <p class="text-xl font-bold text-gray-900">₹22,136</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Maharashtrian Himali Gold Nath</h2>
+                        <p class="text-gray-600 line-through">₹23,408</p>
+                        <p class="text-xl font-bold text-gray-900">₹22,136</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Maharashtrian Himali Gold Nath</h2>
+                        <p class="text-gray-600 line-through">₹23,408</p>
+                        <p class="text-xl font-bold text-gray-900">₹22,136</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Maharashtrian Himali Gold Nath</h2>
+                        <p class="text-gray-600 line-through">₹23,408</p>
+                        <p class="text-xl font-bold text-gray-900">₹22,136</p>
+                    </div>
+                </div>
+
+                <!-- Add more New Ins products here -->
+            </div>
+            
+            <div x-show="activeTab === 'best'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <!-- Best Sellers products -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div> <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Jewelry item" class="w-full h-48 object-cover"/>
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">Kolhapuri Thushi Gold Necklace</h2>
+                        <p class="text-gray-600 line-through">₹38,778</p>
+                        <p class="text-xl font-bold text-gray-900">₹33,268</p>
+                    </div>
+                </div>
+                <!-- Add more Best Sellers products here -->
+            </div>
+        </main>
+        
+        <div class="mt-8 flex justify-center">
+            <button class="bg-[#601042] text-white px-6 py-2 rounded-lg mr-4 hover:bg-[#601042] transition duration-300">Previous</button>
+            <button class="bg-[#601042] text-white px-6 py-2 rounded-lg hover:bg-[#601042] transition duration-300">Next</button>
+        </div>
+    </div> --}}
+
+
+
 {{-- button slider --}}
 {{-- 
     <!-- TABS -->
@@ -734,7 +973,7 @@
         </div>
     </div>
    <div class="flex justify-center p-4 mt-8">
-    <button class="hover:bg-[#601042]  hover:text-white font-semibold py-2 px-6  bg-white text-[#601042] focus:outline-none focus:ring-4 focus:ring-[#601042]/50 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+    <button class="hover:bg-[#601042] border-2 border-black hover:text-white font-semibold py-2 px-6  bg-white text-[#601042] focus:outline-none focus:ring-4 focus:ring-[#601042]/50 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
         Discover More
     </button>
    </div>
@@ -796,7 +1035,7 @@
             <p class="text-start text-white mb-8">
                 The story of Gititra is indeed an epic scripted by six generations at the forefront of exceptional traditional designs and unparalleled craftsmanship. Discover how Gititra Jewellers Pvt. Ltd, founded in 1832, went from a little jewellery shop in Sangli to a renowned design brand in the jewellery industry.
             </p>
-            <a href="#" class="inline-block bg-white text-black font-semibold py-3 px-6  hover:bg-[#7a1e4d] hover:text-white transition duration-300">READ MORE</a>
+            <a href="#" class="inline-block bg-white text-black font-semibold py-3 px-6  hover:bg-[#7a1e4d] hover:text-white transition duration-300 border-2 border-black">READ MORE</a>
         </div>
         <div class="md:w-1/2 mt-6 md:mt-0">
             <iframe class="w-full h-64 md:h-80" src="https://www.youtube.com/embed/dZBm_NxMUho?si=hxFuI8SCHC3TGq4I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -825,7 +1064,7 @@
             <p class="text-xl mb-6 font-light">
                 Explore iconic traditional jewellery, gold and diamond engagement rings, silver classics, elegant accessories, and precious gifts for any occasion at our PNG Jewellers stores across the globe.
             </p>
-            <a href="#" class="inline-block bg-white text-black font-semibold py-3 px-6 hover:bg-[#7a1e4d] hover:text-white transition duration-300">Find a Store Location</a>
+            <a href="#" class="inline-block border-2 border-black bg-white text-black font-semibold py-3 px-6 hover:bg-[#7a1e4d] hover:text-white transition duration-300">Find a Store Location</a>
         </div>
     </div>
 </section>
@@ -918,10 +1157,11 @@
 </div>
 
   {{--::::::::::: mail--::::::::: --}}
+
   <div class=" w-full">
-    <div class="bg-gradient-to-r from-[#5f0f42] to-[#ac8238]  rounded shadow-xs p-6  text-center">
-        <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
-            Latest from <span class="text-[#601042]">Gititra Jewellers</span>
+    <div class="bg-gradient-to-r from-[#b87aa2] to-[#dbc8a8]  rounded shadow-xs p-6  text-center">
+        <h2 class="text-2xl lg:text-3xl font-bold text-white mb-4">
+            Latest from <span class="text-[#7a3f65]">Gititra Jewellers</span>
         </h2>
         <p class="text-lg lg:text-xl text-gray-200 mb-6">
             Be the first to know about exciting new designs, special events, store openings, and much more.
@@ -930,17 +1170,26 @@
             <input 
                 type="email" 
                 placeholder="Your Email Address" 
-                class="w-full sm:w-1/2 p-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                class="w-full sm:w-1/2 p-3  border-2 border-black  focus:outline-none focus:ring-2 focus:ring-yellow-500"
             />
             <button 
-                class="w-full sm:w-auto px-6 py-3 bg-white text-black font-semibold  shadow-md hover:bg-[#d3a4bd] hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-100"
-            >
-                Subscribe
-            </button>
+    class="w-full sm:w-auto px-6 py-3 bg-white text-black font-semibold border-2 border-black shadow-md hover:bg-[#d3a4bd] hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-100"
+>
+    Subscribe
+</button>
+
         </div>
     </div>
 </div>
 
+{{-- Horizontal Line --}}
+<div class="flex items-center justify-center w-full mx-auto my-8 ">
+    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+    <div class="mx-4">
+        <img src="{{ asset('asset\img\logo.png') }}" alt="Site Logo" class="h-12 w-auto">
+    </div>
+    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+</div>
 <!-- JavaScript for slider functionality (example using vanilla JS) -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
