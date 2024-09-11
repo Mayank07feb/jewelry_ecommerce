@@ -1,4 +1,3 @@
-
 <style>
     /* Wrapper and Account Hover Effect */
     .account-wrapper:hover .account-details {
@@ -86,8 +85,10 @@
             </div>
             <div class="flex-1 overflow-y-auto p-4">
                 <div class="space-y-6">
-                    <a href="#" class="block text-lg font-medium hover:text-gray-600">All Jewellery</a>
-                    <a href="#" class="block text-lg font-medium hover:text-gray-600">Diamond</a>
+                    <a href="{{ route('alljewellery') }}" class="block text-lg font-medium hover:text-gray-600">All
+                        Jewellery</a>
+                    <a href="{{ route('diamondjewellery') }}"
+                        class="block text-lg font-medium hover:text-gray-600">Diamond</a>
                     <a href="#" class="block text-lg font-medium hover:text-gray-600">Gold</a>
                     <a href="#" class="block text-lg font-medium hover:text-gray-600">Silver</a>
                     <a href="#" class="block text-lg font-medium hover:text-gray-600">Collections</a>
@@ -95,13 +96,13 @@
                 </div>
             </div>
             <div class="border-t border-gray-300 p-4 space-y-4">
-                <a href="#" class="flex items-center text-lg font-medium hover:text-gray-600">
+                <a href="{{ route('profile') }}" class="flex items-center text-lg font-medium hover:text-gray-600">
                     <i class="fas fa-user mr-3"></i> Account
                 </a>
-                <a href="#" class="flex items-center text-lg font-medium hover:text-gray-600">
+                <a href="{{ route('wishlist') }}}" class="flex items-center text-lg font-medium hover:text-gray-600">
                     <i class="fas fa-heart mr-3"></i> Wishlist
                 </a>
-                <a href="#" class="flex items-center text-lg font-medium hover:text-gray-600">
+                <a href="{{ route('cart') }}" class="flex items-center text-lg font-medium hover:text-gray-600">
                     <i class="fas fa-shopping-cart mr-3"></i> Cart
                 </a>
             </div>
@@ -163,7 +164,7 @@
 
                     <!-- Logo -->
                     <div class="ml-4 flex lg:ml-0">
-                        <a href="{{route('home')}}">
+                        <a href="{{ route('home') }}">
                             <span class="sr-only">Your Company</span>
                             <img class="h-8 w-auto" src="{{ asset('asset/img/logo.png') }}" alt="Company Logo">
                         </a>
@@ -191,13 +192,13 @@
                     <div class="hidden lg:ml-8 lg:block lg:self-stretch">
                         <div class="flex h-full space-x-8">
                             <div class="relative group">
-                                <a href="{{route('alljewellery')}}"
-                                    class="relative z-50 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-800 group">
+                                <a href="{{ route('alljewellery') }}"
+                                    class="relative z-10 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-800 group">
                                     All Jewellery
                                 </a>
                                 <!-- Dropdown Menu -->
                                 <div
-                                    class="absolute left-0 mt-2 w-screen max-w-screen-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden group-hover:block">
+                                    class="absolute left-0 mt-2 w-screen max-w-screen-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden group-hover:block z-20">
                                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
                                         <!-- Categories Section -->
                                         <div class="space-y-6">
@@ -283,14 +284,15 @@
                             </div>
 
 
+
                             <div class="relative group">
-                                <a href="{{route('diamondjewellery')}}"
+                                <a href="{{ route('diamondjewellery') }}"
                                     class="relative z-10 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-800 group">
                                     Diamond
                                 </a>
                                 <!-- Dropdown Menu -->
                                 <div
-                                    class="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block">
+                                    class="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block z-20">
                                     <div class="py-1" role="menu" aria-orientation="vertical"
                                         aria-labelledby="menu-button">
                                         <a href="#"
@@ -347,6 +349,7 @@
                                 </div>
                             </div>
 
+
                             <div class="relative group">
                                 <a href="#"
                                     class="relative z-10 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-800">
@@ -354,7 +357,7 @@
                                 </a>
                                 <!-- Dropdown Menu -->
                                 <div
-                                    class="absolute left-0 mt-2 w-80 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block">
+                                    class="absolute left-0 mt-2 w-80 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block z-20">
                                     <div class="py-2" role="menu" aria-orientation="vertical"
                                         aria-labelledby="menu-button">
                                         <!-- Category Header -->
@@ -414,10 +417,10 @@
                                                 </div>
                                             </a>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
+
 
                             <a href="#"
                                 class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Silver</a>
@@ -425,7 +428,7 @@
                                 class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Collections</a>
                             <a href="#"
                                 class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Bullions</a>
-                                <a href="{{route('contact')}}"
+                            <a href="{{ route('contact') }}"
                                 class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Contact</a>
                         </div>
                     </div>
@@ -435,7 +438,7 @@
                         <div class="hidden lg:flex lg:items-center lg:space-x-6">
                             <div class="account-wrapper relative inline-block">
                                 <!-- Account Link -->
-                                <a href="{{route('profile')}}"
+                                <a href="{{ route('profile') }}"
                                     class="text-sm font-medium text-gray-700 hover:text-[#d4af37] flex items-center space-x-2">
                                     <i class="fas fa-user text-lg"></i>
                                     <span>Account</span>
@@ -463,10 +466,12 @@
 
                             </div>
 
-                            <a href="{{route('wishlist')}}" class="text-sm font-medium text-gray-700 hover:text-gray-800">
+                            <a href="{{ route('wishlist') }}"
+                                class="text-sm font-medium text-gray-700 hover:text-gray-800">
                                 <i class="fas fa-heart"></i> Wishlist
                             </a>
-                            <a href="{{route('cart')}}" class="text-sm font-medium text-gray-700 hover:text-gray-800">
+                            <a href="{{ route('cart') }}"
+                                class="text-sm font-medium text-gray-700 hover:text-gray-800">
                                 <i class="fas fa-shopping-cart"></i> Cart
                             </a>
                         </div>
@@ -500,4 +505,3 @@
     openMobileMenuBtn.addEventListener('click', openMobileMenu);
     closeMobileMenuBtn.addEventListener('click', closeMobileMenu);
 </script>
-
