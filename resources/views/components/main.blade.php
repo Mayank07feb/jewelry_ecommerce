@@ -26,7 +26,26 @@
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <!-- Glide.js JavaScript -->
+      <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+ 
+ <!-- Glide.js CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" rel="stylesheet">
+  {{--icon  --}}
+ <link
+ href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+ rel="stylesheet"
+/>
+    <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
+<!-- jQuery (Owl Carousel requires jQuery) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.6/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body class=" text-gray-900">
@@ -165,6 +184,8 @@
 
     <!-- Additional JS Files -->
     <script src="{{ asset('asset/js/script.js') }}"></script>
+{{-- apine js --}}
+
 
 </body>
 

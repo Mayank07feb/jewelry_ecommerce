@@ -21,6 +21,8 @@ Route::get('/orderhistory', [HomeController::class, 'orderhistory'])->name('orde
 
 Route::get('/wishlist', [HomeController::class, 'wishlist'])->name('wishlist');
 
+Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
+
 Route::get('/cancel', [HomeController::class, 'cancel'])->name('cancel');
 
 Route::get('/login', [HomeController::class, 'login'])->name('login');

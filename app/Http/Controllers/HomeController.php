@@ -69,4 +69,9 @@ class HomeController extends Controller
         return view('frontend.cancel');
     }
 
+    public function checkout()
+    {
+        return view('frontend.checkout');
+    }
+
 }
