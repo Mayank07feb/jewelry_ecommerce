@@ -213,9 +213,9 @@
         <h1 class="text-3xl font-light text-center mb-2">Shop by Category</h1>
         <p class="text-center text-gray-600 mb-8">A one-stop shop for all of your jewellery needs!</p>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-auto lg:px-28 lg:py-12" >
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4 lg:px-28 lg:py-12" >
             <!-- Diamond Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-lg">
+            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg">
                 <img src="{{asset('asset/img/daimond.png')}}" alt="Diamond" class="w-44 h-60 object-contain mb-4">
                 <h3 class="text-lg font-semibold mb-1">Diamond</h3>
                 <p class="text-sm text-gray-600 mb-3 text-center">For the most awaited moment!</p>
@@ -225,7 +225,7 @@
             </div>
 
             <!-- Gold Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-lg">
+            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg">
                 <img src="{{asset('asset/img/gold.png')}}" alt="Gold" class="w-44 h-60 object-contain mb-4">
                 <h3 class="text-lg font-semibold mb-1">Gold</h3>
                 <p class="text-sm text-gray-600 mb-3 text-center">For the beauty and the bliss!</p>
@@ -235,7 +235,7 @@
             </div>
 
             <!-- Bullions Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-lg">
+            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg">
                 <img src="{{asset('asset/img/bullions.png')}}" alt="Bullions" class="w-44 h-60 object-contain mb-4">
                 <h3 class="text-lg font-semibold mb-1">Bullions</h3>
                 <p class="text-sm text-gray-600 mb-3 text-center">For auspicious occasions!</p>
@@ -245,7 +245,7 @@
             </div>
 
             <!-- Silver Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-lg">
+            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg">
                 <img src="{{asset('asset\img\sliver.png')}}" alt="Silver" class="w-44 h-60 object-contain mb-4">
                 <h3 class="text-lg font-semibold mb-1">Silver</h3>
                 <p class="text-sm text-gray-600 mb-3 text-center">For everyday elegance!</p>
