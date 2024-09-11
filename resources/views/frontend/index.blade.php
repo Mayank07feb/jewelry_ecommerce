@@ -195,9 +195,6 @@
 </div> --}}
 
 
-
-
-
  {{-- Horizontal Line --}}
 <div class="flex items-center justify-center w-full mx-auto p-4">
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
@@ -213,9 +210,9 @@
         <h1 class="text-3xl font-light text-center mb-2">Shop by Category</h1>
         <p class="text-center text-gray-600 mb-8">A one-stop shop for all of your jewellery needs!</p>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-auto lg:px-28 lg:py-12" >
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4 lg:px-28 lg:py-12" >
             <!-- Diamond Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-lg">
+            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg">
                 <img src="{{asset('asset/img/daimond.png')}}" alt="Diamond" class="w-44 h-60 object-contain mb-4">
                 <h3 class="text-lg font-semibold mb-1">Diamond</h3>
                 <p class="text-sm text-gray-600 mb-3 text-center">For the most awaited moment!</p>
@@ -225,7 +222,7 @@
             </div>
 
             <!-- Gold Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-lg">
+            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg">
                 <img src="{{asset('asset/img/gold.png')}}" alt="Gold" class="w-44 h-60 object-contain mb-4">
                 <h3 class="text-lg font-semibold mb-1">Gold</h3>
                 <p class="text-sm text-gray-600 mb-3 text-center">For the beauty and the bliss!</p>
@@ -235,7 +232,7 @@
             </div>
 
             <!-- Bullions Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-lg">
+            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg">
                 <img src="{{asset('asset/img/bullions.png')}}" alt="Bullions" class="w-44 h-60 object-contain mb-4">
                 <h3 class="text-lg font-semibold mb-1">Bullions</h3>
                 <p class="text-sm text-gray-600 mb-3 text-center">For auspicious occasions!</p>
@@ -245,7 +242,7 @@
             </div>
 
             <!-- Silver Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-lg">
+            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg">
                 <img src="{{asset('asset\img\sliver.png')}}" alt="Silver" class="w-44 h-60 object-contain mb-4">
                 <h3 class="text-lg font-semibold mb-1">Silver</h3>
                 <p class="text-sm text-gray-600 mb-3 text-center">For everyday elegance!</p>
@@ -263,6 +260,7 @@
     </div>
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
 </div>
+
 
 {{-- PROMISES --}}
 <div class=" mx-auto bg-[#601042] w-full my-4">
@@ -417,37 +415,27 @@
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
 </div>
 
-{{-- video --}}
+
+{{-- video :::::::: Crafted Elegance:::::::--}}
 <div class="flex justify-center items-center overflow-hidden hover:cursor-pointer px-6 md:px-28 py-12">
     <div id="mouse-parallax-container" class="relative w-full h-full">
       
-      <!-- Background Video -->
-      <div class="relative w-[80vw] lg:w-[55vw] h-[50vh] lg:h-[70vh] overflow-hidden">
-        <video width="100%" height="100%" loop muted autoplay class="w-full h-full object-cover">
-          <source src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/widgets/video_1682089105_1691241930.mp4" type="video/mp4">
-         
-        </video>
+        <!-- Background Video -->
+        <div class="relative w-[80vw] lg:w-[55vw] h-[50vh] lg:h-[70vh] overflow-hidden">
+            <video width="100%" height="100%" loop muted autoplay class="w-full h-full object-cover">
+                <source src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/widgets/video_1682089105_1691241930.mp4" type="video/mp4">
+            </video>
   
-        <!-- Parallax Title -->
-         <!-- Text overlay -->
-         <div class="absolute inset-0 flex justify-center items-center w-full">
-            <div class="text-white text-[5vw] lg:text-[85px] md:text-[70px] sm:text-[45px] font-bold uppercase text-center">
-                Crafted Elegance
+            <!-- Parallax Title -->
+            <div class="absolute inset-0 flex justify-end items-center w-full h-full">
+                <div class="text-white text-[10vw] lg:text-[85px] font-light uppercase whitespace-nowrap">
+                    Crafted <span class="text-white">Elegance</span>
+                </div>
             </div>
         </div>
-      </div>
     </div>
-  </div>
-  
-
- {{-- Horizontal Line --}}
- <div class="flex items-center justify-center w-full mx-auto p-4">
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-    <div class="mx-4">
-        <img src="{{ asset('asset\img\logo.png') }}" alt="Site Logo" class="h-12 w-auto">
-    </div>
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
 </div>
+
 
 
 {{-- COLLECTIONS --}}
@@ -523,7 +511,7 @@
 </div>
 
 
-<!-- Video Background Section -->
+<!-- Video Background Section ::::::::::DAIMOND RING-->
 <div class="relative overflow-hidden lg:z-[9999] my-4">
     <video class="object-cover w-full h-[250px] sm:h-[450px] lg:h-[500px]" autoplay loop muted playsinline>
         <source src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/widgets/customizevideo_1682338275_1685535434.mp4" type="video/mp4">
@@ -543,7 +531,9 @@
         </a>
       </div>
     </div>
-  </div>
+</div>
+
+
 {{-- Horizontal Line --}}
 <div class="flex items-center justify-center w-full mx-auto">
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
@@ -553,12 +543,15 @@
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
 </div>
 
+
 {{-- img with text --}}
 <div>
     <h1 class="text-3xl font-light text-center mb-2 my-4">Gititra Jewellers</h1>
     <p class="text-center text-gray-600 mb-8">A paradise of precious jewels</p>
     
 </div>
+
+
 {{-- section --}}
 <section class="py-10 bg-[#7b3962] w-full">
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
@@ -574,6 +567,8 @@
         </div>
     </div>
 </section>
+
+
 {{-- Horizontal Line --}}
 <div class="flex items-center justify-center w-full mx-auto my-8 ">
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
@@ -582,6 +577,8 @@
     </div>
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
 </div>
+
+
 {{-- SHOP --}}
 <section class="bg-[#f8edde] py-10 md:py-16">
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
@@ -606,7 +603,6 @@
 </section>
 
   
-
 {{-- Horizontal Line --}}
 <div class="flex items-center justify-center w-full mx-auto my-8 ">
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
@@ -684,6 +680,8 @@
         </div>
     </div>
 </div>
+
+
 {{-- Horizontal Line --}}
 <div class="flex items-center justify-center w-full mx-auto my-8 ">
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
@@ -693,8 +691,8 @@
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
 </div>
 
-  {{--::::::::::: mail--::::::::: --}}
 
+  {{--::::::::::: mail--::::::::: --}}
   <div class=" w-full">
     <div class="bg-gradient-to-r from-[#b87aa2] to-[#dbc8a8]  rounded shadow-xs p-6  text-center">
         <h2 class="text-2xl lg:text-3xl font-bold text-white mb-4">

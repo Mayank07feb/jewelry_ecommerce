@@ -103,15 +103,19 @@
             <div class="mt-6">
                 <div class="lg:px-8">
                     <!-- Mobile View: Hidden on Large Screens -->
-                    <div class="lg:hidden flex items-center justify-between text-xs bg-[#F9F7F2] pt-4">
-                        <div class="uppercase text-[11px] text-gray-600">Total</div>
-                        <div class="font-semibold">₹23,666</div>
+                    <div class="lg:hidden flex items-center justify-between text-xs bg-[#F9F7F2] pt-4 pb-2.5 px-4">
+                        <div class="text-gray-600 text-base">
+                            Total: <span class="font-bold">₹1,06,496</span>
+                        </div>
+                        <div class="text-primary uppercase font-bold">
+                            View summary
+                        </div>
                     </div>
+                    <!-- Button -->
                     <a href="{{ route('checkout') }}">
-                        <button
-                            class="bg-[#601042] text-white w-full lg:mb-8 min-h-[50px] py-2 px-4 rounded-md font-semibold hover:bg-[#9d6e2a] transition duration-300">
-                            Place Order
-                        </button>
+                    <button class="bg-[#601042] text-white w-full lg:mb-8 min-h-[50px] py-2 px-4 rounded-md font-semibold hover:bg-[#9d6e2a] transition duration-300">
+                        Place Order
+                    </button>
                     </a>
                 </div>
             </div>

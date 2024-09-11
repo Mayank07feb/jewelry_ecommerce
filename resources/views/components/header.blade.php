@@ -125,7 +125,7 @@
                         <span class="hidden sm:inline">WhatsApp</span>
                     </a>
                     <div class="border-l border-gray-400 h-4 mx-2"></div>
-                    <a href="#"
+                    <a href="{{ route('storelocator') }}"
                         class="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300">
                         <i class="fas fa-store text-xl"></i>
                         <span class="hidden sm:inline">Store Locator</span>
