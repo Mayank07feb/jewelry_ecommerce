@@ -60,6 +60,8 @@
     <!-- Tab Buttons -->
     <div class="tab-buttons flex justify-center my-4">
         <button data-tab="slider1" class="active text-3xl font-light text-center mb-2">New Ins</button>
+        <div class="h-12 border-l border-gray-500"></div>
+
         <button data-tab="slider2" class="text-3xl font-light text-center mb-2">Best Sellers</button>
     </div>
     <p class="text-center text-gray-600 mb-8">Freshen up your look!</p>
@@ -623,7 +625,7 @@
         <h2 class="font-light text-[28px] md:text-[52px] text-black mb-3">Customize Jewellery</h2>
         <p class="font-light text-lg tracking-wide mb-6">Add a personal touch to your style.</p>
         <a href="/product/customizejewellery" class="inline-block">
-          <button class="btn btn-outline-primary px-6 py-3">Customize Jewellery</button>
+          <button class="btn btn-outline-primary border-black border-2 bg-white px-6 py-3">Customize Jewellery</button>
         </a>
       </div>
     </div>
@@ -639,7 +641,7 @@
 
 {{-- img with text --}}
 <div>
-    <h1 class="text-3xl font-light text-center mb-2">Gititra Jewellers</h1>
+    <h1 class="text-3xl font-light text-center mb-2 my-4">Gititra Jewellers</h1>
     <p class="text-center text-gray-600 mb-8">A paradise of precious jewels</p>
     
 </div>
