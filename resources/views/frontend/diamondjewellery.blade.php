@@ -167,12 +167,12 @@
                 <!-- Card 1 Start -->
                 <div
                     class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-white transform hover:-translate-y-2 transition-transform duration-300">
-                    <a href="{{route('productdetail')}}">
+                    <a href="{{ route('productdetail') }}">
                         <div class="overflow-hidden">
                             <img src="{{ asset('asset/img/new.jpg') }}" alt="Rainbow Radiance Diamond Ladies Ring"
                                 class="w-full h-64 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-110">
                         </div>
-                    </a>                    
+                    </a>
                     <div class="p-4 bg-gradient-to-b from-gray-50 to-white">
                         <p class="text-lg font-semibold text-gray-800">₹21,481 <span
                                 class="text-red-600 line-through">₹22,589</span></p>
@@ -192,10 +192,12 @@
                 <!-- Card 2 Start -->
                 <div
                     class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-white transform hover:-translate-y-2 transition-transform duration-300">
-                    <div class="overflow-hidden">
-                        <img src="{{ asset('asset/img/new.jpg') }}" alt="Golden Radiance Necklace Set"
-                            class="w-full h-64 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-110">
-                    </div>
+                    <a href="{{ route('productdetail') }}">
+                        <div class="overflow-hidden">
+                            <img src="{{ asset('asset/img/new.jpg') }}" alt="Golden Radiance Necklace Set"
+                                class="w-full h-64 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-110">
+                        </div>
+                    </a>
                     <div class="p-4 bg-gradient-to-b from-gray-50 to-white">
                         <p class="text-lg font-semibold text-gray-800">₹15,999 <span
                                 class="text-red-600 line-through">₹18,499</span></p>
