@@ -133,7 +133,7 @@
                     <a href="#"
                         class="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300">
                         <i class="fas fa-heart text-xl"></i>
-                        <span class="hidden sm:inline">PNG Franchise</span>
+                        <span class="hidden sm:inline">Giritra Franchise</span>
                     </a>
                 </div>
                 <div class="flex items-center space-x-4">
