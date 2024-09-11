@@ -34,25 +34,28 @@
                             <div class="mt-1.5">
                                 <a href="/sparkling-charm-silver-anklet-296?variantApin=BMVSDB5VSA6G"
                                     class="text-[#601042] underline text-xs">Change</a>
-                                <div class="flex items-center space-x-2">
-                                    <!-- Delivery Text -->
-                                    <span class="text-sm text-gray-600">Delivery by - 30th Sep</span>
-                                </div>
-                                <div class="flex justify-between items-center lg:mt-4">
-                                    <!-- Button for "Move to Wishlist" -->
-                                    <button type="button"
-                                        class="border bg-[#601042] text-white px-4 pt-2 lg:pt-1.5 pb-1.5 hover:bg-[#9d6e2a] hover:text-white transition">
-                                        Move to Wishlist
-                                    </button>
-
-                                    <!-- Delete Button for larger screens -->
-                                    <div
-                                        class="hidden lg:flex items-center text-[11px] cursor-pointer uppercase tracking-[0.2em] lg:-mt-2">
-                                        <!-- Delete Icon and Text -->
-                                        <span class="material-icons text-[#9d6e2a] mr-2">delete</span>
-                                        <span class="pt-px">Delete</span>
+                                    <div class="flex items-center space-x-2">
+                                        <!-- Corrected airport_shuttle Icon -->
+                                        <i class="ri-truck-fill"></i>
+                                        <span class="text-sm text-gray-600">Delivery by - 30th Sep</span>
                                     </div>
-                                </div>
+                                    
+                                    <div class="flex justify-between items-center lg:mt-4 w-full">
+                                        <!-- Button for "Move to Wishlist" on the left -->
+                                        <button type="button"
+                                            class="border bg-[#601042] text-white px-4 pt-2 lg:pt-1.5 pb-1.5 hover:bg-[#9d6e2a] hover:text-white transition">
+                                            Move to Wishlist
+                                        </button>
+                                    
+                                        <!-- Delete Button for larger screens on the right -->
+                                        <div class="hidden lg:flex items-right text-[11px] cursor-pointer uppercase tracking-[0.2em] lg:-mt-2 space-x-1">
+                                            <span class="material-icons text-[#9d6e2a] mr-1">delete</span>
+                                            <span class="pt-px">Delete</span>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
 
                                 {{-- End Wishlist Button --}}
                             </div>
