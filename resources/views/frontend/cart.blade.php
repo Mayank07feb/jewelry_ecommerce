@@ -1,30 +1,5 @@
 @extends('components.main')
 @section('content')
-    <!-- Header Section -->
-    <!-- Header Section -->
-    {{-- <div class="grid grid-cols-[auto_1fr] items-center bg-white pb-0 px-4 py-2 shadow-md">
-  <!-- Logo Section -->
-  <div class="relative flex items-center xl:max-w-xs lg:max-w-[200px] max-w-[65px] py-1.5">
-    <a href="/" class="inline-flex">
-      <img src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/website/png_logo_1675677572.svg" 
-           width="55" 
-           height="83" 
-           alt="Logo" 
-           class="h-14 lg:h-auto">
-    </a>
-  </div>
-  <!-- Contact Section -->
-  <div class="flex justify-end items-center">
-    <a href="tel:+918806907567" class="hidden lg:inline-flex items-center text-gray-900 font-light text-[15px]">
-      <svg width="24" height="24" viewBox="0 0 15 15" fill="currentColor" class="mr-3.5">
-        <path d="M7.52459 0C3.40454 0 0.0515467 3.34579 0.0503194 7.45822C0.0503194 8.76862 0.395191 10.057 1.04812 11.1873L1.05425 11.1984L1.05057 11.2106L0 15.0401L3.93964 14.009L3.95068 14.0151C5.04176 14.6091 6.27642 14.9226 7.52336 14.9226C11.6459 14.9226 15.0001 11.5768 15.0013 7.46312C15.0025 5.47059 14.2257 3.59562 12.8143 2.18603C11.4016 0.777664 9.52386 0.00122467 7.52459 0ZM7.52459 13.7199H7.52213C6.3967 13.7199 5.29335 13.4175 4.33115 12.848L4.11392 12.7194L1.71331 13.3476L2.35396 11.0122L2.21283 10.7881C1.58567 9.79244 1.2543 8.64125 1.2543 7.45945C1.25553 4.01078 4.06851 1.20385 7.52581 1.20385C9.19985 1.20385 10.7745 1.85537 11.9576 3.0384C13.1407 4.2202 13.7924 5.79268 13.7924 7.46435C13.7924 10.913 10.9807 13.7199 7.52459 13.7199Z"></path>
-        <path d="M4.86762 4.03027C4.78539 4.03027 4.57552 4.05232 4.3902 4.2544L4.35338 4.29359C4.15456 4.50548 3.74219 4.94516 3.74219 5.79391C3.74219 6.61204 4.27238 7.40568 4.50066 7.70942C4.50802 7.71922 4.5203 7.73514 4.53625 7.75841C5.06154 8.5104 6.17101 9.8711 7.69409 10.5276C8.11997 10.7113 8.4587 10.8252 8.76062 10.9207C9.23558 11.0714 9.65409 11.0346 9.92778 10.9942C10.2727 10.9428 11.0176 10.5496 11.1698 10.1246C11.322 9.69841 11.3232 9.33099 11.2815 9.26118C11.2484 9.20606 11.1649 9.16564 11.0373 9.10441C11.0054 9.08849 10.971 9.07256 10.9342 9.05419C10.7488 8.96111 9.82469 8.50796 9.65532 8.44672C9.49086 8.3867 9.38286 8.35854 9.26995 8.52878C9.13863 8.72596 8.76676 9.16075 8.67348 9.26607C8.55198 9.40447 8.42802 9.41917 8.23042 9.31996C8.19974 9.30527 8.15924 9.2869 8.10769 9.26485C7.85119 9.1534 7.31854 8.92314 6.71594 8.3867C6.1747 7.90415 5.8016 7.31382 5.66659 7.08235C5.54386 6.87169 5.66537 6.75167 5.75373 6.66348C5.80896 6.60837 5.87401 6.52999 5.9366 6.45283C5.96851 6.41363 6.00165 6.37444 6.03356 6.3377C6.11088 6.24829 6.14401 6.17971 6.19065 6.0854L6.21765 6.03151C6.27779 5.91149 6.24097 5.80861 6.2017 5.73145C6.16979 5.66776 5.99674 5.24645 5.8286 4.83983C5.74882 4.64632 5.67396 4.46261 5.62241 4.33891C5.50091 4.04864 5.38677 4.03762 5.2849 4.03762C5.27509 4.03762 5.26649 4.03762 5.2579 4.03762C5.24809 4.03762 5.23704 4.03762 5.22722 4.03762C5.10817 4.0315 4.97317 4.03027 4.86762 4.03027Z"></path>
-      </svg>
-      +91 8806907567
-    </a>
-  </div>
-</div> --}}
-
     <!-- Main Content Section -->
     <div class="flex flex-col lg:flex-row lg:gap-x-8 lg:px-8 px-4 py-5">
         <!-- Shopping Cart Section -->
@@ -58,8 +33,6 @@
                             <div class="mt-1.5">
                                 <a href="/sparkling-charm-silver-anklet-296?variantApin=BMVSDB5VSA6G"
                                     class="text-primary underline text-xs">Change</a>
-
-
                                 <div class="flex items-center space-x-2">
                                     <!-- Mini Bus SVG -->
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -75,10 +48,6 @@
                                     <!-- Text or Action -->
                                     <span class="text-sm text-gray-600">Delivery by - 30th Sep</span>
                                 </div>
-
-
-
-
                                 <div class="flex justify-between items-center lg:mt-4">
                                     <!-- Button for "Move to Wishlist" -->
                                     <button type="button"
@@ -108,15 +77,6 @@
                                 </div>
 
                                 {{-- End Wishlist Button --}}
-
-
-
-
-
-
-
-
-
                             </div>
                         </div>
                         <!-- Quantity & Price -->
@@ -124,7 +84,7 @@
                             <div class="relative flex items-center text-xs text-black">
                                 <span class="text-gray-500 mr-2">Quantity:</span>
                                 <select
-                                    class="w-16 text-center border border-gray-300 rounded-md bg-white outline-none focus:ring-2 focus:ring-purple-300">
+                                    class="w-16 text-center border border-gray-300 rounded-md bg-white outline-none focus:ring-2 focus:ring-violet-400">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -160,8 +120,6 @@
                 <span class="text-gray-800">₹23,666</span>
             </div>
             <div class="mt-6">
-
-
                 <div class="lg:px-8">
                     <!-- Mobile View: Hidden on Large Screens -->
                     <div class="lg:hidden flex items-center justify-between text-xs bg-[#F9F7F2] pt-4 pb-2.5 px-4">
@@ -179,17 +137,7 @@
                         Place Order
                     </button>
                 </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
+              </div>
             <div class="flex items-center justify-center text-xs font-light mt-6 mb-4 lg:hidden">
                 <svg width="12" height="15" viewBox="0 0 12 15" fill="currentColor" class="mr-2">
                     <path

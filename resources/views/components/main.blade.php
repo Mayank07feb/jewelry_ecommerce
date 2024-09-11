@@ -16,6 +16,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <!-- Drift CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drift-zoom@1.0.0/dist/drift-basic.min.css">
+
     <!-- If using Vite, include the Vite directive -->
     @vite('resources/css/app.css')
     <!-- Swiper CSS -->
@@ -169,6 +172,10 @@
             chatButton.addEventListener('click', openChat);
         });
     </script>
+    <!-- Drift JS -->
+    <script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.0.0/dist/drift.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Additional JS Files -->
     <script src="{{ asset('asset/js/script.js') }}"></script>

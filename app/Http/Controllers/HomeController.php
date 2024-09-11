@@ -27,11 +27,14 @@ class HomeController extends Controller
         return view('frontend.diamondjewellery');
     }
 
-
-
     public function cart()
     {
         return view('frontend.cart');
+    }
+
+    public function productdetail()
+    {
+        return view('frontend.productdetail');
     }
 
     public function wishlist()
@@ -50,9 +53,6 @@ class HomeController extends Controller
     {
         return view('frontend.signup');
     }
-
-
-
 
     public function profile()
     {

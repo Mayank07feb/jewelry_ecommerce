@@ -13,6 +13,8 @@ Route::get('/diamondjewellery', [HomeController::class, 'diamondjewellery'])->na
 
 Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
 
+Route::get('/productdetail', [HomeController::class, 'productdetail'])->name('productdetail');
+
 Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
 
 Route::get('/orderhistory', [HomeController::class, 'orderhistory'])->name('orderhistory');
