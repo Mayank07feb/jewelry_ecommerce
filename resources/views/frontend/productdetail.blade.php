@@ -23,6 +23,8 @@
     <span class="text-gray-800">Gold Luminary Fancy Gold Chain</span>
 </nav>
 
+
+
 <!-- Main Product Section -->
 <section class="container mx-auto px-4 py-8">
     <div class="flex flex-col lg:flex-row">
