@@ -38,4 +38,8 @@ Route::get('/paymentconfirmation', [HomeController::class, 'paymentconfirmation'
 
 Route::get('/thankyou', [HomeController::class, 'thankyou'])->name('thankyou');
 
+<<<<<<< HEAD
 Route::get('/storelocator',[HomeController::class,'storelocator'])->name('storelocator');
+=======
+Route::get('/franchise', [HomeController::class, 'franchise'])->name('franchise');
+>>>>>>> 862a606fc574587cb4e1abccb8536c6fc529a8ef
