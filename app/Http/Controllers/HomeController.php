@@ -93,4 +93,9 @@ class HomeController extends Controller
     {
         return view('frontend.thank-you');
     }
+    // franchise
+    public function franchise()
+    {
+        return view('frontend.franchise');
+    }
 }

@@ -102,7 +102,7 @@
                 </ul>
             </div>
             <div class="glide__arrows flex justify-center my-4 gap-2" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left border-black border" data-glide-dir="<"><i class="ri-arrow-left-s-line text-3xl"></i></i></button>
+                <button class="glide__arrow glide__arrow--left border-black border" data-glide-dir="<"><i class="ri-arrow-left-s-line text-3xl"></i></button>
                 <button class="glide__arrow glide__arrow--right border-black border" data-glide-dir=">"><i class="ri-arrow-right-s-line text-3xl"></i></button>
             </div>
         </div>
@@ -148,51 +148,6 @@
         </div>
     </div>
 
-
-
-
-
-{{-- <div class="max-w-6xl mx-auto p-4">
-    <div class="tabs-container flex justify-center space-x-4 py-4">
-        <button id="newTab" class="tab-button border-[#601042] active" onclick="showTab('new')">New Ins</button>
-        <button id="bestTab" class="tab-button" onclick="showTab('best')">Best Sellers</button>
-    </div>
-    
-    <!-- New Ins Slider -->
-    <div id="newSlider" class="glide">
-        <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-                <!-- Product items for New Ins will be inserted here by JavaScript -->
-            </ul>
-        </div>
-        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-            <i data-lucide="chevron-left" class="w-6 h-6 text-gray-600"></i>
-        </button>
-        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-            <i data-lucide="chevron-right" class="w-6 h-6 text-gray-600"></i>
-        </button>
-    </div>
-
-    <!-- Best Sellers Slider -->
-    <div id="bestSlider" class="glide hidden">
-        <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-                <!-- Product items for Best Sellers will be inserted here by JavaScript -->
-            </ul>
-        </div>
-        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-            <i data-lucide="chevron-left" class="w-6 h-6 text-gray-600"></i>
-        </button>
-        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-            <i data-lucide="chevron-right" class="w-6 h-6 text-gray-600"></i>
-        </button>
-    </div>
-
-    <div class="flex justify-center mt-4">
-        <span class="glide__bullet mx-1 w-2 h-2 rounded-full bg-gray-300"></span>
-        <span class="glide__bullet mx-1 w-2 h-2 rounded-full bg-gray-300"></span>
-    </div>
-</div> --}}
 
 
  {{-- Horizontal Line --}}
