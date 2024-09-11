@@ -192,7 +192,7 @@
                         <div class="flex h-full space-x-8">
                             <div class="relative group">
                                 <a href="{{route('alljewellery')}}"
-                                    class="relative z-10 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-800 group">
+                                    class="relative z-50 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-800 group">
                                     All Jewellery
                                 </a>
                                 <!-- Dropdown Menu -->
