@@ -59,183 +59,96 @@
 
     <!-- Tab Buttons -->
     <div class="tab-buttons flex justify-center my-4">
-        <button data-tab="slider1" class="active text-3xl font-light text-center mb-2">New Ins</button>
-        <div class="h-12 border-l border-gray-500"></div>
-
-        <button data-tab="slider2" class="text-3xl font-light text-center mb-2">Best Sellers</button>
+        <button data-tab="slider1" class="active text-3xl font-light text-center mb-2 pr-2">New Ins</button>
+        <div class="h-10 border-l border-gray-500 "></div>
+        <button data-tab="slider2" class="text-3xl font-light text-center mb-2 px-2 ">Best Sellers</button>
     </div>
     <p class="text-center text-gray-600 mb-8">Freshen up your look!</p>
     <!-- Slider 1 -->
-    <div id="slider1" class="tab-content">
+    <div id="slider1" class="tab-content mx-auto">
         <div class="glide" id="glide1">
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
                     <!-- Example Slide -->
                      <!-- Example product card -->
-         <div class="w-full md:w-1/2 lg:w-1/4 flex-shrink-0 p-2">
-            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                <div class="relative">
-                    <img src="asset/img/best6.webp" alt="Best Seller 1" class="w-full h-48 object-cover" loading="lazy">
-                </div>
-                <div class="p-4">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
-                </div>
-            </div>
-        </div>
-                    <!-- Example product card -->
-         <div class="w-full md:w-1/2 lg:w-1/4 flex-shrink-0 p-2">
-            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                <div class="relative">
-                    <img src="asset/img/best6.webp" alt="Best Seller 1" class="w-full h-48 object-cover" loading="lazy">
-                </div>
-                <div class="p-4">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
+           <!-- Product cards -->
+           <div class="item">
+            <div class="w-full md:w-1/2 lg:w-full flex-shrink-0 p-2">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+                    <div class="relative">
+                        <img src="{{asset('asset/img/new1.webp')}}" alt="Maharashtrian Himali Gold Nath" class="w-full h-48 object-cover" loading="lazy">
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
+                        <h3 class="text-lg font-semibold text-gray-800 mt-1">Maharashtrian Himali Gold Nath</h3>
+                    </div>
                 </div>
             </div>
         </div>
-                     <!-- Example product card -->
-         <div class="w-full md:w-1/2 lg:w-1/4 flex-shrink-0 p-2">
-            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                <div class="relative">
-                    <img src="asset/img/best6.webp" alt="Best Seller 1" class="w-full h-48 object-cover" loading="lazy">
-                </div>
-                <div class="p-4">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
+        <!-- Product cards -->
+        <div class="item">
+            <div class="w-full md:w-1/2 lg:w-full flex-shrink-0 p-2">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+                    <div class="relative">
+                        <img src="{{asset('asset/img/new2.webp')}}" alt="Maharashtrian Himali Gold Nath" class="w-full h-48 object-cover" loading="lazy">
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
+                        <h3 class="text-lg font-semibold text-gray-800 mt-1">Maharashtrian Himali Gold Nath</h3>
+                    </div>
                 </div>
             </div>
         </div>
                 </ul>
             </div>
-            <div class="glide__arrows" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
-                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+            <div class="glide__arrows flex justify-center my-4 gap-2" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left border-black border" data-glide-dir="<"><i class="ri-arrow-left-s-line text-3xl"></i></i></button>
+                <button class="glide__arrow glide__arrow--right border-black border" data-glide-dir=">"><i class="ri-arrow-right-s-line text-3xl"></i></button>
             </div>
         </div>
     </div>
 
     <!-- Slider 2 -->
-    <div id="slider2" class="tab-content hidden">
+    <div id="slider2" class="tab-content hidden mx-auto">
         <div class="glide" id="glide2">
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
                     <!-- Example Slide -->
-                      <!-- Product cards -->
-      <div class="item">
-        <div class="w-full md:w-1/2 lg:w-1/4 flex-shrink-0 p-2">
+                               <!-- Example product card -->
+         <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
             <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                 <div class="relative">
-                    <img src="asset/img/new1.webp" alt="Maharashtrian Himali Gold Nath" class="w-full h-48 object-cover">
+                    <img src="{{asset('asset\img\best1.webp')}}" alt="Best Seller 1" class="w-full h-48 object-cover" loading="lazy">
                 </div>
                 <div class="p-4">
                     <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Maharashtrian Himali Gold Nath</h3>
+                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
                 </div>
             </div>
         </div>
-    </div>
-                      <!-- Product cards -->
-      <div class="item">
-        <div class="w-full md:w-1/2 lg:w-1/4 flex-shrink-0 p-2">
-            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                <div class="relative">
-                    <img src="asset/img/new1.webp" alt="Maharashtrian Himali Gold Nath" class="w-full h-48 object-cover">
-                </div>
-                <div class="p-4">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Maharashtrian Himali Gold Nath</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-                     <!-- Product cards -->
-      <div class="item">
-        <div class="w-full md:w-1/2 lg:w-1/4 flex-shrink-0 p-2">
-            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                <div class="relative">
-                    <img src="asset/img/new1.webp" alt="Maharashtrian Himali Gold Nath" class="w-full h-48 object-cover">
-                </div>
-                <div class="p-4">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Maharashtrian Himali Gold Nath</h3>
+                    
+               <!-- Example product card -->
+               <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+                    <div class="relative">
+                        <img src="{{asset('asset\img\best1.webp')}}" alt="Best Seller 1" class="w-full h-48 object-cover" loading="lazy">
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
+                        <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
                 </ul>
             </div>
-            <div class="glide__arrows" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
-                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+            <div class="glide__arrows flex justify-center my-4 gap-2" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left border-black border" data-glide-dir="<"><i class="ri-arrow-left-s-line text-3xl"></i></i></button>
+                <button class="glide__arrow glide__arrow--right border-black border" data-glide-dir=">"><i class="ri-arrow-right-s-line text-3xl"></i></button>
             </div>
         </div>
     </div>
 
-    <!-- Glide.js JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Initialize Glide.js sliders
-            var glide1 = new Glide('#glide1', {
-                type: 'carousel',
-                startAt: 0,
-                perView: 3,
-                breakpoints: {
-                    1200: { perView: 2 },
-                    800: { perView: 1 }
-                }
-            }).mount();
 
-            var glide2 = new Glide('#glide2', {
-                type: 'carousel',
-                startAt: 0,
-                perView: 3,
-                breakpoints: {
-                    1200: { perView: 2 },
-                    800: { perView: 1 }
-                }
-            }).mount();
-
-            // Tab functionality
-            var tabs = document.querySelectorAll('.tab-buttons button');
-            var tabContents = document.querySelectorAll('.tab-content');
-
-            tabs.forEach(function(tab) {
-                tab.addEventListener('click', function() {
-                    var target = this.getAttribute('data-tab');
-                    
-                    tabs.forEach(btn => btn.classList.remove('active'));
-                    tab.classList.add('active');
-
-                    tabContents.forEach(content => {
-                        if (content.id === target) {
-                            content.classList.remove('hidden');
-                        } else {
-                            content.classList.add('hidden');
-                        }
-                    });
-
-                    // Reinitialize Glide.js after tab switch
-                    if (target === 'slider1') {
-                        glide1.update();
-                    } else if (target === 'slider2') {
-                        glide2.update();
-                    }
-                });
-            });
-
-            // Optional: Auto-update Glide.js on window resize
-            window.addEventListener('resize', function() {
-                if (!document.querySelector('#slider1.hidden')) {
-                    glide1.update();
-                } else if (!document.querySelector('#slider2.hidden')) {
-                    glide2.update();
-                }
-            });
-        });
-    </script>
 
 
 
@@ -302,7 +215,7 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-auto lg:px-28 lg:py-12" >
             <!-- Diamond Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6]">
+            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-lg">
                 <img src="{{asset('asset/img/daimond.png')}}" alt="Diamond" class="w-44 h-60 object-contain mb-4">
                 <h3 class="text-lg font-semibold mb-1">Diamond</h3>
                 <p class="text-sm text-gray-600 mb-3 text-center">For the most awaited moment!</p>
@@ -312,7 +225,7 @@
             </div>
 
             <!-- Gold Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6]">
+            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-lg">
                 <img src="{{asset('asset/img/gold.png')}}" alt="Gold" class="w-44 h-60 object-contain mb-4">
                 <h3 class="text-lg font-semibold mb-1">Gold</h3>
                 <p class="text-sm text-gray-600 mb-3 text-center">For the beauty and the bliss!</p>
@@ -322,7 +235,7 @@
             </div>
 
             <!-- Bullions Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6]">
+            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-lg">
                 <img src="{{asset('asset/img/bullions.png')}}" alt="Bullions" class="w-44 h-60 object-contain mb-4">
                 <h3 class="text-lg font-semibold mb-1">Bullions</h3>
                 <p class="text-sm text-gray-600 mb-3 text-center">For auspicious occasions!</p>
@@ -332,7 +245,7 @@
             </div>
 
             <!-- Silver Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6]">
+            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-lg">
                 <img src="{{asset('asset\img\sliver.png')}}" alt="Silver" class="w-44 h-60 object-contain mb-4">
                 <h3 class="text-lg font-semibold mb-1">Silver</h3>
                 <p class="text-sm text-gray-600 mb-3 text-center">For everyday elegance!</p>
@@ -516,10 +429,11 @@
         </video>
   
         <!-- Parallax Title -->
-        <div class="absolute inset-0 flex justify-center items-center w-full">
-          <div class="text-white text-[auto] lg:text-[95px] md:text-[70px] sm:text-[45px] px-4 lg:px-12 font-bold uppercase text-center">
-            Crafted Elegance
-          </div>
+         <!-- Text overlay -->
+         <div class="absolute inset-0 flex justify-center items-center w-full">
+            <div class="text-white text-[5vw] lg:text-[85px] md:text-[70px] sm:text-[45px] font-bold uppercase text-center">
+                Crafted Elegance
+            </div>
         </div>
       </div>
     </div>
@@ -669,23 +583,28 @@
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
 </div>
 {{-- SHOP --}}
-<section class=" bg-[#f8edde]">
-    <div class="container flex flex-col md:flex-row items-center">
+<section class="bg-[#f8edde] py-10 md:py-16">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
         <!-- Image Section -->
-        <div class="sec w-1/2 mb-6 md:mb-0">
-            <img src="{{ asset('asset\img\store.webp') }}" alt="Jewellery Showcase" class="w-full h-auto rounded-lg shadow-md">
+        <div class="sec w-full md:w-1/2 mb-6 md:mb-0">
+            <img src="{{ asset('asset/img/store.webp') }}" alt="Jewellery Showcase" class="w-full h-auto rounded-lg shadow-md">
         </div>
-        
+
         <!-- Text Section -->
-        <div class="sec md:w-1/2 md:pl-8">
-            <h1 class="text-3xl font-light mb-2">Come and Say Hi</h1>
-            <p class="text-xl mb-6 font-light">
+        <div class="sec w-full md:w-1/2 md:pl-8 text-center md:text-left">
+            <h1 class="text-2xl md:text-3xl font-light mb-4 md:mb-2">
+                Come and Say Hi
+            </h1>
+            <p class="text-lg md:text-xl mb-6 font-light">
                 Explore iconic traditional jewellery, gold and diamond engagement rings, silver classics, elegant accessories, and precious gifts for any occasion at our PNG Jewellers stores across the globe.
             </p>
-            <a href="#" class="inline-block border-2 border-black bg-white text-black font-semibold py-3 px-6 hover:bg-[#7a1e4d] hover:text-white transition duration-300">Find a Store Location</a>
+            <a href="#" class="inline-block border-2 border-black bg-white text-black font-semibold py-3 px-6 hover:bg-[#7a1e4d] hover:text-white transition duration-300">
+                Find a Store Location
+            </a>
         </div>
     </div>
 </section>
+
   
 
 {{-- Horizontal Line --}}

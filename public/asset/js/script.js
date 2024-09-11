@@ -67,3 +67,63 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 // button sliuder
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Glide.js sliders
+    var glide1 = new Glide('#glide1', {
+        type: 'carousel',
+        startAt: 0,
+        perView: 3,
+        breakpoints: {
+            1200: { perView: 2 },
+            800: { perView: 1 }
+        }
+    }).mount();
+
+    var glide2 = new Glide('#glide2', {
+        type: 'carousel',
+        startAt: 0,
+        perView: 3,
+        breakpoints: {
+            1200: { perView: 2 },
+            800: { perView: 1 }
+        }
+    }).mount();
+
+    // Tab functionality
+    var tabs = document.querySelectorAll('.tab-buttons button');
+    var tabContents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            var target = this.getAttribute('data-tab');
+            
+            tabs.forEach(btn => btn.classList.remove('active'));
+            tab.classList.add('active');
+
+            tabContents.forEach(content => {
+                if (content.id === target) {
+                    content.classList.remove('hidden');
+                } else {
+                    content.classList.add('hidden');
+                }
+            });
+
+            // Reinitialize Glide.js after tab switch
+            if (target === 'slider1') {
+                glide1.update();
+            } else if (target === 'slider2') {
+                glide2.update();
+            }
+        });
+    });
+
+    // Optional: Auto-update Glide.js on window resize
+    window.addEventListener('resize', function() {
+        if (!document.querySelector('#slider1.hidden')) {
+            glide1.update();
+        } else if (!document.querySelector('#slider2.hidden')) {
+            glide2.update();
+        }
+    });
+});
