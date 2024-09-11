@@ -139,7 +139,7 @@
 
             function toggleMenu() {
                 hamburgerMenu.classList.toggle('translate-y-0');
-                
+                overlay.classList.toggle('hidden');
 
                 const isExpanded = hamburgerButton.getAttribute('aria-expanded') === 'true' || false;
                 hamburgerButton.setAttribute('aria-expanded', !isExpanded);
