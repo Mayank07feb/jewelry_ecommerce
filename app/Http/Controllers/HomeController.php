@@ -74,4 +74,23 @@ class HomeController extends Controller
         return view('frontend.checkout');
     }
 
+    public function orderconfirmation()
+    {
+        return view('frontend.orderconfirmation');
+    }
+
+    public function ordersummary()
+    {
+        return view('frontend.order-summary');
+    }
+
+    public function paymentconfirmation()
+    {
+        return view('frontend.payment-confirmation');
+    }
+
+    public function thankyou()
+    {
+        return view('frontend.thank-you');
+    }
 }
