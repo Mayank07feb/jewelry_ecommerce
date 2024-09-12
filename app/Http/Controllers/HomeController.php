@@ -93,11 +93,15 @@ class HomeController extends Controller
     {
         return view('frontend.thank-you');
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a6c02eff094aeae3e0f46173976f59681ce31438
 
     public function storelocator()
     {
         return view('frontend.storelocator');
+<<<<<<< HEAD
     }
 
    
@@ -106,4 +110,13 @@ class HomeController extends Controller
         return view('frontend.franchise');
 
     }
+=======
+    } 
+
+    // franchise
+    public function franchise()
+    {
+        return view('frontend.franchise');
+    } 
+>>>>>>> a6c02eff094aeae3e0f46173976f59681ce31438
 }

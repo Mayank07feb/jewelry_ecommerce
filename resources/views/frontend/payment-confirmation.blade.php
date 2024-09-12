@@ -17,6 +17,15 @@
                         <p class="text-gray-600 mt-2">Amount: ₹33,728</p>
                         <p class="text-gray-600">Payment Method: Credit Card</p>
                     </div>
+                    
+                    <!-- Check Order Summary Button -->
+                    <div class="mt-6 text-center">
+                        <a href="{{route('ordersummary')}}" class="inline-block">
+                            <button class="bg-[#601042] text-white py-3 px-6 rounded-md font-semibold hover:bg-[#4b0a2c] transition duration-300">
+                                Check Order Summary
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
