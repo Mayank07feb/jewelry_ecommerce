@@ -21,46 +21,50 @@
 
     <!-- If using Vite, include the Vite directive -->
     @vite('resources/css/app.css')
-
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Glide.js JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
-
-    <!-- Glide.js CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" rel="stylesheet">
-
+      <!-- Glide.js JavaScript -->
+      <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+ 
+ <!-- Glide.js CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" rel="stylesheet">
+  {{--icon  --}}
+ <link
+ href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+ rel="stylesheet"
+/>
     <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
-    <!-- jQuery (Owl Carousel requires jQuery) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- jQuery (Owl Carousel requires jQuery) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!-- Owl Carousel JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <!-- Additional Tailwind CSS (Remove if duplicate) -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.6/dist/tailwind.min.css" rel="stylesheet">
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.6/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="text-gray-900">
+<body class=" text-gray-900">
 
     <!-- Include the header -->
     @include('components.header')
 
+
+
+
     <!-- Content Section -->
     @yield('content')
+
 
     <!-- Include the footer -->
     @include('components.footer')
 
-    <!-- Overlay -->
-    <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
+    <!-- Include JS files -->
+    <script src="{{ asset('js/app.js') }}"></script>
 
     <!-- Hamburger Menu Button -->
     <button id="hamburger-button" aria-label="Open menu" aria-expanded="false"
@@ -120,86 +124,69 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" id="chat-button"
-                                class="flex items-center text-gray-700 hover:text-amber-600 transition-colors duration-300 group">
+                            <a href="#"
+                                class="flex items-center text-gray-700 hover:text-amber-600 transition-colors duration-300 group"
+                                id="chat-button">
                                 <div
                                     class="w-12 h-12 mr-4 rounded-full bg-amber-100 flex items-center justify-center group-hover:bg-amber-200 transition-colors duration-300">
                                     <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M15 17h5l-1.555-1.555M21 13h-5l1.555 1.555M6 17H1l1.555-1.555M1 13h5L4.445 14.555M12 4v8m0 0l3-3m-3 3l-3-3">
+                                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
                                         </path>
                                     </svg>
                                 </div>
-                                <span class="text-lg font-medium">Chat</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact"
-                                class="flex items-center text-gray-700 hover:text-amber-600 transition-colors duration-300 group">
-                                <div
-                                    class="w-12 h-12 mr-4 rounded-full bg-amber-100 flex items-center justify-center group-hover:bg-amber-200 transition-colors duration-300">
-                                    <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M7 7h10M7 12h10m-7 5h7">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <span class="text-lg font-medium">Contact</span>
+                                <span class="text-lg font-medium">Live Chat</span>
                             </a>
                         </li>
                     </ul>
                 </nav>
             </div>
+            <div class="mt-auto p-4 bg-gradient-to-r from-amber-100 to-amber-200 text-center">
+                <p class="text-sm text-amber-800">&copy; 2024 Your Jewelry Store. All rights reserved.</p>
+            </div>
         </div>
     </div>
 
-    <!-- Custom Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('asset/js/script.js') }}"></script>
-    
-    <!-- Initialize Glide.js -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var glide = new Glide('.glide').mount();
-        });
-    </script>
-
-
-    <!-- Hamburger Menu Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const hamburgerButton = document.getElementById('hamburger-button');
             const hamburgerMenu = document.getElementById('hamburger-menu');
+            const closeMenuButton = document.getElementById('close-menu');
             const overlay = document.getElementById('overlay');
-            const closeButton = document.getElementById('close-menu');
             const chatButton = document.getElementById('chat-button');
 
-            hamburgerButton.addEventListener('click', function () {
-                hamburgerMenu.classList.remove('translate-y-full');
-                hamburgerMenu.classList.add('translate-y-0');
-                overlay.classList.remove('hidden');
-            });
+            function toggleMenu() {
+                hamburgerMenu.classList.toggle('translate-y-0');
+                overlay.classList.toggle('hidden');
 
-            closeButton.addEventListener('click', function () {
-                hamburgerMenu.classList.remove('translate-y-0');
-                hamburgerMenu.classList.add('translate-y-full');
-                overlay.classList.add('hidden');
-            });
+                const isExpanded = hamburgerButton.getAttribute('aria-expanded') === 'true' || false;
+                hamburgerButton.setAttribute('aria-expanded', !isExpanded);
+            }
 
-            overlay.addEventListener('click', function () {
-                hamburgerMenu.classList.remove('translate-y-0');
-                hamburgerMenu.classList.add('translate-y-full');
-                overlay.classList.add('hidden');
-            });
+            function openChat(event) {
+                event.preventDefault();
+                // Add your chat functionality here
+                console.log('Open chat');
+                toggleMenu(); // Close the menu after opening chat
+            }
 
-            chatButton.addEventListener('click', function () {
-                window.open('https://wa.me/7905111789', '_blank');
-            });
+            hamburgerButton.addEventListener('click', toggleMenu);
+            closeMenuButton.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+            chatButton.addEventListener('click', openChat);
         });
     </script>
+    <!-- Drift JS -->
+    <script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.0.0/dist/drift.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Additional JS Files -->
+    <script src="{{ asset('asset/js/script.js') }}"></script>
+{{-- apine js --}}
+
+
 </body>
 
 </html>
