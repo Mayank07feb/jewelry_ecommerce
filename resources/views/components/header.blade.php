@@ -100,7 +100,7 @@
     <!-- Header -->
     <header class="relative bg-white shadow-sm">
         <!-- Promo Banner -->
-        <div class="bg-[#601042] text-white text-sm py-2 hidden lg:flex">
+        <div class="bg-[#601042] text-white text-sm hidden lg:flex">
             <div class="container mx-auto flex justify-between items-center">
                 <div class="flex items-center space-x-4">
                     <a href="#"
@@ -128,7 +128,7 @@
                         <span class="hidden sm:inline">Metal Rates</span>
                     </a>
                 </div> --}}
-                <div class="flex items-center space-x-4 p-4">
+                <div class="flex items-center space-x-4 p-2">
                     <!-- Link with icon -->
                     <div class="relative group">
                         <a href="#" class="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300">
@@ -488,7 +488,7 @@
 
                                 <!-- Hidden content to show on hover -->
                                 <div
-                                    class="absolute top-10 right-0 bg-white shadow-xl p-6 border border-gray-200 rounded-lg w-72 z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out">
+                                    class="absolute top-10 right-0 bg-white shadow-xl p-3 border border-gray-200 rounded-lg w-72 z-50 hidden group-hover:block duration-200 ease-in-out">
                                     <h3 class="font-semibold text-lg text-gray-800 border-b pb-2">Your Account</h3>
                                     <p class="text-gray-500 text-sm mt-2">Track your orders, manage payment, edit
                                         profile, and much more...</p>
