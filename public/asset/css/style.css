@@ -28,7 +28,10 @@
         background-color: rgba(0, 0, 0, 0.7);
     }
 
-
+    .active {
+        background-color: #601042; 
+        color: white !important; 
+      }
 /* owl  */
 .owl-prev, .owl-next {
     position: absolute;

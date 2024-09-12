@@ -59,10 +59,10 @@
 
     <!-- Tab Buttons -->
     <div class="tab-buttons flex justify-center my-4">
-        <button data-tab="slider1" class="active text-3xl font-light text-center mb-2 pr-2">New Ins</button>
-        <div class="h-10 border-l border-gray-500 "></div>
-        <button data-tab="slider2" class="text-3xl font-light text-center mb-2 px-2 ">Best Sellers</button>
+        <button data-tab="slider1" class="active text-3xl font-light text-center mb-2 pr-2 hover:bg-[#601042] hover:text-white border-black border p-2">New Ins</button>
+        <button data-tab="slider2" class="text-3xl font-light text-center mb-2 px-2 hover:bg-[#601042] hover:text-white border-black border p-2">Best Sellers</button>
     </div>
+  
     <p class="text-center text-gray-600 mb-8">Freshen up your look!</p>
     <!-- Slider 1 -->
     <div id="slider1" class="tab-content mx-auto">
@@ -70,10 +70,10 @@
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
                     <!-- Example Slide -->
-                     <!-- Example product card -->
+                     
            <!-- Product cards -->
            <div class="item">
-            <div class="w-full md:w-1/2 lg:w-full flex-shrink-0 p-2">
+            <div class="w-full  lg:w-full flex-shrink-0 p-2">
                 <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                     <div class="relative">
                         <img src="{{asset('asset/img/new1.webp')}}" alt="Maharashtrian Himali Gold Nath" class="w-full h-48 object-cover" loading="lazy">
@@ -87,7 +87,7 @@
         </div>
         <!-- Product cards -->
         <div class="item">
-            <div class="w-full md:w-1/2 lg:w-full flex-shrink-0 p-2">
+            <div class="w-full  lg:w-full flex-shrink-0 p-2">
                 <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                     <div class="relative">
                         <img src="{{asset('asset/img/new2.webp')}}" alt="Maharashtrian Himali Gold Nath" class="w-full h-48 object-cover" loading="lazy">
