@@ -60,7 +60,7 @@
     <!-- Tab Buttons -->
     <div class="tab-buttons flex justify-center mt-8">
         <button data-tab="slider1" class="tab-btn active-tab text-3xl font-light text-center mb-2 pr-2 hover:text-[#601042] p-2">New Ins</button>
-        <div class="w-px h-10 mt-2 mx-2 bg-gray-800"></div>
+        <div class="w-px h-10 mx-2 bg-gray-800"></div>
 
         <button data-tab="slider2" class="tab-btn text-3xl font-light text-center mb-2 px-2 hover:text-[#601042] p-2">Best Sellers</button>
       </div>
