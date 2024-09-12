@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="bg-[#f8f9fa] text-gray-800 py-12">
+<footer class="bg-[#f8f9fa] text-gray-800 py-12 mb-12 md:mb-0">
     <div class="container mx-auto px-4 md:px-8 lg:px-12">
         <!-- Mobile Dropdown Toggle Button -->
         <div class="block md:hidden mb-4">

@@ -157,7 +157,7 @@
         </div> --}}
 
         {{-- Filter --}}
-        <div class="bg-[#601042] w-full h-auto z-50">
+        <div class="bg-[#601042] w-full h-auto z-10">
             <div class="container px-4 lg:overflow-visible">
                 <div class="lg:bg-primary lg:flex">
                     <!-- Filter Categories for Desktop -->
