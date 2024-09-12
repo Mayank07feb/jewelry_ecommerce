@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- Breadcrumb -->
-<nav class="flex" aria-label="Breadcrumb">
+<nav class="hidden md:flex" aria-label="Breadcrumb">
     <ol class="inline-flex items-center space-x-2 md:space-x-4">
         <li class="inline-flex items-center">
             <a href="/" class="text-gray-600 hover:text-[#9d6e2a] inline-flex items-center">
@@ -26,37 +26,35 @@
         </li>
     </ol>
 </nav>
+<div class="p-4 md:p-8 text-center">
+    <h1 class="text-2xl md:text-4xl font-light text-[#601042] relative before:absolute before:bottom-0 before:bg-[#601042] leading-none before:w-10 before:h-0.5 pb-1.5">
+        Shop By Collection
+    </h1>
+    <p class="text-lg md:text-xl mb-4 md:mb-6">Say hello to our sparkling new collection!</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <a href="https://example.com/link1" class="block group">
+            <img src="{{asset('asset/img/pratha.jpg')}}" alt="Image 1" class="w-full h-60 md:h-70 object-cover rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+        </a>
+        <a href="#" class="block group">
+            <img src="{{asset('asset/img/pratha.jpg')}}" alt="Image 2" class="w-full h-60 md:h-70 object-cover rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+        </a>
+        <a href="https://example.com/link3" class="block group">
+            <img src="{{asset('asset/img/pratha.jpg')}}" alt="Image 3" class="w-full h-60 md:h-70 object-cover rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+        </a>
+        <a href="https://example.com/link4" class="block group">
+            <img src="{{asset('asset/img/pratha.jpg')}}" alt="Image 4" class="w-full h-60 md:h-70 object-cover rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+        </a>
+        <a href="https://example.com/link5" class="block group">
+            <img src="{{asset('asset/img/pratha.jpg')}}" alt="Image 5" class="w-full h-60 md:h-70 object-cover rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+        </a>
+        <a href="https://example.com/link6" class="block group">
+            <img src="{{asset('asset/img/pratha.jpg')}}" alt="Image 6" class="w-full h-60 md:h-70 object-cover rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+        </a>
+    </div>
+</div>
 
-<div class="p-8 text-center">
-    <h1
-    class="text-4xl font-light text-[#601042] relative before:absolute before:bottom-0 before:bg-[#601042] leading-none before:w-10 before:h-0.5 pb-1.5">
-    Shop By Collection
-</h1>
-<p class="text-xl mb-6">Say hello to our sparkling new collection!</p>
-<div class="grid grid-cols-3 gap-6">
-    <a href="https://example.com/link1" class="block group">
-        <img src="{{asset('asset/img/pratha.jpg')}}" alt="Image 1" class="w-full h-70 object-cover rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
-    </a>
-    <a href="#" class="block group">
-        <img src="{{asset('asset/img/pratha.jpg')}}" alt="Image 2" class="w-full h-70 object-cover rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
-    </a>
-    <a href="https://example.com/link3" class="block group">
-        <img src="{{asset('asset/img/pratha.jpg')}}" alt="Image 3" class="w-full h-70 object-cover rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
-    </a>
-    <a href="https://example.com/link4" class="block group">
-        <img src="{{asset('asset/img/pratha.jpg')}}" alt="Image 4" class="w-full h-70 object-cover rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
-    </a>
-    <a href="https://example.com/link5" class="block group">
-        <img src="{{asset('asset/img/pratha.jpg')}}" alt="Image 5" class="w-full h-70 object-cover rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
-    </a>
-    <a href="https://example.com/link6" class="block group">
-        <img src="{{asset('asset/img/pratha.jpg')}}" alt="Image 6" class="w-full h-70 object-cover rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
-    </a>
-    <!-- Add more images if needed -->
-</div>
-</div>
- {{-- horizontal line --}}
- <div class="flex items-center justify-center w-screen">
+<!-- Horizontal line with logo -->
+<div class="flex items-center justify-center w-full my-8">
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
     <div class="mx-4">
         <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="h-12 w-auto">
