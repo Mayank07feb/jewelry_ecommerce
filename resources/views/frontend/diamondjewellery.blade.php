@@ -166,7 +166,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <!-- Card 1 Start -->
                 <div
-                    class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-white transform hover:-translate-y-2 transition-transform duration-300">
+                    class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl  bg-white transform hover:-translate-y-2 transition-transform duration-300">
                     <a href="{{ route('productdetail') }}">
                         <div class="overflow-hidden">
                             <img src="{{ asset('asset/img/new.jpg') }}" alt="Rainbow Radiance Diamond Ladies Ring"
@@ -191,7 +191,7 @@
 
                 <!-- Card 2 Start -->
                 <div
-                    class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-white transform hover:-translate-y-2 transition-transform duration-300">
+                    class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl bg-white transform hover:-translate-y-2 transition-transform duration-300">
                     <a href="{{ route('productdetail') }}">
                         <div class="overflow-hidden">
                             <img src="{{ asset('asset/img/new.jpg') }}" alt="Golden Radiance Necklace Set"
