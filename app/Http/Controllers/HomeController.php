@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
- {
+
+{
     // Method for home page
     public function index()
     {
@@ -94,28 +95,14 @@ class HomeController extends Controller
         return view('frontend.thank-you');
     }
 
-
-
-
     public function storelocator()
     {
         return view('frontend.storelocator');
-
     }
 
-   
+    // Method for franchise page
     public function franchise()
     {
         return view('frontend.franchise');
-
     }
-
-
-
-    // franchise
-    public function franchise()
-    {
-        return view('frontend.franchise');
-    } 
-
 }
