@@ -94,12 +94,10 @@ class HomeController extends Controller
     {
         return view('frontend.thank-you');
     }
-
     public function storelocator()
     {
         return view('frontend.storelocator');
     }
-
     // Method for franchise page
     public function franchise()
     {

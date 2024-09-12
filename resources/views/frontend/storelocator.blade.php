@@ -35,59 +35,122 @@
     <!-- Add your search form or additional content here -->
   
 
-  <h1 class="text-2xl font-bold text-center py-4 border-b">
-    Find your Nearest P. N. Gadgil Jewellery
-</h1>
-<div class="flex-1 flex flex-col overflow-hidden">
-    <div class="flex space-x-4 p-4">
-        <div class="w-1/2">
+<div class="container mx-auto p-4 h-screen flex flex-col">
+    <h1 class="text-2xl font-bold mb-4 text-center">Find your Nearest Giritra Jewellery</h1>
+    
+    <div class="flex mb-4">
+        <div class="w-1/2 pr-1">
             <label class="block text-sm font-medium text-gray-700 mb-1">Stores in India</label>
-            <select class="w-full border rounded-md p-2">
+            <select class="w-full p-2 border rounded">
                 <option>Select</option>
+                <option>Giritra</option>
                 <!-- Add more options as needed -->
             </select>
         </div>
-        <div class="w-1/2">
+        <div class="w-1/2 pl-1 bg-[#9d6e2a]">
             <label class="block text-sm font-medium text-gray-700 mb-1">International Stores</label>
-            <select class="w-full border rounded-md p-2">
+            <select class="w-full p-2  border rounded">
                 <option>Select</option>
+                <option>Giritra</option>
                 <!-- Add more options as needed -->
             </select>
         </div>
     </div>
-</div>
-
-<div class="flex-1 flex ">
-    <!-- Store Entries Container with Scrollbar -->
-    <div class="w-1/3 h-screen p-4 overflow-y-auto border-r">
-        <div class="space-y-4">
-            <!-- Store Entry -->
-            <div class="bg-purple-100 p-4 rounded-lg cursor-pointer">
-                <div class="flex items-center space-x-2 mb-2">
-                    <div class="w-10 h-10 bg-[#9d6e2a] rounded-full flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
+    
+    <div class="flex flex-grow gap-4 overflow-hidden">
+        <div class="w-1/2 overflow-y-auto pr-4">
+            <!-- Store List -->
+            <div class="bg-white p-4 rounded-lg shadow mb-4 cursor-pointer hover:bg-gray-50">
+                <div class="flex items-center mb-2">
+                    <div class="w-12 h-12 bg-[#9d6e2a] rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white text-xl font-bold">PNG</span>
                     </div>
-                    <h3 class="font-semibold text-[#9d6e2a]">P N Gadgil Jewellers Limited (Laxmi Road)</h3>
+                    <h2 class="text-lg font-semibold">P N Gadgil Jewellers Limited (Laxmi Road)</h2>
                 </div>
-                <p class="text-sm text-gray-600">Kunte Chowk, 694, Laxmi Rd, Bhatancha Bol, Narayan Peth, 411030, PUNE, Maharashtra</p>
+                <p class="text-sm text-gray-600">
+                    Kunte Chowk, 694, Laxmi Rd, Bhatancha Bol, Narayan Peth, 411030, PUNE, Maharashtra
+                </p>
             </div>
-            <!-- Repeat above block for more stores -->
-            <!-- Add a "Show More" button if needed -->
-            <div class="text-center">
-                <button class="text-blue-600 hover:underline mt-4">Show More</button>
+            
+            <div class="bg-white p-4 rounded-lg shadow mb-4 cursor-pointer hover:bg-gray-50">
+                <div class="flex items-center mb-2">
+                    <div class="w-12 h-12 bg-[#9d6e2a] rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white text-xl font-bold">PNG</span>
+                    </div>
+                    <h2 class="text-lg font-semibold">P N Gadgil Jewellers Limited (Paud Road)</h2>
+                </div>
+                <p class="text-sm text-gray-600">
+                    Commerce Avenue, shop no.5-6, Mahaganesh Colony, Opp. Punyai Sabhgruha, Paud Road, Kothrud, 411038, PUNE, Maharashtra
+                </p>
             </div>
+
+            <div class="bg-white p-4 rounded-lg shadow mb-4 cursor-pointer hover:bg-gray-50">
+                <div class="flex items-center mb-2">
+                    <div class="w-12 h-12 bg-[#9d6e2a] rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white text-xl font-bold">PNG</span>
+                    </div>
+                    <h2 class="text-lg font-semibold">P N Gadgil Jewellers Limited (Laxmi Road)</h2>
+                </div>
+                <p class="text-sm text-gray-600">
+                    Kunte Chowk, 694, Laxmi Rd, Bhatancha Bol, Narayan Peth, 411030, PUNE, Maharashtra
+                </p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow mb-4 cursor-pointer hover:bg-gray-50">
+                <div class="flex items-center mb-2">
+                    <div class="w-12 h-12 bg-[#9d6e2a] rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white text-xl font-bold">PNG</span>
+                    </div>
+                    <h2 class="text-lg font-semibold">P N Gadgil Jewellers Limited (Laxmi Road)</h2>
+                </div>
+                <p class="text-sm text-gray-600">
+                    Kunte Chowk, 694, Laxmi Rd, Bhatancha Bol, Narayan Peth, 411030, PUNE, Maharashtra
+                </p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow mb-4 cursor-pointer hover:bg-gray-50">
+                <div class="flex items-center mb-2">
+                    <div class="w-12 h-12 bg-[#9d6e2a] rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white text-xl font-bold">PNG</span>
+                    </div>
+                    <h2 class="text-lg font-semibold">P N Gadgil Jewellers Limited (Laxmi Road)</h2>
+                </div>
+                <p class="text-sm text-gray-600">
+                    Kunte Chowk, 694, Laxmi Rd, Bhatancha Bol, Narayan Peth, 411030, PUNE, Maharashtra
+                </p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow mb-4 cursor-pointer hover:bg-gray-50">
+                <div class="flex items-center mb-2">
+                    <div class="w-12 h-12 bg-[#9d6e2a] rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white text-xl font-bold">PNG</span>
+                    </div>
+                    <h2 class="text-lg font-semibold">P N Gadgil Jewellers Limited (Laxmi Road)</h2>
+                </div>
+                <p class="text-sm text-gray-600">
+                    Kunte Chowk, 694, Laxmi Rd, Bhatancha Bol, Narayan Peth, 411030, PUNE, Maharashtra
+                </p>
+            </div>
+            <!-- Add more store blocks as needed -->
         </div>
-    </div>
-    <!-- Map Placeholder -->
-    <div class="flex-1 bg-blue-100 p-4 flex items-center justify-center">
-        <div class="w-full h-full bg-blue-200 rounded-lg flex items-center justify-center">
-            <p class="text-xl font-semibold text-blue-800 text-center">Map Placeholder</p>
+        
+        <div class="w-1/2 bg-gray-200 rounded-lg">
+            <!-- Placeholder for the map -->
+            <div class="h-full flex items-center justify-center">
+                <svg class="text-purple-600" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 5.25-9 13-9 13S3 15.25 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span class="ml-2 text-lg">Map would be displayed here</span>
+            </div>
         </div>
     </div>
 </div>
 
+
+<div class="flex items-center justify-center w-screen">
+    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+    <div class="mx-4">
+        <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="h-12 w-auto">
+    </div>
+    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+</div>
 
 @endsection
