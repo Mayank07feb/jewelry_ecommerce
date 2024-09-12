@@ -37,3 +37,8 @@ Route::get('/ordersummary', [HomeController::class, 'ordersummary'])->name('orde
 Route::get('/paymentconfirmation', [HomeController::class, 'paymentconfirmation'])->name('paymentconfirmation');
 
 Route::get('/thankyou', [HomeController::class, 'thankyou'])->name('thankyou');
+
+Route::get('/storelocator',[HomeController::class,'storelocator'])->name('storelocator');
+
+Route::get('/franchise', [HomeController::class, 'franchise'])->name('franchise');
+

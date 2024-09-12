@@ -93,4 +93,15 @@ class HomeController extends Controller
     {
         return view('frontend.thank-you');
     }
+
+    public function storelocator()
+    {
+        return view('frontend.storelocator');
+    } 
+
+    // franchise
+    public function franchise()
+    {
+        return view('frontend.franchise');
+    } 
 }
