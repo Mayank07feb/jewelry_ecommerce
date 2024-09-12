@@ -88,7 +88,7 @@
                         class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Diamond</a>
                     <a href="#" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Gold</a>
                     <a href="#" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Silver</a>
-                    <a href="#"
+                    <a href="{{route('collection')}}"
                         class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Collections</a>
                     <a href="#" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Bullions</a>
                 </div>
