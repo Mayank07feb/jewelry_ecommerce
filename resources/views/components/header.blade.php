@@ -150,7 +150,7 @@
                     <div class="ml-4 flex lg:ml-0">
                         <a href="{{ route('home') }}">
                             <span class="sr-only">Your Company</span>
-                            <img class="h-8 w-auto" src="{{ asset('asset/img/logo.png') }}" alt="Company Logo">
+                            <img class="h-8 w-auto" src="{{asset('asset/img/logo.png')}}" alt="Company Logo">
                         </a>
                         <!-- Image Search Bar -->
                         {{-- <div class="relative ml-4 w-full max-w-lg">
