@@ -171,7 +171,7 @@
                                     <div class="text-center font-medium text-gray-800">15,645</div>
                                 </div>
                             </div>
-                            <div class="hidden lg:block border-b border-tertiary">
+                            <div class="hidden lg:block ">
                                 <p class="text-gray-800 pt-2 pb-1 text-center text-md font-light">Applicable for online purchase only</p>
                               </div>
                               {{--  --}}
