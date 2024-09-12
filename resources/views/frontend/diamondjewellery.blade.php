@@ -390,6 +390,8 @@
             </div>
         </div>
 
+
+        
         {{-- Main --}}
         <div class="container mx-auto py-8">
             <h2 class="text-2xl font-semibold mb-4 text-gray-800">Diamond Jewellery <span class="text-yellow-600">2471
