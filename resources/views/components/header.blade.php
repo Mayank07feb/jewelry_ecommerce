@@ -115,7 +115,7 @@
                         <span class="hidden sm:inline">Store Locator</span>
                     </a>
                     <div class="border-l border-gray-400 h-4 mx-2"></div>
-                    <a href="{{route('franchise')}}"
+                    <a href="{{ route('franchise') }}"
                         class="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300">
                         <i class="fas fa-heart text-xl"></i>
                         <span class="hidden sm:inline">Giritra Franchise</span>
@@ -467,39 +467,39 @@
 </div>
 
 
-<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50">
+{{-- <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50">
     <div class="flex justify-between items-center p-4">
         <!-- Home Button -->
         <a href="/" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
-            <span class="material-icons text-2xl">home</span>
+            <span class="material-icons text-3xl">home</span>
             <span class="text-xs">Home</span>
         </a>
 
         <!-- Category Button -->
         <a href="/categories" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
-            <span class="material-icons text-2xl">category</span>
+            <span class="material-icons text-3xl">category</span>
             <span class="text-xs">Category</span>
         </a>
 
         <!-- Account Button -->
         <a href="/login" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
-            <span class="material-icons text-2xl">account_circle</span>
+            <span class="material-icons text-3xl">account_circle</span>
             <span class="text-xs">Account</span>
         </a>
 
         <!-- Wishlist Button -->
         <a href="/dashboard/wishlist" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
-            <span class="material-icons text-2xl">favorite_border</span>
+            <span class="material-icons text-3xl">favorite_border</span>
             <span class="text-xs">Wishlist</span>
         </a>
 
         <!-- Cart Button -->
         <a href="/cart" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
-            <span class="material-icons text-2xl">shopping_cart</span>
+            <span class="material-icons text-3xl">shopping_cart</span>
             <span class="text-xs">Cart</span>
         </a>
     </div>
-</div>
+</div> --}}
 
 
 
