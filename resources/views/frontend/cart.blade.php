@@ -53,8 +53,7 @@
                                             <span class="pt-px">Delete</span>
                                         </div>
                                     </div>
-                                    
-                                    
+
                                     
 
                                 {{-- End Wishlist Button --}}
