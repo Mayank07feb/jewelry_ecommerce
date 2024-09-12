@@ -49,3 +49,7 @@
     right: -25px;
 }
 
+  /* Custom styles for dropdown */
+  .dropdown:hover .dropdown-content {
+    display: block;
+}

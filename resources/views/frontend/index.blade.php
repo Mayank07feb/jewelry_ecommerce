@@ -385,7 +385,7 @@
   
             <!-- Parallax Title -->
             <div class="absolute inset-0 flex justify-end items-center w-full h-full">
-                <div class="text-white text-[8vw] md:text-[12vw] lg:text-[85px] font-light uppercase whitespace-nowrap">
+                <div class="text-white text-[8vw] md:text-[10vw] lg:text-[85px] font-light uppercase whitespace-nowrap">
                     Crafted <span class="text-white">Elegance</span>
                 </div>
             </div>
