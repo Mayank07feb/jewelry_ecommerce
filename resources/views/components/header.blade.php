@@ -171,7 +171,7 @@
                                     <div class="text-center font-medium text-gray-800">15,645</div>
                                 </div>
                             </div>
-                            <div class="hidden lg:block border-b border-tertiary">
+                            <div class="hidden lg:block ">
                                 <p class="text-gray-800 pt-2 pb-1 text-center text-md font-light">Applicable for online purchase only</p>
                               </div>
                               {{--  --}}
@@ -208,7 +208,7 @@
                     <div class="ml-4 flex lg:ml-0">
                         <a href="{{ route('home') }}">
                             <span class="sr-only">Your Company</span>
-                            <img class="h-8 w-auto" src="{{ asset('asset/img/logo.png') }}" alt="Company Logo">
+                            <img class="h-8 w-auto" src="{{asset('asset/img/logo.png')}}" alt="Company Logo">
                         </a>
                         <!-- Image Search Bar -->
                         {{-- <div class="relative ml-4 w-full max-w-lg">
