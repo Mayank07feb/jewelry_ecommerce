@@ -51,12 +51,8 @@
     <!-- Include the header -->
     @include('components.header')
 
-
-
-
     <!-- Content Section -->
     @yield('content')
-
 
     <!-- Include the footer -->
     @include('components.footer')
@@ -69,7 +65,7 @@
 
     <!-- Hamburger Menu Button -->
     <button id="hamburger-button" aria-label="Open menu" aria-expanded="false"
-        class="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-white hover:from-amber-500 hover:to-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-opacity-50 shadow-lg transition-all duration-300">
+        class="fixed bottom-24 right-6 z-50 p-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-white hover:from-amber-500 hover:to-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-opacity-50 shadow-lg transition-all duration-300">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
