@@ -29,24 +29,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
- // Select all tab buttons
-  const tabButtons = document.querySelectorAll('.tab-btn');
 
-  // Add click event listener to each button
-  tabButtons.forEach((button) => {
-    button.addEventListener('click', function () {
-      // Remove active styles from all buttons
-      tabButtons.forEach((btn) => {
-        btn.classList.remove('bg-white', 'text-[#601042]', 'active-tab' ,'underline');
-        btn.classList.add('hover:bg-white', 'hover:text-[#601042]' ,'underline');
-      });
 
-      // Add active styles to the clicked button
-      this.classList.add('bg-white', 'text-[#601042]', 'active-tab' );
-      this.classList.remove('hover:bg-white', 'hover:text-[#601042]', 'underline');
+// Select all tab buttons
+const tabButtons = document.querySelectorAll('.tab-btn');
+
+// Add click event listener to each button
+tabButtons.forEach((button) => {
+  button.addEventListener('click', function () {
+    // Remove active styles from all buttons
+    tabButtons.forEach((btn) => {
+      btn.classList.remove('bg-white', 'text-[#601042]', 'active-tab', 'underline');
     });
-  });
 
+    // Add active styles to the clicked button
+    this.classList.add('bg-white', 'text-[#601042]', 'active-tab', 'underline');
+  });
+});
 
 
 
