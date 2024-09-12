@@ -482,7 +482,7 @@
         <h2 class="font-light text-[28px] md:text-[52px] text-black mb-3">Customize Jewellery</h2>
         <p class="font-light text-lg tracking-wide mb-6">Add a personal touch to your style.</p>
         <a href="/product/customizejewellery" class="inline-block">
-          <button class="btn btn-outline-primary border-black border-2 bg-white px-6 py-3">Customize Jewellery</button>
+          <button class="btn btn-outline-primary border-black border-2 bg-white hover:bg-[#8a4879] hover:text-white px-6 py-3">Customize Jewellery</button>
         </a>
       </div>
     </div>
