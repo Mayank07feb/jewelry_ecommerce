@@ -553,6 +553,17 @@
                 }
             });
         });
+
+         // Wishlist functionality
+         document.querySelectorAll('.wishlist-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const svg = this.querySelector('svg');
+                svg.classList.toggle('text-gray-400');
+                svg.classList.toggle('text-red-500');
+                svg.classList.toggle('fill-current');
+            });
+        });
+
         // document.getElementById('filterDropdown').addEventListener('click', function() {
         //     document.getElementById('filterMenu').classList.toggle('hidden');
         // });
