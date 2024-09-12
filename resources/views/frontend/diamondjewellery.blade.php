@@ -248,6 +248,69 @@
         </div>
     </div>
 
+   <!-- Bottom Navigation Bar with Sort and Filter Dropdowns -->
+<div class="lg:hidden fixed bottom-0 left-0 w-full z-50 bg-[#601042]">
+    <div class="grid grid-flow-col auto-cols-fr text-white">
+        <!-- Sort Button with Dropdown -->
+        <div class="relative flex flex-col items-center justify-center py-4 hover:bg-[#4b002f] transition duration-200 cursor-pointer border-r border-white group">
+            <span class="material-icons text-3xl">sort</span>
+            <span class="text-sm uppercase mt-1">Sort</span>
+            
+            <!-- Sort Dropdown -->
+            <div class="absolute bottom-16 left-0 w-40 bg-white text-black hidden group-hover:block">
+                <ul class="text-left p-2 space-y-2">
+                    <li class="hover:bg-gray-200 p-2 cursor-pointer">Price: Low to High</li>
+                    <li class="hover:bg-gray-200 p-2 cursor-pointer">Price: High to Low</li>
+                    <li class="hover:bg-gray-200 p-2 cursor-pointer">New Arrivals</li>
+                    <li class="hover:bg-gray-200 p-2 cursor-pointer">Best Sellers</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Filter Button with Dropdown -->
+        <div class="relative flex flex-col items-center justify-center py-4 hover:bg-[#4b002f] transition duration-200 cursor-pointer group">
+            <span class="material-icons text-3xl">filter_list</span>
+            <span class="text-sm uppercase mt-1">Filter</span>
+            
+            <!-- Filter Dropdown -->
+            <div class="absolute bottom-16 left-0 w-48 bg-white text-black hidden group-hover:block">
+                <ul class="text-left p-2 space-y-4">
+                    <!-- Category Filter -->
+                    <li>
+                        <h4 class="font-bold">Category</h4>
+                        <ul class="space-y-2">
+                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Rings</li>
+                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Necklaces</li>
+                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Bracelets</li>
+                        </ul>
+                    </li>
+
+                    <!-- Metal Type Filter -->
+                    <li>
+                        <h4 class="font-bold">Metal Type</h4>
+                        <ul class="space-y-2">
+                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Gold</li>
+                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Silver</li>
+                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Platinum</li>
+                        </ul>
+                    </li>
+
+                    <!-- Price Range Filter -->
+                    <li>
+                        <h4 class="font-bold">Price Range</h4>
+                        <ul class="space-y-2">
+                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Under $500</li>
+                            <li class="hover:bg-gray-200 p-2 cursor-pointer">$500 - $1000</li>
+                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Above $1000</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
     <script>
         // Toggle filter dropdown
         const filterDropdown = document.getElementById('filterDropdown');
