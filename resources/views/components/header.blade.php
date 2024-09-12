@@ -464,7 +464,7 @@
                             </div>
 
 
-                            <a href="#"
+                            <a href="{{route('silver')}}"
                                 class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Silver</a>
                             <a href="{{route('collection')}}"
                                 class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Collections</a>
@@ -525,7 +525,7 @@
 </div>
 
 
-<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50">
+{{-- <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50">
     <div class="flex justify-between items-center p-4">
         <!-- Home Button -->
         <a href="/" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
@@ -557,7 +557,7 @@
             <span class="text-xs">Cart</span>
         </a>
     </div>
-</div>
+</div> --}}
 
 
 
