@@ -518,7 +518,7 @@
                             </a>
                         </div>
                     </div> --}}
-                     <div class="ml-auto flex items-center group">
+                     <div class="ml-auto flex items-center ">
                         <div class="hidden lg:flex lg:items-center lg:space-x-6">
                             <div class="relative inline-block group">
                                 <!-- Account Link -->
