@@ -103,4 +103,9 @@ class HomeController extends Controller
     {
         return view('frontend.franchise');
     }
+
+    public function collection()
+    {
+        return view('frontend.collection');
+    }
 }
