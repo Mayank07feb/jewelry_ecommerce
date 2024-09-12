@@ -58,11 +58,11 @@
 {{-- button slider --}}
 
     <!-- Tab Buttons -->
-    <div class="tab-buttons flex justify-center my-4">
-        <button data-tab="slider1" class="active text-3xl font-light text-center mb-2 pr-2">New Ins</button>
-        <div class="h-10 border-l border-gray-500 "></div>
-        <button data-tab="slider2" class="text-3xl font-light text-center mb-2 px-2 ">Best Sellers</button>
-    </div>
+    <div class="tab-buttons flex justify-center mt-8">
+        <button data-tab="slider1" class="tab-btn active-tab text-3xl font-light text-center mb-2 pr-2 hover:bg-[#601042] hover:text-white border-black border p-2">New Ins</button>
+        <button data-tab="slider2" class="tab-btn text-3xl font-light text-center mb-2 px-2 hover:bg-[#601042] hover:text-white border-black border p-2">Best Sellers</button>
+      </div>
+  
     <p class="text-center text-gray-600 mb-8">Freshen up your look!</p>
     <!-- Slider 1 -->
     <div id="slider1" class="tab-content mx-auto">
@@ -70,31 +70,32 @@
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
                     <!-- Example Slide -->
-                     <!-- Example product card -->
+                     
            <!-- Product cards -->
            <div class="item">
-            <div class="w-full md:w-1/2 lg:w-full flex-shrink-0 p-2">
-                <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+            <div class="w-full lg:w-full flex-shrink-0 p-2">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
                     <div class="relative">
-                        <img src="{{asset('asset/img/new1.webp')}}" alt="Maharashtrian Himali Gold Nath" class="w-full h-48 object-cover" loading="lazy">
+                        <img src="{{asset('asset/img/new1.webp')}}" alt="Maharashtrian Himali Gold Nath" class="w-full h-60 object-cover" loading="lazy">
                     </div>
                     <div class="p-4">
                         <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                        <h3 class="text-lg font-semibold text-gray-800 mt-1">Maharashtrian Himali Gold Nath</h3>
+                        <h3 class="text-lg font-medium text-gray-800">Maharashtrian Himali Gold Nath</h3>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Product cards -->
-        <div class="item">
-            <div class="w-full md:w-1/2 lg:w-full flex-shrink-0 p-2">
-                <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+        
+         <!-- Product cards -->
+         <div class="item">
+            <div class="w-full lg:w-full flex-shrink-0 p-2">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
                     <div class="relative">
-                        <img src="{{asset('asset/img/new2.webp')}}" alt="Maharashtrian Himali Gold Nath" class="w-full h-48 object-cover" loading="lazy">
+                        <img src="{{asset('asset/img/new1.webp')}}" alt="Maharashtrian Himali Gold Nath" class="w-full h-60 object-cover" loading="lazy">
                     </div>
                     <div class="p-4">
                         <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                        <h3 class="text-lg font-semibold text-gray-800 mt-1">Maharashtrian Himali Gold Nath</h3>
+                        <h3 class="text-lg font-medium text-gray-800">Maharashtrian Himali Gold Nath</h3>
                     </div>
                 </div>
             </div>
@@ -161,52 +162,53 @@
 
 
 {{-- Category Section --}}
-    <div class="w-full mx-auto ">
-        <h1 class="text-3xl font-light text-center mb-2">Shop by Category</h1>
-        <p class="text-center text-gray-600 mb-8">A one-stop shop for all of your jewellery needs!</p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4 lg:px-28 lg:py-12" >
-            <!-- Diamond Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg">
-                <img src="{{asset('asset/img/daimond.png')}}" alt="Diamond" class="w-44 h-60 object-contain mb-4">
-                <h3 class="text-lg font-semibold mb-1">Diamond</h3>
-                <p class="text-sm text-gray-600 mb-3 text-center">For the most awaited moment!</p>
-                <button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black  hover:bg-[#601042] hover:text-white transition-colors text-sm">
-                    DISCOVER MORE
-                </button>
-            </div>
+<div class="w-full mx-auto">
+    <h1 class="text-3xl font-light text-center mb-4 lg:mb-6">Shop by Category</h1>
+    <p class="text-center text-gray-600 mb-6 lg:mb-10">A one-stop shop for all of your jewellery needs!</p>
 
-            <!-- Gold Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg">
-                <img src="{{asset('asset/img/gold.png')}}" alt="Gold" class="w-44 h-60 object-contain mb-4">
-                <h3 class="text-lg font-semibold mb-1">Gold</h3>
-                <p class="text-sm text-gray-600 mb-3 text-center">For the beauty and the bliss!</p>
-                <button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black  hover:bg-[#601042] hover:text-white transition-colors text-sm">
-                    DISCOVER MORE
-                </button>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 px-6 lg:px-20 py-8 lg:py-12">
+        <!-- Diamond Category -->
+        <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
+            <img src="{{asset('asset/img/daimond.png')}}" alt="Diamond" class="w-40 h-56 object-contain mb-4">
+            <h3 class="text-lg font-semibold mb-1">Diamond</h3>
+            <p class="text-sm text-gray-600 mb-3 text-center">For the most awaited moment!</p>
+            <button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
+                DISCOVER MORE
+            </button>
+        </div>
 
-            <!-- Bullions Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg">
-                <img src="{{asset('asset/img/bullions.png')}}" alt="Bullions" class="w-44 h-60 object-contain mb-4">
-                <h3 class="text-lg font-semibold mb-1">Bullions</h3>
-                <p class="text-sm text-gray-600 mb-3 text-center">For auspicious occasions!</p>
-                <button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black  hover:bg-[#601042] hover:text-white transition-colors text-sm">
-                    DISCOVER MORE
-                </button>
-            </div>
+        <!-- Gold Category -->
+        <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
+            <img src="{{asset('asset/img/gold.png')}}" alt="Gold" class="w-40 h-56 object-contain mb-4">
+            <h3 class="text-lg font-semibold mb-1">Gold</h3>
+            <p class="text-sm text-gray-600 mb-3 text-center">For the beauty and the bliss!</p>
+            <button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
+                DISCOVER MORE
+            </button>
+        </div>
 
-            <!-- Silver Category -->
-            <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg">
-                <img src="{{asset('asset\img\sliver.png')}}" alt="Silver" class="w-44 h-60 object-contain mb-4">
-                <h3 class="text-lg font-semibold mb-1">Silver</h3>
-                <p class="text-sm text-gray-600 mb-3 text-center">For everyday elegance!</p>
-                <button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black  hover:bg-[#601042] hover:text-white transition-colors text-sm">
-                    DISCOVER MORE
-                </button>
-            </div>
+        <!-- Bullions Category -->
+        <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
+            <img src="{{asset('asset/img/bullions.png')}}" alt="Bullions" class="w-40 h-56 object-contain mb-4">
+            <h3 class="text-lg font-semibold mb-1">Bullions</h3>
+            <p class="text-sm text-gray-600 mb-3 text-center">For auspicious occasions!</p>
+            <button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
+                DISCOVER MORE
+            </button>
+        </div>
+
+        <!-- Silver Category -->
+        <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
+            <img src="{{asset('asset/img/sliver.png')}}" alt="Silver" class="w-40 h-56 object-contain mb-4">
+            <h3 class="text-lg font-semibold mb-1">Silver</h3>
+            <p class="text-sm text-gray-600 mb-3 text-center">For everyday elegance!</p>
+            <button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
+                DISCOVER MORE
+            </button>
         </div>
     </div>
+</div>
+
  {{-- Horizontal Line --}}
  <div class="flex items-center justify-center w-full mx-auto p-4">
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
@@ -383,7 +385,7 @@
   
             <!-- Parallax Title -->
             <div class="absolute inset-0 flex justify-end items-center w-full h-full">
-                <div class="text-white text-[10vw] lg:text-[85px] font-light uppercase whitespace-nowrap">
+                <div class="text-white text-[8vw] md:text-[12vw] lg:text-[85px] font-light uppercase whitespace-nowrap">
                     Crafted <span class="text-white">Elegance</span>
                 </div>
             </div>
@@ -468,25 +470,26 @@
 
 <!-- Video Background Section ::::::::::DAIMOND RING-->
 <div class="relative overflow-hidden lg:z-[9999] my-4">
+    <!-- Video Section -->
     <video class="object-cover w-full h-[250px] sm:h-[450px] lg:h-[500px]" autoplay loop muted playsinline>
         <source src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/widgets/customizevideo_1682338275_1685535434.mp4" type="video/mp4">
- 
+        
         <!-- Fallback for unsupported browsers -->
-        <img src="https://via.placeholder.com/1920x1080?text=Video+not+available" alt="Video not available">
-      </video>
-      
+        <img src="https://via.placeholder.com/1920x1080?text=Video+not+available" alt="Video not available" class="object-cover w-full h-full">
+    </video>
 
     <!-- Overlay Section -->
-    <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-      <div class="container text-center lg:text-left">
-        <h2 class="font-light text-[28px] md:text-[52px] text-black mb-3">Customize Jewellery</h2>
-        <p class="font-light text-lg tracking-wide mb-6">Add a personal touch to your style.</p>
-        <a href="/product/customizejewellery" class="inline-block">
-          <button class="btn btn-outline-primary border-black border-2 bg-white hover:bg-[#8a4879] hover:text-white px-6 py-3">Customize Jewellery</button>
-        </a>
-      </div>
+    <div class="absolute top-0 left-0 w-full h-full flex items-center justify-start">
+        <div class="text-center lg:text-left  p-4 lg:p-8 rounded-lg">
+            <h2 class="font-light text-[28px] md:text-[52px] text-black mb-3">Customize Jewellery</h2>
+            <p class="font-light text-lg tracking-wide mb-6">Add a personal touch to your style.</p>
+            <a href="/product/customizejewellery" class="inline-block">
+                <button class="border-black border-2 bg-white hover:bg-[#8a4879] hover:text-white px-6 py-3 transition-colors">Customize Jewellery</button>
+            </a>
+        </div>
     </div>
 </div>
+
 
 
 {{-- Horizontal Line --}}

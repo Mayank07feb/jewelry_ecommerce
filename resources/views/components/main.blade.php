@@ -21,34 +21,32 @@
 
     <!-- If using Vite, include the Vite directive -->
     @vite('resources/css/app.css')
-
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <!-- Glide.js JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
 
     <!-- Glide.js CSS -->
     <link href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" rel="stylesheet">
-
+    {{-- icon  --}}
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
     <!-- jQuery (Owl Carousel requires jQuery) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <!-- Additional Tailwind CSS (Remove if duplicate) -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.6/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="text-gray-900">
+<body class=" text-gray-900">
 
     <!-- Include the header -->
     @include('components.header')
@@ -59,12 +57,15 @@
     <!-- Include the footer -->
     @include('components.footer')
 
+    <!-- Include JS files -->
+    <script src="{{ asset('js/app.js') }}"></script>
+
     <!-- Overlay -->
     <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
 
     <!-- Hamburger Menu Button -->
     <button id="hamburger-button" aria-label="Open menu" aria-expanded="false"
-        class="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-white hover:from-amber-500 hover:to-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-opacity-50 shadow-lg transition-all duration-300">
+        class="fixed bottom-24 right-6 z-50 p-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-white hover:from-amber-500 hover:to-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-opacity-50 shadow-lg transition-all duration-300">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -155,51 +156,48 @@
         </div>
     </div>
 
-    <!-- Custom Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('asset/js/script.js') }}"></script>
-    
-    <!-- Initialize Glide.js -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var glide = new Glide('.glide').mount();
-        });
-    </script>
-
-
     <!-- Hamburger Menu Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const hamburgerButton = document.getElementById('hamburger-button');
             const hamburgerMenu = document.getElementById('hamburger-menu');
             const overlay = document.getElementById('overlay');
             const closeButton = document.getElementById('close-menu');
             const chatButton = document.getElementById('chat-button');
 
-            hamburgerButton.addEventListener('click', function () {
+            hamburgerButton.addEventListener('click', function() {
                 hamburgerMenu.classList.remove('translate-y-full');
                 hamburgerMenu.classList.add('translate-y-0');
                 overlay.classList.remove('hidden');
             });
 
-            closeButton.addEventListener('click', function () {
+            closeButton.addEventListener('click', function() {
                 hamburgerMenu.classList.remove('translate-y-0');
                 hamburgerMenu.classList.add('translate-y-full');
                 overlay.classList.add('hidden');
             });
 
-            overlay.addEventListener('click', function () {
+            overlay.addEventListener('click', function() {
                 hamburgerMenu.classList.remove('translate-y-0');
                 hamburgerMenu.classList.add('translate-y-full');
                 overlay.classList.add('hidden');
             });
 
-            chatButton.addEventListener('click', function () {
+            chatButton.addEventListener('click', function() {
                 window.open('https://wa.me/7905111789', '_blank');
             });
         });
     </script>
+    <!-- Drift JS -->
+    <script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.0.0/dist/drift.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Additional JS Files -->
+    <script src="{{ asset('asset/js/script.js') }}"></script>
+    {{-- apine js --}}
+
+
 </body>
 
 </html>
