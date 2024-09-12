@@ -248,67 +248,223 @@
         </div>
     </div>
 
-   <!-- Bottom Navigation Bar with Sort and Filter Dropdowns -->
-<div class="lg:hidden fixed bottom-0 left-0 w-full z-50 bg-[#601042]">
-    <div class="grid grid-flow-col auto-cols-fr text-white">
-        <!-- Sort Button with Dropdown -->
-        <div class="relative flex flex-col items-center justify-center py-4 hover:bg-[#4b002f] transition duration-200 cursor-pointer border-r border-white group">
-            <span class="material-icons text-3xl">sort</span>
-            <span class="text-sm uppercase mt-1">Sort</span>
-            
-            <!-- Sort Dropdown -->
-            <div class="absolute bottom-16 left-0 w-40 bg-white text-black hidden group-hover:block">
-                <ul class="text-left p-2 space-y-2">
-                    <li class="hover:bg-gray-200 p-2 cursor-pointer">Price: Low to High</li>
-                    <li class="hover:bg-gray-200 p-2 cursor-pointer">Price: High to Low</li>
-                    <li class="hover:bg-gray-200 p-2 cursor-pointer">New Arrivals</li>
-                    <li class="hover:bg-gray-200 p-2 cursor-pointer">Best Sellers</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Filter Button with Dropdown -->
-        <div class="relative flex flex-col items-center justify-center py-4 hover:bg-[#4b002f] transition duration-200 cursor-pointer group">
-            <span class="material-icons text-3xl">filter_list</span>
-            <span class="text-sm uppercase mt-1">Filter</span>
-            
-            <!-- Filter Dropdown -->
-            <div class="absolute bottom-16 left-0 w-48 bg-white text-black hidden group-hover:block">
-                <ul class="text-left p-2 space-y-4">
-                    <!-- Category Filter -->
-                    <li>
-                        <h4 class="font-bold">Category</h4>
-                        <ul class="space-y-2">
-                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Rings</li>
-                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Necklaces</li>
-                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Bracelets</li>
-                        </ul>
-                    </li>
-
-                    <!-- Metal Type Filter -->
-                    <li>
-                        <h4 class="font-bold">Metal Type</h4>
-                        <ul class="space-y-2">
-                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Gold</li>
-                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Silver</li>
-                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Platinum</li>
-                        </ul>
-                    </li>
-
-                    <!-- Price Range Filter -->
-                    <li>
-                        <h4 class="font-bold">Price Range</h4>
-                        <ul class="space-y-2">
-                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Under $500</li>
-                            <li class="hover:bg-gray-200 p-2 cursor-pointer">$500 - $1000</li>
-                            <li class="hover:bg-gray-200 p-2 cursor-pointer">Above $1000</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+    {{-- <!-- Bottom Navigation Bar with Sort and Filter Buttons -->
+    <div class="lg:hidden fixed bottom-0 left-0 w-full z-50 bg-[#601042]">
+        <div class="grid grid-flow-col auto-cols-fr text-white">
+            <button id="open-sort"
+                class="flex flex-col items-center justify-center py-2 hover:bg-[#4b002f] transition duration-200 cursor-pointer border-r border-white">
+                <span class="material-icons text-3xl">sort</span>
+                <span class="text-sm uppercase mt-1">Sort</span>
+            </button>
+            <button id="open-filter"
+                class="flex flex-col items-center justify-center py-2 hover:bg-[#4b002f] transition duration-200 cursor-pointer">
+                <span class="material-icons text-3xl">filter_list</span>
+                <span class="text-sm uppercase mt-1">Filter</span>
+            </button>
         </div>
     </div>
-</div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black opacity-50 z-30 hidden"></div>
+
+    <!-- Sort Sidebar (Left) -->
+    <div id="sort-sidebar"
+        class="fixed inset-y-0 left-0 w-full max-w-xs z-40 bg-white text-black shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <div class="bg-[#601042] text-white">
+            <div class="flex justify-between items-center p-4">
+                <h3 class="text-lg font-bold">Sort Options</h3>
+                <button class="close-sidebar text-white hover:text-gray-300">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <div class="p-4 border-t border-[#4b002f]">
+                <button id="apply-sort"
+                    class="w-full bg-white text-[#601042] py-2 rounded font-bold hover:bg-gray-100 transition duration-200">
+                    Apply Sort
+                </button>
+            </div>
+        </div>
+        <div class="p-4 flex-grow overflow-y-auto">
+            <ul class="space-y-4">
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="radio" name="sort" value="price_low_high" class="mr-2">
+                        Price: Low to High
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="radio" name="sort" value="price_high_low" class="mr-2">
+                        Price: High to Low
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="radio" name="sort" value="new_arrivals" class="mr-2">
+                        New Arrivals
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="radio" name="sort" value="best_sellers" class="mr-2">
+                        Best Sellers
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Filter Sidebar (Right) -->
+    <div id="filter-sidebar"
+        class="fixed inset-y-0 right-0 w-full max-w-xs z-40 bg-white text-black shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <div class="bg-[#601042] text-white">
+            <div class="flex justify-between items-center p-4">
+                <h3 class="text-lg font-bold">Filter Options</h3>
+                <button class="close-sidebar text-white hover:text-gray-300">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <div class="p-4 border-t border-[#4b002f]">
+                <button id="apply-filter"
+                    class="w-full bg-white text-[#601042] py-2 rounded font-bold hover:bg-gray-100 transition duration-200">
+                    Apply Filters
+                </button>
+            </div>
+        </div>
+        <div class="p-4 flex-grow overflow-y-auto">
+            <ul class="space-y-4">
+                <li>
+                    <h4 class="font-bold">Category</h4>
+                    <ul class="space-y-2">
+                        <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="category" value="rings" class="mr-2">
+                                Rings
+                            </label>
+                        </li>
+                        <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="category" value="necklaces" class="mr-2">
+                                Necklaces
+                            </label>
+                        </li>
+                        <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="category" value="bracelets" class="mr-2">
+                                Bracelets
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="font-bold">Metal Type</h4>
+                    <ul class="space-y-2">
+                        <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="metal" value="gold" class="mr-2">
+                                Gold
+                            </label>
+                        </li>
+                        <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="metal" value="silver" class="mr-2">
+                                Silver
+                            </label>
+                        </li>
+                        <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="metal" value="platinum" class="mr-2">
+                                Platinum
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="font-bold">Price Range</h4>
+                    <ul class="space-y-2">
+                        <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="price" value="under_500" class="mr-2">
+                                Under $500
+                            </label>
+                        </li>
+                        <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="price" value="500_1000" class="mr-2">
+                                $500 - $1000
+                            </label>
+                        </li>
+                        <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                            <label class="flex items-center">
+                                <input type="checkbox" name="price" value="above_1000" class="mr-2">
+                                Above $1000
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sortSidebar = document.getElementById('sort-sidebar');
+            const filterSidebar = document.getElementById('filter-sidebar');
+            const overlay = document.getElementById('overlay');
+
+            function openSidebar(sidebar) {
+                sidebar.classList.remove(sidebar === sortSidebar ? '-translate-x-full' : 'translate-x-full');
+                overlay.classList.remove('hidden');
+            }
+
+            function closeSidebars() {
+                sortSidebar.classList.add('-translate-x-full');
+                filterSidebar.classList.add('translate-x-full');
+                overlay.classList.add('hidden');
+            }
+
+            document.getElementById('open-sort').addEventListener('click', () => openSidebar(sortSidebar));
+            document.getElementById('open-filter').addEventListener('click', () => openSidebar(filterSidebar));
+
+            document.querySelectorAll('.close-sidebar').forEach(button => {
+                button.addEventListener('click', closeSidebars);
+            });
+
+            overlay.addEventListener('click', closeSidebars);
+
+            // Apply Sort
+            document.getElementById('apply-sort').addEventListener('click', function() {
+                const selectedSort = document.querySelector('input[name="sort"]:checked');
+                if (selectedSort) {
+                    console.log('Applying sort:', selectedSort.value);
+                    // Here you would typically update your product listing based on the selected sort
+                    closeSidebars();
+                } else {
+                    console.log('No sort option selected');
+                }
+            });
+
+            // Apply Filters
+            document.getElementById('apply-filter').addEventListener('click', function() {
+                const selectedCategories = Array.from(document.querySelectorAll(
+                    'input[name="category"]:checked')).map(input => input.value);
+                const selectedMetals = Array.from(document.querySelectorAll('input[name="metal"]:checked'))
+                    .map(input => input.value);
+                const selectedPrices = Array.from(document.querySelectorAll('input[name="price"]:checked'))
+                    .map(input => input.value);
+
+                console.log('Applying filters:', {
+                    categories: selectedCategories,
+                    metals: selectedMetals,
+                    prices: selectedPrices
+                });
+                // Here you would typically update your product listing based on the selected filters
+                closeSidebars();
+            });
+        });
+    </script> --}}
+
+
 
 
     <script>
