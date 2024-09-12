@@ -65,53 +65,37 @@
     <div id="mobile-menu" class="fixed inset-0 z-40 hidden" role="dialog" aria-modal="true">
         <div class="fixed inset-0 bg-black bg-opacity-25" aria-hidden="true"></div>
         <div class="fixed inset-y-0 right-0 z-40 w-full max-w-xs bg-[#f5f5f5] text-black shadow-xl flex flex-col">
-            <div class="flex flex-wrap justify-between items-center bg-[#d8c9d8] px-4 py-2.5 border-b border-gray-300">
+            <div class="flex flex-wrap justify-between items-center bg-[#601042] px-4 py-3 border-b border-[#d8c9d8]">
                 <div class="flex items-center space-x-3">
                     <a href="/login"
-                        class="tracking-normal capitalize text-base px-4 py-2 bg-[#d1b514] hover:bg-[#005f87] text-white rounded">Log
+                        class="tracking-normal capitalize text-base px-4 py-2 bg-[#d1b514] hover:bg-[#c3a827] text-white rounded">Log
                         in</a>
                     <a href="/signup"
                         class="tracking-normal capitalize text-base px-4 py-2 bg-[#0077b6] hover:bg-[#005f87] text-white rounded">Sign
                         Up</a>
                 </div>
-                <button id="close-mobile-menu" type="button" class="text-black hover:text-gray-600 p-2">
+                <button id="close-mobile-menu" type="button" class="text-white hover:text-gray-300 p-2">
                     <span class="sr-only">Close menu</span>
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
-                        <path
-                            d="M1.38461 18L0 16.6154L7.61538 9L0 1.38461L1.38461 0L9 7.61538L16.6154 0L18 1.38461L10.3846 9L18 16.6154L16.6154 18L9 10.3846L1.38461 18Z">
-                        </path>
-                    </svg>
+                    <span class="material-icons">close</span>
                 </button>
             </div>
             <div class="flex-1 overflow-y-auto p-4">
                 <div class="space-y-6">
-                    <a href="{{ route('alljewellery') }}" class="block text-lg font-medium hover:text-gray-600">All
+                    <a href="{{ route('alljewellery') }}"
+                        class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">All
                         Jewellery</a>
                     <a href="{{ route('diamondjewellery') }}"
-                        class="block text-lg font-medium hover:text-gray-600">Diamond</a>
-                    <a href="#" class="block text-lg font-medium hover:text-gray-600">Gold</a>
-                    <a href="#" class="block text-lg font-medium hover:text-gray-600">Silver</a>
-                    <a href="#" class="block text-lg font-medium hover:text-gray-600">Collections</a>
-                    <a href="#" class="block text-lg font-medium hover:text-gray-600">Bullions</a>
+                        class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Diamond</a>
+                    <a href="#" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Gold</a>
+                    <a href="#" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Silver</a>
+                    <a href="#"
+                        class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Collections</a>
+                    <a href="#" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Bullions</a>
                 </div>
             </div>
-            <div class="border-t border-gray-300 p-4 space-y-4">
-                <a href="{{ route('profile') }}" class="flex items-center text-lg font-medium hover:text-gray-600">
-                    <i class="fas fa-user mr-3"></i> Account
-                </a>
-                <a href="{{ route('wishlist') }}}" class="flex items-center text-lg font-medium hover:text-gray-600">
-                    <i class="fas fa-heart mr-3"></i> Wishlist
-                </a>
-                <a href="{{ route('cart') }}" class="flex items-center text-lg font-medium hover:text-gray-600">
-                    <i class="fas fa-shopping-cart mr-3"></i> Cart
-                </a>
-            </div>
+
         </div>
     </div>
-
-
-
-
 
     <!-- Header -->
     <header class="relative bg-white shadow-sm">
@@ -443,12 +427,13 @@
                                     <i class="fas fa-user text-lg"></i>
                                     <span>Account</span>
                                 </a>
-                            
+
                                 <!-- Hidden content to show on hover -->
                                 <div
                                     class="absolute top-10 right-0 bg-white shadow-xl p-6 border border-gray-200 rounded-lg w-72 z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out">
                                     <h3 class="font-semibold text-lg text-gray-800 border-b pb-2">Your Account</h3>
-                                    <p class="text-gray-500 text-sm mt-2">Track your orders, manage payment, edit profile, and much more...</p>
+                                    <p class="text-gray-500 text-sm mt-2">Track your orders, manage payment, edit
+                                        profile, and much more...</p>
                                     <div class="flex space-x-4 mt-4">
                                         <!-- Log In Button -->
                                         <a href="{{ route('login') }}"
@@ -463,7 +448,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
 
                             <a href="{{ route('wishlist') }}"
                                 class="text-sm font-medium text-gray-700 hover:text-gray-800">
@@ -480,6 +465,43 @@
         </nav>
     </header>
 </div>
+
+
+<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50">
+    <div class="flex justify-between items-center p-4">
+        <!-- Home Button -->
+        <a href="/" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+            <span class="material-icons text-2xl">home</span>
+            <span class="text-xs">Home</span>
+        </a>
+
+        <!-- Category Button -->
+        <a href="/categories" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+            <span class="material-icons text-2xl">category</span>
+            <span class="text-xs">Category</span>
+        </a>
+
+        <!-- Account Button -->
+        <a href="/login" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+            <span class="material-icons text-2xl">account_circle</span>
+            <span class="text-xs">Account</span>
+        </a>
+
+        <!-- Wishlist Button -->
+        <a href="/dashboard/wishlist" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+            <span class="material-icons text-2xl">favorite_border</span>
+            <span class="text-xs">Wishlist</span>
+        </a>
+
+        <!-- Cart Button -->
+        <a href="/cart" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+            <span class="material-icons text-2xl">shopping_cart</span>
+            <span class="text-xs">Cart</span>
+        </a>
+    </div>
+</div>
+
+
 
 <script>
     const mobileMenu = document.getElementById('mobile-menu');
