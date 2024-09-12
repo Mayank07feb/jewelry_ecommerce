@@ -157,14 +157,14 @@
         </div> --}}
 
         {{-- Filter --}}
-        <div class="bg-[#601042] w-full h-auto z-10">
+        <div class="bg-[#601042] w-full h-auto z-[-10]">
             <div class="container px-4 lg:overflow-visible">
                 <div class="lg:bg-primary lg:flex">
                     <!-- Filter Categories for Desktop -->
                     <div class="flex w-full flex-wrap">
                         <!-- Price Filter -->
                         <div class="lg:max-w-[270px] flex-auto">
-                            <div class="relative z-40">
+                            <div class="relative z-[-10]">
                                 <div id="price-filter-button"
                                     class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
                                     <span class="material-icons text-white mr-2">tune</span>
@@ -204,7 +204,7 @@
 
                         <!-- Metal Type Filter -->
                         <div class="lg:max-w-[270px] flex-auto">
-                            <div class="relative z-40">
+                            <div class="relative z-40z-[-10]">
                                 <div id="metal-filter-button"
                                     class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
                                     <span class="inline-block capitalize">Metal Type</span>
@@ -243,7 +243,7 @@
 
                         <!-- Shop For Filter -->
                         <div class="lg:max-w-[270px] flex-auto">
-                            <div class="relative z-40">
+                            <div class="relative z-[-10]">
                                 <div id="shopfor-filter-button"
                                     class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
                                     <span class="inline-block capitalize">Shop For</span>
@@ -283,7 +283,7 @@
 
                         <!-- Gifts Filter -->
                         <div class="lg:max-w-[270px] flex-auto">
-                            <div class="relative z-40">
+                            <div class="relative z-[-10]">
                                 <div id="gifts-filter-button"
                                     class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
                                     <span class="inline-block capitalize">Gifts</span>
@@ -327,7 +327,7 @@
         </div>
 
         {{-- Sort --}}
-        <div class="bg-gradient-to-r from-[#F5F5DC] to-[#601042] lg:py-2 relative z-10">
+        <div class="bg-gradient-to-r from-[#F5F5DC] to-[#601042] lg:py-2 relative z-[-10]">
             <div class="container lg:pb-3">
                 <div class="flex lg:flex-wrap -mx-2 lg:mb-1 overflow-auto">
                     <!-- Content can go here if needed -->
