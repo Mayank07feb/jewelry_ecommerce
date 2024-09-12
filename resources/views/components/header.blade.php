@@ -567,7 +567,7 @@
 </div>
 
 
-<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50">
+{{-- <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50">
     <div class="flex justify-between items-center p-4">
         <!-- Home Button -->
         <a href="/" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
@@ -599,7 +599,7 @@
             <span class="text-xs">Cart</span>
         </a>
     </div>
-</div>
+</div> --}}
 
 
 
