@@ -51,12 +51,8 @@
     <!-- Include the header -->
     @include('components.header')
 
-
-
-
     <!-- Content Section -->
     @yield('content')
-
 
     <!-- Include the footer -->
     @include('components.footer')
