@@ -1,5 +1,4 @@
 @extends('frontend.profile.layout')
-
 @section('profileContent')
 
  <!-- Main Profile Content -->

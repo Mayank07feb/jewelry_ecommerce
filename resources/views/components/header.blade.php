@@ -476,7 +476,7 @@
                     </div>
 
                     <!-- User Actions and Cart -->
-                    <div class="ml-auto flex items-center">
+                    {{-- <div class="ml-auto flex items-center">
                         <div class="hidden lg:flex lg:items-center lg:space-x-6">
                             <div class="relative inline-block group">
                                 <!-- Account Link -->
@@ -489,6 +489,48 @@
                                 <!-- Hidden content to show on hover -->
                                 <div
                                     class="absolute top-10 right-0 bg-white shadow-xl p-6 border border-gray-200 rounded-lg w-72 z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out">
+                                    <h3 class="font-semibold text-lg text-gray-800 border-b pb-2">Your Account</h3>
+                                    <p class="text-gray-500 text-sm mt-2">Track your orders, manage payment, edit
+                                        profile, and much more...</p>
+                                    <div class="flex space-x-4 mt-4">
+                                        <!-- Log In Button -->
+                                        <a href="{{ route('login') }}"
+                                            class="border border-[#d4af37] text-[#d4af37] font-medium px-4 py-2 rounded hover:bg-[#d4af37] hover:text-white transition duration-200 ease-in-out">
+                                            Log In
+                                        </a>
+                                        <!-- Sign Up Button -->
+                                        <a href="{{ route('signup') }}"
+                                            class="bg-[#601042] text-white font-medium px-4 py-2 rounded hover:bg-[#9c0864] transition duration-200 ease-in-out">
+                                            Sign Up
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a href="{{ route('wishlist') }}"
+                                class="text-sm font-medium text-gray-700 hover:text-gray-800">
+                                <i class="fas fa-heart"></i> Wishlist
+                            </a>
+                            <a href="{{ route('cart') }}"
+                                class="text-sm font-medium text-gray-700 hover:text-gray-800">
+                                <i class="fas fa-shopping-cart"></i> Cart
+                            </a>
+                        </div>
+                    </div> --}}
+                     <div class="ml-auto flex items-center group">
+                        <div class="hidden lg:flex lg:items-center lg:space-x-6">
+                            <div class="relative inline-block group">
+                                <!-- Account Link -->
+                                <a href="{{ route('profile') }}"
+                                    class="text-sm font-medium text-gray-700 hover:text-[#d4af37] flex items-center space-x-2">
+                                    <i class="fas fa-user text-lg"></i>
+                                    <span>Account</span>
+                                </a>
+
+                                <!-- Hidden content to show on hover -->
+                                <div
+                                    class="absolute top-10 right-0 bg-white shadow-xl p-4 border border-gray-200 rounded-lg w-72 z-50 hidden group-hover:block">
                                     <h3 class="font-semibold text-lg text-gray-800 border-b pb-2">Your Account</h3>
                                     <p class="text-gray-500 text-sm mt-2">Track your orders, manage payment, edit
                                         profile, and much more...</p>
