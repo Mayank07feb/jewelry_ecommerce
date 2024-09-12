@@ -466,7 +466,7 @@
 
                             <a href="#"
                                 class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Silver</a>
-                            <a href="#"
+                            <a href="{{route('collection')}}"
                                 class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Collections</a>
                             <a href="#"
                                 class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Bullions</a>
