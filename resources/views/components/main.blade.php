@@ -91,7 +91,7 @@
                 <nav class="mt-4">
                     <ul class="space-y-6">
                         <li>
-                            <a href="tel:+7905111789"
+                            <a href="tel:+"
                                 class="flex items-center text-gray-700 hover:text-amber-600 transition-colors duration-300 group">
                                 <div
                                     class="w-12 h-12 mr-4 rounded-full bg-amber-100 flex items-center justify-center group-hover:bg-amber-200 transition-colors duration-300">
@@ -106,7 +106,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/7905111789" target="_blank" rel="noopener noreferrer"
+                            <a href="" target="_blank" rel="noopener noreferrer"
                                 class="flex items-center text-gray-700 hover:text-amber-600 transition-colors duration-300 group">
                                 <div
                                     class="w-12 h-12 mr-4 rounded-full bg-amber-100 flex items-center justify-center group-hover:bg-amber-200 transition-colors duration-300">
@@ -118,21 +118,6 @@
                                     </svg>
                                 </div>
                                 <span class="text-lg font-medium">WhatsApp</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" id="chat-button"
-                                class="flex items-center text-gray-700 hover:text-amber-600 transition-colors duration-300 group">
-                                <div
-                                    class="w-12 h-12 mr-4 rounded-full bg-amber-100 flex items-center justify-center group-hover:bg-amber-200 transition-colors duration-300">
-                                    <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M15 17h5l-1.555-1.555M21 13h-5l1.555 1.555M6 17H1l1.555-1.555M1 13h5L4.445 14.555M12 4v8m0 0l3-3m-3 3l-3-3">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <span class="text-lg font-medium">Chat</span>
                             </a>
                         </li>
                         <li>
