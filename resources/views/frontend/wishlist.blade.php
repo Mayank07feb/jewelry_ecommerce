@@ -1,5 +1,4 @@
 @extends('components.main')
-
 @section('content')
 <div class="container mx-auto mt-12 p-6 lg:p-10 bg-white shadow-xl rounded-2xl">
     <h2 class="text-3xl lg:text-4xl font-bold text-center text-[#601042] mb-8">Your Wish List</h2>
