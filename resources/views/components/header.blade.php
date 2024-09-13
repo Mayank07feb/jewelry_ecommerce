@@ -556,25 +556,25 @@
         </a>
 
         <!-- Category Button -->
-        <a href="/categories" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+        <a href="{{route('page404')}}" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
             <span class="material-icons text-3xl">category</span>
             <span class="text-xs">Category</span>
         </a>
 
         <!-- Account Button -->
-        <a href="/login" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+        <a href="{{route('login')}}" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
             <span class="material-icons text-3xl">account_circle</span>
             <span class="text-xs">Account</span>
         </a>
 
         <!-- Wishlist Button -->
-        <a href="/dashboard/wishlist" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+        <a href="{{route('wishlist')}}" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
             <span class="material-icons text-3xl">favorite_border</span>
             <span class="text-xs">Wishlist</span>
         </a>
 
         <!-- Cart Button -->
-        <a href="/cart" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+        <a href="{{route('cart')}}" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
             <span class="material-icons text-3xl">shopping_cart</span>
             <span class="text-xs">Cart</span>
         </a>
