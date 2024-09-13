@@ -10,6 +10,8 @@ Route::get('/alljewellery', [HomeController::class, 'alljewellery'])->name('allj
 
 Route::get('/diamondjewellery', [HomeController::class, 'diamondjewellery'])->name('diamondjewellery');
 
+Route::get('/silver', [HomeController::class, 'silver'])->name('silver');
+
 Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
 
 Route::get('/productdetail', [HomeController::class, 'productdetail'])->name('productdetail');

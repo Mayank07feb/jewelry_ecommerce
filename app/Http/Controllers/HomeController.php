@@ -28,6 +28,11 @@ class HomeController extends Controller
         return view('frontend.diamondjewellery');
     }
 
+    public function silver()
+    {
+        return view('frontend.silver');
+    }
+
     public function cart()
     {
         return view('frontend.cart');
