@@ -4,7 +4,7 @@
     <div class="py-12 lg:py-20 bg-gradient-to-b from-gray-100 to-gray-200">
         <div class="max-w-screen-xl mx-auto text-center px-4">
             <h2
-                class="inline-block relative before:absolute before:bottom-0 before:bg-[#D4AF37] leading-none text-gray-800 lg:font-light lg:text-4xl text-3xl before:w-20 before:h-1 pb-3 uppercase lg:font-light before:top-16 before:bottom-auto mb-8">
+                class="inline-block relative before:absolute before:bg-[#D4AF37] leading-none text-gray-800 lg:font-light lg:text-4xl text-3xl before:w-20 before:h-1 pb-3 uppercase  before:top-16 before:bottom-auto mb-8">
                 Connect with Giritra Jewellers</h2>
             <p class="text-lg text-gray-700 tracking-wide py-5 lg:mb-10 max-w-2xl mx-auto">From selecting the perfect piece
                 to custom designs and expert advice, our team at Giritra Jewellers is here to make your jewelry dreams come
@@ -149,4 +149,14 @@
             </div>
         </div>
     </div>
+
+ {{-- Horizontal Line --}}
+ <div class="flex items-center justify-center w-full mx-auto p-4">
+    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+    <div class="mx-4">
+        <img src="{{ asset('asset\img\logo.png') }}" alt="Site Logo" class="h-12 w-auto">
+    </div>
+    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+</div>
+
 @endsection
