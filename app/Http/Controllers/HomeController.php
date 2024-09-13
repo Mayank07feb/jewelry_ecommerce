@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -15,7 +14,7 @@ class HomeController extends Controller
 
     public function contact()
     {
-        return view('frontend.contact');
+        return view ('frontend.contact');
     }
 
     public function alljewellery()
@@ -140,9 +139,15 @@ class HomeController extends Controller
         return view('frontend.collection');
     }
 
+    public function collectiondetails()
+    {
+        return view('frontend.collectiondetails');
+    }
+
     // cumtomize jewwlery
     public function customjewellery()
     {
         return view('frontend.customjewellery');
     }
+
 }

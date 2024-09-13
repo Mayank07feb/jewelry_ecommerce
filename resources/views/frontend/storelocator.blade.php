@@ -1,7 +1,7 @@
 @extends('components.main')
 @section('content')
 <!-- Main Image Section -->
-<div class="relative h-[400px] lg:h-[500px] bg-cover bg-center" style="background-image: url('{{ asset('asset/img/store-web-banner.jpg') }}');">
+<div class="relative h-[400px] lg:h-[450px] bg-cover bg-center" style="background-image: url('{{ asset('asset/img/store-web-banner.jpg') }}');">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="absolute bottom-1/3 left-1/2 transform -translate-x-1/2 text-center text-white">
         <h1 class="text-4xl lg:text-5xl font-extrabold mb-2 drop-shadow-md">Store Locator</h1>

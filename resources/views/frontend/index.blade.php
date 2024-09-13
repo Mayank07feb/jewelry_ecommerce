@@ -486,7 +486,7 @@
             <h2 class="font-light text-[28px] md:text-[52px] text-black mb-3">Customize Jewellery</h2>
             <p class="font-light text-lg tracking-wide mb-6">Add a personal touch to your style.</p>
             <a href="{{route('customjewellery')}}" class="inline-block">
-                <button class="border-black border-2 bg-white hover:bg-[#8a4879] hover:text-white px-6 py-3 transition-colors">Customize Jewellery</button>
+                <button class="border-black border-2 bg-white hover:bg-[#601042] hover:text-white px-6 py-3 transition-colors">Customize Jewellery</button>
             </a>
         </div>
     </div>
@@ -513,14 +513,14 @@
 
 
 {{-- section --}}
-<section class="py-10 bg-[#7b3962] w-full">
+<section class="py-10 bg-[#601042] w-full">
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 md:pr-8">
             <h1 class="text-3xl font-light mb-2 text-white">Beginnings - Cornerstone of Each Story!</h1>
             <p class="text-start text-white mb-8">
                 The story of Gititra is indeed an epic scripted by six generations at the forefront of exceptional traditional designs and unparalleled craftsmanship. Discover how Gititra Jewellers Pvt. Ltd, founded in 1832, went from a little jewellery shop in Sangli to a renowned design brand in the jewellery industry.
             </p>
-            <a href="#" class="inline-block bg-white text-black font-semibold py-3 px-6  hover:bg-[#7a1e4d] hover:text-white transition duration-300 border-2 border-black">READ MORE</a>
+            <a href="#" class="inline-block bg-white text-black font-semibold py-3 px-6  hover:bg-[#f6d7ac] transition duration-300 border-2 border-black">READ MORE</a>
         </div>
         <div class="md:w-1/2 mt-6 md:mt-0">
             <iframe class="w-full h-64 md:h-80" src="https://www.youtube.com/embed/dZBm_NxMUho?si=hxFuI8SCHC3TGq4I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -555,7 +555,7 @@
             <p class="text-lg md:text-xl mb-6 font-light">
                 Explore iconic traditional jewellery, gold and diamond engagement rings, silver classics, elegant accessories, and precious gifts for any occasion at our PNG Jewellers stores across the globe.
             </p>
-            <a href="{{route('storelocator')}}" class="inline-block border-2 border-black bg-white text-black font-semibold py-3 px-6 hover:bg-[#7a1e4d] hover:text-white transition duration-300">
+            <a href="{{route('storelocator')}}" class="inline-block border-2 border-black bg-white text-black font-semibold py-3 px-6 hover:bg-[#601042] hover:text-white transition duration-300">
                 Find a Store Location
             </a>
         </div>
@@ -656,7 +656,7 @@
   <div class=" w-full">
     <div class="bg-gradient-to-r from-[#b87aa2] to-[#dbc8a8]  rounded shadow-xs p-6  text-center">
         <h2 class="text-2xl lg:text-3xl font-bold text-white mb-4">
-            Latest from <span class="text-[#7a3f65]">Gititra Jewellers</span>
+            Latest from <span class="text-[#601042]">Gititra Jewellers</span>
         </h2>
         <p class="text-lg lg:text-xl text-gray-200 mb-6">
             Be the first to know about exciting new designs, special events, store openings, and much more.

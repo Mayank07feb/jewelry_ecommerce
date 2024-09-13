@@ -1,0 +1,854 @@
+@extends('components.main')
+@section('content')
+{{-- Banner Start --}}
+<div class="relative">
+    <!-- Desktop Banner -->
+    <div class="hidden md:block">
+      <img 
+        src="{{ asset('asset/img/Prath.webp') }}" 
+        width="1440" 
+        height="410" 
+        alt="banner" 
+        class="w-full h-auto"
+      >
+    </div>
+    <!-- Mobile Banner -->
+    <div class="block md:hidden">
+      <img 
+        src="{{ asset('asset/img/Prath.webp') }}" 
+        width="375" 
+        height="210" 
+        alt="banner" 
+        class="w-full h-auto"
+      >
+    </div>
+  </div>
+  {{-- Banner End --}}
+  
+<!-- Breadcrumb -->
+<ul class="hidden md:flex items-center text-xs -mx-1">
+    <li class="px-1 py-2.5 text-muted last:text-black">
+      <a href="/" class="py-px inline-block">Home</a>
+    </li>
+    <li class="px-1 py-2.5">
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="currentColor" class="fill-muted h-2">
+        <path d="M0.954248 10L6 4.99892L0.954248 0L0 0.945273L4.0915 4.99892L0 9.05473L0.954248 10Z"></path>
+      </svg>
+    </li>
+    <li class="px-1 py-2.5 text-muted last:text-black">
+      <a href="/collection" class="py-px inline-block">Collections</a>
+    </li>
+    <li class="px-1 py-2.5">
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="currentColor" class="fill-muted h-2">
+        <path d="M0.954248 10L6 4.99892L0.954248 0L0 0.945273L4.0915 4.99892L0 9.05473L0.954248 10Z"></path>
+      </svg>
+    </li>
+    <li class="px-1 py-2.5 text-muted last:text-black">
+      <span class="py-px inline-block">Pratha Collection</span>
+    </li>
+</ul>
+
+{{-- Heading Start --}}
+<div class="text-center font-light pt-5 lg:pt-7">
+    <ul class="flex flex-wrap justify-center leading-none mb-2.5">
+      <li class="border-r last:border-r-0 px-5 lg:px-8 border-[#601042]">
+        <span class="text-[22px] lg:text-[32px] py-1 inline-block relative cursor-pointer text-black before:absolute before:bottom-0 before:w-[34px] lg:before:h-0.5 before:h-px before:bg-black/[0.8]">
+          Featured Products
+        </span>
+      </li>
+    </ul>
+    <p class="tracking-wider mb-6 px-4 cursor-pointer">
+      Freshen up your look!
+    </p>
+  </div>
+  {{-- Products Start --}}
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <!-- Product 1 -->
+            <div class="bg-white p-2 rounded-lg shadow-md">
+                <img src="{{asset('asset/img/payal.webp')}}" alt="Mythic Elegance Ensemble Gold" class="w-full h-48 object-cover mb-4 rounded">
+                <h2 class="text-lg font-semibold mb-2">Mythic Elegance Ensemble Gold</h2>
+                <p class="text-gray-600 mb-2">₹8,25,646</p>
+                <p class="text-sm text-gray-500 line-through">₹8,37,857</p>
+            </div>
+            <!-- Product 2 -->
+            <div class="bg-white p-2 rounded-lg shadow-md">
+                <img src="{{asset('asset/img/payal.webp')}}" alt="Luxurious Majesty Serenade Gold" class="w-full h-48 object-cover mb-4 rounded">
+                <h2 class="text-lg font-semibold mb-2">Luxurious Majesty Serenade Gold</h2>
+                <p class="text-gray-600 mb-2">₹9,57,526</p>
+                <p class="text-sm text-gray-500 line-through">₹9,71,546</p>
+            </div>   
+            <!-- Product 3 -->
+            <div class="bg-white p-2 rounded-lg shadow-md">
+                <img src="{{asset('asset/img/payal.webp')}}" alt="Grandeur Ringed Radiance Gold" class="w-full h-48 object-cover mb-4 rounded">
+                <h2 class="text-lg font-semibold mb-2">Grandeur Ringed Radiance Gold</h2>
+                <p class="text-gray-600 mb-2">₹7,65,716</p>
+                <p class="text-sm text-gray-500 line-through">₹7,78,493</p>
+            </div>      
+            <!-- Product 4 -->
+            <div class="bg-white p-2 rounded-lg shadow-md">
+                <img src="{{asset('asset/img/payal.webp')}}" alt="Royal Grace Symphony Gold" class="w-full h-48 object-cover mb-4 rounded">
+                <h2 class="text-lg font-semibold mb-2">Royal Grace Symphony Gold</h2>
+                <p class="text-gray-600 mb-2">₹5,87,811</p>
+                <p class="text-sm text-gray-500 line-through">₹5,96,922</p>
+            </div>  
+            <!-- Product 5 -->
+            <div class="bg-white p-2 rounded-lg shadow-md">
+                <img src="{{asset('asset/img/gold.png')}}" alt="Royal Grace Symphony Gold" class="w-full h-48 object-cover mb-4 rounded">
+                <h2 class="text-lg font-semibold mb-2">Royal Grace Symphony Gold</h2>
+                <p class="text-gray-600 mb-2">₹5,87,811</p>
+                <p class="text-sm text-gray-500 line-through">₹5,96,922</p>
+            </div>
+        </div> 
+        {{-- Products End --}}
+    
+
+
+    {{-- COLLECTIONS Start --}}
+    <div class="py-12 mx-auto p-4">
+        <div class="container mx-auto">
+            <!-- Section Title -->
+            <div class="container font-light lg:pt-5 text-center">
+                <h2 class="text-[22px] lg:text-[32px] inline-block relative before:absolute before:bottom-0 ltr:before:left-0 rtl:before:right-0 before:w-[34px] before:h-px lg:before:h-0.5 before:bg-black/[0.8] leading-none text-black pb-2 mb-2" style="opacity: 1; visibility: visible; transform: translateY(0px) translateZ(0px);">
+                  Collections
+                </h2>
+            </div>
+            <!-- Collection Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+                <!-- Collection 1 -->
+                <a href="/" class="group relative overflow-hidden rounded-lg shadow-lg p-auto">
+                    <img src="{{asset('asset/img/Swarajya.webp')}}" alt="Collection 1" class="object-cover w-full h-full transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-80 transition duration-300"></div> 
+                </a>
+    
+                <!-- Collection 2 -->
+                <a href="/" class="group relative overflow-hidden rounded-lg shadow-lg p-auto">
+                    <img src="{{asset('asset/img/Office.webp')}}" alt="Collection 2" class="object-cover w-full h-full transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-80 transition duration-300"></div>    
+                </a>
+    
+                <!-- Collection 3 -->
+                <a href="/" class="group relative overflow-hidden rounded-lg shadow-lg p-auto">
+                    <img src="{{asset('asset/img/Kids.webp')}}" alt="Collection 3" class="object-cover w-full h-full transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-80 transition duration-300"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+{{-- Collection End  --}}
+{{-- Mid Banner Start--}}
+<div class="relative">
+    <div class="hidden md:block">
+      <img src="{{asset('asset\img\Capture5PNG.webp')}}" width="1440" height="410" alt="banner" class="w-full h-auto">
+    </div>
+    <div class="block md:hidden">
+      <img src="{{asset('asset\img\Capture5PNG.webp')}}" width="375" height="210" alt="banner" class="w-full h-auto">
+    </div>
+  </div>
+  {{-- Mid Banner End --}}
+  
+
+{{-- All Jewellry  --}}
+
+ {{-- Web View Filter --}}
+ <div class="hidden lg:block bg-[#601042] w-full h-auto z-10">
+    <div class="container px-4 lg:overflow-visible">
+        <div class="lg:bg-primary lg:flex">
+            <!-- Filter Categories for Desktop -->
+            <div class="flex w-full flex-wrap">
+                <!-- Price Filter -->
+                <div class="lg:max-w-[270px] flex-auto">
+                    <div class="relative z-40">
+                        <div id="price-filter-button"
+                            class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
+                            <span class="material-icons text-white mr-2">tune</span>
+                            <span class="inline-block capitalize">Price</span>
+                            <span class="ml-auto">
+                                <span
+                                    class="material-icons transform transition-transform duration-500">expand_more</span>
+                            </span>
+                        </div>
+                        <!-- Dropdown -->
+                        <div id="price-dropdown" class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
+                            <ul class="text-sm">
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="radio" id="under500" name="price" value="under500"
+                                        class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="under500" class="ml-2">Under $500</label>
+                                </li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="radio" id="500-1000" name="price" value="500-1000"
+                                        class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="500-1000" class="ml-2">$500 - $1000</label>
+                                </li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="radio" id="1000-5000" name="price" value="1000-5000"
+                                        class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="1000-5000" class="ml-2">$1000 - $5000</label>
+                                </li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="radio" id="above5000" name="price" value="above5000"
+                                        class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="above5000" class="ml-2">Above $5000</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metal Type Filter -->
+                <div class="lg:max-w-[270px] flex-auto">
+                    <div class="relative z-40">
+                        <div id="metal-filter-button"
+                            class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
+                            <span class="inline-block capitalize">Metal Type</span>
+                            <span class="ml-auto">
+                                <span
+                                    class="material-icons transform transition-transform duration-500">expand_more</span>
+                            </span>
+                        </div>
+                        <!-- Dropdown -->
+                        <div id="metal-dropdown" class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
+                            <ul class="text-sm">
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="checkbox" id="gold" name="metal" value="gold"
+                                        class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="gold" class="ml-2">Gold</label>
+                                </li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="checkbox" id="silver" name="metal" value="silver"
+                                        class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="silver" class="ml-2">Silver</label>
+                                </li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="checkbox" id="platinum" name="metal" value="platinum"
+                                        class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="platinum" class="ml-2">Platinum</label>
+                                </li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="checkbox" id="mixed" name="metal" value="mixed"
+                                        class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="mixed" class="ml-2">Mixed Metals</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shop For Filter -->
+                <div class="lg:max-w-[270px] flex-auto">
+                    <div class="relative z-40">
+                        <div id="shopfor-filter-button"
+                            class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
+                            <span class="inline-block capitalize">Shop For</span>
+                            <span class="ml-auto">
+                                <span
+                                    class="material-icons transform transition-transform duration-500">expand_more</span>
+                            </span>
+                        </div>
+                        <!-- Dropdown -->
+                        <div id="shopfor-dropdown"
+                            class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
+                            <ul class="text-sm">
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="checkbox" id="men" name="shopfor" value="men"
+                                        class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="men" class="ml-2">Men</label>
+                                </li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="checkbox" id="women" name="shopfor" value="women"
+                                        class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="women" class="ml-2">Women</label>
+                                </li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="checkbox" id="children" name="shopfor" value="children"
+                                        class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="children" class="ml-2">Children</label>
+                                </li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="checkbox" id="unisex" name="shopfor" value="unisex"
+                                        class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="unisex" class="ml-2">Unisex</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gifts Filter -->
+                <div class="lg:max-w-[270px] flex-auto">
+                    <div class="relative z-40">
+                        <div id="gifts-filter-button"
+                            class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
+                            <span class="inline-block capitalize">Gifts</span>
+                            <span class="ml-auto">
+                                <span
+                                    class="material-icons transform transition-transform duration-500">expand_more</span>
+                            </span>
+                        </div>
+                        <!-- Dropdown -->
+                        <div id="gifts-dropdown"
+                            class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
+                            <ul class="text-sm">
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="checkbox" id="forhim" name="gifts" value="forhim"
+                                        class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="forhim" class="ml-2">For Him</label>
+                                </li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="checkbox" id="forher" name="gifts" value="forher"
+                                        class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="forher" class="ml-2">For Her</label>
+                                </li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="checkbox" id="forkids" name="gifts" value="forkids"
+                                        class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="forkids" class="ml-2">For Kids</label>
+                                </li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <input type="checkbox" id="specialoccasions" name="gifts"
+                                        value="specialoccasions"
+                                        class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <label for="specialoccasions" class="ml-2">Special Occasions</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{-- Web View Sort --}}
+<div class="bg-gradient-to-r from-[#F5F5DC] to-[#601042] lg:py-2 relative z-10 sm:hidden lg:block">
+    <div class="container lg:pb-3">
+        <div class="flex lg:flex-wrap -mx-2 lg:mb-1 overflow-auto">
+            <!-- Content can go here if needed -->
+        </div>
+        <div class="flex justify-end">
+            <div
+                class="sort-outer lg:col-span-2 col-span-3 lg:text-right lg:relative fixed w-full left-0 bottom-0 lg:transform-none duration-700 ease-in-out lg:z-30">
+                <div class="relative lg:inline-block text-black lg:text-left">
+                    <!-- Desktop Sort Button -->
+                    <div id="desktop-sort-button"
+                        class="lg:flex items-center px-3.5 py-2 leading-[17px] cursor-pointer bg-white border text-[13px] max-w-full w-[320px] lg:w-[267px] border-b-0 border-white mr-4">
+                        Sort by
+                        <span class="ml-auto">
+                            <svg width="11" height="7" viewBox="0 0 11 7" fill="currentColor"
+                                class="duration-500">
+                                <path
+                                    d="M0 1.11329L5.50119 7L11 1.11329L9.9602 0L5.50119 4.77342L1.0398 0L0 1.11329Z">
+                                </path>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <!-- Desktop Dropdown Menu -->
+                    <div id="desktop-dropdown-menu"
+                        class="hidden absolute z-30 w-full bg-white border border-black">
+                        <ul class="text-[13px] px-4 py-3.5">
+                            <li class="py-1.5">
+                                <label class="inline-flex items-center cursor-pointer relative pl-6">
+                                    <input type="radio" name="sort" value="popularity"
+                                        class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <span class="ml-2">Popularity</span>
+                                </label>
+                            </li>
+                            <li class="py-1.5">
+                                <label class="inline-flex items-center cursor-pointer relative pl-6">
+                                    <input type="radio" name="sort" value="newly-listed"
+                                        class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <span class="ml-2">Newly Listed</span>
+                                </label>
+                            </li>
+                            <li class="py-1.5">
+                                <label class="inline-flex items-center cursor-pointer relative pl-6">
+                                    <input type="radio" name="sort" value="price-high-to-low"
+                                        class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <span class="ml-2">Price - High to Low</span>
+                                </label>
+                            </li>
+                            <li class="py-1.5">
+                                <label class="inline-flex items-center cursor-pointer relative pl-6">
+                                    <input type="radio" name="sort" value="price-low-to-high"
+                                        class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                    <span class="ml-2">Price - Low to High</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{-- Main --}}
+<div class="container mx-auto py-8">
+    <h2 class="text-2xl font-semibold mb-4 text-gray-800">All Jewellery <span class="text-yellow-600">30
+            Designs</span></h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Card 1 Start -->
+        <div
+            class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl  bg-white transform hover:-translate-y-2 transition-transform duration-300">
+            <a href="{{ route('productdetail') }}">
+                <div class="overflow-hidden">
+                    <img src="{{ asset('asset/img/new.jpg') }}" alt="Rainbow Radiance Diamond Ladies Ring"
+                        class="w-full h-64 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-110">
+                </div>
+            </a>
+            <div class="p-4 bg-gradient-to-b from-gray-50 to-white">
+                <p class="text-lg font-semibold text-gray-800">₹21,481 <span
+                        class="text-red-600 line-through">₹22,589</span></p>
+                <p class="text-sm text-gray-600">Rainbow Radiance Diamond Ladies Ring</p>
+            </div>
+            <button
+                class="wishlist-btn absolute top-2 right-2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-all duration-300 ease-in-out transform hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 hover:text-red-500"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+            </button>
+        </div>
+        <!-- Card 1 End -->
+
+        <!-- Card 2 Start -->
+        <div
+            class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl bg-white transform hover:-translate-y-2 transition-transform duration-300">
+            <a href="{{ route('productdetail') }}">
+                <div class="overflow-hidden">
+                    <img src="{{ asset('asset/img/new.jpg') }}" alt="Golden Radiance Necklace Set"
+                        class="w-full h-64 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-110">
+                </div>
+            </a>
+            <div class="p-4 bg-gradient-to-b from-gray-50 to-white">
+                <p class="text-lg font-semibold text-gray-800">₹15,999 <span
+                        class="text-red-600 line-through">₹18,499</span></p>
+                <p class="text-sm text-gray-600">Golden Radiance Necklace Set</p>
+            </div>
+            <button
+                class="wishlist-btn absolute top-2 right-2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-all duration-300 ease-in-out transform hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 hover:text-red-500"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+            </button>
+        </div>
+        <!-- Card 2 End -->
+
+        <!-- Add more cards here as needed -->
+    </div>
+</div>
+</div>
+
+<!-- Bottom Navigation Bar with Sort and Filter Buttons -->
+<div class="lg:hidden fixed bottom-0 left-0 w-full z-50 bg-[#601042]">
+<div class="grid grid-flow-col auto-cols-fr text-white">
+    <button id="open-sort"
+        class="flex flex-col items-center justify-center py-2 hover:bg-[#4b002f] transition duration-200 cursor-pointer border-r border-white">
+        <span class="material-icons text-3xl">sort</span>
+        <span class="text-sm uppercase mt-1">Sort</span>
+    </button>
+    <button id="open-filter"
+        class="flex flex-col items-center justify-center py-2 hover:bg-[#4b002f] transition duration-200 cursor-pointer">
+        <span class="material-icons text-3xl">filter_list</span>
+        <span class="text-sm uppercase mt-1">Filter</span>
+    </button>
+</div>
+</div>
+
+<!--Mobile View Overlay -->
+<div id="overlay" class="fixed inset-0 bg-black opacity-50 z-30 hidden"></div>
+
+<!--Mobile View Sidebar (Left) -->
+<div id="sort-sidebar"
+class="fixed inset-y-0 left-0 w-full max-w-xs z-40 bg-white text-black shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+<div class="bg-[#601042] text-white">
+    <div class="flex justify-between items-center p-4">
+        <h3 class="text-lg font-bold">Sort Options</h3>
+        <button class="close-sidebar text-white hover:text-gray-300">
+            <span class="material-icons">close</span>
+        </button>
+    </div>
+    <div class="p-4 border-t border-[#4b002f]">
+        <button id="apply-sort"
+            class="w-full bg-white text-[#601042] py-2 rounded font-bold hover:bg-gray-100 transition duration-200">
+            Apply Sort
+        </button>
+    </div>
+</div>
+<div class="p-4 flex-grow overflow-y-auto">
+    <ul class="space-y-4">
+        <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+            <label class="flex items-center">
+                <input type="radio" name="sort" value="price_low_high"
+                    class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                Price: Low to High
+            </label>
+        </li>
+        <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+            <label class="flex items-center">
+                <input type="radio" name="sort" value="price_high_low"
+                    class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                Price: High to Low
+            </label>
+        </li>
+        <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+            <label class="flex items-center">
+                <input type="radio" name="sort" value="new_arrivals"
+                    class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                New Arrivals
+            </label>
+        </li>
+        <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+            <label class="flex items-center">
+                <input type="radio" name="sort" value="best_sellers"
+                    class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                Best Sellers
+            </label>
+        </li>
+    </ul>
+</div>
+</div>
+
+<!-- Filter Sidebar (Right) -->
+<div id="filter-sidebar"
+class="fixed inset-y-0 right-0 w-full max-w-xs z-40 bg-white text-black shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+<div class="bg-[#601042] text-white">
+    <div class="flex justify-between items-center p-4">
+        <h3 class="text-lg font-bold">Filter Options</h3>
+        <button class="close-sidebar text-white hover:text-gray-300">
+            <span class="material-icons">close</span>
+        </button>
+    </div>
+    <div class="p-4 border-t border-[#4b002f]">
+        <button id="apply-filter"
+            class="w-full bg-white text-[#601042] py-2 rounded font-bold hover:bg-gray-100 transition duration-200">
+            Apply Filters
+        </button>
+    </div>
+</div>
+<div class="p-4 flex-grow overflow-y-auto mb-16">
+    <ul class="space-y-4">
+        <li>
+            <h4 class="font-bold">Category</h4>
+            <ul class="space-y-2">
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="category" value="rings"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        Rings
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="category" value="necklaces"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        Necklaces
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="category" value="bracelets"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        Bracelets
+                    </label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4 class="font-bold">Metal Type</h4>
+            <ul class="space-y-2">
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="metal" value="gold"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        Gold
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="metal" value="silver"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        Silver
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="metal" value="platinum"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        Platinum
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="metal" value="mixed"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        Mixed Metals
+                    </label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4 class="font-bold">Price Range</h4>
+            <ul class="space-y-2">
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="radio" name="price" value="under_500"
+                            class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        Under $500
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="radio" name="price" value="500_1000"
+                            class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        $500 - $1000
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="radio" name="price" value="1000_5000"
+                            class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        $1000 - $5000
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="radio" name="price" value="above5000"
+                            class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        Above $5000
+                    </label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4 class="font-bold">Shop For</h4>
+            <ul class="space-y-2">
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="shopfor" value="men"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        Men
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="shopfor" value="women"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        Women
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="shopfor" value="children"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        Children
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="shopfor" value="unisex"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        Unisex
+                    </label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4 class="font-bold">Gifts</h4>
+            <ul class="space-y-2">
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="gifts" value="forhim"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        For Him
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="gifts" value="forher"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        For Her
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="gifts" value="forkids"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        For Kids
+                    </label>
+                </li>
+                <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="gifts" value="specialoccasions"
+                            class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        Special Occasions
+                    </label>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</div>
+
+<script>
+// Wishlist functionality
+document.querySelectorAll('.wishlist-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const svg = this.querySelector('svg');
+        svg.classList.toggle('text-gray-400');
+        svg.classList.toggle('text-red-500');
+        svg.classList.toggle('fill-current');
+    });
+});
+
+//Mobile
+document.addEventListener('DOMContentLoaded', () => {
+    // Toggle Price Filter Dropdown
+    const priceButton = document.getElementById('price-filter-button');
+    const priceDropdown = document.getElementById('price-dropdown');
+
+    priceButton.addEventListener('click', () => {
+        priceDropdown.classList.toggle('hidden');
+    });
+
+    // Toggle Metal Type Filter Dropdown
+    const metalButton = document.getElementById('metal-filter-button');
+    const metalDropdown = document.getElementById('metal-dropdown');
+
+    metalButton.addEventListener('click', () => {
+        metalDropdown.classList.toggle('hidden');
+    });
+
+    // Toggle Shop For Filter Dropdown
+    const shopForButton = document.getElementById('shopfor-filter-button');
+    const shopForDropdown = document.getElementById('shopfor-dropdown');
+
+    shopForButton.addEventListener('click', () => {
+        shopForDropdown.classList.toggle('hidden');
+    });
+
+    // Toggle Gifts Filter Dropdown
+    const giftsButton = document.getElementById('gifts-filter-button');
+    const giftsDropdown = document.getElementById('gifts-dropdown');
+
+    giftsButton.addEventListener('click', () => {
+        giftsDropdown.classList.toggle('hidden');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!priceButton.contains(e.target) && !priceDropdown.contains(e.target)) {
+            priceDropdown.classList.add('hidden');
+        }
+        if (!metalButton.contains(e.target) && !metalDropdown.contains(e.target)) {
+            metalDropdown.classList.add('hidden');
+        }
+        if (!shopForButton.contains(e.target) && !shopForDropdown.contains(e.target)) {
+            shopForDropdown.classList.add('hidden');
+        }
+        if (!giftsButton.contains(e.target) && !giftsDropdown.contains(e.target)) {
+            giftsDropdown.classList.add('hidden');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sortButton = document.getElementById('desktop-sort-button');
+    const dropdownMenu = document.getElementById('desktop-dropdown-menu');
+
+    sortButton.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('hidden');
+    });
+
+    // Optional: Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!sortButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            dropdownMenu.classList.add('hidden');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sortSidebar = document.getElementById('sort-sidebar');
+    const filterSidebar = document.getElementById('filter-sidebar');
+    const overlay = document.getElementById('overlay');
+
+    function openSidebar(sidebar) {
+        sidebar.classList.remove(sidebar === sortSidebar ? '-translate-x-full' : 'translate-x-full');
+        overlay.classList.remove('hidden');
+    }
+
+    function closeSidebars() {
+        sortSidebar.classList.add('-translate-x-full');
+        filterSidebar.classList.add('translate-x-full');
+        overlay.classList.add('hidden');
+    }
+
+    document.getElementById('open-sort').addEventListener('click', () => openSidebar(sortSidebar));
+    document.getElementById('open-filter').addEventListener('click', () => openSidebar(filterSidebar));
+
+    document.querySelectorAll('.close-sidebar').forEach(button => {
+        button.addEventListener('click', closeSidebars);
+    });
+
+    overlay.addEventListener('click', closeSidebars);
+
+    // Apply Sort
+    document.getElementById('apply-sort').addEventListener('click', function() {
+        const selectedSort = document.querySelector('input[name="sort"]:checked');
+        if (selectedSort) {
+            console.log('Applying sort:', selectedSort.value);
+            // Here you would typically update your product listing based on the selected sort
+            closeSidebars();
+        } else {
+            console.log('No sort option selected');
+        }
+    });
+
+    // Apply Filters
+    document.getElementById('apply-filter').addEventListener('click', function() {
+        const selectedCategories = Array.from(document.querySelectorAll(
+            'input[name="category"]:checked')).map(input => input.value);
+        const selectedMetals = Array.from(document.querySelectorAll('input[name="metal"]:checked'))
+            .map(input => input.value);
+        const selectedPrices = Array.from(document.querySelectorAll('input[name="price"]:checked'))
+            .map(input => input.value);
+
+        console.log('Applying filters:', {
+            categories: selectedCategories,
+            metals: selectedMetals,
+            prices: selectedPrices
+        });
+        // Here you would typically update your product listing based on the selected filters
+        closeSidebars();
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Horizontal line with logo -->
+<div class="flex items-center justify-center w-full my-8">
+    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+    <div class="mx-4">
+        <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="h-12 w-auto">
+    </div>
+    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+</div>
+@endsection
