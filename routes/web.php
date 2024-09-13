@@ -10,7 +10,13 @@ Route::get('/alljewellery', [HomeController::class, 'alljewellery'])->name('allj
 
 Route::get('/diamondjewellery', [HomeController::class, 'diamondjewellery'])->name('diamondjewellery');
 
+Route::get('/gold', [HomeController::class, 'gold'])->name('gold');
+
+Route::get('/bullions', [HomeController::class, 'bullions'])->name('bullions');
+
 Route::get('/silver', [HomeController::class, 'silver'])->name('silver');
+
+Route::get('/page404', [HomeController::class, 'page404'])->name('page404');
 
 Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
 

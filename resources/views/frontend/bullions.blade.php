@@ -22,7 +22,7 @@
                                 d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                                 clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-gray-500 ml-1 md:ml-2 font-medium">All Jewellery</span>
+                        <span class="text-gray-500 ml-1 md:ml-2 font-medium">Bullions</span>
                     </div>
                 </li>
             </ol>
@@ -263,7 +263,7 @@
 
         {{-- Main --}}
         <div class="container mx-auto py-8">
-            <h2 class="text-2xl font-semibold mb-4 text-gray-800">All Jewellery <span class="text-yellow-600">2471
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Bullions<span class="text-yellow-600">2471
                     Designs</span></h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

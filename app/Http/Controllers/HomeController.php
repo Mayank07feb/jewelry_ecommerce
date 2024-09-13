@@ -33,9 +33,24 @@ class HomeController extends Controller
         return view('frontend.silver');
     }
 
+    public function gold()
+    {
+        return view('frontend.gold');
+    }
+
+    public function bullions()
+    {
+        return view('frontend.bullions');
+    }
+
     public function cart()
     {
         return view('frontend.cart');
+    }
+
+    public function page404()
+    {
+        return view('frontend.404');
     }
 
     public function productdetail()
