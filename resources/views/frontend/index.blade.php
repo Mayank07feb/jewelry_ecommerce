@@ -668,7 +668,7 @@
                 class="w-full sm:w-1/2 p-3  border-2 border-black  focus:outline-none focus:ring-2 focus:ring-yellow-500"
             />
             <button 
-    class="w-full sm:w-auto px-6 py-3 bg-white text-black font-semibold border-2 border-black shadow-md hover:bg-[#d3a4bd] hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-100"
+    class="w-full sm:w-auto px-6 py-3 bg-white text-black font-semibold border-2 border-black shadow-md hover:bg-[#601042] hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-100"
 >
     Subscribe
 </button>

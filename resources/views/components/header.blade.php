@@ -210,24 +210,7 @@
                             <span class="sr-only">Your Company</span>
                             <img class="h-8 w-auto" src="{{asset('asset/img/logo.png')}}" alt="Company Logo">
                         </a>
-                        <!-- Image Search Bar -->
-                        {{-- <div class="relative ml-4 w-full max-w-lg">
-                            <form class="flex items-center" action="#" method="GET">
-                                <label for="search" class="sr-only">Search</label>
-                                <input id="search" name="search"
-                                    class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 sm:text-sm"
-                                    placeholder="Search products" type="search">
-                                <button type="submit"
-                                    class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
-                                        aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.896 3.32l4.186 4.186a1 1 0 01-1.414 1.414l-4.186-4.186A6 6 0 012 8z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </button>
-                            </form>
-                        </div> --}}
+                       
                     </div>
 
                     <!-- Desktop Navigation Menu -->
@@ -240,7 +223,7 @@
                                 </a>
                                 <!-- Dropdown Menu -->
                                 <div
-                                    class="absolute left-0 mt-2 w-screen max-w-screen-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden group-hover:block z-20">
+                                    class="absolute left-0 mt-2 w-screen max-w-screen-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden group-hover:block z-50">
                                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
                                         <!-- Categories Section -->
                                         <div class="space-y-6">
@@ -257,7 +240,7 @@
                                                 <li>
                                                     <a href="#"
                                                         class="flex items-center text-gray-700 hover:text-gray-900">
-                                                        <img src="path-to-your-image/rings.jpg" alt="Rings"
+                                                        <img src="{{asset('asset\img\nav-img')}}" alt="Rings"
                                                             class="h-6 w-6 mr-3">
                                                         Rings
                                                     </a>
@@ -265,7 +248,7 @@
                                                 <li>
                                                     <a href="#"
                                                         class="flex items-center text-gray-700 hover:text-gray-900">
-                                                        <img src="path-to-your-image/bracelets.jpg" alt="Bracelets"
+                                                        <img src="{{asset('asset\img\nav-img')}}" alt="Bracelets"
                                                             class="h-6 w-6 mr-3">
                                                         Bracelets
                                                     </a>
@@ -273,7 +256,7 @@
                                                 <li>
                                                     <a href="#"
                                                         class="flex items-center text-gray-700 hover:text-gray-900">
-                                                        <img src="path-to-your-image/earrings.jpg" alt="Earrings"
+                                                        <img src="{{asset('asset\img\nav-img')}}" alt="Earrings"
                                                             class="h-6 w-6 mr-3">
                                                         Earrings
                                                     </a>
@@ -281,7 +264,7 @@
                                                 <li>
                                                     <a href="#"
                                                         class="flex items-center text-gray-700 hover:text-gray-900">
-                                                        <img src="path-to-your-image/watches.jpg" alt="Watches"
+                                                        <img src="{{asset('asset\img\nav-img')}}" alt="Watches"
                                                             class="h-6 w-6 mr-3">
                                                         Watches
                                                     </a>
@@ -290,13 +273,13 @@
                                         </div>
                                         <!-- Featured Items Section -->
                                         <div
-                                            class="col-span-2 md:col-span-1 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            class="col-span-2 md:col-span-1 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-4 ">
                                             <!-- Featured Item 1 -->
                                             <div class="relative overflow-hidden rounded-lg bg-gray-100 group">
                                                 <img src="{{ asset('asset/img/0.jpg') }}" alt="New Arrivals"
                                                     class="w-full h-full object-cover object-center group-hover:opacity-80">
                                                 <div
-                                                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-center p-4 group-hover:opacity-100 opacity-0 transition-opacity">
+                                                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-center p-4 group-hover:opacity-100 opacity-0 transition-opacity z-10">
                                                     <div>
                                                         <p class="text-lg font-medium">New Arrivals</p>
                                                         <a href="#"
@@ -310,7 +293,7 @@
                                                 <img src="{{ asset('asset/img/latest.jpg') }}" alt="Popular Items"
                                                     class="w-full h-full object-cover object-center group-hover:opacity-80">
                                                 <div
-                                                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-center p-4 group-hover:opacity-100 opacity-0 transition-opacity">
+                                                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-center p-4 group-hover:opacity-100 opacity-0 transition-opacity z-10">
                                                     <div>
                                                         <p class="text-lg font-medium">Popular Items</p>
                                                         <a href="#"
@@ -352,7 +335,7 @@
                                             Rings
                                         </a>
                                         <a href="#"
-                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
                                             role="menuitem">
                                             <img src="{{ asset('asset/img/bracelets.jpg') }}" alt="Bracelets"
                                                 class="h-8 w-8 mr-2">
@@ -481,11 +464,11 @@
                             <i class="ri-search-2-line"></i>
                         </div> --}}
                         <!-- Search Input for Desktop -->
-                        <form class=" lg:flex w-full lg:ml-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                        <form class="lg:flex lg:w-full md:w-full sm:w-1/2 ml-4 border rounded-lg">
                             <div class="flex items-center w-full">
                               <input 
                                 type="text" 
-                                class="w-full px-4 py-2 border-none focus:outline-none" 
+                                class="w-full px-4 py-2 border-none focus:outline-none focus:ring-2 focus:ring-[#601042]" 
                                 placeholder="Search..." 
                               />
                               <button type="submit" class="px-3">
@@ -493,6 +476,7 @@
                               </button>
                             </div>
                           </form>
+                          
                           
                       </div>
                       
