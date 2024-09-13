@@ -121,7 +121,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#contact"
+                            <a href="{{ route('contact') }}"
                                 class="flex items-center text-gray-700 hover:text-amber-600 transition-colors duration-300 group">
                                 <div
                                     class="w-12 h-12 mr-4 rounded-full bg-amber-100 flex items-center justify-center group-hover:bg-amber-200 transition-colors duration-300">
