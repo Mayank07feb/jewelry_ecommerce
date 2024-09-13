@@ -198,7 +198,7 @@
         </div>
 
         {{-- Web View Sort --}}
-        <div class="bg-gradient-to-r from-[#F5F5DC] to-[#601042] lg:py-2 relative z-10">
+        <div class="bg-gradient-to-r from-[#F5F5DC] to-[#601042] lg:py-2 relative z-10 sm:hidden lg:block">
             <div class="container lg:pb-3">
                 <div class="flex lg:flex-wrap -mx-2 lg:mb-1 overflow-auto">
                     <!-- Content can go here if needed -->
@@ -392,25 +392,29 @@
             <ul class="space-y-4">
                 <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                     <label class="flex items-center">
-                        <input type="radio" name="sort" value="price_low_high" class="mr-2">
+                        <input type="radio" name="sort" value="price_low_high"
+                            class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                         Price: Low to High
                     </label>
                 </li>
                 <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                     <label class="flex items-center">
-                        <input type="radio" name="sort" value="price_high_low" class="mr-2">
+                        <input type="radio" name="sort" value="price_high_low"
+                            class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                         Price: High to Low
                     </label>
                 </li>
                 <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                     <label class="flex items-center">
-                        <input type="radio" name="sort" value="new_arrivals" class="mr-2">
+                        <input type="radio" name="sort" value="new_arrivals"
+                            class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                         New Arrivals
                     </label>
                 </li>
                 <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                     <label class="flex items-center">
-                        <input type="radio" name="sort" value="best_sellers" class="mr-2">
+                        <input type="radio" name="sort" value="best_sellers"
+                            class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                         Best Sellers
                     </label>
                 </li>
@@ -435,26 +439,29 @@
                 </button>
             </div>
         </div>
-        <div class="p-4 flex-grow overflow-y-auto">
+        <div class="p-4 flex-grow overflow-y-auto mb-16">
             <ul class="space-y-4">
                 <li>
                     <h4 class="font-bold">Category</h4>
                     <ul class="space-y-2">
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="category" value="rings" class="mr-2">
+                                <input type="checkbox" name="category" value="rings"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 Rings
                             </label>
                         </li>
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="category" value="necklaces" class="mr-2">
+                                <input type="checkbox" name="category" value="necklaces"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 Necklaces
                             </label>
                         </li>
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="category" value="bracelets" class="mr-2">
+                                <input type="checkbox" name="category" value="bracelets"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 Bracelets
                             </label>
                         </li>
@@ -465,25 +472,29 @@
                     <ul class="space-y-2">
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="metal" value="gold" class="mr-2">
+                                <input type="checkbox" name="metal" value="gold"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 Gold
                             </label>
                         </li>
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="metal" value="silver" class="mr-2">
+                                <input type="checkbox" name="metal" value="silver"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 Silver
                             </label>
                         </li>
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="metal" value="platinum" class="mr-2">
+                                <input type="checkbox" name="metal" value="platinum"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 Platinum
                             </label>
                         </li>
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="metal" value="mixed" class="mr-2">
+                                <input type="checkbox" name="metal" value="mixed"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 Mixed Metals
                             </label>
                         </li>
@@ -494,25 +505,29 @@
                     <ul class="space-y-2">
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="radio" name="price" value="under_500" class="mr-2">
+                                <input type="radio" name="price" value="under_500"
+                                    class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 Under $500
                             </label>
                         </li>
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="radio" name="price" value="500_1000" class="mr-2">
+                                <input type="radio" name="price" value="500_1000"
+                                    class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 $500 - $1000
                             </label>
                         </li>
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="radio" name="price" value="1000_5000" class="mr-2">
+                                <input type="radio" name="price" value="1000_5000"
+                                    class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 $1000 - $5000
                             </label>
                         </li>
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="radio" name="price" value="above5000" class="mr-2">
+                                <input type="radio" name="price" value="above5000"
+                                    class="form-radio mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 Above $5000
                             </label>
                         </li>
@@ -523,25 +538,29 @@
                     <ul class="space-y-2">
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="shopfor" value="men" class="mr-2">
+                                <input type="checkbox" name="shopfor" value="men"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 Men
                             </label>
                         </li>
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="shopfor" value="women" class="mr-2">
+                                <input type="checkbox" name="shopfor" value="women"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 Women
                             </label>
                         </li>
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="shopfor" value="children" class="mr-2">
+                                <input type="checkbox" name="shopfor" value="children"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 Children
                             </label>
                         </li>
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="shopfor" value="unisex" class="mr-2">
+                                <input type="checkbox" name="shopfor" value="unisex"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 Unisex
                             </label>
                         </li>
@@ -552,25 +571,29 @@
                     <ul class="space-y-2">
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="gifts" value="forhim" class="mr-2">
+                                <input type="checkbox" name="gifts" value="forhim"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 For Him
                             </label>
                         </li>
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="gifts" value="forher" class="mr-2">
+                                <input type="checkbox" name="gifts" value="forher"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 For Her
                             </label>
                         </li>
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="gifts" value="forkids" class="mr-2">
+                                <input type="checkbox" name="gifts" value="forkids"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 For Kids
                             </label>
                         </li>
                         <li class="cursor-pointer hover:bg-gray-200 p-2 rounded">
                             <label class="flex items-center">
-                                <input type="checkbox" name="gifts" value="specialoccasions" class="mr-2">
+                                <input type="checkbox" name="gifts" value="specialoccasions"
+                                    class="form-checkbox mr-2 text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                 Special Occasions
                             </label>
                         </li>
