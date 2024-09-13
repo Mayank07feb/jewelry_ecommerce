@@ -63,14 +63,17 @@
     <!-- Overlay -->
     <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
 
-    <!-- Hamburger Menu Button -->
+    <!-- Hamburger Menu Button with Help Icon and Text -->
     <button id="hamburger-button" aria-label="Open menu" aria-expanded="false"
-        class="fixed bottom-24 right-6 z-50 p-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-white hover:from-amber-500 hover:to-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-opacity-50 shadow-lg transition-all duration-300">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
+        class="fixed bottom-24 right-6 z-50 flex items-center space-x-2 p-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-white hover:from-amber-500 hover:to-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-opacity-50 shadow-lg transition-all duration-300">
+
+        <!-- Help? Text -->
+        <span class="text-sm font-semibold">Help</span>
+
+        <!-- Help Icon -->
+        <span class="material-icons w-6 h-6">help_outline</span>
     </button>
+
 
     <!-- Hamburger Menu -->
     <div id="hamburger-menu"
