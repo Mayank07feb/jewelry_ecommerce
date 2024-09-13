@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -15,7 +14,7 @@ class HomeController extends Controller
 
     public function contact()
     {
-        return view('frontend.contact');
+        return view ('frontend.contact');
     }
 
     public function alljewellery()
@@ -33,9 +32,24 @@ class HomeController extends Controller
         return view('frontend.silver');
     }
 
+    public function gold()
+    {
+        return view('frontend.gold');
+    }
+
+    public function bullions()
+    {
+        return view('frontend.bullions');
+    }
+
     public function cart()
     {
         return view('frontend.cart');
+    }
+
+    public function page404()
+    {
+        return view('frontend.404');
     }
 
     public function productdetail()
@@ -58,6 +72,16 @@ class HomeController extends Controller
     public function signup()
     {
         return view('frontend.signup');
+    }
+
+    public function showForgotPasswordForm()
+    {
+        return view('frontend.forgot-password');
+    }
+
+    public function showResetPasswordForm()
+    {
+        return view('frontend.reset-password');
     }
 
     public function profile()
@@ -115,12 +139,15 @@ class HomeController extends Controller
         return view('frontend.collection');
     }
 
-
     public function collectiondetails()
     {
         return view('frontend.collectiondetails');
     }
 
-    
+    // cumtomize jewwlery
+    public function customjewellery()
+    {
+        return view('frontend.customjewellery');
+    }
 
 }

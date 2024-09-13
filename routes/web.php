@@ -10,7 +10,13 @@ Route::get('/alljewellery', [HomeController::class, 'alljewellery'])->name('allj
 
 Route::get('/diamondjewellery', [HomeController::class, 'diamondjewellery'])->name('diamondjewellery');
 
+Route::get('/gold', [HomeController::class, 'gold'])->name('gold');
+
+Route::get('/bullions', [HomeController::class, 'bullions'])->name('bullions');
+
 Route::get('/silver', [HomeController::class, 'silver'])->name('silver');
+
+Route::get('/page404', [HomeController::class, 'page404'])->name('page404');
 
 Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
 
@@ -32,6 +38,11 @@ Route::get('/login', [HomeController::class, 'login'])->name('login');
 
 Route::get('/signup', [HomeController::class, 'signup'])->name('signup');
 
+Route::get('/forgot-password', [HomeController::class, 'showForgotPasswordForm'])->name('forgot.password');
+
+Route::get('/reset-password', [HomeController::class, 'showResetPasswordForm'])->name('password.reset');
+
+
 // New Routes
 Route::get('/ordersummary', [HomeController::class, 'ordersummary'])->name('ordersummary');
 
@@ -45,5 +56,8 @@ Route::get('/franchise', [HomeController::class, 'franchise'])->name('franchise'
 
 Route::get('/collection', [HomeController::class, 'collection'])->name('collection');
 
+
 Route::get('/collectiondetails', [HomeController::class, 'collectiondetails'])->name('collectiondetails');
+
+Route::get('/customjewellery', [HomeController::class, 'customjewellery'])->name('customjewellery');
 
