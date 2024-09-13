@@ -244,6 +244,21 @@
         </div>
     </div>
 
+     {{-- horizontal line --}}
+     <div class="flex items-center justify-center w-screen">
+        <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+        <div class="mx-4">
+            <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="h-12 w-auto">
+        </div>
+        <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+    </div>
+
+
+
+
+
+
+
     <script>
         // Toggle filter dropdown
         const filterDropdown = document.getElementById('filterDropdown');
