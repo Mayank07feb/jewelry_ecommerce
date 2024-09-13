@@ -115,6 +115,12 @@ class HomeController extends Controller
         return view('frontend.collection');
     }
 
+
+    public function collectiondetails()
+    {
+        return view('frontend.collectiondetails');
+    }
+
     
 
 }
