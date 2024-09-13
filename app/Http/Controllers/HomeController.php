@@ -139,4 +139,10 @@ class HomeController extends Controller
     {
         return view('frontend.collection');
     }
+
+    // cumtomize jewwlery
+    public function customjewellery()
+    {
+        return view('frontend.customjewellery');
+    }
 }

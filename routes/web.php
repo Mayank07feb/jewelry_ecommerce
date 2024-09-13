@@ -56,3 +56,4 @@ Route::get('/franchise', [HomeController::class, 'franchise'])->name('franchise'
 
 Route::get('/collection', [HomeController::class, 'collection'])->name('collection');
 
+Route::get('/customjewellery', [HomeController::class, 'customjewellery'])->name('customjewellery');

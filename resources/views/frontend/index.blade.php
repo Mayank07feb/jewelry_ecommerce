@@ -10,7 +10,7 @@
         <div id="sliderWrapper" class="slider-wrapper flex transition-transform duration-700 ease-in-out">
             <!-- Slide 1 -->
             <div class="slider-slide w-full h-full flex-shrink-0 relative">
-                <img src="{{ asset('asset/img/banner') }}" alt="Diamond Collection" class="w-full h-full object-cover">
+                <a href="{{route('gold')}}"><img src="{{ asset('asset/img/banner') }}" alt="Diamond Collection" class="w-full h-full object-cover"></a>
                 {{-- <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-center justify-center">
                     <div class="text-center text-white p-4 md:p-10">
                         <h1 class="text-xl md:text-3xl lg:text-5xl font-bold drop-shadow-lg">Exclusive Diamond Collection</h1>
@@ -22,7 +22,7 @@
 
             <!-- Slide 2 -->
             <div class="slider-slide w-full h-full flex-shrink-0 relative">
-                <img src="{{ asset('asset/img/banner2.webp') }}" alt="Bridal Jewellery Collection" class="w-full h-full object-cover">
+                <a href="{{route('gold')}}"><img src="{{ asset('asset/img/banner2.webp') }}" alt="Bridal Jewellery Collection" class="w-full h-full object-cover"></a>
                 {{-- <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-center justify-center">
                     <div class="text-center text-white p-4 md:p-10">
                         <h1 class="text-xl md:text-3xl lg:text-5xl font-bold drop-shadow-lg">Bridal Jewellery Collection</h1>
@@ -34,7 +34,7 @@
 
             <!-- Slide 3 -->
             <div class="slider-slide w-full h-full flex-shrink-0 relative">
-                <img src="{{ asset('asset/img/banner3.webp') }}" alt="Luxury Gold Jewellery" class="w-full h-full object-cover">
+                <a href="{{route('gold')}}"><img src="{{ asset('asset/img/banner3.webp') }}" alt="Luxury Gold Jewellery" class="w-full h-full object-cover"></a>
                 {{-- <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-center justify-center">
                     <div class="text-center text-white p-4 md:p-10">
                         <h1 class="text-xl md:text-3xl lg:text-5xl font-bold drop-shadow-lg">Luxury Gold Jewellery</h1>
@@ -58,12 +58,12 @@
 {{-- button slider --}}
 
     <!-- Tab Buttons -->
-    <div class="tab-buttons flex justify-center mt-8">
-        <button data-tab="slider1" class="tab-btn active-tab text-3xl font-light text-center mb-2 pr-2 hover:text-[#601042] p-2">New Ins</button>
-        <div class="w-px h-10 mx-2 bg-gray-800"></div>
+<div class="tab-buttons flex justify-center mt-8">
+    <button data-tab="slider1" class="tab-btn active-tab text-3xl font-light text-center mb-2 pr-2 hover:text-[#601042] p-2">New Ins</button>
+    <div class="w-px h-10 mx-2 bg-gray-800"></div>
 
-        <button data-tab="slider2" class="tab-btn text-3xl font-light text-center mb-2 px-2 hover:text-[#601042] p-2">Best Sellers</button>
-      </div>
+    <button data-tab="slider2" class="tab-btn text-3xl font-light text-center mb-2 px-2 hover:text-[#601042] p-2">Best Sellers</button>
+</div>
   
     <p class="text-center text-gray-600 mb-8">Freshen up your look!</p>
     <!-- Slider 1 -->
@@ -78,7 +78,7 @@
             <div class="w-full lg:w-full flex-shrink-0 p-2">
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
                     <div class="relative">
-                        <img src="{{asset('asset/img/new1.webp')}}" alt="Maharashtrian Himali Gold Nath" class="w-full h-60 object-cover" loading="lazy">
+                    <a href="{{route('productdetail')}}"><img src="{{asset('asset/img/new1.webp')}}" alt="Maharashtrian Himali Gold Nath" class="w-full h-60 object-cover" loading="lazy"></a>
                     </div>
                     <div class="p-4">
                         <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
@@ -93,7 +93,7 @@
             <div class="w-full lg:w-full flex-shrink-0 p-2">
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
                     <div class="relative">
-                        <img src="{{asset('asset/img/new1.webp')}}" alt="Maharashtrian Himali Gold Nath" class="w-full h-60 object-cover" loading="lazy">
+                        <a href="{{route('productdetail')}}"> <img src="{{asset('asset/img/new1.webp')}}" alt="Maharashtrian Himali Gold Nath" class="w-full h-60 object-cover" loading="lazy"></a>
                     </div>
                     <div class="p-4">
                         <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
@@ -121,7 +121,7 @@
          <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
             <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                 <div class="relative">
-                    <img src="{{asset('asset\img\best1.webp')}}" alt="Best Seller 1" class="w-full h-48 object-cover" loading="lazy">
+                    <a href="{{route('productdetail')}}"><img src="{{asset('asset\img\best1.webp')}}" alt="Best Seller 1" class="w-full h-48 object-cover" loading="lazy"></a>
                 </div>
                 <div class="p-4">
                     <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
@@ -134,7 +134,7 @@
                <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
                 <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                     <div class="relative">
-                        <img src="{{asset('asset\img\best1.webp')}}" alt="Best Seller 1" class="w-full h-48 object-cover" loading="lazy">
+                        <a href="{{route('productdetail')}}"><img src="{{asset('asset\img\best1.webp')}}" alt="Best Seller 1" class="w-full h-48 object-cover" loading="lazy"></a>
                     </div>
                     <div class="p-4">
                         <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
@@ -171,7 +171,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 px-6 lg:px-20 py-8 lg:py-12">
         <!-- Diamond Category -->
         <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
-            <img src="{{asset('asset/img/daimond.png')}}" alt="Diamond" class="w-40 h-56 object-contain mb-4">
+            <a href="{{route('diamondjewellery')}}"><img src="{{asset('asset/img/daimond.png')}}" alt="Diamond" class="w-40 h-56 object-contain mb-4"></a>
             <h3 class="text-lg font-semibold mb-1">Diamond</h3>
             <p class="text-sm text-gray-600 mb-3 text-center">For the most awaited moment!</p>
             <a href="{{ route('diamondjewellery') }}" ><button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
@@ -181,7 +181,7 @@
 
         <!-- Gold Category -->
         <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
-            <img src="{{asset('asset/img/gold.png')}}" alt="Gold" class="w-40 h-56 object-contain mb-4">
+            <a href="{{route('diamondjewellery')}}"><img src="{{asset('asset/img/gold.png')}}" alt="Gold" class="w-40 h-56 object-contain mb-4"></a>
             <h3 class="text-lg font-semibold mb-1">Gold</h3>
             <p class="text-sm text-gray-600 mb-3 text-center">For the beauty and the bliss!</p>
             <a href="{{ route('diamondjewellery') }}" ><button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
@@ -191,7 +191,7 @@
 
         <!-- Bullions Category -->
         <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
-            <img src="{{asset('asset/img/bullions.png')}}" alt="Bullions" class="w-40 h-56 object-contain mb-4">
+            <a href="{{route('diamondjewellery')}}"><img src="{{asset('asset/img/bullions.png')}}" alt="Bullions" class="w-40 h-56 object-contain mb-4"></a>
             <h3 class="text-lg font-semibold mb-1">Bullions</h3>
             <p class="text-sm text-gray-600 mb-3 text-center">For auspicious occasions!</p>
             <a href="{{ route('diamondjewellery') }}" ><button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
@@ -201,7 +201,7 @@
 
         <!-- Silver Category -->
         <div class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
-            <img src="{{asset('asset/img/sliver.png')}}" alt="Silver" class="w-40 h-56 object-contain mb-4">
+            <a href="{{route('diamondjewellery')}}"><img src="{{asset('asset/img/sliver.png')}}" alt="Silver" class="w-40 h-56 object-contain mb-4"></a
             <h3 class="text-lg font-semibold mb-1">Silver</h3>
             <p class="text-sm text-gray-600 mb-3 text-center">For everyday elegance!</p>
             <a href="{{ route('diamondjewellery') }}" ><button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
@@ -485,7 +485,7 @@
         <div class="text-center lg:text-left  p-4 lg:p-8 rounded-lg">
             <h2 class="font-light text-[28px] md:text-[52px] text-black mb-3">Customize Jewellery</h2>
             <p class="font-light text-lg tracking-wide mb-6">Add a personal touch to your style.</p>
-            <a href="/product/customizejewellery" class="inline-block">
+            <a href="{{route('customjewellery')}}" class="inline-block">
                 <button class="border-black border-2 bg-white hover:bg-[#8a4879] hover:text-white px-6 py-3 transition-colors">Customize Jewellery</button>
             </a>
         </div>
@@ -555,7 +555,7 @@
             <p class="text-lg md:text-xl mb-6 font-light">
                 Explore iconic traditional jewellery, gold and diamond engagement rings, silver classics, elegant accessories, and precious gifts for any occasion at our PNG Jewellers stores across the globe.
             </p>
-            <a href="#" class="inline-block border-2 border-black bg-white text-black font-semibold py-3 px-6 hover:bg-[#7a1e4d] hover:text-white transition duration-300">
+            <a href="{{route('storelocator')}}" class="inline-block border-2 border-black bg-white text-black font-semibold py-3 px-6 hover:bg-[#7a1e4d] hover:text-white transition duration-300">
                 Find a Store Location
             </a>
         </div>
