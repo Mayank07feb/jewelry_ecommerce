@@ -263,7 +263,7 @@
 
         {{-- Main --}}
         <div class="container mx-auto py-8">
-            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Bullions<span class="text-yellow-600">2471
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Bullions <span class="text-yellow-600">2471
                     Designs</span></h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -348,6 +348,15 @@
                     </li>
                 </ul>
             </nav>
+        </div>
+
+        {{-- Horizontal line with logo --}}
+        <div class="flex items-center justify-center w-full mt-8">
+            <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+            <div class="mx-4">
+                <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="h-12 w-auto">
+            </div>
+            <div class="flex-grow h-px bg-[#9d6e2a]"></div>
         </div>
 
     </div>
