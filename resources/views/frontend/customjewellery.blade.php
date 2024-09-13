@@ -33,50 +33,50 @@
 </nav>
 {{-- work --}}
 <div class="flex flex-col md:flex-row">
-    <div class="container mx-auto p-8 flex-1 bg-[#613158]">
+    <div class="container mx-auto p-8 flex-1 bg-[#601042]">
         <h2 class="text-3xl font-light text-center mb-12 text-white">How It Works</h2>
 
         <!-- Steps -->
         <div class="space-y-8">
             <!-- Step 1 -->
-            <div class="flex flex-col md:flex-col items-start md:items-center">
-                <img src="{{asset('asset/img/custom1.png')}}" alt="Step 1 Image" class="lg:w-20 lg:h-20 w-10 h-10 object-contain mb-4 md:mb-0">
+            <div class="flex flex-row gap-4 lg:gap-1 md:flex-row items-start md:items-center">
+                <img src="{{asset('asset/img/custom1.png')}}" alt="Step 1 Image" class="lg:w-20 lg:h-20 object-contain mb-4 md:mb-0">
                 <div class="md:pl-8">
-                    <h3 class="text-2xl font-semilight mb-2 text-white">Step 1: Share Your Design</h3>
-                    <p class="text-white">
+                    <h3 class="lg:text-2xl text-sm font-bold lg:font-light mb-2 text-white">Step 1: Share Your Design</h3>
+                    <p class="text-white lg:text-xs">
                         Share your jewellery design and idea for customizing it. Our team will carefully review your vision and guide you through the next steps.
                     </p>
                 </div>
             </div>
 
             <!-- Step 2 -->
-            <div class="flex flex-col md:flex-col items-start md:items-center">
-                <img src="{{asset('asset/img/custom2.png')}}" alt="Step 2 Image" class="lg:w-20 lg:h-20 w-10 h-10 object-contain mb-4 md:mb-0">
+            <div class="flex flex-row gap-4 lg:gap-1 md:flex-row items-start md:items-center">
+                <img src="{{asset('asset/img/custom2.png')}}" alt="Step 2 Image" class="lg:w-20 lg:h-20 object-contain mb-4 md:mb-0">
                 <div class="md:pl-8">
-                    <h3 class="text-2xl font-semilight mb-2 text-white">Step 2: Analysis & Cost Estimation</h3>
-                    <p class="text-white">
+                    <h3 class="lg:text-2xl text-sm font-bold lg:font-light mb-2 text-white">Step 2: Analysis & Cost Estimation</h3>
+                    <p class="text-white lg:text-xs">
                         We analyze your specifics, estimate the cost, and provide a detailed timeline for your customized jewellery project.
                     </p>
                 </div>
             </div>
 
             <!-- Step 3 -->
-            <div class="flex flex-col md:flex-col items-start md:items-center">
-                <img src="{{asset('asset/img/custom3.png')}}" alt="Step 3 Image" class="lg:w-20 lg:h-20 w-10 h-10 object-contain mb-4 md:mb-0">
+            <div class="flex flex-row gap-4 lg:gap-1 md:flex-row items-start md:items-center">
+                <img src="{{asset('asset/img/custom3.png')}}" alt="Step 3 Image" class="lg:w-20 lg:h-20 object-contain mb-4 md:mb-0">
                 <div class="md:pl-8">
-                    <h3 class="text-2xl font-semilight mb-2 text-white">Step 3: Mould Casting & Order Confirmation</h3>
-                    <p class="text-white">
+                    <h3 class="lg:text-2xl text-sm font-bold lg:font-light mb-2 text-white">Step 3: Mould Casting & Order Confirmation</h3>
+                    <p class="text-white lg:text-xs">
                         We cast the perfect mould for your jewellery, and once you're satisfied, we confirm your order with an invoice payment.
                     </p>
                 </div>
             </div>
 
             <!-- Step 4 -->
-            <div class="flex flex-col md:flex-col items-start md:items-center">
-                <img src="{{asset('asset/img/custom4.png')}}" alt="Step 4 Image" class="lg:w-20 lg:h-20 w-10 h-10 object-contain mb-4 md:mb-0">
+            <div class="flex flex-row gap-4 lg:gap-1 md:flex-row items-start md:items-center">
+                <img src="{{asset('asset/img/custom4.png')}}" alt="Step 4 Image" class="lg:w-20 lg:h-20 object-contain mb-4 md:mb-0">
                 <div class="md:pl-8">
-                    <h3 class="text-2xl font-semilight mb-2 text-white">Step 4: Final Payment & Delivery</h3>
-                    <p class="text-white">
+                    <h3 class="lg:text-2xl text-sm font-bold lg:font-light mb-2 text-white">Step 4: Final Payment & Delivery</h3>
+                    <p class="text-white lg:text-xs">
                         Your jewellery is crafted to perfection, and a final payment adjustment is made. Your customized jewellery is now ready for delivery!
                     </p>
                 </div>
@@ -85,7 +85,7 @@
     </div>
 
 <div class="flex-1 w-full mx-auto p-auto bg-white rounded-lg shadow-md">
-        <h1 class="text-3xl text-center font-light mb-6">Please provide all your details</h1>
+        <h1 class="text-3xl text-center font-light my-6">Please provide all your details</h1>
     <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 ">
     
         <!-- Form 1 -->
@@ -96,7 +96,7 @@
                     <label for="goldColor" class="block text-sm font-light text-gray-700">Gold Color *</label>
                     <div class="flex items-center mt-1">
                         
-                        <select id="goldColor" name="goldColor" class="pl-12 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#601042] w-full">
+                        <select id="goldColor" name="goldColor" class="pl-12 pr-3 py-2 font-light border border-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#601042] w-full">
                             <option value="" disabled selected>Select Gold Color</option>
                             <option value="yellow">Yellow Gold</option>
                             <option value="white">White Gold</option>
@@ -111,7 +111,7 @@
                     <label for="goldPurity" class="block text-sm font-light text-gray-700">Gold Purity *</label>
                     <div class="flex items-center mt-1">
                         
-                        <select id="goldPurity" name="goldPurity" class="pl-12 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#601042] w-full">
+                        <select id="goldPurity" name="goldPurity" class="pl-12 pr-3 py-2 font-light border border-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#601042] w-full">
                             <option value="" disabled selected>Select Purity</option>
                             <option value="14kt">14KT</option>
                             <option value="18kt">18KT</option>
@@ -160,7 +160,7 @@
                     <label for="diamondClarity" class="block text-sm font-light text-gray-700">Diamond Clarity *</label>
                     <div class="flex items-center mt-1">
                        
-                        <select id="diamondClarity" name="diamondClarity" class="pl-12 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#601042] w-full">
+                        <select id="diamondClarity" name="diamondClarity" class="pl-12 pr-3 py-2 font-light border border-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#601042] w-full">
                             <option value="" disabled selected>Select Clarity</option>
                             <option value="VS1">VS1</option>
                             <option value="VS2">VS2</option>
@@ -200,7 +200,7 @@
         <!-- Submit Button -->
 <div class="lg:-mt-24 m-8 pl-16 lg:pl-0 lg:m-0">
     <div class="flex justify-start lg:pl-4">
-        <button type="submit" class="px-6 py-2 bg-[#601042] text-white font-semibold rounded-md shadow-md hover:bg-[#4b002a] focus:outline-none focus:ring-2 focus:ring-[#601042] transition-colors duration-300">
+        <button type="submit" class="px-6 py-2 bg-[#601042] text-white font-light rounded-md shadow-md hover:bg-[#4b002a] focus:outline-none focus:ring-2 focus:ring-[#601042] transition-colors duration-300">
             Submit
         </button>
     </div>

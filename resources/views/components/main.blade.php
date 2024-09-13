@@ -176,17 +176,17 @@
             });
         });
 
-        // Disable right-click
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
+        // // Disable right-click
+        // document.addEventListener('contextmenu', function(e) {
+        //     e.preventDefault();
+        // });
 
-        // Disable keyboard shortcuts
-        document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 'i' || e.key === 'I')) {
-                e.preventDefault();
-            }
-        });
+        // // Disable keyboard shortcuts
+        // document.addEventListener('keydown', function(e) {
+        //     if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 'i' || e.key === 'I')) {
+        //         e.preventDefault();
+        //     }
+        // });
     </script>
     <!-- Drift JS -->
     <script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.0.0/dist/drift.min.js"></script>
