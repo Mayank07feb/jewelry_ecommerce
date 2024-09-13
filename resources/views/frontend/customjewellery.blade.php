@@ -99,7 +99,7 @@
             </div>
 
             <div class="flex-1 w-full mx-auto p-auto bg-white rounded-lg shadow-md">
-                <h1 class="text-3xl text-center font-light my-6">Please provide all your details</h1>
+                <h1 class="lg:text-3xl text-xl text-center font-light my-6">Please provide all your details</h1>
                 <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 ">
 
                     <!-- Form 1 -->
@@ -244,6 +244,13 @@
                 </div>
             </div>
         </div>
+        {{-- Horizontal line with logo --}}
+        <div class="flex items-center justify-center w-full mt-8">
+            <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+            <div class="mx-4">
+                <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="h-12 w-auto">
+            </div>
+            <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+        </div>
     </div>
-    
 @endsection
