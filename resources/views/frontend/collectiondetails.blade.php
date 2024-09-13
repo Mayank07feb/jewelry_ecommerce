@@ -22,47 +22,68 @@
         class="w-full h-auto"
       >
     </div>
-  </div>
+</div>
   {{-- Banner End --}}
-  
-<!-- Breadcrumb -->
-<ul class="hidden md:flex items-center text-xs -mx-1">
-    <li class="px-1 py-2.5 text-muted last:text-black">
-      <a href="/" class="py-px inline-block">Home</a>
-    </li>
-    <li class="px-1 py-2.5">
-      <svg width="6" height="10" viewBox="0 0 6 10" fill="currentColor" class="fill-muted h-2">
-        <path d="M0.954248 10L6 4.99892L0.954248 0L0 0.945273L4.0915 4.99892L0 9.05473L0.954248 10Z"></path>
-      </svg>
-    </li>
-    <li class="px-1 py-2.5 text-muted last:text-black">
-      <a href="/collection" class="py-px inline-block">Collections</a>
-    </li>
-    <li class="px-1 py-2.5">
-      <svg width="6" height="10" viewBox="0 0 6 10" fill="currentColor" class="fill-muted h-2">
-        <path d="M0.954248 10L6 4.99892L0.954248 0L0 0.945273L4.0915 4.99892L0 9.05473L0.954248 10Z"></path>
-      </svg>
-    </li>
-    <li class="px-1 py-2.5 text-muted last:text-black">
-      <span class="py-px inline-block">Pratha Collection</span>
-    </li>
-</ul>
+
+  {{-- Breadcrumb Start --}}
+<div class="w-full lg:max-w-none mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-gray-50">
+    <!-- Breadcrumb with Background and Border -->
+    <nav class="flex bg-white border border-gray-200 p-4 rounded-md shadow-sm mb-6" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+                <a href="/" class="text-gray-600 hover:text-[#601042] inline-flex items-center">
+                    <svg class="w-5 h-5 mr-2.5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                        </path>
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <a href="/collection" class="text-gray-600 hover:text-[#601042] inline-flex items-center">
+                    <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    collection
+                    </a>
+                </div>
+            </li>
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-gray-500 ml-1 md:ml-2 font-medium">Pratha Collection</span>
+                </div>
+            </li>
+        </ol>
+    </nav>
+
 
 {{-- Heading Start --}}
 <div class="text-center font-light pt-5 lg:pt-7">
     <ul class="flex flex-wrap justify-center leading-none mb-2.5">
       <li class="border-r last:border-r-0 px-5 lg:px-8 border-[#601042]">
-        <span class="text-[22px] lg:text-[32px] py-1 inline-block relative cursor-pointer text-black before:absolute before:bottom-0 before:w-[34px] lg:before:h-0.5 before:h-px before:bg-black/[0.8]">
+        <span class="text-[22px] lg:text-[32px] py-1 inline-block relative cursor-pointer text-[#601042] before:absolute before:bottom-0 before:w-[34px] lg:before:h-0.5 before:h-px before:bg-black/[0.8]">
           Featured Products
         </span>
       </li>
     </ul>
-    <p class="tracking-wider mb-6 px-4 cursor-pointer">
+    <p class="tracking-wider text-[#601042] mb-6 px-4 cursor-pointer">
       Freshen up your look!
     </p>
-  </div>
+</div>
   {{-- Products Start --}}
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             <!-- Product 1 -->
             <div class="bg-white p-2 rounded-lg shadow-md">
                 <img src="{{asset('asset/img/payal.webp')}}" alt="Mythic Elegance Ensemble Gold" class="w-full h-48 object-cover mb-4 rounded">
@@ -98,17 +119,15 @@
                 <p class="text-gray-600 mb-2">₹5,87,811</p>
                 <p class="text-sm text-gray-500 line-through">₹5,96,922</p>
             </div>
-        </div> 
+</div> 
         {{-- Products End --}}
     
-
-
     {{-- COLLECTIONS Start --}}
-    <div class="py-12 mx-auto p-4">
+<div class="py-12 mx-auto p-4">
         <div class="container mx-auto">
             <!-- Section Title -->
             <div class="container font-light lg:pt-5 text-center">
-                <h2 class="text-[22px] lg:text-[32px] inline-block relative before:absolute before:bottom-0 ltr:before:left-0 rtl:before:right-0 before:w-[34px] before:h-px lg:before:h-0.5 before:bg-black/[0.8] leading-none text-black pb-2 mb-2" style="opacity: 1; visibility: visible; transform: translateY(0px) translateZ(0px);">
+                <h2 class="text-[22px] lg:text-[32px] inline-block relative before:absolute before:bottom-0 ltr:before:left-0 rtl:before:right-0 before:w-[34px] before:h-px lg:before:h-0.5 before:bg-[#601042]/[0.8] leading-none text-[#601042] pb-2 mb-2" style="opacity: 1; visibility: visible; transform: translateY(0px) translateZ(0px);">
                   Collections
                 </h2>
             </div>
@@ -133,7 +152,7 @@
                 </a>
             </div>
         </div>
-    </div>
+</div>
     
 {{-- Collection End  --}}
 {{-- Mid Banner Start--}}
@@ -144,7 +163,7 @@
     <div class="block md:hidden">
       <img src="{{asset('asset\img\Capture5PNG.webp')}}" width="375" height="210" alt="banner" class="w-full h-auto">
     </div>
-  </div>
+</div>
   {{-- Mid Banner End --}}
   
 
@@ -386,7 +405,7 @@
 
 {{-- Main --}}
 <div class="container mx-auto py-8">
-    <h2 class="text-2xl font-semibold mb-4 text-gray-800">All Jewellery <span class="text-yellow-600">30
+    <h2 class="text-2xl font-semibold mb-4 text-gray-800">All Jewellery <span class="text-yellow-600">2471
             Designs</span></h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -443,7 +462,7 @@
         <!-- Add more cards here as needed -->
     </div>
 </div>
-</div>
+
 
 <!-- Bottom Navigation Bar with Sort and Filter Buttons -->
 <div class="lg:hidden fixed bottom-0 left-0 w-full z-50 bg-[#601042]">
@@ -831,18 +850,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Horizontal line with logo -->
 <div class="flex items-center justify-center w-full my-8">
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
@@ -850,5 +857,6 @@ document.addEventListener('DOMContentLoaded', function() {
         <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="h-12 w-auto">
     </div>
     <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+</div>
 </div>
 @endsection
