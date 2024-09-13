@@ -63,18 +63,20 @@
 <div class="bg-white">
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 z-40 hidden" role="dialog" aria-modal="true">
-        <div class="fixed inset-0 bg-black bg-opacity-25" aria-hidden="true"></div>
-        <div class="fixed inset-y-0 right-0 z-40 w-full max-w-xs bg-[#f5f5f5] text-black shadow-xl flex flex-col">
+        <div class="fixed inset-0 bg-black bg-opacity-25 transition-opacity duration-300" aria-hidden="true"></div>
+        <div
+            class="fixed inset-y-0 right-0 z-40 w-full max-w-xs bg-[#f5f5f5] text-black shadow-xl flex flex-col transform transition-transform duration-300 ease-in-out">
             <div class="flex flex-wrap justify-between items-center bg-[#601042] px-4 py-3 border-b border-[#d8c9d8]">
                 <div class="flex items-center space-x-3">
                     <a href="/login"
-                        class="tracking-normal capitalize text-base px-4 py-2 bg-[#d1b514] hover:bg-[#c3a827] text-white rounded">Log
+                        class="tracking-normal capitalize text-base px-4 py-2 bg-[#d1b514] hover:bg-[#c3a827] text-white rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-md">Log
                         in</a>
                     <a href="/signup"
-                        class="tracking-normal capitalize text-base px-4 py-2 bg-[#0077b6] hover:bg-[#005f87] text-white rounded">Sign
+                        class="tracking-normal capitalize text-base px-4 py-2 bg-[#0077b6] hover:bg-[#005f87] text-white rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-md">Sign
                         Up</a>
                 </div>
-                <button id="close-mobile-menu" type="button" class="text-white hover:text-gray-300 p-2">
+                <button id="close-mobile-menu" type="button"
+                    class="text-white hover:text-gray-300 p-2 transition-colors duration-300">
                     <span class="sr-only">Close menu</span>
                     <span class="material-icons">close</span>
                 </button>
@@ -82,18 +84,20 @@
             <div class="flex-1 overflow-y-auto p-4">
                 <div class="space-y-6">
                     <a href="{{ route('alljewellery') }}"
-                        class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">All
+                        class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">All
                         Jewellery</a>
                     <a href="{{ route('diamondjewellery') }}"
-                        class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Diamond</a>
-                    <a href="{{ route('gold') }}" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Gold</a>
-                    <a href="{{ route('silver') }}" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Silver</a>
-                    <a href="{{route('collection')}}"
-                        class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Collections</a>
-                    <a href="{{ route('bullions') }}" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Bullions</a>
+                        class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Diamond</a>
+                    <a href="{{ route('gold') }}"
+                        class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Gold</a>
+                    <a href="{{ route('silver') }}"
+                        class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Silver</a>
+                    <a href="{{ route('collection') }}"
+                        class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Collections</a>
+                    <a href="{{ route('bullions') }}"
+                        class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Bullions</a>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -121,33 +125,28 @@
                         <span class="hidden sm:inline">Giritra Franchise</span>
                     </a>
                 </div>
-                {{-- <div class="flex items-center space-x-4">
-                    <a href="{{route('metalrate')}}"
-                        class="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300">
-                        <i class="fas fa-balance-scale text-xl"></i>
-                        <span class="hidden sm:inline">Metal Rates</span>
-                    </a>
-                </div> --}}
                 <div class="flex items-center space-x-4 p-2">
                     <!-- Link with icon -->
                     <div class="relative group">
-                        <a href="#" class="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300">
+                        <a href="#"
+                            class="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300">
                             <i class="fas fa-balance-scale text-xl text-white"></i>
                             <span class="hidden sm:inline text-white">Metal Rates</span>
                         </a>
-                        
+
                         <!-- Dropdown Container -->
-                        <div class="dropdown-content absolute right-0 w-72 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg transition-all duration-300 ease-in-out z-50 hidden group-hover:block">
+                        <div
+                            class="dropdown-content absolute right-0 w-72 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg transition-all duration-300 ease-in-out z-50 hidden group-hover:block">
                             <h1 class="text-3xl font-light text-gray-900 text-center my-4">Today's Gold Rates</h1>
                             <!-- Horizontal Line with Logo -->
                             <div class="flex items-center justify-center w-full mx-auto">
                                 <div class="flex-grow h-px bg-[#9d6e2a]"></div>
                                 <div class="mx-4">
-                                    <img src="{{asset('asset/img/logo.png')}}" alt="Site Logo" class="h-10 w-10">
+                                    <img src="{{ asset('asset/img/logo.png') }}" alt="Site Logo" class="h-10 w-10">
                                 </div>
                                 <div class="flex-grow h-px bg-[#9d6e2a]"></div>
                             </div>
-                       
+
                             <!-- Grid for Silver and Rates -->
                             <div class="grid grid-cols-2 gap-4">
                                 <!-- Silver side -->
@@ -172,11 +171,12 @@
                                 </div>
                             </div>
                             <div class="hidden lg:block ">
-                                <p class="text-gray-800 pt-2 pb-1 text-center text-md font-light">Applicable for online purchase only</p>
-                              </div>
-                              {{--  --}}
-                              <div class="bg-[#9d6e2a] my-2 w-full h-px"></div> 
-                          
+                                <p class="text-gray-800 pt-2 pb-1 text-center text-md font-light">Applicable for online
+                                    purchase only</p>
+                            </div>
+                            {{--  --}}
+                            <div class="bg-[#9d6e2a] my-2 w-full h-px"></div>
+
                             <!-- Update Information -->
                             <div class="px-4 py-2 text-start text-gray-600">
                                 <label class="font-light text-md">Updated on:</label>
@@ -185,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-           
+
             </div>
         </div>
 
@@ -197,8 +197,8 @@
                     <button id="open-mobile-menu" type="button"
                         class="relative rounded-md p-2 text-gray-400 lg:hidden">
                         <span class="sr-only">Open menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                            aria-hidden="true">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
@@ -208,9 +208,9 @@
                     <div class="ml-4 flex lg:ml-0">
                         <a href="{{ route('home') }}">
                             <span class="sr-only">Your Company</span>
-                            <img class="h-8 w-auto" src="{{asset('asset/img/logo.png')}}" alt="Company Logo">
+                            <img class="h-8 w-auto" src="{{ asset('asset/img/logo.png') }}" alt="Company Logo">
                         </a>
-                       
+
                     </div>
 
                     <!-- Desktop Navigation Menu -->
@@ -218,8 +218,10 @@
                         <div class="flex h-full space-x-8">
                             <div class="relative group">
                                 <a href="{{ route('alljewellery') }}"
-                                    class="relative z-10 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-800 group">
+                                    class="relative z-10 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:text-[#d4af37] group">
                                     All Jewellery
+                                    <span
+                                        class="absolute bottom-0 left-0 w-full h-0.5 bg-[#d4af37] transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                                 </a>
                                 <!-- Dropdown Menu -->
                                 <div
@@ -240,7 +242,7 @@
                                                 <li>
                                                     <a href="#"
                                                         class="flex items-center text-gray-700 hover:text-gray-900">
-                                                        <img src="{{asset('asset\img\nav-img')}}" alt="Rings"
+                                                        <img src="{{ asset('asset\img\nav-img') }}" alt="Rings"
                                                             class="h-6 w-6 mr-3">
                                                         Rings
                                                     </a>
@@ -248,7 +250,7 @@
                                                 <li>
                                                     <a href="#"
                                                         class="flex items-center text-gray-700 hover:text-gray-900">
-                                                        <img src="{{asset('asset\img\nav-img')}}" alt="Bracelets"
+                                                        <img src="{{ asset('asset\img\nav-img') }}" alt="Bracelets"
                                                             class="h-6 w-6 mr-3">
                                                         Bracelets
                                                     </a>
@@ -256,7 +258,7 @@
                                                 <li>
                                                     <a href="#"
                                                         class="flex items-center text-gray-700 hover:text-gray-900">
-                                                        <img src="{{asset('asset\img\nav-img')}}" alt="Earrings"
+                                                        <img src="{{ asset('asset\img\nav-img') }}" alt="Earrings"
                                                             class="h-6 w-6 mr-3">
                                                         Earrings
                                                     </a>
@@ -264,7 +266,7 @@
                                                 <li>
                                                     <a href="#"
                                                         class="flex items-center text-gray-700 hover:text-gray-900">
-                                                        <img src="{{asset('asset\img\nav-img')}}" alt="Watches"
+                                                        <img src="{{ asset('asset\img\nav-img') }}" alt="Watches"
                                                             class="h-6 w-6 mr-3">
                                                         Watches
                                                     </a>
@@ -312,39 +314,41 @@
 
                             <div class="relative group">
                                 <a href="{{ route('diamondjewellery') }}"
-                                    class="relative z-10 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-800 group">
+                                    class="relative z-10 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:text-[#d4af37] group">
                                     Diamond
+                                    <span
+                                        class="absolute bottom-0 left-0 w-full h-0.5 bg-[#d4af37] transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                                 </a>
                                 <!-- Dropdown Menu -->
                                 <div
-                                    class="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block z-20">
+                                    class="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block z-50">
                                     <div class="py-1" role="menu" aria-orientation="vertical"
                                         aria-labelledby="menu-button">
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                             role="menuitem">
-                                            <img src="{{ asset('asset/img/necklaces.jpg') }}" alt="Necklaces"
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Necklaces"
                                                 class="h-8 w-8 mr-2">
                                             Necklaces
                                         </a>
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                             role="menuitem">
-                                            <img src="{{ asset('asset/img/rings.jpg') }}" alt="Rings"
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Rings"
                                                 class="h-8 w-8 mr-2">
                                             Rings
                                         </a>
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
                                             role="menuitem">
-                                            <img src="{{ asset('asset/img/bracelets.jpg') }}" alt="Bracelets"
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Bracelets"
                                                 class="h-8 w-8 mr-2">
                                             Bracelets
                                         </a>
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                             role="menuitem">
-                                            <img src="{{ asset('asset/img/earrings.jpg') }}" alt="Earrings"
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Earrings"
                                                 class="h-8 w-8 mr-2">
                                             Earrings
                                         </a>
@@ -352,21 +356,21 @@
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                             role="menuitem">
-                                            <img src="{{ asset('asset/img/pendants.jpg') }}" alt="Pendants"
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Pendants"
                                                 class="h-8 w-8 mr-2">
                                             Pendants
                                         </a>
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                             role="menuitem">
-                                            <img src="{{ asset('asset/img/ear-cuffs.jpg') }}" alt="Ear Cuffs"
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Ear Cuffs"
                                                 class="h-8 w-8 mr-2">
                                             Ear Cuffs
                                         </a>
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                             role="menuitem">
-                                            <img src="{{ asset('asset/img/diamond-sets.jpg') }}" alt="Diamond Sets"
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Diamond Sets"
                                                 class="h-8 w-8 mr-2">
                                             Diamond Sets
                                         </a>
@@ -377,84 +381,99 @@
 
                             <div class="relative group">
                                 <a href="{{ route('gold') }}"
-                                    class="relative z-10 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-800">
+                                    class="relative z-10 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:text-[#d4af37] group">
                                     Gold
+                                    <span
+                                        class="absolute bottom-0 left-0 w-full h-0.5 bg-[#d4af37] transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                                 </a>
                                 <!-- Dropdown Menu -->
                                 <div
-                                    class="absolute left-0 mt-2 w-80 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block z-20">
-                                    <div class="py-2" role="menu" aria-orientation="vertical"
+                                    class="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block z-50">
+                                    <div class="py-1" role="menu" aria-orientation="vertical"
                                         aria-labelledby="menu-button">
-                                        <!-- Category Header -->
-                                        <div
-                                            class="px-4 py-2 text-lg font-semibold border-b border-gray-200 bg-gray-50">
-                                            Gold Jewelry
-                                        </div>
-                                        <!-- Category Items -->
-                                        <div class="py-1">
-                                            <a href="#"
-                                                class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                                <img src="{{ asset('asset/img/gold-necklaces.jpg') }}"
-                                                    alt="Gold Necklaces"
-                                                    class="h-12 w-12 mr-3 rounded-full border border-gray-200">
-                                                <div class="flex-1">
-                                                    <p class="font-medium">Gold Necklaces</p>
-                                                    <p class="text-gray-500">Starting at $200</p>
-                                                </div>
-                                            </a>
-                                            <a href="#"
-                                                class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                                <img src="{{ asset('asset/img/gold-rings.jpg') }}" alt="Gold Rings"
-                                                    class="h-12 w-12 mr-3 rounded-full border border-gray-200">
-                                                <div class="flex-1">
-                                                    <p class="font-medium">Gold Rings</p>
-                                                    <p class="text-gray-500">Starting at $150</p>
-                                                </div>
-                                            </a>
-                                            <a href="#"
-                                                class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                                <img src="{{ asset('asset/img/gold-bracelets.jpg') }}"
-                                                    alt="Gold Bracelets"
-                                                    class="h-12 w-12 mr-3 rounded-full border border-gray-200">
-                                                <div class="flex-1">
-                                                    <p class="font-medium">Gold Bracelets</p>
-                                                    <p class="text-gray-500">Starting at $180</p>
-                                                </div>
-                                            </a>
-                                            <a href="#"
-                                                class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                                <img src="{{ asset('asset/img/gold-earrings.jpg') }}"
-                                                    alt="Gold Earrings"
-                                                    class="h-12 w-12 mr-3 rounded-full border border-gray-200">
-                                                <div class="flex-1">
-                                                    <p class="font-medium">Gold Earrings</p>
-                                                    <p class="text-gray-500">Starting at $120</p>
-                                                </div>
-                                            </a>
-                                            <a href="#"
-                                                class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                                <img src="{{ asset('asset/img/gold-watches.jpg') }}"
-                                                    alt="Gold Watches"
-                                                    class="h-12 w-12 mr-3 rounded-full border border-gray-200">
-                                                <div class="flex-1">
-                                                    <p class="font-medium">Gold Watches</p>
-                                                    <p class="text-gray-500">Starting at $350</p>
-                                                </div>
-                                            </a>
-                                        </div>
+                                        <a href="#"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            role="menuitem">
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Necklaces"
+                                                class="h-8 w-8 mr-2">
+                                           Gold Necklaces
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            role="menuitem">
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Rings"
+                                                class="h-8 w-8 mr-2">
+                                            Gold Rings
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
+                                            role="menuitem">
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Bracelets"
+                                                class="h-8 w-8 mr-2">
+                                           Gold Bracelets
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            role="menuitem">
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Earrings"
+                                                class="h-8 w-8 mr-2">
+                                           Gold Earrings
+                                        </a>
+                                        <!-- Additional items -->
+                                        <a href="#"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            role="menuitem">
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Pendants"
+                                                class="h-8 w-8 mr-2">
+                                           Gold Pendants
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            role="menuitem">
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Ear Cuffs"
+                                                class="h-8 w-8 mr-2">
+                                           Gold Ear Cuffs
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            role="menuitem">
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Gold Sets"
+                                                class="h-8 w-8 mr-2">
+                                           Gold Sets
+                                        </a>
                                     </div>
                                 </div>
                             </div>
 
 
-                            <a href="{{route('silver')}}"
-                                class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Silver</a>
-                            <a href="{{route('collection')}}"
-                                class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Collections</a>
+                            <a href="{{ route('silver') }}"
+                                class="relative flex items-center text-sm font-medium text-gray-700 hover:text-[#d4af37] group">
+                                Silver
+                                <span
+                                    class="absolute bottom-5 left-0 w-full h-0.5 bg-[#d4af37] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                            </a>
+
+                            <a href="{{ route('collection') }}"
+                                class="relative flex items-center text-sm font-medium text-gray-700 hover:text-[#d4af37] group">
+                                Collections
+                                <span
+                                    class="absolute bottom-5 left-0 w-full h-0.5 bg-[#d4af37] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                            </a>
+
                             <a href="{{ route('bullions') }}"
-                                class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Bullions</a>
+                                class="relative flex items-center text-sm font-medium text-gray-700 hover:text-[#d4af37] group">
+                                Bullions
+                                <span
+                                    class="absolute bottom-5 left-0 w-full h-0.5 bg-[#d4af37] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                            </a>
+
                             <a href="{{ route('contact') }}"
-                                class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Contact</a>
+                                class="relative flex items-center text-sm font-medium text-gray-700 hover:text-[#d4af37] group">
+                                Contact
+                                <span
+                                    class="absolute bottom-5 left-0 w-full h-0.5 bg-[#d4af37] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                            </a>
+
                         </div>
                     </div>
                     {{-- seachbar --}}
@@ -466,20 +485,18 @@
                         <!-- Search Input for Desktop -->
                         <form class="lg:flex lg:w-full md:w-full sm:w-1/2 ml-4 border rounded-lg">
                             <div class="flex items-center w-full">
-                              <input 
-                                type="text" 
-                                class="w-full px-4 py-2 border-none focus:outline-none focus:ring-2 focus:ring-[#601042]" 
-                                placeholder="Search..." 
-                              />
-                              <button type="submit" class="px-3">
-                                <i class="ri-search-2-line text-gray-500"></i>
-                              </button>
+                                <input type="text"
+                                    class="w-full px-4 py-2 border-none focus:outline-none focus:ring-2 focus:ring-[#601042]"
+                                    placeholder="Search..." />
+                                <button type="submit" class="px-3">
+                                    <i class="ri-search-2-line text-gray-500"></i>
+                                </button>
                             </div>
-                          </form>
-                          
-                          
-                      </div>
-                      
+                        </form>
+
+
+                    </div>
+
                     <!-- User Actions and Cart -->
                     <div class="ml-auto flex items-center">
                         <div class="hidden lg:flex lg:items-center lg:space-x-6">
@@ -514,11 +531,11 @@
 
 
                             <a href="{{ route('wishlist') }}"
-                                class="text-sm font-medium text-gray-700 hover:text-gray-800">
+                                class="text-sm font-medium text-gray-700 hover:text-[#d4af37]">
                                 <i class="fas fa-heart"></i> Wishlist
                             </a>
                             <a href="{{ route('cart') }}"
-                                class="text-sm font-medium text-gray-700 hover:text-gray-800">
+                                class="text-sm font-medium text-gray-700 hover:text-[#d4af37]">
                                 <i class="fas fa-shopping-cart"></i> Cart
                             </a>
                         </div>
@@ -530,7 +547,7 @@
 </div>
 
 
-{{-- <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50">
+<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50">
     <div class="flex justify-between items-center p-4">
         <!-- Home Button -->
         <a href="/" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
@@ -562,7 +579,7 @@
             <span class="text-xs">Cart</span>
         </a>
     </div>
-</div> --}}
+</div>
 
 
 

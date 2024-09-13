@@ -94,7 +94,7 @@
         </svg>
         <h3 class="text-2xl font-semibold text-gray-700 mb-3">Your Wishlist is Empty</h3>
         <p class="text-gray-500 mb-8 max-w-md mx-auto">Explore our exquisite collection and add the jewelry pieces you love to your wishlist.</p>
-        <a href="#" class="inline-flex items-center px-8 py-3 bg-[#601042] text-white font-medium rounded-full hover:bg-[#4a0c31] focus:outline-none focus:ring-2 focus:ring-[#601042] focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:scale-105">
+        <a href="{{route('collection')}}" class="inline-flex items-center px-8 py-3 bg-[#601042] text-white font-medium rounded-full hover:bg-[#4a0c31] focus:outline-none focus:ring-2 focus:ring-[#601042] focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:scale-105">
             Discover Our Collection
             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
