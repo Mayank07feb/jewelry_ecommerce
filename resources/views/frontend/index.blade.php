@@ -174,9 +174,9 @@
             <img src="{{asset('asset/img/daimond.png')}}" alt="Diamond" class="w-40 h-56 object-contain mb-4">
             <h3 class="text-lg font-semibold mb-1">Diamond</h3>
             <p class="text-sm text-gray-600 mb-3 text-center">For the most awaited moment!</p>
-            <button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
+            <a href="{{ route('diamondjewellery') }}" ><button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
                 DISCOVER MORE
-            </button>
+            </button></a>
         </div>
 
         <!-- Gold Category -->
@@ -184,9 +184,9 @@
             <img src="{{asset('asset/img/gold.png')}}" alt="Gold" class="w-40 h-56 object-contain mb-4">
             <h3 class="text-lg font-semibold mb-1">Gold</h3>
             <p class="text-sm text-gray-600 mb-3 text-center">For the beauty and the bliss!</p>
-            <button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
+            <a href="{{ route('diamondjewellery') }}" ><button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
                 DISCOVER MORE
-            </button>
+            </button></a>
         </div>
 
         <!-- Bullions Category -->
@@ -194,9 +194,9 @@
             <img src="{{asset('asset/img/bullions.png')}}" alt="Bullions" class="w-40 h-56 object-contain mb-4">
             <h3 class="text-lg font-semibold mb-1">Bullions</h3>
             <p class="text-sm text-gray-600 mb-3 text-center">For auspicious occasions!</p>
-            <button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
+            <a href="{{ route('diamondjewellery') }}" ><button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
                 DISCOVER MORE
-            </button>
+            </button></a>
         </div>
 
         <!-- Silver Category -->
@@ -204,9 +204,9 @@
             <img src="{{asset('asset/img/sliver.png')}}" alt="Silver" class="w-40 h-56 object-contain mb-4">
             <h3 class="text-lg font-semibold mb-1">Silver</h3>
             <p class="text-sm text-gray-600 mb-3 text-center">For everyday elegance!</p>
-            <button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
+            <a href="{{ route('diamondjewellery') }}" ><button class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
                 DISCOVER MORE
-            </button>
+            </button></a>
         </div>
     </div>
 </div>

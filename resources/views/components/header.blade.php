@@ -86,11 +86,11 @@
                         Jewellery</a>
                     <a href="{{ route('diamondjewellery') }}"
                         class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Diamond</a>
-                    <a href="#" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Gold</a>
-                    <a href="#" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Silver</a>
+                    <a href="{{ route('gold') }}" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Gold</a>
+                    <a href="{{ route('silver') }}" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Silver</a>
                     <a href="{{route('collection')}}"
                         class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Collections</a>
-                    <a href="#" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Bullions</a>
+                    <a href="{{ route('bullions') }}" class="block text-lg font-medium text-[#601042] hover:text-[#4b002f]">Bullions</a>
                 </div>
             </div>
 
@@ -393,7 +393,7 @@
 
 
                             <div class="relative group">
-                                <a href="#"
+                                <a href="{{ route('gold') }}"
                                     class="relative z-10 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-800">
                                     Gold
                                 </a>
@@ -468,13 +468,34 @@
                                 class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Silver</a>
                             <a href="{{route('collection')}}"
                                 class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Collections</a>
-                            <a href="#"
+                            <a href="{{ route('bullions') }}"
                                 class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Bullions</a>
                             <a href="{{ route('contact') }}"
                                 class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Contact</a>
                         </div>
                     </div>
-
+                    {{-- seachbar --}}
+                    <div class="relative">
+                        <!-- Search Icon for Mobile -->
+                        {{-- <div class="absolute inset-y-0 left-0 flex items-center pl-4 lg:hidden">
+                            <i class="ri-search-2-line"></i>
+                        </div> --}}
+                        <!-- Search Input for Desktop -->
+                        <form class=" lg:flex w-full lg:ml-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                            <div class="flex items-center w-full">
+                              <input 
+                                type="text" 
+                                class="w-full px-4 py-2 border-none focus:outline-none" 
+                                placeholder="Search..." 
+                              />
+                              <button type="submit" class="px-3">
+                                <i class="ri-search-2-line text-gray-500"></i>
+                              </button>
+                            </div>
+                          </form>
+                          
+                      </div>
+                      
                     <!-- User Actions and Cart -->
                     <div class="ml-auto flex items-center">
                         <div class="hidden lg:flex lg:items-center lg:space-x-6">
