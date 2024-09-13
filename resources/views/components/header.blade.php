@@ -100,7 +100,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Header -->
     <header class="relative bg-white shadow-sm">
         <!-- Promo Banner -->
@@ -321,7 +321,7 @@
                                 </a>
                                 <!-- Dropdown Menu -->
                                 <div
-                                    class="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block z-20">
+                                    class="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block z-50">
                                     <div class="py-1" role="menu" aria-orientation="vertical"
                                         aria-labelledby="menu-button">
                                         <a href="#"
@@ -388,62 +388,59 @@
                                 </a>
                                 <!-- Dropdown Menu -->
                                 <div
-                                    class="absolute left-0 mt-2 w-80 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block z-20">
-                                    <div class="py-2" role="menu" aria-orientation="vertical"
+                                    class="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block z-50">
+                                    <div class="py-1" role="menu" aria-orientation="vertical"
                                         aria-labelledby="menu-button">
-                                        <!-- Category Header -->
-                                        <div
-                                            class="px-4 py-2 text-lg font-semibold border-b border-gray-200 bg-gray-50">
-                                            Gold Jewelry
-                                        </div>
-                                        <!-- Category Items -->
-                                        <div class="py-1">
-                                            <a href="#"
-                                                class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                                <img src="{{ asset('asset/img/logo.png') }}" alt="Gold Necklaces"
-                                                    class="h-12 w-12 mr-3 rounded-full border border-gray-200">
-                                                <div class="flex-1">
-                                                    <p class="font-medium">Gold Necklaces</p>
-                                                    <p class="text-gray-500">Starting at $200</p>
-                                                </div>
-                                            </a>
-                                            <a href="#"
-                                                class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                                <img src="{{ asset('asset/img/logo.png') }}" alt="Gold Rings"
-                                                    class="h-12 w-12 mr-3 rounded-full border border-gray-200">
-                                                <div class="flex-1">
-                                                    <p class="font-medium">Gold Rings</p>
-                                                    <p class="text-gray-500">Starting at $150</p>
-                                                </div>
-                                            </a>
-                                            <a href="#"
-                                                class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                                <img src="{{ asset('asset/img/logo.png') }}" alt="Gold Bracelets"
-                                                    class="h-12 w-12 mr-3 rounded-full border border-gray-200">
-                                                <div class="flex-1">
-                                                    <p class="font-medium">Gold Bracelets</p>
-                                                    <p class="text-gray-500">Starting at $180</p>
-                                                </div>
-                                            </a>
-                                            <a href="#"
-                                                class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                                <img src="{{ asset('asset/img/logo.png') }}" alt="Gold Earrings"
-                                                    class="h-12 w-12 mr-3 rounded-full border border-gray-200">
-                                                <div class="flex-1">
-                                                    <p class="font-medium">Gold Earrings</p>
-                                                    <p class="text-gray-500">Starting at $120</p>
-                                                </div>
-                                            </a>
-                                            <a href="#"
-                                                class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                                <img src="{{ asset('asset/img/logo.png') }}" alt="Gold Watches"
-                                                    class="h-12 w-12 mr-3 rounded-full border border-gray-200">
-                                                <div class="flex-1">
-                                                    <p class="font-medium">Gold Watches</p>
-                                                    <p class="text-gray-500">Starting at $350</p>
-                                                </div>
-                                            </a>
-                                        </div>
+                                        <a href="#"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            role="menuitem">
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Necklaces"
+                                                class="h-8 w-8 mr-2">
+                                           Gold Necklaces
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            role="menuitem">
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Rings"
+                                                class="h-8 w-8 mr-2">
+                                            Gold Rings
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
+                                            role="menuitem">
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Bracelets"
+                                                class="h-8 w-8 mr-2">
+                                           Gold Bracelets
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            role="menuitem">
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Earrings"
+                                                class="h-8 w-8 mr-2">
+                                           Gold Earrings
+                                        </a>
+                                        <!-- Additional items -->
+                                        <a href="#"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            role="menuitem">
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Pendants"
+                                                class="h-8 w-8 mr-2">
+                                           Gold Pendants
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            role="menuitem">
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Ear Cuffs"
+                                                class="h-8 w-8 mr-2">
+                                           Gold Ear Cuffs
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            role="menuitem">
+                                            <img src="{{ asset('asset/img/logo.png') }}" alt="Gold Sets"
+                                                class="h-8 w-8 mr-2">
+                                           Gold Sets
+                                        </a>
                                     </div>
                                 </div>
                             </div>
