@@ -371,6 +371,19 @@
     <!--Mobile View Overlay -->
     <div id="overlay" class="fixed inset-0 bg-black opacity-50 z-30 hidden"></div>
 
+
+     {{-- horizontal line --}}
+     <div class="flex items-center justify-center w-screen">
+        <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+        <div class="mx-4">
+            <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="h-12 w-auto">
+        </div>
+        <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+    </div>
+
+
+
+
     <!--Mobile View Sidebar (Left) -->
     <div id="sort-sidebar"
         class="fixed inset-y-0 left-0 w-full max-w-xs z-40 bg-white text-black shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
@@ -421,6 +434,7 @@
             </ul>
         </div>
     </div>
+
 
     <!-- Filter Sidebar (Right) -->
     <div id="filter-sidebar"
