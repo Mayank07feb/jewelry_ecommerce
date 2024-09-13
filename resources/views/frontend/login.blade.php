@@ -29,7 +29,7 @@
             <input type="password" placeholder="Enter Password" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
         </div>
         <div class="flex justify-between items-center">
-            <a href="#" class="text-sm text-[#9d6e2a] hover:underline">Forgot Password?</a>
+            <a href="{{route('forgot.password')}}" class="text-sm text-[#9d6e2a] hover:underline">Forgot Password?</a>
         </div>
         <button type="submit" class="w-full bg-[#9d6e2a] text-white py-2 rounded-md hover:bg-[#7b4a1b] focus:outline-none">Log me in</button>
     </form>

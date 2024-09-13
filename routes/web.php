@@ -38,6 +38,11 @@ Route::get('/login', [HomeController::class, 'login'])->name('login');
 
 Route::get('/signup', [HomeController::class, 'signup'])->name('signup');
 
+Route::get('/forgot-password', [HomeController::class, 'showForgotPasswordForm'])->name('forgot.password');
+
+Route::get('/reset-password', [HomeController::class, 'showResetPasswordForm'])->name('password.reset');
+
+
 // New Routes
 Route::get('/ordersummary', [HomeController::class, 'ordersummary'])->name('ordersummary');
 

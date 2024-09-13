@@ -75,6 +75,16 @@ class HomeController extends Controller
         return view('frontend.signup');
     }
 
+    public function showForgotPasswordForm()
+    {
+        return view('frontend.forgot-password');
+    }
+
+    public function showResetPasswordForm()
+    {
+        return view('frontend.reset-password');
+    }
+
     public function profile()
     {
         return view('frontend.profile');
@@ -129,7 +139,4 @@ class HomeController extends Controller
     {
         return view('frontend.collection');
     }
-
-    
-
 }
