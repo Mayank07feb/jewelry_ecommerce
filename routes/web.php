@@ -16,6 +16,10 @@ Route::get('/bullions', [HomeController::class, 'bullions'])->name('bullions');
 
 Route::get('/silver', [HomeController::class, 'silver'])->name('silver');
 
+Route::get('/blogs', [HomeController::class, 'showBlogs'])->name('blogs');
+
+Route::get('/blog-details', [HomeController::class, 'showBlogDetails'])->name('blog.details');
+
 Route::get('/page404', [HomeController::class, 'page404'])->name('page404');
 
 Route::get('/cart', [HomeController::class, 'cart'])->name('cart');

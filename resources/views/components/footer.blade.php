@@ -20,7 +20,7 @@
                             Story</a></li>
                     <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Video</a>
                     </li>
-                    <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Blogs</a>
+                    <li><a href="{{route('blogs')}}" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Blogs</a>
                     </li>
                     <li><a href="#"
                             class="hover:text-[#9d6e2a] hover:underline transition duration-300">Careers</a></li>
@@ -60,7 +60,7 @@
                             Appointment</a></li>
                     <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Contest &
                             Programs</a></li>
-                    <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Contact
+                    <li><a href="{{route('contact')}}" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Contact
                             Us</a></li>
                     <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Giritra
                             Franchise</a></li>
