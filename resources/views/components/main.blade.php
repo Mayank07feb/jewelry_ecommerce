@@ -185,7 +185,7 @@
             });
 
             chatButton.addEventListener('click', function() {
-                window.open('https://wa.me/7905111789', '_blank');
+                window.open('https://wa.me/0123456789', '_blank');
             });
         });
 
