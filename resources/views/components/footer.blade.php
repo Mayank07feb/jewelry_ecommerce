@@ -52,7 +52,7 @@
             <div class="space-y-4">
                 <h4 class="text-[#601042] text-xl font-semibold mb-4">Customer Delight</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">FAQ</a>
+                    <li><a href="{{route('faq')}}" class="hover:text-[#9d6e2a] hover:underline transition duration-300">FAQ</a>
                     </li>
                     <li><a href="#"
                             class="hover:text-[#9d6e2a] hover:underline transition duration-300">Policies</a></li>

@@ -51,6 +51,11 @@ class HomeController extends Controller
         return view('frontend.blog-details');
     }
 
+    public function faq()
+    {
+        return view('frontend.faq');
+    }
+
     public function cart()
     {
         return view('frontend.cart');

@@ -20,6 +20,8 @@ Route::get('/blogs', [HomeController::class, 'showBlogs'])->name('blogs');
 
 Route::get('/blog-details', [HomeController::class, 'showBlogDetails'])->name('blog.details');
 
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+
 Route::get('/page404', [HomeController::class, 'page404'])->name('page404');
 
 Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
