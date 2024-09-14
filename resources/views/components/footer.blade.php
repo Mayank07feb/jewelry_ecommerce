@@ -31,7 +31,7 @@
             <div class="space-y-4">
                 <h4 class="text-[#601042] text-xl font-semibold mb-4">Giritra Promises</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">14-Day
+                    <li><a href="{{route('giritra.promises')}}" class="hover:text-[#9d6e2a] hover:underline transition duration-300">14-Day
                             Returns</a></li>
                     <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Free
                             Shipping</a></li>

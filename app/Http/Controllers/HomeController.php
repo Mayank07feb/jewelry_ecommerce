@@ -61,6 +61,11 @@ class HomeController extends Controller
         return view('frontend.policies'); 
     }
 
+    public function giritraPromises()
+    {
+        return view('frontend.giritra-promises');
+    }
+
     public function cart()
     {
         return view('frontend.cart');
