@@ -52,7 +52,7 @@
             <div class="px-4 lg:px-0 pt-6 lg:pt-4">
                 <div class="space-y-12">
                     <!-- About Gititra Jewellers FAQ Section -->
-                    <div id="about-gititra-jewellers" class="faq-section">
+                    <div id="about-gititra-jewellers" class="faq-section hidden">
                         <h2
                             class="inline-block relative before:absolute before:bottom-0 before:left-0 before:w-8 before:h-1 before:bg-[#601042] pb-2 mb-4 text-lg lg:text-2xl font-light">
                             About Gititra Jewellers
@@ -146,11 +146,23 @@
         </div>
     </div>
 
+
+    {{-- horizontal line --}}
+    <div class="flex items-center justify-center w-screen px-10">
+        <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+        <div class="mx-4">
+            <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="h-12 w-auto">
+        </div>
+        <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const links = document.querySelectorAll('.faq-link');
             const sections = document.querySelectorAll('.faq-section');
+            const toggles = document.querySelectorAll('.toggle-answer');
 
+            // Sidebar section toggle
             links.forEach(link => {
                 link.addEventListener('click', function() {
                     // Hide all sections
@@ -160,6 +172,18 @@
                     const target = document.querySelector(this.dataset.target);
                     if (target) {
                         target.classList.remove('hidden');
+                    }
+                });
+            });
+
+            // Accordion functionality
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const target = document.querySelector(this.dataset.target);
+                    if (target) {
+                        target.classList.toggle('hidden');
+                        // Rotate the icon based on the visibility of the answer
+                        this.querySelector('svg').classList.toggle('rotate-0');
                     }
                 });
             });
