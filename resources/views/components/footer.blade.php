@@ -54,7 +54,7 @@
                 <ul class="space-y-2 text-sm">
                     <li><a href="{{route('faq')}}" class="hover:text-[#9d6e2a] hover:underline transition duration-300">FAQ</a>
                     </li>
-                    <li><a href="#"
+                    <li><a href="{{route('policies')}}"
                             class="hover:text-[#9d6e2a] hover:underline transition duration-300">Policies</a></li>
                     <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Book
                             Appointment</a></li>

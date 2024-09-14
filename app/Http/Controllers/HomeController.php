@@ -56,6 +56,11 @@ class HomeController extends Controller
         return view('frontend.faq');
     }
 
+    public function policies()
+    {
+        return view('frontend.policies'); 
+    }
+
     public function cart()
     {
         return view('frontend.cart');
