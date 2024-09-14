@@ -503,48 +503,49 @@
         <div class="flex-grow h-px bg-[#9d6e2a]"></div>
     </div>
 
-   {{-- video :::::::: Crafted Elegance::::::: --}}
-<div>
+    {{-- video :::::::: Crafted Elegance::::::: --}}
     <div>
-        <!-- Parallax Section -->
-        <div
-            class="relative hidden lg:flex w-full h-[80vh] min-h-[600px] justify-center items-center overflow-hidden cursor-pointer">
-            <div id="mouse-parallax-container"
-                class="relative ltr:left-[5%] rtl:right-[5%] ltr:right-0 rtl:left-0 top-auto bottom-auto flex items-center w-[95%] h-[90%]"
-                style="transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);">
+        <div>
+            <!-- Parallax Section -->
+            <div
+                class="relative w-full h-[80vh] min-h-[600px] justify-center items-center overflow-hidden cursor-pointer flex">
+                <div id="mouse-parallax-container"
+                    class="relative ltr:left-[5%] rtl:right-[5%] ltr:right-0 rtl:left-0 top-auto bottom-auto flex items-center w-[95%] h-[90%]"
+                    style="transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);">
 
-                <!-- Dark Title Wrapper -->
-                <div class="absolute inset-0 -z-[3] w-full h-full">
-                    <div
-                        class="static ltr:left-auto rtl:right-auto ltr:right-0 rtl:left-0 inset-y-0 flex justify-end items-center ltr:text-right rtl:text-left w-[80vw] h-[80vh]">
+                    <!-- Dark Title Wrapper -->
+                    <div class="absolute inset-0 -z-[3] w-full h-full">
                         <div
-                            class="title text-black text-[95px] font-light uppercase whitespace-nowrap static ltr:-ml-2 rtl:-mr-2"
-                            style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
-                            Crafted Elegance
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Video Section -->
-                <div class="absolute inset-0 -z-[1] w-[55vw] justify-start cursor-pointer video-wrapper"
-                     style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
-                    <div class="relative h-full">
-                        <video width="100%" height="100%" loop muted autoplay
-                            class="w-full h-full object-cover object-right"
-                            src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/widgets/video_1682089105_1691241930.mp4"></video>
-                        <div class="inline-flex cursor-pointer absolute bottom-0 ltr:right-0 rtl:left-0 m-4">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- White Title Wrapper -->
-                <div
-                    class="absolute ltr:left-auto rtl:right-auto ltr:right-0 rtl:left-0 inset-y-0 -z-[1] w-full h-full">
-                    <div class="static overflow-hidden w-[55vw] justify-end items-center origin-[0%_50%] object-fill">
-                        <div class="static flex justify-end items-center w-[80vw] h-[80vh]">
-                            <div class="title text-white text-[95px] font-light uppercase whitespace-nowrap static"
-                                 style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
+                            class="static ltr:left-auto rtl:right-auto ltr:right-0 rtl:left-0 inset-y-0 flex justify-end items-center ltr:text-right rtl:text-left w-[80vw] h-[80vh]">
+                            <div class="title text-black text-[40px] md:text-[60px] lg:text-[95px] font-light uppercase whitespace-nowrap static ltr:-ml-2 rtl:-mr-2"
+                                style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
                                 Crafted Elegance
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Section -->
+                    <div class="absolute inset-0 -z-[1] w-full md:w-[55vw] justify-start cursor-pointer video-wrapper"
+                        style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
+                        <div class="relative h-full">
+                            <video width="100%" height="100%" loop muted autoplay
+                                class="w-full h-full object-cover object-right"
+                                src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/widgets/video_1682089105_1691241930.mp4"></video>
+                            <div class="inline-flex cursor-pointer absolute bottom-0 ltr:right-0 rtl:left-0 m-4">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- White Title Wrapper -->
+                    <div
+                        class="absolute ltr:left-auto rtl:right-auto ltr:right-0 rtl:left-0 inset-y-0 -z-[1] w-full h-full">
+                        <div
+                            class="static overflow-hidden w-full md:w-[55vw] justify-end items-center origin-[0%_50%] object-fill">
+                            <div class="static flex justify-end items-center w-[80vw] h-[80vh]">
+                                <div class="title text-white text-[40px] md:text-[60px] lg:text-[95px] font-light uppercase whitespace-nowrap static"
+                                    style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
+                                    Crafted Elegance
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -552,6 +553,7 @@
             </div>
         </div>
     </div>
+
 </div>
 {{-- video ::::mobile screen only:::: Crafted Elegance:::::::--}}
 {{-- <div class="flex lg:hidden justify-center items-center overflow-hidden hover:cursor-pointer px-6 md:px-28 py-12">
@@ -572,6 +574,7 @@
         </div>
     </div>
 </div> --}}
+
 
 
     <!-- COLLECTIONS -->

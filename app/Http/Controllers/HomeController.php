@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
-
 {
     // Method for home page
     public function index()
@@ -14,7 +13,7 @@ class HomeController extends Controller
 
     public function contact()
     {
-        return view ('frontend.contact');
+        return view('frontend.contact');
     }
 
     public function alljewellery()
@@ -133,7 +132,6 @@ class HomeController extends Controller
         return view('frontend.franchise');
     }
 
-
     public function collection()
     {
         return view('frontend.collection');
@@ -149,5 +147,4 @@ class HomeController extends Controller
     {
         return view('frontend.customjewellery');
     }
-
 }

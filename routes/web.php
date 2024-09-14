@@ -42,7 +42,6 @@ Route::get('/forgot-password', [HomeController::class, 'showForgotPasswordForm']
 
 Route::get('/reset-password', [HomeController::class, 'showResetPasswordForm'])->name('password.reset');
 
-
 // New Routes
 Route::get('/ordersummary', [HomeController::class, 'ordersummary'])->name('ordersummary');
 
