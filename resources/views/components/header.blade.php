@@ -483,7 +483,7 @@
                             <i class="ri-search-2-line"></i>
                         </div> --}}
                         <!-- Search Input for Desktop -->
-                        <form class="lg:flex lg:w-full md:w-full sm:w-1/2 ml-4 border rounded-lg">
+                        <form class="lg:flex lg:w-full md:w-full w-1/2 ml-4 border rounded-lg">
                             <div class="flex items-center w-full">
                                 <input type="text"
                                     class="w-full px-4 py-2 border-none focus:outline-none focus:ring-2 focus:ring-[#601042]"
@@ -556,25 +556,25 @@
         </a>
 
         <!-- Category Button -->
-        <a href="{{route('page404')}}" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+        <a href="/categories" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
             <span class="material-icons text-3xl">category</span>
             <span class="text-xs">Category</span>
         </a>
 
         <!-- Account Button -->
-        <a href="{{route('login')}}" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+        <a href="/login" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
             <span class="material-icons text-3xl">account_circle</span>
             <span class="text-xs">Account</span>
         </a>
 
         <!-- Wishlist Button -->
-        <a href="{{route('wishlist')}}" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+        <a href="/dashboard/wishlist" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
             <span class="material-icons text-3xl">favorite_border</span>
             <span class="text-xs">Wishlist</span>
         </a>
 
         <!-- Cart Button -->
-        <a href="{{route('cart')}}" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+        <a href="/cart" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
             <span class="material-icons text-3xl">shopping_cart</span>
             <span class="text-xs">Cart</span>
         </a>

@@ -553,6 +553,25 @@
         </div>
     </div>
 </div>
+{{-- video ::::mobile screen only:::: Crafted Elegance:::::::--}}
+{{-- <div class="flex lg:hidden justify-center items-center overflow-hidden hover:cursor-pointer px-6 md:px-28 py-12">
+    <div id="mouse-parallax-container" class="relative w-full h-full">
+      
+        <!-- Background Video -->
+        <div class="relative w-[80vw]  h-[50vh] lg:h-[70vh] overflow-hidden">
+            <video width="100%" height="100%" loop muted autoplay class="w-full h-full object-cover">
+                <source src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/widgets/video_1682089105_1691241930.mp4" type="video/mp4">
+            </video>
+  
+            <!-- Parallax Title -->
+            <div class="absolute inset-0 flex justify-end items-center w-full h-full">
+                <div class="text-white text-[8vw] md:text-[10vw] lg:text-[85px] font-light uppercase whitespace-nowrap">
+                    Crafted <span class="text-white">Elegance</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}
 
 
     <!-- COLLECTIONS -->
