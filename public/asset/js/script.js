@@ -142,3 +142,99 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// card1------------VALUE
+    document.addEventListener('DOMContentLoaded', () => {
+        const readMoreBtn = document.getElementById('read-more');
+        const readLessBtn = document.getElementById('read-less');
+        const showMoreIcon = document.getElementById('show-more-icon');
+        const showLessIcon = document.getElementById('show-less-icon');
+        const coreValuesText = document.getElementById('core-values-text');
+        
+        // Initial hidden state
+        const fullText = "Our story unfolds over eighteen decades – inspired by the values of trust, purity, and transparency. Generations of the Gadgil family have employed their experience and expertise to abide by being a global hallmark of traditional designs while bringing a fresh twist to contemporary designs. A journey adorned with the values of goodness, creativity, and evolution!";
+        const shortText = fullText.slice(0, 150) + '...'; // Adjust the slice as needed
+
+        coreValuesText.innerHTML = shortText;
+
+        readMoreBtn.addEventListener('click', () => {
+            coreValuesText.innerHTML = fullText;
+            showMoreIcon.classList.add('hidden');
+            readMoreBtn.classList.add('hidden');
+            showLessIcon.classList.remove('hidden');
+            readLessBtn.classList.remove('hidden');
+        });
+
+        readLessBtn.addEventListener('click', () => {
+            coreValuesText.innerHTML = shortText;
+            showMoreIcon.classList.remove('hidden');
+            readMoreBtn.classList.remove('hidden');
+            showLessIcon.classList.add('hidden');
+            readLessBtn.classList.add('hidden');
+        });
+    });
+
+// CARD2 --------VISION
+document.addEventListener('DOMContentLoaded', () => {
+    const readMoreBtn = document.getElementById('read-more-vission');
+    const readLessBtn = document.getElementById('read-less-vission');
+    const showMoreIcon = document.getElementById('show-more-icon-vission');
+    const showLessIcon = document.getElementById('show-less-icon-vission');
+    const coreValuesText = document.getElementById('core-values-text-vission');
+    
+    // Initial hidden state
+    const fullText = "Our story unfolds over eighteen decades – inspired by the values of trust, purity, and transparency. Generations of the Gadgil family have employed their experience and expertise to abide by being a global hallmark of traditional designs while bringing a fresh twist to contemporary designs. A journey adorned with the values of goodness, creativity, and evolution!";
+    const shortText = fullText.slice(0, 150) + '...'; // Adjust the slice as needed
+
+    coreValuesText.innerHTML = shortText;
+
+    readMoreBtn.addEventListener('click', () => {
+        coreValuesText.innerHTML = fullText;
+        showMoreIcon.classList.add('hidden');
+        readMoreBtn.classList.add('hidden');
+        showLessIcon.classList.remove('hidden');
+        readLessBtn.classList.remove('hidden');
+    });
+
+    readLessBtn.addEventListener('click', () => {
+        coreValuesText.innerHTML = shortText;
+        showMoreIcon.classList.remove('hidden');
+        readMoreBtn.classList.remove('hidden');
+        showLessIcon.classList.add('hidden');
+        readLessBtn.classList.add('hidden');
+    });
+});
+
+// card3-------------MISSION
+document.addEventListener('DOMContentLoaded', () => {
+    const readMoreBtn = document.getElementById('read-more-Mission');
+    const readLessBtn = document.getElementById('read-less-Mission');
+    const showMoreIcon = document.getElementById('show-more-icon-Mission');
+    const showLessIcon = document.getElementById('show-less-icon-Mission');
+    const coreValuesText = document.getElementById('core-values-text-Mission');
+    
+    // Initial hidden state
+    const fullText = "Our story unfolds over eighteen decades – inspired by the values of trust, purity, and transparency. Generations of the Gadgil family have employed their experience and expertise to abide by being a global hallmark of traditional designs while bringing a fresh twist to contemporary designs. A journey adorned with the values of goodness, creativity, and evolution!";
+    const shortText = fullText.slice(0, 150) + '...'; // Adjust the slice as needed
+
+    coreValuesText.innerHTML = shortText;
+
+    readMoreBtn.addEventListener('click', () => {
+        coreValuesText.innerHTML = fullText;
+        showMoreIcon.classList.add('hidden');
+        readMoreBtn.classList.add('hidden');
+        showLessIcon.classList.remove('hidden');
+        readLessBtn.classList.remove('hidden');
+    });
+
+    readLessBtn.addEventListener('click', () => {
+        coreValuesText.innerHTML = shortText;
+        showMoreIcon.classList.remove('hidden');
+        readMoreBtn.classList.remove('hidden');
+        showLessIcon.classList.add('hidden');
+        readLessBtn.classList.add('hidden');
+    });
+});
+
+
+    

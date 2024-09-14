@@ -60,3 +60,8 @@ Route::get('/collectiondetails', [HomeController::class, 'collectiondetails'])->
 
 Route::get('/customjewellery', [HomeController::class, 'customjewellery'])->name('customjewellery');
 
+Route::get('/ourstory', [HomeController::class, 'ourstory'])->name('ourstory');
+
+Route::get('/jewellerycareguide', [HomeController::class, 'jewellerycareguide'])->name('jewellerycareguide');
+
+Route::get('/gemstone', [HomeController::class, 'gemstone'])->name('gemstone');

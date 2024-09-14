@@ -643,10 +643,10 @@
             </div>
         </div>
         <div class="flex justify-center p-4 mt-8">
-            <button
-                class="hover:bg-[#601042] border-2 border-black hover:text-white font-semibold py-2 px-6 bg-white text-[#601042] focus:outline-none focus:ring-4 focus:ring-[#601042]/50 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
-                Discover More
-            </button>
+           <a href="{{route('collection')}}"> <button
+            class="hover:bg-[#601042] border-2 border-black hover:text-white font-semibold py-2 px-6 bg-white text-[#601042] focus:outline-none focus:ring-4 focus:ring-[#601042]/50 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+            Discover More
+        </button></a>
         </div>
     </div>
 

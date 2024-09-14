@@ -147,4 +147,16 @@ class HomeController extends Controller
     {
         return view('frontend.customjewellery');
     }
+    // OUR STORY
+    public function ourstory(){
+        return view('frontend.ourstory');
+    }
+    // care guide
+    public function jewellerycareguide(){
+        return view('frontend.jewellerycareguide');
+    }
+    // GEMSTONE
+    public function gemstone(){
+        return view('frontend.gemstone');
+    }
 }

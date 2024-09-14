@@ -16,7 +16,7 @@
             <div class="space-y-4">
                 <h4 class="text-[#601042] text-xl font-semibold mb-4">Know Us</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Our
+                    <li><a href="{{route('ourstory')}}" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Our
                             Story</a></li>
                     <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Video</a>
                     </li>
@@ -73,11 +73,11 @@
                 <ul class="space-y-2 text-sm">
                     <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Size
                             Guide</a></li>
-                    <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Jewellery
+                    <li><a href="{{route('jewellerycareguide')}}" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Jewellery
                             Care Guide</a></li>
                     <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Know Your
                             Diamond</a></li>
-                    <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Know Your
+                    <li><a href="gemstone" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Know Your
                             Gemstone</a></li>
                 </ul>
             </div>
