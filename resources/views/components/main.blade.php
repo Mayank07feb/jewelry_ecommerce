@@ -48,6 +48,15 @@
 
 <body class=" text-gray-900">
 
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 flex items-center justify-center bg-white bg-opacity-70 z-50">
+        <div
+            class="animate-spin rounded-full h-24 w-24 border-t-4 border-b-4 border-transparent flex items-center justify-center">
+            <img src="{{ asset('asset/img/loader.png') }}" alt="Logo" class="h-16 w-16">
+        </div>
+    </div>
+
+
     <!-- Include the header -->
     @include('components.header')
 
@@ -146,6 +155,10 @@
 
     <!-- Hamburger Menu Script -->
     <script>
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.display = 'none';
+        });
         document.addEventListener('DOMContentLoaded', function() {
             const hamburgerButton = document.getElementById('hamburger-button');
             const hamburgerMenu = document.getElementById('hamburger-menu');
@@ -172,7 +185,7 @@
             });
 
             chatButton.addEventListener('click', function() {
-                window.open('https://wa.me/7905111789', '_blank');
+                window.open('https://wa.me/0123456789', '_blank');
             });
         });
 

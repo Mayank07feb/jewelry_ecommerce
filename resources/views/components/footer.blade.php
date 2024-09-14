@@ -20,7 +20,7 @@
                             Story</a></li>
                     <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Video</a>
                     </li>
-                    <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Blogs</a>
+                    <li><a href="{{route('blogs')}}" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Blogs</a>
                     </li>
                     <li><a href="#"
                             class="hover:text-[#9d6e2a] hover:underline transition duration-300">Careers</a></li>
@@ -52,15 +52,15 @@
             <div class="space-y-4">
                 <h4 class="text-[#601042] text-xl font-semibold mb-4">Customer Delight</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">FAQ</a>
+                    <li><a href="{{route('faq')}}" class="hover:text-[#9d6e2a] hover:underline transition duration-300">FAQ</a>
                     </li>
-                    <li><a href="#"
+                    <li><a href="{{route('policies')}}"
                             class="hover:text-[#9d6e2a] hover:underline transition duration-300">Policies</a></li>
                     <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Book
                             Appointment</a></li>
                     <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Contest &
                             Programs</a></li>
-                    <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Contact
+                    <li><a href="{{route('contact')}}" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Contact
                             Us</a></li>
                     <li><a href="#" class="hover:text-[#9d6e2a] hover:underline transition duration-300">Giritra
                             Franchise</a></li>
