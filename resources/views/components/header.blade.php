@@ -1,4 +1,31 @@
 <style>
+    .popup-content {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Corrected shadow property */
+        padding: 1rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.375rem;
+        width: 18rem;
+        z-index: 50;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .group:hover .popup-content {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .popup-content:hover {
+        opacity: 1;
+        visibility: visible;
+    }
+
     /* Wrapper and Account Hover Effect */
     .account-wrapper:hover .account-details {
         display: block;
@@ -6,10 +33,6 @@
 
     .account-details {
         display: none;
-    }
-
-    /* Styling for the account details box */
-    .account-details {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         transition: opacity 0.3s ease, transform 0.3s ease;
         opacity: 0;
@@ -18,6 +41,8 @@
 
     /* On hover, show account details with a subtle animation */
     .account-wrapper:hover .account-details {
+        display: block;
+        /* Ensure display is block to make it visible */
         opacity: 1;
         transform: translateY(0);
     }
@@ -27,7 +52,6 @@
         transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* Custom styles for hover states */
     button:hover {
         cursor: pointer;
     }
@@ -396,7 +420,7 @@
                                             role="menuitem">
                                             <img src="{{ asset('asset/img/logo.png') }}" alt="Necklaces"
                                                 class="h-8 w-8 mr-2">
-                                           Gold Necklaces
+                                            Gold Necklaces
                                         </a>
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -410,14 +434,14 @@
                                             role="menuitem">
                                             <img src="{{ asset('asset/img/logo.png') }}" alt="Bracelets"
                                                 class="h-8 w-8 mr-2">
-                                           Gold Bracelets
+                                            Gold Bracelets
                                         </a>
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                             role="menuitem">
                                             <img src="{{ asset('asset/img/logo.png') }}" alt="Earrings"
                                                 class="h-8 w-8 mr-2">
-                                           Gold Earrings
+                                            Gold Earrings
                                         </a>
                                         <!-- Additional items -->
                                         <a href="#"
@@ -425,21 +449,21 @@
                                             role="menuitem">
                                             <img src="{{ asset('asset/img/logo.png') }}" alt="Pendants"
                                                 class="h-8 w-8 mr-2">
-                                           Gold Pendants
+                                            Gold Pendants
                                         </a>
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                             role="menuitem">
                                             <img src="{{ asset('asset/img/logo.png') }}" alt="Ear Cuffs"
                                                 class="h-8 w-8 mr-2">
-                                           Gold Ear Cuffs
+                                            Gold Ear Cuffs
                                         </a>
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                             role="menuitem">
                                             <img src="{{ asset('asset/img/logo.png') }}" alt="Gold Sets"
                                                 class="h-8 w-8 mr-2">
-                                           Gold Sets
+                                            Gold Sets
                                         </a>
                                     </div>
                                 </div>
@@ -509,8 +533,7 @@
                                 </a>
 
                                 <!-- Hidden content to show on hover -->
-                                <div
-                                    class="absolute top-10 right-0 bg-white shadow-xl p-3 border border-gray-200 rounded-lg w-72 z-50 hidden group-hover:block duration-200 ease-in-out">
+                                <div class="popup-content">
                                     <h3 class="font-semibold text-lg text-gray-800 border-b pb-2">Your Account</h3>
                                     <p class="text-gray-500 text-sm mt-2">Track your orders, manage payment, edit
                                         profile, and much more...</p>
