@@ -84,3 +84,10 @@ Route::get('/ourstory', [HomeController::class, 'ourstory'])->name('ourstory');
 Route::get('/jewellerycareguide', [HomeController::class, 'jewellerycareguide'])->name('jewellerycareguide');
 
 Route::get('/gemstone', [HomeController::class, 'gemstone'])->name('gemstone');
+
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+
+// backend route
+
+Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
