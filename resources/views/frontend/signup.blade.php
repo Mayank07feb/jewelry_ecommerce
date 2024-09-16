@@ -13,39 +13,46 @@
             <div class="flex-grow h-px bg-[#9d6e2a]"></div>
         </div>
 
-        <form class="space-y-4">
+        @if($errors->any())
+            @foreach($errors->all()  as $error)
+                {{$error}}
+            @endforeach
+        @endif
+
+        <form class="space-y-4" action="{{route('register')}}" method="post">
+            @csrf
             <!-- Flex container for First Name and Last Name -->
             <div class="flex space-x-4">
                 <div class="flex-1">
                     <label class="block text-gray-700 text-sm">First Name <span class="text-red-500">*</span></label>
-                    <input type="text" placeholder="Enter First Name" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
+                    <input type="text" placeholder="Enter First Name" name="first_name" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
                 </div>
                 <div class="flex-1">
                     <label class="block text-gray-700 text-sm">Last Name</label>
-                    <input type="text" placeholder="Enter Last Name" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
+                    <input type="text" placeholder="Enter Last Name" name="last_name" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
                 </div>
             </div>
 
             <div>
                 <label class="block text-gray-700 text-sm">Email Address <span class="text-red-500">*</span></label>
-                <input type="email" placeholder="Enter Email Address" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
+                <input type="email" placeholder="Enter Email Address" name="email" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
             </div>
 
             <div>
                 <label class="block text-gray-700 text-sm">Password <span class="text-red-500">*</span></label>
-                <input type="password" placeholder="Enter Password" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
+                <input type="password" placeholder="Enter Password" name="password" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
             </div>
 
             <div>
                 <label class="block text-gray-700 text-sm">Confirm Password <span class="text-red-500">*</span></label>
-                <input type="password" placeholder="Confirm Password" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
+                <input type="password" placeholder="Confirm Password" name="confirm_password" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
             </div>
 
             <div>
                 <label class="block text-gray-700 text-sm">Enter Mobile Number <span class="text-red-500">*</span></label>
                 <div class="flex">
                     <span class="bg-gray-200 border border-gray-300 p-2 rounded-l-md text-sm">+91</span>
-                    <input type="tel" placeholder="Mobile Number" class="w-full p-2 border border-gray-300 rounded-r-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a] text-sm">
+                    <input type="tel" placeholder="Mobile Number" name="mobile" class="w-full p-2 border border-gray-300 rounded-r-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a] text-sm">
                 </div>
             </div>
 

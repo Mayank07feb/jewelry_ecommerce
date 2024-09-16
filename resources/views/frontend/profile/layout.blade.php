@@ -1,17 +1,20 @@
 @extends('components.main')
 
 @section('content')
+    @php
+        $user = auth()->user();
+    @endphp
     <div class="container mx-auto my-10 p-4">
         <!-- Profile Header Section -->
         <div class="shadow-md rounded-lg p-6 bg-gradient-to-r bg-[#601042]">
             <div class="flex items-center space-x-6">
                 <div
                     class="w-24 h-24 bg-gray-300 rounded-full flex justify-center items-center text-white text-3xl font-bold">
-                    M
+                    {{$user->first_name[0]}}
                 </div>
                 <div>
-                    <h2 class="text-2xl font-semibold text-white">Mayank Sharma</h2>
-                    <p class="text-sm text-gray-300">mayank07feb@gmail.com</p>
+                    <h2 class="text-2xl font-semibold text-white">{{$user->first_name.' '.$user->last_name}}</h2>
+                    <p class="text-sm text-gray-300">{{$user->email}}</p>
                 </div>
             </div>
         </div>

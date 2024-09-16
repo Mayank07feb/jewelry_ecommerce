@@ -1,8 +1,24 @@
 <?php
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
+Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
+Route::post('login', [AuthController::class, 'login'])->name('login');
+
+Route::get('/signup', [AuthController::class, 'signupForm'])->name('signup');
+Route::post('register', [AuthController::class, 'register'])->name('register');
+
+Route::get('/forgot-password', [HomeController::class, 'showForgotPasswordForm'])->name('forgot.password');
+
+Route::get('/reset-password', [HomeController::class, 'showResetPasswordForm'])->name('password.reset');
+
+
+
+
 
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
@@ -42,13 +58,6 @@ Route::get('/cancel', [HomeController::class, 'cancel'])->name('cancel');
 
 Route::get('/orderconfirmation', [HomeController::class, 'orderconfirmation'])->name('orderconfirmation');
 
-Route::get('/login', [HomeController::class, 'login'])->name('login');
-
-Route::get('/signup', [HomeController::class, 'signup'])->name('signup');
-
-Route::get('/forgot-password', [HomeController::class, 'showForgotPasswordForm'])->name('forgot.password');
-
-Route::get('/reset-password', [HomeController::class, 'showResetPasswordForm'])->name('password.reset');
 
 // New Routes
 Route::get('/ordersummary', [HomeController::class, 'ordersummary'])->name('ordersummary');

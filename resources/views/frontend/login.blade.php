@@ -19,14 +19,15 @@
     </div>
 
     <!-- Login with Password Form -->
-    <form id="passwordForm" class="space-y-4">
+    <form action="{{route('login')}}" method="post" id="passwordForm" class="space-y-4">
+        @csrf
         <div>
             <label class="block text-gray-700 text-sm lg:text-base">Email Address <span class="text-red-500">*</span></label>
-            <input type="email" placeholder="Enter Email Address" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
+            <input type="email" placeholder="Enter Email Address" name="email" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
         </div>
         <div>
             <label class="block text-gray-700 text-sm lg:text-base">Password <span class="text-red-500">*</span></label>
-            <input type="password" placeholder="Enter Password" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
+            <input type="password" placeholder="Enter Password" name="password" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
         </div>
         <div class="flex justify-between items-center">
             <a href="{{route('forgot.password')}}" class="text-sm text-[#9d6e2a] hover:underline">Forgot Password?</a>
