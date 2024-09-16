@@ -2,6 +2,7 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BannerController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -44,17 +45,9 @@ Route::get('/giritra-promises', [HomeController::class, 'giritraPromises'])->nam
 
 Route::get('/page404', [HomeController::class, 'page404'])->name('page404');
 
-Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
 
 Route::get('/productdetail', [HomeController::class, 'productdetail'])->name('productdetail');
 
-Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
-
-Route::get('/orderhistory', [HomeController::class, 'orderhistory'])->name('orderhistory');
-
-Route::get('/wishlist', [HomeController::class, 'wishlist'])->name('wishlist');
-
-Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
 
 Route::get('/cancel', [HomeController::class, 'cancel'])->name('cancel');
 
@@ -85,9 +78,27 @@ Route::get('/jewellerycareguide', [HomeController::class, 'jewellerycareguide'])
 
 Route::get('/gemstone', [HomeController::class, 'gemstone'])->name('gemstone');
 
-Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 
-// backend route
+Route::middleware('auth')->group(function(){
+    Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+    Route::get('/orderhistory', [HomeController::class, 'orderhistory'])->name('orderhistory');
+    Route::get('/wishlist', [HomeController::class, 'wishlist'])->name('wishlist');
+    Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
+    Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
 
-Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+
+    //backend routes
+
+    Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+
+    Route::prefix('banner')->name('banner.')->group(function(){
+        Route::get('/', [BannerController::class, 'index'])->name('index');
+        Route::get('create', [BannerController::class, 'create'])->name('create');
+        Route::post('store', [BannerController::class, 'store'])->name('store');
+        Route::get('edit/{banner}', [BannerController::class, 'edit'])->name('edit');
+        Route::post('update/{banner}', [BannerController::class, 'update'])->name('update');
+        Route::post('destroy', [BannerController::class, 'delete'])->name('destroy');
+    });
+});

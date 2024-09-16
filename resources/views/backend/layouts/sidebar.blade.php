@@ -13,7 +13,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-      <a class="nav-link" href="#">
+      <a class="nav-link" href="{{route('dashboard')}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
     </li>
@@ -42,8 +42,8 @@
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">Banner Options:</h6>
-          <a class="collapse-item" href="#">Banners</a>
-          <a class="collapse-item" href="#">Add Banners</a>
+          <a class="collapse-item" href="{{route('banner.index')}}">Banners</a>
+          <a class="collapse-item" href="{{ route('banner.create') }}">Add Banners</a>
         </div>
       </div>
     </li>
