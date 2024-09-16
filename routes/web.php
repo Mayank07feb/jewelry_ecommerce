@@ -40,6 +40,8 @@ Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 
 Route::get('/policies', [HomeController::class, 'policies'])->name('policies');
 
+Route::get('/giritra-promises', [HomeController::class, 'giritraPromises'])->name('giritra.promises');
+
 Route::get('/page404', [HomeController::class, 'page404'])->name('page404');
 
 Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
