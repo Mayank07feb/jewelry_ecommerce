@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','E-SHOP || Banner Page')
+@section('title','E-SHOP || Category Page')
 @section('main-content')
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
@@ -9,19 +9,20 @@
             </div>
         </div>
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary float-left">Banners List</h6>
-            <a href="{{route('banner.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Banner</a>
+            <h6 class="m-0 font-weight-bold text-primary float-left">Categories List</h6>
+            <a href="{{route('category.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Category</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                @if(count($banners)>0)
-                    <table class="table table-bordered" id="banner-dataTable" width="100%" cellspacing="0">
+                @if(count($categories)>0)
+                    <table class="table table-bordered" id="category-dataTable" width="100%" cellspacing="0">
                         <thead>
                         <tr>
                             <th>S.N.</th>
                             <th>Title</th>
                             <th>Slug</th>
                             <th>Photo</th>
+                            <th>Parent</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -32,35 +33,37 @@
                             <th>Title</th>
                             <th>Slug</th>
                             <th>Photo</th>
+                            <th>Parent</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
                         </tfoot>
                         <tbody>
-                        @foreach($banners as $banner)
+                        @foreach($categories as $category)
                             <tr>
-                                <td>{{$banner->id}}</td>
-                                <td>{{$banner->title}}</td>
-                                <td>{{$banner->slug}}</td>
+                                <td>{{$category->id}}</td>
+                                <td>{{$category->title}}</td>
+                                <td>{{$category->slug}}</td>
                                 <td>
-                                    @if($banner->photo)
-                                        <img src="{{asset('storage/'. $banner->photo)}}" class="img-fluid zoom" style="max-width:80px" alt="{{$banner->photo}}">
+                                    @if($category->photo)
+                                        <img src="{{asset('storage/'. $category->photo)}}" class="img-fluid zoom" style="max-width:80px" alt="{{$category->photo}}">
                                     @else
                                         <img src="{{asset('backend/img/thumbnail-default.jpg')}}" class="img-fluid zoom" style="max-width:100%" alt="avatar.png">
                                     @endif
                                 </td>
+                                <td>{{$category->parent?->title}}</td>
                                 <td>
-                                    @if($banner->status=='active')
-                                        <span class="badge badge-success">{{$banner->status}}</span>
+                                    @if($category->status=='active')
+                                        <span class="badge badge-success">{{$category->status}}</span>
                                     @else
-                                        <span class="badge badge-warning">{{$banner->status}}</span>
+                                        <span class="badge badge-warning">{{$category->status}}</span>
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{route('banner.edit',$banner->id)}}" class="btn btn-primary btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>
-                                    <form method="POST" action="{{route('banner.destroy',[$banner->id])}}">
+                                    <a href="{{route('category.edit',$category->id)}}" class="btn btn-primary btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>
+                                    <form method="POST" action="{{route('category.destroy',[$category->id])}}">
                                         @csrf
-                                        <button class="btn btn-danger btn-sm dltBtn" data-id={{$banner->id}} style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fas fa-trash-alt"></i></button>
+                                        <button class="btn btn-danger btn-sm dltBtn" data-id="{{$category->id}}" style="height:30px; width:30px;border-radius:50%;" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fas fa-trash-alt"></i></button>
                                     </form>
                                 </td>
                                 {{-- Delete Modal --}}
@@ -74,7 +77,7 @@
                                           </button>
                                         </div>
                                         <div class="modal-body">
-                                          <form method="post" action="{{ route('banners.destroy',$user->id) }}">
+                                          <form method="post" action="{{ route('categorys.destroy',$user->id) }}">
                                             @csrf
                                             @method('delete')
                                             <button type="submit" class="btn btn-danger" style="margin:auto; text-align:center">Parmanent delete user</button>
@@ -87,9 +90,9 @@
                         @endforeach
                         </tbody>
                     </table>
-{{--                    <span style="float:right">{{$banners->links()}}</span>--}}
+                    {{--                    <span style="float:right">{{$categorys->links()}}</span>--}}
                 @else
-                    <h6 class="text-center">No banners found!!! Please create banner</h6>
+                    <h6 class="text-center">No categories found!!! Please create category</h6>
                 @endif
             </div>
         </div>
@@ -124,7 +127,7 @@
     <script src="{{asset('backend/js/demo/datatables-demo.js')}}"></script>
     <script>
 
-        $('#banner-dataTable').DataTable( {
+        $('#category-dataTable').DataTable( {
             "columnDefs":[
                 {
                     "orderable":false,

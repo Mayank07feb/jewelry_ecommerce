@@ -1,14 +1,17 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use Illuminate\Http\Request;
+
 
 class HomeController extends Controller
 {
     // Method for home page
     public function index()
     {
-        return view('frontend.index');
+        $banners = Banner::where('status', 'active')->get();
+        return view('frontend.index', compact('banners'));
     }
 
     public function contact()
@@ -58,7 +61,7 @@ class HomeController extends Controller
 
     public function policies()
     {
-        return view('frontend.policies'); 
+        return view('frontend.policies');
     }
 
     public function giritraPromises()

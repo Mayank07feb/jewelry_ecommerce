@@ -7,7 +7,6 @@
         <div class="card-body">
             <form method="post" action="{{route('banner.update',$banner->id)}}" enctype="multipart/form-data">
                 @csrf
-                @method('PATCH')
                 <div class="form-group">
                     <label for="inputTitle" class="col-form-label">Title <span class="text-danger">*</span></label>
                     <input id="inputTitle" type="text" name="title" placeholder="Enter title"  value="{{$banner->title}}" class="form-control">

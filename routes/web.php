@@ -3,6 +3,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -99,6 +100,16 @@ Route::middleware('auth')->group(function(){
         Route::post('store', [BannerController::class, 'store'])->name('store');
         Route::get('edit/{banner}', [BannerController::class, 'edit'])->name('edit');
         Route::post('update/{banner}', [BannerController::class, 'update'])->name('update');
-        Route::post('destroy', [BannerController::class, 'delete'])->name('destroy');
+        Route::post('destroy/{banner}', [BannerController::class, 'delete'])->name('destroy');
     });
+
+    Route::prefix('category')->name('category.')->group(function(){
+        Route::get('/', [CategoryController::class, 'index'])->name('index');
+        Route::get('create', [CategoryController::class, 'create'])->name('create');
+        Route::post('store', [CategoryController::class, 'store'])->name('store');
+        Route::get('edit/{category}', [CategoryController::class, 'edit'])->name('edit');
+        Route::post('update/{category}', [CategoryController::class, 'update'])->name('update');
+        Route::post('destroy/{category}', [CategoryController::class, 'delete'])->name('destroy');
+    });
+
 });

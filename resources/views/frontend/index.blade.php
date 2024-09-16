@@ -9,43 +9,20 @@
             <!-- Slides Wrapper -->
             <div id="sliderWrapper" class="slider-wrapper flex transition-transform duration-700 ease-in-out">
                 <!-- Slide 1 -->
-                <div class="slider-slide w-full h-full flex-shrink-0 relative">
-                    <a href="{{ route('gold') }}"><img src="{{ asset('asset/img/banner') }}" alt="Diamond Collection"
-                            class="w-full h-full object-cover"></a>
-                    {{-- <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-center justify-center">
-                    <div class="text-center text-white p-4 md:p-10">
-                        <h1 class="text-xl md:text-3xl lg:text-5xl font-bold drop-shadow-lg">Exclusive Diamond Collection</h1>
-                        <p class="mt-2 md:mt-4 text-xs md:text-sm lg:text-lg">Elegant and Timeless Pieces</p>
-                        <button class="mt-4 px-4 py-2 bg-[#601042] hover:bg-[#501032] text-white text-xs md:text-sm lg:text-lg rounded-full transition duration-300">Shop Now</button>
+                @foreach($banners as $banner)
+                    <div class="slider-slide w-full h-full flex-shrink-0 relative">
+                        <a href="{{ route('gold') }}"><img src="{{ asset('storage/'. $banner->photo) }}" alt="Diamond Collection"
+                                class="w-full h-full object-cover"></a>
+                        {{-- <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-center justify-center">
+                        <div class="text-center text-white p-4 md:p-10">
+                            <h1 class="text-xl md:text-3xl lg:text-5xl font-bold drop-shadow-lg">Exclusive Diamond Collection</h1>
+                            <p class="mt-2 md:mt-4 text-xs md:text-sm lg:text-lg">Elegant and Timeless Pieces</p>
+                            <button class="mt-4 px-4 py-2 bg-[#601042] hover:bg-[#501032] text-white text-xs md:text-sm lg:text-lg rounded-full transition duration-300">Shop Now</button>
+                        </div>
+                    </div> --}}
                     </div>
-                </div> --}}
-                </div>
+                @endforeach
 
-                <!-- Slide 2 -->
-                <div class="slider-slide w-full h-full flex-shrink-0 relative">
-                    <a href="{{ route('gold') }}"><img src="{{ asset('asset/img/banner2.webp') }}"
-                            alt="Bridal Jewellery Collection" class="w-full h-full object-cover"></a>
-                    {{-- <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-center justify-center">
-                    <div class="text-center text-white p-4 md:p-10">
-                        <h1 class="text-xl md:text-3xl lg:text-5xl font-bold drop-shadow-lg">Bridal Jewellery Collection</h1>
-                        <p class="mt-2 md:mt-4 text-xs md:text-sm lg:text-lg">Perfect for Your Special Day</p>
-                        <button class="mt-4 px-4 py-2 bg-[#601042] hover:bg-[#501032] text-white text-xs md:text-sm lg:text-lg rounded-full transition duration-300">Discover More</button>
-                    </div>
-                </div> --}}
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="slider-slide w-full h-full flex-shrink-0 relative">
-                    <a href="{{ route('gold') }}"><img src="{{ asset('asset/img/banner3.webp') }}"
-                            alt="Luxury Gold Jewellery" class="w-full h-full object-cover"></a>
-                    {{-- <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-center justify-center">
-                    <div class="text-center text-white p-4 md:p-10">
-                        <h1 class="text-xl md:text-3xl lg:text-5xl font-bold drop-shadow-lg">Luxury Gold Jewellery</h1>
-                        <p class="mt-2 md:mt-4 text-xs md:text-sm lg:text-lg">Handcrafted with Perfection</p>
-                        <button class="mt-4 px-4 py-2 bg-[#601042] hover:bg-[#501032] text-white text-xs md:text-sm lg:text-lg rounded-full transition duration-300">Browse Now</button>
-                    </div>
-                </div> --}}
-                </div>
             </div>
 
             <!-- Pagination -->
@@ -159,7 +136,7 @@
             </div>
             <div class="glide__arrows flex justify-center my-4 gap-2" data-glide-el="controls">
                 <button class="glide__arrow glide__arrow--left border-black border" data-glide-dir="<"><i
-                        class="ri-arrow-left-s-line text-3xl"></i></i></button>
+                        class="ri-arrow-left-s-line text-3xl"></i></button>
                 <button class="glide__arrow glide__arrow--right border-black border" data-glide-dir=">"><i
                         class="ri-arrow-right-s-line text-3xl"></i></button>
             </div>
@@ -227,7 +204,7 @@
             <div
                 class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
                 <a href="{{ route('diamondjewellery') }}"><img src="{{ asset('asset/img/sliver.png') }}" alt="Silver"
-                        class="w-40 h-56 object-contain mb-4"></a <h3 class="text-lg font-semibold mb-1">Silver</h3>
+                        class="w-40 h-56 object-contain mb-4"></a> <h3 class="text-lg font-semibold mb-1">Silver</h3>
                 <p class="text-sm text-gray-600 mb-3 text-center">For everyday elegance!</p>
                 <a href="{{ route('diamondjewellery') }}"><button
                         class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
@@ -245,7 +222,6 @@
         </div>
         <div class="flex-grow h-px bg-[#9d6e2a]"></div>
     </div>
-
 
     {{-- PROMISES --}}
     <div class=" mx-auto bg-[#601042] w-full my-4">
@@ -558,13 +534,13 @@
 {{-- video ::::mobile screen only:::: Crafted Elegance:::::::--}}
 {{-- <div class="flex lg:hidden justify-center items-center overflow-hidden hover:cursor-pointer px-6 md:px-28 py-12">
     <div id="mouse-parallax-container" class="relative w-full h-full">
-      
+
         <!-- Background Video -->
         <div class="relative w-[80vw]  h-[50vh] lg:h-[70vh] overflow-hidden">
             <video width="100%" height="100%" loop muted autoplay class="w-full h-full object-cover">
                 <source src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/widgets/video_1682089105_1691241930.mp4" type="video/mp4">
             </video>
-  
+
             <!-- Parallax Title -->
             <div class="absolute inset-0 flex justify-end items-center w-full h-full">
                 <div class="text-white text-[8vw] md:text-[10vw] lg:text-[85px] font-light uppercase whitespace-nowrap">

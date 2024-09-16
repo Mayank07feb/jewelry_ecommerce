@@ -78,10 +78,10 @@ class BannerController extends Controller
         }
         $status = $banner->delete();
         if($status){
-            request()->session()->flash('success','Banner successfully updated');
+            request()->session()->flash('success','Banner successfully deleted');
         }
         else{
-            request()->session()->flash('error','Error occurred while updating banner');
+            request()->session()->flash('error','Error occurred while deleting banner');
         }
         return back();
     }
