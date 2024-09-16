@@ -92,24 +92,26 @@ Route::middleware('auth')->group(function(){
 
     //backend routes
 
-    Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+    Route::middleware('admin')->group(function(){
+        Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+        Route::prefix('banner')->name('banner.')->group(function(){
+            Route::get('/', [BannerController::class, 'index'])->name('index');
+            Route::get('create', [BannerController::class, 'create'])->name('create');
+            Route::post('store', [BannerController::class, 'store'])->name('store');
+            Route::get('edit/{banner}', [BannerController::class, 'edit'])->name('edit');
+            Route::post('update/{banner}', [BannerController::class, 'update'])->name('update');
+            Route::post('destroy/{banner}', [BannerController::class, 'delete'])->name('destroy');
+        });
 
-    Route::prefix('banner')->name('banner.')->group(function(){
-        Route::get('/', [BannerController::class, 'index'])->name('index');
-        Route::get('create', [BannerController::class, 'create'])->name('create');
-        Route::post('store', [BannerController::class, 'store'])->name('store');
-        Route::get('edit/{banner}', [BannerController::class, 'edit'])->name('edit');
-        Route::post('update/{banner}', [BannerController::class, 'update'])->name('update');
-        Route::post('destroy/{banner}', [BannerController::class, 'delete'])->name('destroy');
+        Route::prefix('category')->name('category.')->group(function(){
+            Route::get('/', [CategoryController::class, 'index'])->name('index');
+            Route::get('create', [CategoryController::class, 'create'])->name('create');
+            Route::post('store', [CategoryController::class, 'store'])->name('store');
+            Route::get('edit/{category}', [CategoryController::class, 'edit'])->name('edit');
+            Route::post('update/{category}', [CategoryController::class, 'update'])->name('update');
+            Route::post('destroy/{category}', [CategoryController::class, 'delete'])->name('destroy');
+        });
     });
 
-    Route::prefix('category')->name('category.')->group(function(){
-        Route::get('/', [CategoryController::class, 'index'])->name('index');
-        Route::get('create', [CategoryController::class, 'create'])->name('create');
-        Route::post('store', [CategoryController::class, 'store'])->name('store');
-        Route::get('edit/{category}', [CategoryController::class, 'edit'])->name('edit');
-        Route::post('update/{category}', [CategoryController::class, 'update'])->name('update');
-        Route::post('destroy/{category}', [CategoryController::class, 'delete'])->name('destroy');
-    });
 
 });
