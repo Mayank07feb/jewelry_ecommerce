@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\CategoryController;
+use \App\Http\Middleware\AdminMiddleware;
+use \App\Http\Controllers\BrandController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -92,7 +94,7 @@ Route::middleware('auth')->group(function(){
 
     //backend routes
 
-    Route::middleware('admin')->group(function(){
+    Route::middleware(AdminMiddleware::class)->group(function(){
         Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
         Route::prefix('banner')->name('banner.')->group(function(){
             Route::get('/', [BannerController::class, 'index'])->name('index');
@@ -110,6 +112,15 @@ Route::middleware('auth')->group(function(){
             Route::get('edit/{category}', [CategoryController::class, 'edit'])->name('edit');
             Route::post('update/{category}', [CategoryController::class, 'update'])->name('update');
             Route::post('destroy/{category}', [CategoryController::class, 'delete'])->name('destroy');
+        });
+
+        Route::prefix('brand')->name('brand.')->group(function(){
+            Route::get('/', [BrandController::class, 'index'])->name('index');
+            Route::get('create', [BrandController::class, 'create'])->name('create');
+            Route::post('store', [BrandController::class, 'store'])->name('store');
+            Route::get('edit/{brand}', [BrandController::class, 'edit'])->name('edit');
+            Route::post('update/{brand}', [BrandController::class, 'update'])->name('update');
+            Route::post('destroy/{brand}', [BrandController::class, 'delete'])->name('destroy');
         });
     });
 
