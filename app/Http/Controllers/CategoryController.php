@@ -15,7 +15,7 @@ class CategoryController extends Controller
     }
 
     public function create(){
-        $categories = Category::where('is_parent', '!=', '1')->get();
+        $categories = Category::where('is_parent', '1')->get();
         return view('backend.category.create')->with('categories', $categories);
     }
 
@@ -43,7 +43,7 @@ class CategoryController extends Controller
     }
 
     public function edit(Category $category){
-        $categories = Category::where('is_parent', '!=', '1')->get();
+        $categories = Category::where('is_parent', '1')->get();
         return view('backend.category.edit', compact('category', 'categories'));
     }
 
@@ -86,5 +86,14 @@ class CategoryController extends Controller
             request()->session()->flash('error','Error occurred while deleting category');
         }
         return back();
+    }
+
+    public function childCategories(Request $request){
+        $child_cat = Category::where('parent_id', $request->id)->get();
+        if ($child_cat->count() <= 0){
+            return response()->json(['status'=>false,'msg'=>'','data'=>null]);
+        }else{
+            return response()->json(['status'=>false,'msg'=>'','data'=>$child_cat]);
+        }
     }
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\CategoryController;
 use \App\Http\Middleware\AdminMiddleware;
 use \App\Http\Controllers\BrandController;
+use \App\Http\Controllers\ProductController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -112,6 +113,7 @@ Route::middleware('auth')->group(function(){
             Route::get('edit/{category}', [CategoryController::class, 'edit'])->name('edit');
             Route::post('update/{category}', [CategoryController::class, 'update'])->name('update');
             Route::post('destroy/{category}', [CategoryController::class, 'delete'])->name('destroy');
+            Route::post('child/{id}', [CategoryController::class, 'childCategories'])->name('child');
         });
 
         Route::prefix('brand')->name('brand.')->group(function(){
@@ -121,6 +123,15 @@ Route::middleware('auth')->group(function(){
             Route::get('edit/{brand}', [BrandController::class, 'edit'])->name('edit');
             Route::post('update/{brand}', [BrandController::class, 'update'])->name('update');
             Route::post('destroy/{brand}', [BrandController::class, 'delete'])->name('destroy');
+        });
+
+        Route::prefix('product')->name('product.')->group(function(){
+            Route::get('/', [ProductController::class, 'index'])->name('index');
+            Route::get('create', [ProductController::class, 'create'])->name('create');
+            Route::post('store', [ProductController::class, 'store'])->name('store');
+            Route::get('edit/{product}', [ProductController::class, 'edit'])->name('edit');
+            Route::post('update/{product}', [ProductController::class, 'update'])->name('update');
+            Route::post('destroy/{product}', [ProductController::class, 'delete'])->name('destroy');
         });
     });
 
