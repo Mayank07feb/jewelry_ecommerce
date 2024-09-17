@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostCategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BannerController;
@@ -122,6 +123,15 @@ Route::middleware('auth')->group(function(){
             Route::post('update/{brand}', [BrandController::class, 'update'])->name('update');
             Route::post('destroy/{brand}', [BrandController::class, 'delete'])->name('destroy');
         });
+
+        Route::get('postCategory/index',[PostCategoryController::class,'index'])->name('postCategory.index');
+        Route::get('postCategory/create',[PostCategoryController::class,'create'])->name('postCategory.create');
+        Route::post('postCategory/store',[PostCategoryController::class,'store'])->name('postCategory.store');
+        Route::get('postCategory/edit/{postCategory}',[PostCategoryController::class,'edit'])->name('postCategory.edit');
+        Route::get('postCategory/delete/{postCategory}',[PostCategoryController::class,'delete'])->name('postCategory.delete');
+        Route::get('postCategory/duplicate/{postCategory}',[PostCategoryController::class,'duplicate'])->name('postCategory.duplicate');
+        Route::post('postCategory/update/{postCategory}',[PostCategoryController::class,'update'])->name('postCategory.update');
+
     });
 
 
