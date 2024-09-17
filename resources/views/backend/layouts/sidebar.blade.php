@@ -162,8 +162,8 @@
         <div id="postCategoryCollapse" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Category Options:</h6>
-            <a class="collapse-item" href="#">Category</a>
-            <a class="collapse-item" href="#">Add Category</a>
+            <a class="collapse-item" href="{{route('postCategory.index')}}">Category</a>
+            <a class="collapse-item" href="{{route('postCategory.create')}}">Add Category</a>
           </div>
         </div>
       </li>
