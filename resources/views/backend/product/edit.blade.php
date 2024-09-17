@@ -7,7 +7,6 @@
         <div class="card-body">
             <form method="post" action="{{route('product.update',$product->id)}}">
                 @csrf
-                @method('PATCH')
                 <div class="form-group">
                     <label for="inputTitle" class="col-form-label">Title <span class="text-danger">*</span></label>
                     <input id="inputTitle" type="text" name="title" placeholder="Enter title"  value="{{$product->title}}" class="form-control">
@@ -64,7 +63,7 @@
 
                 <div class="form-group">
                     <label for="weight">Product Weight (Grams)</label><br>
-                    <input type="number" name='weight' id='weight' placeholder="Product Weight"  value="{{old('weight')}}" class="form-control">
+                    <input type="number" name='weight' id='weight' placeholder="Product Weight"  value="{{$product->weight}}" class="form-control">
                 </div>
 
                 <div class="form-group">
@@ -182,18 +181,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
 
     <script>
-        $('#lfm').filemanager('image');
-
         $(document).ready(function() {
             $('#summary').summernote({
-                placeholder: "Write short description.....",
+                placeholder: "Write detail summary.....",
                 tabsize: 2,
                 height: 150
             });
         });
+
         $(document).ready(function() {
             $('#description').summernote({
-                placeholder: "Write detail Description.....",
+                placeholder: "Write detail description.....",
                 tabsize: 2,
                 height: 150
             });

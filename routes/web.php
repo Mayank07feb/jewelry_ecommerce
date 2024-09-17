@@ -126,7 +126,7 @@ Route::middleware('auth')->group(function(){
             Route::post('destroy/{brand}', [BrandController::class, 'delete'])->name('destroy');
         });
 
-<<<<<<< HEAD
+
         Route::prefix('product')->name('product.')->group(function(){
             Route::get('/', [ProductController::class, 'index'])->name('index');
             Route::get('create', [ProductController::class, 'create'])->name('create');
@@ -135,7 +135,7 @@ Route::middleware('auth')->group(function(){
             Route::post('update/{product}', [ProductController::class, 'update'])->name('update');
             Route::post('destroy/{product}', [ProductController::class, 'delete'])->name('destroy');
         });
-=======
+
         Route::get('postCategory/index',[PostCategoryController::class,'index'])->name('postCategory.index');
         Route::get('postCategory/create',[PostCategoryController::class,'create'])->name('postCategory.create');
         Route::post('postCategory/store',[PostCategoryController::class,'store'])->name('postCategory.store');
@@ -144,7 +144,6 @@ Route::middleware('auth')->group(function(){
         Route::get('postCategory/duplicate/{postCategory}',[PostCategoryController::class,'duplicate'])->name('postCategory.duplicate');
         Route::post('postCategory/update/{postCategory}',[PostCategoryController::class,'update'])->name('postCategory.update');
 
->>>>>>> 1a548d7b6b4567a91ac80ab011ce576837e01def
     });
 
 

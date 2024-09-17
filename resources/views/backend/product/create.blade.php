@@ -137,7 +137,7 @@
                 <div class="form-group">
                     <label for="inputPhoto" class="col-form-label">Feature Image <span class="text-danger">*</span></label>
                     <div class="input-group">
-                        <input id="thumbnail" class="form-control" type="file" name="photo" value="{{old('feature_image')}}">
+                        <input id="thumbnail" class="form-control" type="file" name="image" value="{{old('image')}}">
                     </div>
                     <div id="holder" style="margin-top:15px;max-height:100px;"></div>
                     @error('photo')
@@ -166,8 +166,8 @@
 @endsection
 
 @push('styles')
-    <link rel="stylesheet" href="{{asset('backend/summernote/summernote.min.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <link rel="stylesheet" href="{{asset('backend/summernote/summernote.min.css')}}">
 @endpush
 @push('scripts')
     <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
@@ -175,13 +175,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
 
     <script>
-        $('#lfm').filemanager('image');
+        // $('#lfm').filemanager('image');
 
         $(document).ready(function() {
             $('#summary').summernote({
-                placeholder: "Write short description.....",
+                placeholder: "Write detail summary.....",
                 tabsize: 2,
-                height: 100
+                height: 150
             });
         });
 
@@ -195,50 +195,51 @@
         // $('select').selectpicker();
 
     </script>
-    <script src="{{asset('backend/vendor/jquery/jquery.min.js')}}"></script>
+
 
     <script>
-        $('#cat_id').change(function(){
-            var cat_id=$(this).val();
-            if(cat_id !=null){
-
-                // Ajax call
-                $.ajax({
-                    url:"category/child/"+cat_id,
-                    data:{
-                        _token:"{{csrf_token()}}",
-                        id:cat_id
-                    },
-                    type:"POST",
-                    success:function(response){
-                        console.log("Ajax response received:", response);
-
-                        if(typeof(response) !='object'){
-                            response=$.parseJSON(response)
-                        }
-                        // console.log(response);
-                        var html_option="<option value=''>----Select sub category----</option>"
-                        if(response.status){
-                            var data=response.data;
-                            // alert(data);
-                            if(response.data){
-                                $('#child_cat_div').removeClass('d-none');
-                                $.each(data,function(id,title){
-                                    html_option +="<option value='"+id+"'>"+title+"</option>"
-                                });
+        $(document).ready(function() {
+            $('#cat_id').change(function() {
+                var cat_id = $(this).val();
+                if (cat_id) {
+                    $.ajax({
+                        url: "/category/child/" + cat_id,
+                        data: {
+                            _token: "{{ csrf_token() }}",
+                            id: cat_id
+                        },
+                        type: "POST",
+                        success: function(response) {
+                            console.log(response);
+                            if (typeof(response) != 'object') {
+                                response = $.parseJSON(response);
                             }
-                            else{
+                            if (typeof(response) != 'object') {
+                                response = $.parseJSON(response);
                             }
+
+                            var html_option = "<option value=''>----Select sub category----</option>";
+                            if (response.status) {  // Check for success
+                                var data = response.data;
+                                if (data) {
+
+                                    $('#child_cat_div').removeClass('d-none');
+                                    $.each(data, function(index, category) {
+                                        html_option += "<option value='" + category.id + "'>" + category.title + "</option>";
+                                    });
+                                }
+                            } else {
+                                $('#child_cat_div').addClass('d-none');
+                            }
+                            $('#child_cat_id').html(html_option);
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("Ajax error:", error);
                         }
-                        else{
-                            $('#child_cat_div').addClass('d-none');
-                        }
-                        $('#child_cat_id').html(html_option);
-                    }
-                });
-            }
-            else{
-            }
-        })
+                    });
+                }
+            });
+        });
+
     </script>
 @endpush

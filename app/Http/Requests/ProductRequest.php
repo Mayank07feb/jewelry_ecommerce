@@ -23,8 +23,8 @@ class ProductRequest extends FormRequest
     {
         return [
             'title'=>'string|required',
-            'summary'=>'string|required',
-            'description'=>'string|nullable',
+            'summary'=>'required',
+            'description'=>'nullable',
             'size'=>'nullable',
             'stock'=>"required|numeric",
             'cat_id'=>'required|exists:categories,id',
@@ -36,7 +36,8 @@ class ProductRequest extends FormRequest
             'carat' => 'nullable|numeric',
 //            'condition'=>'required|in:default,new,hot',
             'price'=>'required|numeric',
-            'discount'=>'nullable|numeric'
+            'discount'=>'nullable|numeric',
+            'image' => 'image|mimes:png,jpg,jpeg',
         ];
     }
 }

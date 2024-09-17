@@ -6,6 +6,7 @@ use App\Http\Requests\ProductRequest;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -32,10 +33,10 @@ class ProductController extends Controller
         }
         $data['slug'] = $slug;
         $product = Product::create($data);
-        if ($request->file('feature_image')){
-            $file = $request->file('feature_image')->store('public/productImage');
-            $product->photo = str_replace('public/', '', $file);
-            $product->save();
+        if ($request->file('image')){
+            $file = $request->file('image')->store('public/productImage');
+            ProductImage::create(['product_id' => $product->id, 'image' => str_replace('public/', '', $file)]);
+//            $product->photo = str_replace('public/', '', $file);
         }
         if($product){
             request()->session()->flash('success','Product successfully added');
@@ -47,8 +48,9 @@ class ProductController extends Controller
     }
 
     public function edit(Product $product){
-        $products = Product::where('is_parent', '!=', '1')->get();
-        return view('backend.product.edit', compact('product', 'products'));
+        $categories = Category::where('is_parent', '1')->get();
+        $brands = Brand::all();
+        return view('backend.product.edit', compact('product', 'categories', 'brands'));
     }
 
     public function update(ProductRequest $request, Product $product){

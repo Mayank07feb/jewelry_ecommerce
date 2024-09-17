@@ -89,11 +89,11 @@ class CategoryController extends Controller
     }
 
     public function childCategories(Request $request){
-        $child_cat = Category::where('parent_id', $request->id)->get();
-        if ($child_cat->count() <= 0){
+        $data = Category::where('parent_id', $request->id)->get();
+        if ($data->count() <= 0){
             return response()->json(['status'=>false,'msg'=>'','data'=>null]);
         }else{
-            return response()->json(['status'=>false,'msg'=>'','data'=>$child_cat]);
+            return response()->json(['status'=>true,'msg'=>'','data'=>$data]);
         }
     }
 }
