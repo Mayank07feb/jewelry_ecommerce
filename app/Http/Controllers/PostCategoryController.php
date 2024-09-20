@@ -22,6 +22,7 @@ class PostCategoryController extends Controller
     }
 
     public function create(){
+
         return view('postCategory.create');
     }
 

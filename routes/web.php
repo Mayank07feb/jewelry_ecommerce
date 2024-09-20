@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostCategoryController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BannerController;
@@ -138,6 +139,8 @@ Route::middleware('auth')->group(function(){
             Route::post('destroy/{product}', [ProductController::class, 'delete'])->name('destroy');
         });
 
+         //post category
+
         Route::get('postCategory/index',[PostCategoryController::class,'index'])->name('postCategory.index');
         Route::get('postCategory/create',[PostCategoryController::class,'create'])->name('postCategory.create');
         Route::post('postCategory/store',[PostCategoryController::class,'store'])->name('postCategory.store');
@@ -146,7 +149,21 @@ Route::middleware('auth')->group(function(){
         Route::get('postCategory/duplicate/{postCategory}',[PostCategoryController::class,'duplicate'])->name('postCategory.duplicate');
         Route::post('postCategory/update/{postCategory}',[PostCategoryController::class,'update'])->name('postCategory.update');
 
+      //post
+
+        Route::get('post/index',[PostController::class,'index'])->name('post.index');
+        Route::get('post/create',[PostController::class,'create'])->name('post.create');
+        Route::post('post/store',[PostController::class,'store'])->name('post.store');
+        Route::get('post/edit/{post}',[PostController::class,'edit'])->name('post.edit');
+        Route::get('post/delete/{post}',[PostController::class,'delete'])->name('post.delete');
+        Route::get('post/duplicate/{post}',[PostController::class,'duplicate'])->name('post.duplicate');
+        Route::post('post/update/{post}',[PostController::class,'update'])->name('post.update');
+
+
+
     });
+
+
 
 
 });
