@@ -33,9 +33,13 @@ class ProductController extends Controller
         }
         $data['slug'] = $slug;
         $product = Product::create($data);
-        if ($request->file('image')){
-            $file = $request->file('image')->store('public/productImage');
-            ProductImage::create(['product_id' => $product->id, 'image' => str_replace('public/', '', $file)]);
+//        $product = '';
+        if ($request->file('images')){
+            $images = $request->file('images');
+            foreach ($images as $image){
+                $file = $image->store('public/productImage');
+                ProductImage::create(['product_id' => $product->id, 'image' => str_replace('public/', '', $file)]);
+            }
 //            $product->photo = str_replace('public/', '', $file);
         }
         if($product){

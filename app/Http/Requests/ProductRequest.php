@@ -37,7 +37,7 @@ class ProductRequest extends FormRequest
 //            'condition'=>'required|in:default,new,hot',
             'price'=>'required|numeric',
             'discount'=>'nullable|numeric',
-            'image' => 'image',
+            'image.*' => 'image|mimes:png,jpg,jpeg',
             'material' => 'required',
         ];
     }

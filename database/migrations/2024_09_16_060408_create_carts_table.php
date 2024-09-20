@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('order_id')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('product_variation_id')->nullable();
             $table->float('price');
             $table->enum('status',['new','progress','delivered','cancel'])->default('new');
             $table->integer('quantity');
@@ -23,6 +24,7 @@ return new class extends Migration
             $table->foreign('product_id')->references('id')->on('products')->onDelete('CASCADE');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('SET NULL');
+            $table->foreign('product_variation_id')->references('id')->on('product_variations')->onDelete('SET NULL');
             $table->timestamps();
         });
     }

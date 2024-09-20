@@ -103,7 +103,6 @@ Route::middleware('auth')->group(function(){
 
 
     //backend routes
-
     Route::middleware(AdminMiddleware::class)->group(function(){
         Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
         Route::prefix('banner')->name('banner.')->group(function(){
@@ -134,7 +133,6 @@ Route::middleware('auth')->group(function(){
             Route::post('destroy/{brand}', [BrandController::class, 'delete'])->name('destroy');
         });
 
-
         Route::prefix('product')->name('product.')->group(function(){
             Route::get('/', [ProductController::class, 'index'])->name('index');
             Route::get('create', [ProductController::class, 'create'])->name('create');
@@ -164,11 +162,6 @@ Route::middleware('auth')->group(function(){
         Route::get('post/duplicate/{post}',[PostController::class,'duplicate'])->name('post.duplicate');
         Route::post('post/update/{post}',[PostController::class,'update'])->name('post.update');
 
-
-
     });
-
-
-
 
 });

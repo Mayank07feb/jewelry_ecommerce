@@ -2,11 +2,11 @@
 
 @section('main-content')
 
-    @if($errors->any())
-        @foreach($errors->all() as $error)
-            {{$error}}
-        @endforeach
-    @endif
+{{--    @if($errors->any())--}}
+{{--        @foreach($errors->all() as $error)--}}
+{{--            {{$error}}--}}
+{{--        @endforeach--}}
+{{--    @endif--}}
     <div class="card">
         <h5 class="card-header">Add Product</h5>
         <div class="card-body">
@@ -68,13 +68,7 @@
                     <input type="number" name='weight' id='weight' placeholder="Product Weight"  value="{{old('weight')}}" class="form-control">
                 </div>
 
-                <div class="form-group">
-                    <label for="price" class="col-form-label">Price(NRS) <span class="text-danger">*</span></label>
-                    <input id="price" type="number" name="price" placeholder="Enter price"  value="{{old('price')}}" class="form-control">
-                    @error('price')
-                    <span class="text-danger">{{$message}}</span>
-                    @enderror
-                </div>
+
 
                 <div class="form-group">
                     <label for="discount" class="col-form-label">Discount(%)</label>
@@ -94,16 +88,6 @@
                 {{--          </select>--}}
                 {{--        </div>--}}
 
-                <div class="form-group">
-                    <label for="carat">Carat</label>
-                    <select name="carat" class="form-control">
-                        <option value="">--Select Carat--</option>
-                        <option value="24">24 Carat</option>
-                        <option value="22">22 Carat</option>
-                        <option value="20">20 Carat</option>
-                        <option value="18">18 Carat</option>
-                    </select>
-                </div>
 
                 <div class="form-group">
                     <label for="brand_id">Brand</label>
@@ -135,9 +119,9 @@
                     @enderror
                 </div>
                 <div class="form-group">
-                    <label for="inputPhoto" class="col-form-label">Feature Image <span class="text-danger">*</span></label>
+                    <label for="inputPhoto" class="col-form-label">Product Images <span class="text-danger">*</span></label>
                     <div class="input-group">
-                        <input id="thumbnail" class="form-control" type="file" name="image" value="{{old('image')}}">
+                        <input id="thumbnail" class="form-control" type="file" name="images[]" value="{{old('image')}}" multiple>
                     </div>
                     <div id="holder" style="margin-top:15px;max-height:100px;"></div>
                     @error('photo')
@@ -167,6 +151,41 @@
                     @error('status')
                     <span class="text-danger">{{$message}}</span>
                     @enderror
+                </div>
+
+                <div class="row justify-content-between">
+                    <div class="col-md-5 ">
+                        <h3>Product Variations</h3>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="" class="btn btn-primary"> Add Variation</a>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="carat">Carat</label>
+                            <select name="carat" class="form-control">
+                                <option value="">--Select Carat--</option>
+                                <option value="24">24 Carat</option>
+                                <option value="22">22 Carat</option>
+                                <option value="20">20 Carat</option>
+                                <option value="18">18 Carat</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="price" class="col-form-label">Price(NRS) <span class="text-danger">*</span></label>
+                            <input id="price" type="number" name="price" placeholder="Enter price"  value="{{old('price')}}" class="form-control">
+                            @error('price')
+                            <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div id="productVariation">
+
+                    </div>
                 </div>
                 <div class="form-group mb-3">
                     <button type="reset" class="btn btn-warning">Reset</button>
