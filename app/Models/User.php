@@ -47,14 +47,14 @@ class User extends Authenticatable
         ];
     }
 
-<<<<<<< HEAD
-    public function carts(){
+
+    public function carts()
+    {
         return $this->hasMany(Cart::class, 'user_id');
-=======
+    }
     // Relationship: One user can add many posts
     public function posts()
     {
         return $this->hasMany(Post::class, 'added_by');
->>>>>>> 0a39f687ae753cd54e50ee3e312714888b01fe44
     }
 }

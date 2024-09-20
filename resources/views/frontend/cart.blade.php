@@ -15,71 +15,74 @@
                 <div
                     class="border-b border-[#9d6e2a] last:border-b-0 grid gap-x-5 py-6 items-start lg:grid-cols-[125px_1fr] grid-cols-[115px_1fr]">
                     <!-- Product Image -->
-                    <div class="relative bg-[#F9F7F2] w-full" style="padding-top: 125%;">
-                        <img src="{{ asset('asset/img/payal.webp') }}" alt="Product image"
-                            class="absolute inset-0 object-contain w-full h-full">
-                    </div>
-                    <!-- Product Details -->
-                    <div class="grid grid-cols-2 lg:gap-y-4 gap-y-2">
-                        <!-- Product Info -->
-                        <div class="col-span-2 sm:col-span-1">
-                            <a href="/sparkling-charm-silver-anklet-296?variantApin=BMVSDB5VSA6G"
-                                class="text-black text-sm mb-2 lg:mb-3">Sparkling Charm Silver Anklet</a>
-                            <div class="text-xs">
-                                <span class="text-gray-500">Metal Purity:</span> Silver
-                            </div>
-                            <div class="text-xs">
-                                <span class="text-gray-500">Metal Type:</span> Silver (White Rhodium Polish)
-                            </div>
-                            <div class="mt-1.5">
+                    @foreach($items as $item)
+                        <div class="relative bg-[#F9F7F2] w-full" style="padding-top: 125%;">
+                            <img src="{{ asset('storage/'. $item->product->image->image) }}" alt="Product image"
+                                class="absolute inset-0 object-contain w-full h-full">
+                        </div>
+                        <!-- Product Details -->
+                        <div class="grid grid-cols-2 lg:gap-y-4 gap-y-2">
+                            <!-- Product Info -->
+                            <div class="col-span-2 sm:col-span-1">
                                 <a href="/sparkling-charm-silver-anklet-296?variantApin=BMVSDB5VSA6G"
-                                    class="text-[#601042] underline text-xs">Change</a>
-                                    <div class="flex items-center space-x-2">
-                                        <!-- Corrected airport_shuttle Icon -->
-                                        <i class="ri-truck-fill"></i>
-                                        <span class="text-sm text-gray-600">Delivery by - 30th Sep</span>
-                                    </div>
-                                    
-                                    <div class="flex justify-between items-center lg:mt-4 w-full">
-                                        <!-- Button for "Move to Wishlist" on the left -->
-                                        <button type="button"
-                                            class="border bg-[#601042] text-white px-4 pt-2 lg:pt-1.5 pb-1.5 hover:bg-[#9d6e2a] hover:text-white transition">
-                                            Move to Wishlist
-                                        </button>
-                                    
-                                        <!-- Delete Button for larger screens on the right -->
-                                        <div class="hidden lg:flex items-right text-[11px] cursor-pointer uppercase tracking-[0.2em] lg:-mt-2 space-x-1">
-                                            <span class="material-icons text-[#9d6e2a] mr-1">delete</span>
-                                            <span class="pt-px">Delete</span>
+                                    class="text-black text-sm mb-2 lg:mb-3">{{$item->product->title}}</a>
+                                <div class="text-xs">
+                                    <span class="text-gray-500">Metal Purity: </span> {{$item->product->carat.'K '.$item->product->material}}
+                                </div>
+                                <div class="text-xs">
+                                    <span class="text-gray-500">Metal Type: </span>{{$item->product->material}}
+                                </div>
+                                <div class="mt-1.5">
+{{--                                    <a href="/sparkling-charm-silver-anklet-296?variantApin=BMVSDB5VSA6G"--}}
+{{--                                        class="text-[#601042] underline text-xs">Change</a>--}}
+{{--                                        <div class="flex items-center space-x-2">--}}
+{{--                                            <!-- Corrected airport_shuttle Icon -->--}}
+{{--                                            <i class="ri-truck-fill"></i>--}}
+{{--                                            <span class="text-sm text-gray-600">Delivery by - 30th Sep</span>--}}
+{{--                                        </div>--}}
+
+                                        <div class="flex justify-between items-center lg:mt-4 w-full">
+                                            <!-- Button for "Move to Wishlist" on the left -->
+{{--                                            <button type="button"--}}
+{{--                                                class="border bg-[#601042] text-white px-4 pt-2 lg:pt-1.5 pb-1.5 hover:bg-[#9d6e2a] hover:text-white transition">--}}
+{{--                                                Move to Wishlist--}}
+{{--                                            </button>--}}
+
+                                            <!-- Delete Button for larger screens on the right -->
+                                            <form action="{{route('cart.delete', ['cart' => $item->id])}}" method="post">
+                                            <div class="hidden lg:flex items-right text-[11px] cursor-pointer uppercase tracking-[0.2em] lg:-mt-2 space-x-1">
+                                                <span class="material-icons text-[#9d6e2a] mr-1">delete</span>
+                                                <button type="submit" class="pt-px">Delete</button>
+                                            </div>
+                                            </form>
                                         </div>
-                                    </div>
 
-                                    
 
-                                {{-- End Wishlist Button --}}
+
+                                    {{-- End Wishlist Button --}}
+                                </div>
+                            </div>
+                            <!-- Quantity & Price -->
+                            <div class="col-span-2 sm:col-span-1 flex flex-col items-start sm:items-end space-y-2">
+                                <div class="relative flex items-center text-xs text-black">
+                                    <span class="text-gray-500 mr-2">Quantity:</span>
+                                    <select
+                                        class="w-16 text-center border border-gray-300 rounded-md bg-white outline-none focus:ring-2 focus:ring-violet-400">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        <!-- Quantity & Price -->
-                        <div class="col-span-2 sm:col-span-1 flex flex-col items-start sm:items-end space-y-2">
-                            <div class="relative flex items-center text-xs text-black">
-                                <span class="text-gray-500 mr-2">Quantity:</span>
-                                <select
-                                    class="w-16 text-center border border-gray-300 rounded-md bg-white outline-none focus:ring-2 focus:ring-violet-400">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                    <option>10</option>
-                                </select>
-                            </div>
-                        </div>
-
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

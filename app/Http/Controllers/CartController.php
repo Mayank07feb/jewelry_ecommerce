@@ -24,4 +24,14 @@ class CartController extends Controller
         }
         return back();
     }
+
+    public function delete(Cart $cart){
+        $status = $cart->delete();
+        if ($status){
+            request()->session()->flash('success', 'Cart Item deleted successfully');
+        }else{
+            request()->session()->flash('error', 'Failed, Try again!');
+        }
+        return back();
+    }
 }

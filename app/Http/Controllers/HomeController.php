@@ -88,7 +88,8 @@ class HomeController extends Controller
 
     public function cart()
     {
-        return view('frontend.cart');
+        $items = auth()->user()->carts;
+        return view('frontend.cart', compact('items'));
     }
 
     public function page404()

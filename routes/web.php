@@ -93,8 +93,13 @@ Route::middleware('auth')->group(function(){
     Route::get('/wishlist', [HomeController::class, 'wishlist'])->name('wishlist');
     Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
-    Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
+//    Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
     Route::get('addToCart/{product}', [CartController::class, 'addToCart'])->name('addToCart');
+
+    Route::prefix('cart')->name('cart')->group(function(){
+       Route::get('/', [HomeController::class, 'cart']);
+       Route::post('delete', [CartController::class, 'delete'])->name('.delete');
+    });
 
 
     //backend routes
