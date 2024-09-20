@@ -98,7 +98,7 @@ Route::middleware('auth')->group(function(){
 
     Route::prefix('cart')->name('cart')->group(function(){
        Route::get('/', [HomeController::class, 'cart']);
-       Route::post('delete', [CartController::class, 'delete'])->name('.delete');
+       Route::post('delete/{cart}', [CartController::class, 'delete'])->name('.delete');
     });
 
 

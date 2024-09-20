@@ -50,6 +50,7 @@
 
                                             <!-- Delete Button for larger screens on the right -->
                                             <form action="{{route('cart.delete', ['cart' => $item->id])}}" method="post">
+                                                @csrf
                                             <div class="hidden lg:flex items-right text-[11px] cursor-pointer uppercase tracking-[0.2em] lg:-mt-2 space-x-1">
                                                 <span class="material-icons text-[#9d6e2a] mr-1">delete</span>
                                                 <button type="submit" class="pt-px">Delete</button>
