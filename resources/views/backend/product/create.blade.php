@@ -146,6 +146,19 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="material" class="col-form-label">Materials <span class="text-danger">*</span></label>
+                    <select name="material" class="form-control">
+                        <option value="diamond">Diamond</option>
+                        <option value="gold">Gold</option>
+                        <option value="gold">Silver</option>
+                        <option value="platinum">Platinum</option>
+                    </select>
+                    @error('material')
+                    <span class="text-danger">{{$message}}</span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
                     <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
                     <select name="status" class="form-control">
                         <option value="active">Active</option>

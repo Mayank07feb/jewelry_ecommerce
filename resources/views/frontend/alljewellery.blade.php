@@ -268,18 +268,23 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <!-- Card 1 Start -->
+                @foreach($products as $product)
+
                 <div
                     class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl  bg-white transform hover:-translate-y-2 transition-transform duration-300">
-                    <a href="{{ route('productdetail') }}">
+                    <a href="{{ route('productdetail', ['product' => $product->id]) }}">
                         <div class="overflow-hidden">
-                            <img src="{{ asset('asset/img/new.jpg') }}" alt="Rainbow Radiance Diamond Ladies Ring"
+                            <img src="{{ asset('storage/'. $product->image?->image) }}" alt="{{$product->title}}"
                                 class="w-full h-64 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-110">
                         </div>
                     </a>
+                    @php
+                        $discountPrice = $product->price - ($product->price * $product->discount)/100;
+                    @endphp
                     <div class="p-4 bg-gradient-to-b from-gray-50 to-white">
-                        <p class="text-lg font-semibold text-gray-800">₹21,481 <span
-                                class="text-red-600 line-through">₹22,589</span></p>
-                        <p class="text-sm text-gray-600">Rainbow Radiance Diamond Ladies Ring</p>
+                        <p class="text-lg font-semibold text-gray-800">₹{{$discountPrice}} <span
+                                class="text-red-600 line-through">₹{{$product->price}}</span></p>
+                        <p class="text-sm text-gray-600">{{$product->title}}</p>
                     </div>
                     <button
                         class="wishlist-btn absolute top-2 right-2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-all duration-300 ease-in-out transform hover:scale-110">
@@ -291,31 +296,32 @@
                     </button>
                 </div>
                 <!-- Card 1 End -->
+                @endforeach
 
-                <!-- Card 2 Start -->
-                <div
-                    class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl bg-white transform hover:-translate-y-2 transition-transform duration-300">
-                    <a href="{{ route('productdetail') }}">
-                        <div class="overflow-hidden">
-                            <img src="{{ asset('asset/img/new.jpg') }}" alt="Golden Radiance Necklace Set"
-                                class="w-full h-64 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-110">
-                        </div>
-                    </a>
-                    <div class="p-4 bg-gradient-to-b from-gray-50 to-white">
-                        <p class="text-lg font-semibold text-gray-800">₹15,999 <span
-                                class="text-red-600 line-through">₹18,499</span></p>
-                        <p class="text-sm text-gray-600">Golden Radiance Necklace Set</p>
-                    </div>
-                    <button
-                        class="wishlist-btn absolute top-2 right-2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-all duration-300 ease-in-out transform hover:scale-110">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 hover:text-red-500"
-                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                    </button>
-                </div>
-                <!-- Card 2 End -->
+{{--                <!-- Card 2 Start -->--}}
+{{--                <div--}}
+{{--                    class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl bg-white transform hover:-translate-y-2 transition-transform duration-300">--}}
+{{--                    <a href="{{ route('productdetail') }}">--}}
+{{--                        <div class="overflow-hidden">--}}
+{{--                            <img src="{{ asset('asset/img/new.jpg') }}" alt="Golden Radiance Necklace Set"--}}
+{{--                                class="w-full h-64 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-110">--}}
+{{--                        </div>--}}
+{{--                    </a>--}}
+{{--                    <div class="p-4 bg-gradient-to-b from-gray-50 to-white">--}}
+{{--                        <p class="text-lg font-semibold text-gray-800">₹15,999 <span--}}
+{{--                                class="text-red-600 line-through">₹18,499</span></p>--}}
+{{--                        <p class="text-sm text-gray-600">Golden Radiance Necklace Set</p>--}}
+{{--                    </div>--}}
+{{--                    <button--}}
+{{--                        class="wishlist-btn absolute top-2 right-2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-all duration-300 ease-in-out transform hover:scale-110">--}}
+{{--                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 hover:text-red-500"--}}
+{{--                            fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
+{{--                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"--}}
+{{--                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />--}}
+{{--                        </svg>--}}
+{{--                    </button>--}}
+{{--                </div>--}}
+{{--                <!-- Card 2 End -->--}}
 
                 <!-- Add more cards here as needed -->
             </div>

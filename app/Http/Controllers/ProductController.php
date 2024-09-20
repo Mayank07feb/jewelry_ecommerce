@@ -50,6 +50,7 @@ class ProductController extends Controller
     public function edit(Product $product){
         $categories = Category::where('is_parent', '1')->get();
         $brands = Brand::all();
+
         return view('backend.product.edit', compact('product', 'categories', 'brands'));
     }
 

@@ -55,39 +55,29 @@
                 <ul class="glide__slides">
                     <!-- Example Slide -->
 
-                    <!-- Product cards -->
-                    <div class="item">
-                        <div class="w-full lg:w-full flex-shrink-0 p-2">
-                            <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
-                                <div class="relative">
-                                    <a href="{{ route('productdetail') }}"><img src="{{ asset('asset/img/new1.webp') }}"
-                                            alt="Maharashtrian Himali Gold Nath" class="w-full h-60 object-cover"
-                                            loading="lazy"></a>
-                                </div>
-                                <div class="p-4">
-                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                    <h3 class="text-lg font-medium text-gray-800">Maharashtrian Himali Gold Nath</h3>
+                    @foreach($newProducts as $product)
+                        <!-- Product cards -->
+                        <div class="item">
+                            <div class="w-full lg:w-full flex-shrink-0 p-2">
+                                <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
+                                    <div class="relative">
+                                        <a href="{{ route('productdetail', ['product' => $product->id]) }}"><img src="{{ asset('storage/'. $product->image?->image) }}"
+                                                                                    alt="Maharashtrian Himali Gold Nath" class="w-full h-60 object-cover"
+                                                                                    loading="lazy"></a>
+                                    </div>
+                                    @php
+                                        $discountPrice = $product->price - ($product->price * $product->discount)/100;
+                                    @endphp
+                                    <div class="p-4">
+                                        <h2 class="text-2xl font-bold text-gray-900 mb-2">₹{{$discountPrice}}</h2>
+                                        <h3 class="text-lg font-medium text-gray-800">Maharashtrian Himali Gold Nath</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
 
-                    <!-- Product cards -->
-                    <div class="item">
-                        <div class="w-full lg:w-full flex-shrink-0 p-2">
-                            <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
-                                <div class="relative">
-                                    <a href="{{ route('productdetail') }}"> <img src="{{ asset('asset/img/new1.webp') }}"
-                                            alt="Maharashtrian Himali Gold Nath" class="w-full h-60 object-cover"
-                                            loading="lazy"></a>
-                                </div>
-                                <div class="p-4">
-                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                    <h3 class="text-lg font-medium text-gray-800">Maharashtrian Himali Gold Nath</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </ul>
             </div>
             <div class="glide__arrows flex justify-center my-4 gap-2" data-glide-el="controls">
@@ -106,24 +96,12 @@
                 <ul class="glide__slides">
                     <!-- Example Slide -->
                     <!-- Example product card -->
-                    <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
-                        <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                            <div class="relative">
-                                <a href="{{ route('productdetail') }}"><img src="{{ asset('asset\img\best1.webp') }}"
-                                        alt="Best Seller 1" class="w-full h-48 object-cover" loading="lazy"></a>
-                            </div>
-                            <div class="p-4">
-                                <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
-                            </div>
-                        </div>
-                    </div>
+                    @foreach( $bestSellingProducts as $product)
 
-                    <!-- Example product card -->
                     <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
                         <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                             <div class="relative">
-                                <a href="{{ route('productdetail') }}"><img src="{{ asset('asset\img\best1.webp') }}"
+                                <a href="{{ route('productdetail', ['product' => $product]) }}"><img src="{{ asset('storage/'. $product->image?->image) }}"
                                         alt="Best Seller 1" class="w-full h-48 object-cover" loading="lazy"></a>
                             </div>
                             <div class="p-4">
@@ -132,6 +110,8 @@
                             </div>
                         </div>
                     </div>
+                    @endforeach
+
                 </ul>
             </div>
             <div class="glide__arrows flex justify-center my-4 gap-2" data-glide-el="controls">

@@ -20,10 +20,12 @@ return new class extends Migration
             $table->integer('stock')->default(1);
             $table->enum('status',['active','inactive'])->default('inactive');
             $table->decimal('weight', 8, 2);
+            $table->string('material')->nullable();
             $table->string('carat')->nullable();
             $table->float('price');
             $table->float('discount')->nullable();
             $table->boolean('is_featured')->default(false);
+            $table->boolean('is_collection')->default(false);
             $table->unsignedBigInteger('cat_id')->nullable();
             $table->unsignedBigInteger('child_cat_id')->nullable();
             $table->unsignedBigInteger('brand_id')->nullable();

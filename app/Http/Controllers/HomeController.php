@@ -2,7 +2,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
+use App\Models\Cart;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 
 class HomeController extends Controller
@@ -11,7 +15,15 @@ class HomeController extends Controller
     public function index()
     {
         $banners = Banner::where('status', 'active')->get();
-        return view('frontend.index', compact('banners'));
+
+        $newProducts = Product::orderBy('created_at', 'desc')->limit(5)->get();
+        $bestSellingProductsIds = Cart::select('product_id', DB::raw('COUNT(product_id) as total_sales'))
+            ->groupBy('product_id')
+            ->orderBy('total_sales', 'DESC')
+            ->take(5)
+            ->pluck('product_id');
+        $bestSellingProducts = Product::whereIn('id', $bestSellingProductsIds)->get();
+        return view('frontend.index', compact('banners', 'newProducts', 'bestSellingProducts'));
     }
 
     public function contact()
@@ -19,9 +31,14 @@ class HomeController extends Controller
         return view('frontend.contact');
     }
 
-    public function alljewellery()
+    public function alljewellery($material = null)
     {
-        return view('frontend.alljewellery');
+        if ($material){
+            $products = Product::where('material', $material)->get();
+        }else{
+            $products = Product::all();
+        }
+        return view('frontend.alljewellery', compact('products'));
     }
 
     public function diamondjewellery()
@@ -79,9 +96,9 @@ class HomeController extends Controller
         return view('frontend.404');
     }
 
-    public function productdetail()
+    public function productdetail(Product $product)
     {
-        return view('frontend.productdetail');
+        return view('frontend.productdetail', compact('product'));
     }
 
     public function wishlist()

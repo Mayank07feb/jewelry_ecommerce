@@ -110,15 +110,15 @@
                     <a href="{{ route('alljewellery') }}"
                         class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">All
                         Jewellery</a>
-                    <a href="{{ route('diamondjewellery') }}"
+                    <a href="{{ route('alljewellery', ['material' => 'diamond']) }}"
                         class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Diamond</a>
-                    <a href="{{ route('gold') }}"
+                    <a href="{{ route('alljewellery','gold') }}"
                         class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Gold</a>
-                    <a href="{{ route('silver') }}"
+                    <a href="{{ route('alljewellery','silver') }}"
                         class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Silver</a>
-                    <a href="{{ route('collection') }}"
+                    <a href="{{ route('alljewellery','collection') }}"
                         class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Collections</a>
-                    <a href="{{ route('bullions') }}"
+                    <a href="{{ route('alljewellery','bullions') }}"
                         class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Bullions</a>
                 </div>
             </div>
@@ -337,7 +337,7 @@
 
 
                             <div class="relative group">
-                                <a href="{{ route('diamondjewellery') }}"
+                                <a href="{{ route('alljewellery', 'diamond') }}"
                                     class="relative z-10 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:text-[#d4af37] group">
                                     Diamond
                                     <span
@@ -404,7 +404,7 @@
 
 
                             <div class="relative group">
-                                <a href="{{ route('gold') }}"
+                                <a href="{{ route('alljewellery', 'gold') }}"
                                     class="relative z-10 flex items-center border-b-2 border-transparent pt-px mt-5 text-sm font-medium text-gray-700 hover:text-[#d4af37] group">
                                     Gold
                                     <span
@@ -470,7 +470,7 @@
                             </div>
 
 
-                            <a href="{{ route('silver') }}"
+                            <a href="{{ route('alljewellery', 'silver') }}"
                                 class="relative flex items-center text-sm font-medium text-gray-700 hover:text-[#d4af37] group">
                                 Silver
                                 <span
@@ -559,7 +559,7 @@
                             </a>
                             <a href="{{ route('cart') }}"
                                 class="text-sm font-medium text-gray-700 hover:text-[#d4af37]">
-                                <i class="fas fa-shopping-cart"></i> Cart
+                                <i class="fas fa-shopping-cart">{{auth()->user()->carts->count()}}</i> Cart
                             </a>
                         </div>
                     </div>

@@ -8,6 +8,7 @@ use App\Http\Controllers\CategoryController;
 use \App\Http\Middleware\AdminMiddleware;
 use \App\Http\Controllers\BrandController;
 use \App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -28,7 +29,7 @@ Route::get('/reset-password', [HomeController::class, 'showResetPasswordForm'])-
 
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
-Route::get('/alljewellery', [HomeController::class, 'alljewellery'])->name('alljewellery');
+Route::get('/alljewellery/{material?}', [HomeController::class, 'alljewellery'])->name('alljewellery');
 
 Route::get('/diamondjewellery', [HomeController::class, 'diamondjewellery'])->name('diamondjewellery');
 
@@ -51,7 +52,7 @@ Route::get('/giritra-promises', [HomeController::class, 'giritraPromises'])->nam
 Route::get('/page404', [HomeController::class, 'page404'])->name('page404');
 
 
-Route::get('/productdetail', [HomeController::class, 'productdetail'])->name('productdetail');
+Route::get('/productdetail/{product?}', [HomeController::class, 'productdetail'])->name('productdetail');
 
 
 Route::get('/cancel', [HomeController::class, 'cancel'])->name('cancel');
@@ -92,6 +93,7 @@ Route::middleware('auth')->group(function(){
     Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
+    Route::get('addToCart/{product}', [CartController::class, 'addToCart'])->name('addToCart');
 
 
     //backend routes
