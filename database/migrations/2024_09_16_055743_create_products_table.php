@@ -21,8 +21,6 @@ return new class extends Migration
             $table->enum('status',['active','inactive'])->default('inactive');
             $table->decimal('weight', 8, 2);
             $table->string('material')->nullable();
-            $table->string('carat')->nullable();
-            $table->float('price');
             $table->float('discount')->nullable();
             $table->boolean('is_featured')->default(false);
             $table->boolean('is_collection')->default(false);
