@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostCategoryController;
+use App\Http\Controllers\PostCommentController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -161,6 +162,29 @@ Route::middleware('auth')->group(function(){
         Route::get('post/delete/{post}',[PostController::class,'delete'])->name('post.delete');
         Route::get('post/duplicate/{post}',[PostController::class,'duplicate'])->name('post.duplicate');
         Route::post('post/update/{post}',[PostController::class,'update'])->name('post.update');
+
+
+
+
+        // Route to show comments for a specific post
+//        Route::get('posts/{post}/comments', [PostCommentController::class, 'index'])->name('comments.index');
+
+// Route to show the form for creating a new comment for a post
+        // Route to show the form for creating a new comment for a post
+//        Route::get('posts/{post}/comments/create', [PostCommentController::class, 'create'])->name('comments.create');
+
+
+// Route to store a new comment
+//        Route::post('comments', [PostCommentController::class, 'store'])->name('comments.store');
+
+// Route to show the form for editing a comment
+//        Route::get('comments/{comment}/edit', [PostCommentController::class, 'edit'])->name('comments.edit');
+
+// Route to update a comment
+//        Route::post('comments/{comment}', [PostCommentController::class, 'update'])->name('comments.update');
+
+// Route to delete a comment
+//        Route::get('comments/{comment}', [PostCommentController::class, 'destroy'])->name('comments.destroy');
 
     });
 

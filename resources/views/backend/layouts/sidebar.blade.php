@@ -186,7 +186,7 @@
 
       <!-- Comments -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="">
             <i class="fas fa-comments fa-chart-area"></i>
             <span>Comments</span>
         </a>
