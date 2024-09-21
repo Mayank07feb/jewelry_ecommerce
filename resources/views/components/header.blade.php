@@ -557,10 +557,17 @@
                                 class="text-sm font-medium text-gray-700 hover:text-[#d4af37]">
                                 <i class="fas fa-heart"></i> Wishlist
                             </a>
-                            <a href="{{ route('cart') }}"
-                                class="text-sm font-medium text-gray-700 hover:text-[#d4af37]">
-                                <i class="fas fa-shopping-cart">{{ auth()->user() ? auth()->user()->carts->count() : '0'}}</i> Cart
+                            <a href="{{ route('cart') }}" class="relative inline-flex items-center text-sm font-medium text-gray-700 hover:text-[#d4af37]">
+                                <!-- Cart Icon -->
+                                <i class="fas fa-shopping-cart text-lg"></i>
+                                <span class="ml-2">Cart</span>
+                                
+                                <!-- Badge Counter -->
+                                <span class="absolute -top-3 -right-3 bg-[#601042] text-white text-[10px] lg:text-xs font-bold rounded-full h-5 w-5 lg:h-6 lg:w-6 flex items-center justify-center">
+                                    {{ auth()->user() ? auth()->user()->carts->count() : '0' }}
+                                </span>
                             </a>
+                                                       
                         </div>
                     </div>
                 </div>
