@@ -4,6 +4,12 @@
 
 @section('main-content')
 
+    @if($errors->any())
+        @foreach($errors->all() as $error)
+            <li>{{$error}}</li>
+        @endforeach
+    @endif
+
     <div class="card">
         <h5 class="card-header">Add Category</h5>
         <div class="card-body">
@@ -38,7 +44,7 @@
 
                 <div class="form-group">
                     <label for="is_parent">Is Parent</label><br>
-                    <input type="checkbox" name='is_parent' id='is_parent' value='1' checked> Yes
+                    <input type="checkbox" name='is_parent' id='is_parent' value="1" checked> Yes
                 </div>
 
                 <div class="form-group">
@@ -54,7 +60,8 @@
                 <div class="form-group">
                     <label for="parent_id" class="col-form-label">Parent <span class="text-danger"></span></label>
                     <select name="parent_id" class="form-control">
-                        @foreach($categories as $category)
+                        <option value="">Select Parent Category</option>
+                    @foreach($categories as $category)
                             <option value="{{$category->id}}">{{$category->title}}</option>
                         @endforeach
                     </select>

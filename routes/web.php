@@ -140,6 +140,7 @@ Route::middleware('auth')->group(function(){
             Route::get('edit/{product}', [ProductController::class, 'edit'])->name('edit');
             Route::post('update/{product}', [ProductController::class, 'update'])->name('update');
             Route::post('destroy/{product}', [ProductController::class, 'delete'])->name('destroy');
+            Route::post('image/delete/{image}', [ProductController::class, 'imageDelete'])->name('image.delete');
         });
 
          //post category

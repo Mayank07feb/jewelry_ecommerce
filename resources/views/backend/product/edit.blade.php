@@ -79,14 +79,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="price" class="col-form-label">Price(NRS) <span class="text-danger">*</span></label>
-                    <input id="price" type="number" name="price" placeholder="Enter price"  value="{{$product->price}}" class="form-control">
-                    @error('price')
-                    <span class="text-danger">{{$message}}</span>
-                    @enderror
-                </div>
-
-                <div class="form-group">
                     <label for="discount" class="col-form-label">Discount(%)</label>
                     <input id="discount" type="number" name="discount" min="0" max="100" placeholder="Enter discount"  value="{{$product->discount}}" class="form-control">
                     @error('discount')
@@ -110,16 +102,6 @@
                 {{--          </select>--}}
                 {{--        </div>--}}
 
-                <div class="form-group">
-                    <label for="carat">Carat</label>
-                    <select name="carat" class="form-control">
-                        <option value="">--Select Carat--</option>
-                        <option value="24" {{$product->carat == '24' ? 'selected' : ''}}>24 Carat</option>
-                        <option value="22" {{$product->carat == '22' ? 'selected' : ''}}>22 Carat</option>
-                        <option value="20" {{$product->carat == '20' ? 'selected' : ''}}>20 Carat</option>
-                        <option value="18" {{$product->carat == '18' ? 'selected' : ''}}>18 Carat</option>
-                    </select>
-                </div>
                 <div class="form-group">
                     <label for="brand_id">Brand</label>
                     <select name="brand_id" class="form-control">
@@ -147,18 +129,27 @@
                     <span class="text-danger">{{$message}}</span>
                     @enderror
                 </div>
+                <div class="d-flex flex-wrap gap-5">
+                    @foreach($product->images as $image)
+                        <div class="position-relative" style="width: 100px; height: 100px;">
+                            <form action="{{route('product.image.delete', ['image' => $image->id])}}" method="post">
+                                @csrf
+                            <button type="submit" href="#"  class="btn btn-danger btn-sm position-absolute top-0 start-0 m-1">x</button>
+                            </form>
+
+                            <img src="{{ asset('storage/' . $image->image) }}" alt="" class="img-fluid rounded shadow-sm" style="object-fit: cover; width: 100%; height: 100px;">
+                        </div>
+                    @endforeach
+                </div>
+
                 <div class="form-group">
-                    <label for="inputPhoto" class="col-form-label">Photo <span class="text-danger">*</span></label>
+                    <label for="inputPhoto" class="col-form-label">Images <span class="text-danger">*</span></label>
                     <div class="input-group">
-              <span class="input-group-btn">
-                  <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary text-white">
-                  <i class="fas fa-image"></i> Choose
-                  </a>
-              </span>
-                        <input id="thumbnail" class="form-control" type="text" name="photo" value="{{$product->photo}}">
+
+                        <input id="thumbnail" class="form-control" type="file" name="image[]" value="{{$product->photo}}">
                     </div>
                     <div id="holder" style="margin-top:15px;max-height:100px;"></div>
-                    @error('photo')
+                    @error('image')
                     <span class="text-danger">{{$message}}</span>
                     @enderror
                 </div>
@@ -185,6 +176,43 @@
                     @error('status')
                     <span class="text-danger">{{$message}}</span>
                     @enderror
+                </div>
+
+                <div class="row justify-content-between">
+                    <div class="col-md-5 ">
+                        <h3>Product Variations</h3>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="" class="btn btn-primary"> Add Variation</a>
+
+                    </div>
+
+                    @foreach($product->variations as $variation)
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="carat">Carat</label>
+                                <select name="carats[]" class="form-control">
+                                    <option value="">--Select Carat--</option>
+                                    <option value="24" {{$variation->carat == '24' ? 'selected' : ''}}>24 Carat</option>
+                                    <option value="22" {{$variation->carat == '22' ? 'selected' : ''}}>22 Carat</option>
+                                    <option value="20" {{$variation->carat == '20' ? 'selected' : ''}}>20 Carat</option>
+                                    <option value="18" {{$variation->carat == '18' ? 'selected' : ''}}>18 Carat</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="price" class="col-form-label">Price(NRS) <span class="text-danger">*</span></label>
+                                <input id="price" type="number" name="prices[]" placeholder="Enter price"  value="{{$variation->price}}" class="form-control">
+                                @error('prices[]')
+                                <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            </div>
+                        </div>
+                    @endforeach
+                    <div id="productVariation">
+
+                    </div>
                 </div>
                 <div class="form-group mb-3">
                     <button class="btn btn-success" type="submit">Update</button>

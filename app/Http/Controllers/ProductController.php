@@ -7,8 +7,10 @@ use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductImage;
+use App\Models\ProductVariation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use phpDocumentor\Reflection\File;
 
 
 class ProductController extends Controller
@@ -41,6 +43,14 @@ class ProductController extends Controller
                 ProductImage::create(['product_id' => $product->id, 'image' => str_replace('public/', '', $file)]);
             }
 //            $product->photo = str_replace('public/', '', $file);
+        }
+        $carats = $request->carats;
+        foreach ($carats as $key=>$val){
+            ProductVariation::create([
+                'product_id' => $product->id,
+                'carat' => $val,
+                'price' => $request->prices[$key],
+            ]);
         }
         if($product){
             request()->session()->flash('success','Product successfully added');
@@ -98,6 +108,21 @@ class ProductController extends Controller
         }
         return back();
     }
-
+    public function imageDelete(ProductImage $image){
+        if ($image->image){
+            $filePath = public_path('storage/'.$image->image);
+            if (file_exists($filePath)){
+                unlink($filePath);
+            }
+        }
+        $status = $image->delete();
+        if($status){
+            request()->session()->flash('success','Product image removed');
+        }
+        else{
+            request()->session()->flash('error','Error occurred while removing product image');
+        }
+        return back();
+    }
 
 }

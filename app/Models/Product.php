@@ -14,11 +14,15 @@ class Product extends Model
         return $this->belongsTo(Brand::class, 'brand_id');
     }
 
-    public function image(){
-        return $this->hasOne(ProductImage::class, 'product_id');
+    public function images(){
+        return $this->hasMany(ProductImage::class, 'product_id');
     }
 
     public function category(){
         return $this->belongsTo(Category::class, 'cat_id');
+    }
+
+    public function variations(){
+        return $this->hasMany(ProductVariation::class, 'product_id');
     }
 }

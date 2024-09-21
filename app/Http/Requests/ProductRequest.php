@@ -33,12 +33,14 @@ class ProductRequest extends FormRequest
             'is_featured'=>'sometimes|in:1',
             'status'=>'required|in:active,inactive',
             'weight' => 'required|numeric',
-            'carat' => 'nullable|numeric',
+//            'carat' => 'nullable|numeric',
 //            'condition'=>'required|in:default,new,hot',
-            'price'=>'required|numeric',
+//            'price'=>'required|numeric',
             'discount'=>'nullable|numeric',
             'image.*' => 'image|mimes:png,jpg,jpeg',
             'material' => 'required',
-        ];
+            'carats.*' => 'required',
+            'prices.*' => 'required',
+         ];
     }
 }

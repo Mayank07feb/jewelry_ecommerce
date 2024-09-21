@@ -20,6 +20,7 @@ class CategoryController extends Controller
     }
 
     public function  store(CategoryRequest $request){
+//        dd($request->all());
         $data = $request->all();
         $slug = Str::slug($request->title);
         $count = Category::where('slug', $slug)->count();

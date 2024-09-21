@@ -26,7 +26,7 @@ class CategoryRequest extends FormRequest
             'summary'=>'string|nullable',
             'photo'=>'nullable',
             'status'=>'required|in:active,inactive',
-            'is_parent'=>'sometimes|in:1',
+            'is_parent'=>'',
             'parent_id'=>'nullable|exists:categories,id',
         ];
     }
