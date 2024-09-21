@@ -559,7 +559,7 @@
                             </a>
                             <a href="{{ route('cart') }}"
                                 class="text-sm font-medium text-gray-700 hover:text-[#d4af37]">
-                                <i class="fas fa-shopping-cart">{{auth()->user()->carts->count()}}</i> Cart
+                                <i class="fas fa-shopping-cart">{{ auth()->user() ? auth()->user()->carts->count() : '0'}}</i> Cart
                             </a>
                         </div>
                     </div>
@@ -611,7 +611,7 @@
             <strong class="font-bold">Success!</strong>
             <span class="block sm:inline">{{ session('success') }}</span>
             <span class="absolute top-0 bottom-0 right-0 px-4 py-3 cursor-pointer" onclick="closeAlert()">
-            <svg class="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <svg class="fill-current h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <title>Close</title>
                 <path d="M14.348 14.849a1 1 0 010-1.414L10.707 10l3.641-3.435a1 1 0 00-1.414-1.414L9.293 8.586 5.707 5a1 1 0 10-1.414 1.414L7.586 10l-3.707 3.707a1 1 0 001.414 1.414L9.293 11.414l4.055 4.055a1 1 0 001.414 0z"/>
             </svg>
@@ -629,10 +629,11 @@
         <span class="block sm:inline">{{session('error')}}</span>
         <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
             <span class="absolute top-0 bottom-0 right-0 px-4 py-3 cursor-pointer" onclick="closeAlert()">
-            <svg class="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <svg class="fill-current h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <title>Close</title>
                 <path d="M14.348 14.849a1 1 0 010-1.414L10.707 10l3.641-3.435a1 1 0 00-1.414-1.414L9.293 8.586 5.707 5a1 1 0 10-1.414 1.414L7.586 10l-3.707 3.707a1 1 0 001.414 1.414L9.293 11.414l4.055 4.055a1 1 0 001.414 0z"/>
             </svg>
+            </span>
         </span>
     </div>
     @endif
