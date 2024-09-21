@@ -157,36 +157,6 @@
                     @enderror
                 </div>
 
-<<<<<<< HEAD
-                <div class="row justify-content-between">
-                    <div class="col-md-5 ">
-                        <h3>Product Variations</h3>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="" class="btn btn-primary"> Add Variation</a>
-
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="carat">Carat</label>
-                            <select name="carats[]" class="form-control">
-                                <option value="">--Select Carat--</option>
-                                <option value="24">24 Carat</option>
-                                <option value="22">22 Carat</option>
-                                <option value="20">20 Carat</option>
-                                <option value="18">18 Carat</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="price" class="col-form-label">Price(NRS) <span class="text-danger">*</span></label>
-                            <input id="price" type="number" name="prices[]" placeholder="Enter price"  value="{{old('prices[]')}}" class="form-control">
-                            @error('price')
-                            <span class="text-danger">{{$message}}</span>
-                            @enderror
-=======
                 <div class="container">
                     <div class="row justify-content-between align-items-center mb-3">
                         <div class="col-md-5">
@@ -223,12 +193,11 @@
                         </div>
                         <div class="col-md-2 d-flex align-items-end mb-3">
                             <button class="btn btn-danger removeVariation w-100 w-md-auto">Remove</button>
->>>>>>> c419dfacde5b05f2d1c60bf1b0a39113ccb13ed9
                         </div>
                     </div>
 
                     <div id="productVariation">
-                        
+
                     </div>
                 </div>
 
@@ -236,7 +205,9 @@
                     <button type="reset" class="btn btn-warning">Reset</button>
                     <button class="btn btn-success" type="submit">Submit</button>
                 </div>
+
             </form>
+
         </div>
     </div>
 @endsection
