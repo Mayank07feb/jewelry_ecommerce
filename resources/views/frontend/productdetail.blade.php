@@ -74,11 +74,11 @@
                 <!-- Dropdown Selections -->
                 <div class="grid grid-cols-2 gap-6 mb-4">
 
-                    @foreach($product->variations as $variation)
+                    @foreach($product->variations as $v)
                         <div class="flex gap-2">
-                            <a href="{{route('productdetail', ['product' => $product->id, 'variation' => $variation->id])}}" class="w-full">
+                            <a href="{{route('productdetail', ['product' => $product->id, 'variation' => $v->id])}}" class="w-full">
                                 <button class="w-24 py-3 text-black-50 rounded-md hover:bg-gray-600 hover:text-white shadow-md transition-shadow">
-                                    {{$variation->carat}}K
+                                    {{$v->carat}}K
                                 </button>
                             </a>
                         </div>
