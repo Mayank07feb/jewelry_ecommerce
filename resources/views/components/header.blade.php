@@ -112,13 +112,13 @@
                         Jewellery</a>
                     <a href="{{ route('alljewellery', ['material' => 'diamond']) }}"
                         class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Diamond</a>
-                    <a href="{{ route('alljewellery','gold') }}"
+                    <a href="{{ route('alljewellery', 'gold') }}"
                         class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Gold</a>
-                    <a href="{{ route('alljewellery','silver') }}"
+                    <a href="{{ route('alljewellery', 'silver') }}"
                         class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Silver</a>
-                    <a href="{{ route('alljewellery','collection') }}"
+                    <a href="{{ route('alljewellery', 'collection') }}"
                         class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Collections</a>
-                    <a href="{{ route('alljewellery','bullions') }}"
+                    <a href="{{ route('alljewellery', 'bullions') }}"
                         class="block text-lg font-medium text-[#601042] hover:bg-[#d4af37] hover:text-white rounded px-2 py-1 transition-all duration-300 ease-in-out transform hover:translate-x-2 hover:shadow-md">Bullions</a>
                 </div>
             </div>
@@ -554,13 +554,37 @@
 
 
                             <a href="{{ route('wishlist') }}"
-                                class="text-sm font-medium text-gray-700 hover:text-[#d4af37]">
-                                <i class="fas fa-heart"></i> Wishlist
+                                class="relative inline-flex items-center text-sm font-medium text-gray-700 hover:text-[#d4af37]">
+                                <!-- Wishlist Icon -->
+                                <i class="fas fa-heart text-lg"></i>
+                                <span class="ml-2">Wishlist</span>
+
+                                @if (auth()->user() && auth()->user()->carts->count() > 0)
+                                    <!-- Badge Counter -->
+                                    <span
+                                        class="absolute -top-3 -right-3 bg-[#601042] text-white text-[10px] lg:text-xs font-bold rounded-full h-5 w-5 lg:h-6 lg:w-6 flex items-center justify-center">
+                                        {{ auth()->user()->carts->count() }}
+                                    </span>
+                                @endif
                             </a>
+
+
                             <a href="{{ route('cart') }}"
-                                class="text-sm font-medium text-gray-700 hover:text-[#d4af37]">
-                                <i class="fas fa-shopping-cart">{{ auth()->user() ? auth()->user()->carts->count() : '0'}}</i> Cart
+                                class="relative inline-flex items-center text-sm font-medium text-gray-700 hover:text-[#d4af37]">
+                                <!-- Cart Icon -->
+                                <i class="fas fa-shopping-cart text-lg"></i>
+                                <span class="ml-2">Cart</span>
+
+                                @if (auth()->user() && auth()->user()->carts->count() > 0)
+                                    <!-- Badge Counter -->
+                                    <span
+                                        class="absolute -top-3 -right-3 bg-[#601042] text-white text-[10px] lg:text-xs font-bold rounded-full h-5 w-5 lg:h-6 lg:w-6 flex items-center justify-center">
+                                        {{ auth()->user()->carts->count() }}
+                                    </span>
+                                @endif
                             </a>
+
+
                         </div>
                     </div>
                 </div>
@@ -591,51 +615,73 @@
         </a>
 
         <!-- Wishlist Button -->
-        <a href="/dashboard/wishlist" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+        <a href="/dashboard/wishlist" class="relative flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
             <span class="material-icons text-3xl">favorite_border</span>
             <span class="text-xs">Wishlist</span>
+
+            @if (auth()->user() && auth()->user()->carts->count() > 0)
+                <!-- Badge Counter -->
+                <span
+                    class="absolute -top-2 -right-2 bg-[#601042] text-white text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                    {{ auth()->user()->carts->count() }}
+                </span>
+            @endif
         </a>
 
+
         <!-- Cart Button -->
-        <a href="/cart" class="flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
+        <a href="/cart" class="relative flex flex-col items-center text-[#601042] hover:text-[#9d6e2a]">
             <span class="material-icons text-3xl">shopping_cart</span>
             <span class="text-xs">Cart</span>
+
+            @if (auth()->user() && auth()->user()->carts->count() > 0)
+                <!-- Badge Counter -->
+                <span
+                    class="absolute -top-2 -right-2 bg-[#601042] text-white text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                    {{ auth()->user()->carts->count() }}
+                </span>
+            @endif
         </a>
+
     </div>
 </div>
 
 <div class="max-w-md mx-auto">
     <!-- Success Message -->
-    @if(session('success'))
-        <div id="flash-message" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+    @if (session('success'))
+        <div id="flash-message" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
+            role="alert">
             <strong class="font-bold">Success!</strong>
             <span class="block sm:inline">{{ session('success') }}</span>
             <span class="absolute top-0 bottom-0 right-0 px-4 py-3 cursor-pointer" onclick="closeAlert()">
-            <svg class="fill-current h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <title>Close</title>
-                <path d="M14.348 14.849a1 1 0 010-1.414L10.707 10l3.641-3.435a1 1 0 00-1.414-1.414L9.293 8.586 5.707 5a1 1 0 10-1.414 1.414L7.586 10l-3.707 3.707a1 1 0 001.414 1.414L9.293 11.414l4.055 4.055a1 1 0 001.414 0z"/>
-            </svg>
-        </span>
+                <svg class="fill-current h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20">
+                    <title>Close</title>
+                    <path
+                        d="M14.348 14.849a1 1 0 010-1.414L10.707 10l3.641-3.435a1 1 0 00-1.414-1.414L9.293 8.586 5.707 5a1 1 0 10-1.414 1.414L7.586 10l-3.707 3.707a1 1 0 001.414 1.414L9.293 11.414l4.055 4.055a1 1 0 001.414 0z" />
+                </svg>
+            </span>
         </div>
-
     @endif
 
 
     <!-- Error Message -->
-    @if(session('error'))
-
-    <div id="flash-message" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-4" role="alert">
-        <strong class="font-bold">Error!</strong>
-        <span class="block sm:inline">{{session('error')}}</span>
-        <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-            <span class="absolute top-0 bottom-0 right-0 px-4 py-3 cursor-pointer" onclick="closeAlert()">
-            <svg class="fill-current h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <title>Close</title>
-                <path d="M14.348 14.849a1 1 0 010-1.414L10.707 10l3.641-3.435a1 1 0 00-1.414-1.414L9.293 8.586 5.707 5a1 1 0 10-1.414 1.414L7.586 10l-3.707 3.707a1 1 0 001.414 1.414L9.293 11.414l4.055 4.055a1 1 0 001.414 0z"/>
-            </svg>
+    @if (session('error'))
+        <div id="flash-message" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-4"
+            role="alert">
+            <strong class="font-bold">Error!</strong>
+            <span class="block sm:inline">{{ session('error') }}</span>
+            <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+                <span class="absolute top-0 bottom-0 right-0 px-4 py-3 cursor-pointer" onclick="closeAlert()">
+                    <svg class="fill-current h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20">
+                        <title>Close</title>
+                        <path
+                            d="M14.348 14.849a1 1 0 010-1.414L10.707 10l3.641-3.435a1 1 0 00-1.414-1.414L9.293 8.586 5.707 5a1 1 0 10-1.414 1.414L7.586 10l-3.707 3.707a1 1 0 001.414 1.414L9.293 11.414l4.055 4.055a1 1 0 001.414 0z" />
+                    </svg>
+                </span>
             </span>
-        </span>
-    </div>
+        </div>
     @endif
 
 </div>

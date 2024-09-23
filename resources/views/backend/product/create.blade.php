@@ -171,7 +171,7 @@
                         <div class="col-md-5">
                             <div class="form-group">
                                 <label for="carat">Carat</label>
-                                <select name="carat" class="form-control">
+                                <select name="carats[]" class="form-control">
                                     <option value="">--Select Carat--</option>
                                     <option value="24">24 Carat</option>
                                     <option value="22">22 Carat</option>
@@ -184,9 +184,9 @@
                             <div class="form-group">
                                 <label for="price" class="col-form-label">Price (NRS) <span
                                         class="text-danger">*</span></label>
-                                <input id="price" type="number" name="price" placeholder="Enter price"
+                                <input id="price" type="number" name="prices[]" placeholder="Enter price"
                                     value="{{ old('price') }}" class="form-control">
-                                @error('price')
+                                @error('prices[]')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
