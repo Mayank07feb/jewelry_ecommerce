@@ -185,7 +185,7 @@
                                 <label for="price" class="col-form-label">Price (NRS) <span
                                         class="text-danger">*</span></label>
                                 <input id="price" type="number" name="prices[]" placeholder="Enter price"
-                                    value="{{ old('price') }}" class="form-control">
+                                    value="{{ old('price[]') }}" class="form-control">
                                 @error('prices[]')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
@@ -240,7 +240,7 @@
                 caratLabel.setAttribute('for', 'carat');
                 caratLabel.textContent = 'Carat';
                 const caratSelect = document.createElement('select');
-                caratSelect.name = 'carat';
+                caratSelect.name = 'carats[]';
                 caratSelect.classList.add('form-control');
 
                 const caratOptions = [{
@@ -287,7 +287,7 @@
                 priceLabel.innerHTML = 'Price (NRS) <span class="text-danger">*</span>';
                 const priceInput = document.createElement('input');
                 priceInput.type = 'number';
-                priceInput.name = 'price';
+                priceInput.name = 'prices[]';
                 priceInput.placeholder = 'Enter price';
                 priceInput.classList.add('form-control');
 
