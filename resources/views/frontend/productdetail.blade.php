@@ -83,22 +83,21 @@
                 {{--                </div> --}}
 
                 <!-- Dropdown Selections -->
-                <div class="grid grid-cols-2 gap-6 mb-4">
+                <div class="grid gap-6 mb-4">
 
 
 
 
-                    @foreach ($product->variations as $v)
-                        <div class="flex gap-2">
-                            <a href="{{ route('productdetail', ['product' => $product->id, 'variation' => $v->id]) }}"
-                                class="w-full">
-                                <button
-                                    class="w-24 py-3 text-black-50 rounded-md hover:bg-gray-600 hover:text-white shadow-md transition-shadow">
+                    <div class="flex gap-2">
+                        @foreach ($product->variations as $v)
+                            <a href="{{ route('productdetail', ['product' => $product->id, 'variation' => $v->id]) }}">
+                                <button class="w-24 py-3 text-black-50 rounded-md hover:bg-gray-600 hover:text-white shadow-md transition-shadow">
                                     {{ $v->carat }}K
                                 </button>
                             </a>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
+                    
 
                     {{--                    <div> --}}
                     {{--                        <label for="metal_type" class="block text-sm font-medium text-gray-700">Metal Type</label> --}}
@@ -214,14 +213,14 @@
             });
         }
 
-        $(document).ready(function() {
+        $(document).ready(function () {
             initZoom();
 
             $("#zoomImage").fancybox({
-                beforeShow: function() {
+                beforeShow: function () {
                     $.removeData('#zoomImage', 'elevateZoom');
                 },
-                afterClose: function() {
+                afterClose: function () {
                     initZoom();
                 }
             });
