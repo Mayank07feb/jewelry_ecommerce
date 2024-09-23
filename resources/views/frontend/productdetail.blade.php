@@ -2,9 +2,13 @@
 
 @section('content')
 <style>
+    @media (max-width: 768px) { /* Adjust the breakpoint as needed */
     .viewer img {
-    transition: none; /* Remove transition effects */
-    cursor: default; /* Change cursor to default */
+        transform: none; /* Disable any scaling effect */
+        transition: none; /* Remove transition effects */
+        cursor: default; /* Change cursor to default */
+    }
+}
 }
 </style>
     <!-- Breadcrumb Section -->
@@ -21,16 +25,16 @@
     <!-- Main Product Section -->
     <section class="container mx-auto px-4 py-8">
         <div class="flex flex-col lg:flex-row">
-            <div class="lg:w-1/2 w-full max-w-full grid grid-cols-2 gap-4 p-4 overflow-hidden">
-                <div class="viewer col-span-2 relative">
+            <div class="lg:w-1/2 w-full max-w-full grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 overflow-hidden">
+                <div class="viewer col-span-1 sm:col-span-2 relative hidden lg:block">
                     <img id="zoomImage" src="{{ asset('storage/' . $product->image->image) }}"
                         data-zoom-image="{{ asset('storage/' . $product->image->image) }}" alt="Main Image"
                         class="w-full h-full aspect-square object-cover rounded-md shadow-lg transition-shadow duration-300 ease-in-out transform lg:hover:scale-105" />
                 </div>
                 @foreach ($product->images as $image)
                     <div class="relative">
-                        <img src="{{ asset('storage/' . $image->image) }}" alt=""
-                            class="w-full h-full aspect-square object-cover rounded-lg shadow-lg transition-shadow duration-300 ease-in-out hover:shadow-xl" />
+                        <img src="{{ asset('storage/' . $image->image) }}" alt="Product Image"
+                            class="w-full h-auto sm:h-full sm:aspect-square object-cover rounded-lg shadow-lg transition-shadow duration-300 ease-in-out lg:hover:shadow-xl" />
                     </div>
                 @endforeach
             </div>
