@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('order_number')->unique();
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->float('sub_total');
+            $table->float('sub_total')->nullable();
             $table->unsignedBigInteger('shipping_id')->nullable();
             $table->float('coupon')->nullable();
             $table->float('total_amount');

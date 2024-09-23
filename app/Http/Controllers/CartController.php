@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Product;
+use App\Models\ProductVariation;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
-    public function addToCart(Product $product){
+    public function addToCart(Product $product, ProductVariation $variation){
         $amount = $product->price - ($product->price * $product->discount)/100;
         $cart = Cart::create([
             'product_id' => $product->id,
