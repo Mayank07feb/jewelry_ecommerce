@@ -54,7 +54,7 @@ Route::get('/giritra-promises', [HomeController::class, 'giritraPromises'])->nam
 Route::get('/page404', [HomeController::class, 'page404'])->name('page404');
 
 
-Route::get('/productdetail/{product?}', [HomeController::class, 'productdetail'])->name('productdetail');
+Route::get('/productdetail/{product}/{variation?}', [HomeController::class, 'productdetail'])->name('productdetail');
 
 
 Route::get('/cancel', [HomeController::class, 'cancel'])->name('cancel');
@@ -95,7 +95,7 @@ Route::middleware('auth')->group(function(){
     Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 //    Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
-    Route::get('addToCart/{product}', [CartController::class, 'addToCart'])->name('addToCart');
+    Route::get('addToCart/{product}/{variation}', [CartController::class, 'addToCart'])->name('addToCart');
 
     Route::prefix('cart')->name('cart')->group(function(){
        Route::get('/', [HomeController::class, 'cart']);

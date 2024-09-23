@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Banner;
 use App\Models\Cart;
 use App\Models\Product;
+use App\Models\ProductVariation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -97,9 +98,12 @@ class HomeController extends Controller
         return view('frontend.404');
     }
 
-    public function productdetail(Product $product)
+    public function productdetail(Product $product, ProductVariation $variation = null)
     {
-        return view('frontend.productdetail', compact('product'));
+        if ($variation == null ){
+            $variation = $product->variation;
+        }
+        return view('frontend.productdetail', compact('product', 'variation'));
     }
 
     public function wishlist()

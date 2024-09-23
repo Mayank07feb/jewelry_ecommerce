@@ -37,16 +37,15 @@
                         class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out transform group-hover:scale-105 demo-trigger"
                         data-zoom="{{ asset('storage/'. $product->image->image) }}">
                 </div>
+                @foreach($product->images as $image)
                 <div class="relative group">
-                    <img src="{{ asset('asset/img/new.jpg') }}" alt="Gold Chain Image"
+                    <img src="{{ asset('storage/'. $image->image) }}" alt="Gold Chain Image"
                         class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out transform group-hover:scale-105 demo-trigger"
-                        data-zoom="{{ asset('asset/img/new.jpg') }}">
+                        data-zoom="{{ asset('storage/'. $image->image) }}">
                 </div>
-                <div class="relative group">
-                    <img src="{{ asset('asset/img/new.jpg') }}" alt="Gold Chain Image"
-                        class="w-full rounded-lg shadow-md transition-transform duration-300 ease-in-out transform group-hover:scale-105 demo-trigger"
-                        data-zoom="{{ asset('asset/img/new.jpg') }}">
-                </div>
+                @endforeach
+
+
             </div>
 
             <!-- Right Product Details Section -->
@@ -55,14 +54,14 @@
                 <p class="text-gray-600 mb-4">{!! $product->summary !!}</p>
 
                 @php
-                    $discountPrice = ($product->price * $product->discount)/100;
-                    $finalPrice = $product->price - $discountPrice;
+                    $discountPrice = ($variation->price * $product->discount)/100;
+                    $finalPrice = $variation->price - $discountPrice;
                 @endphp
 
                 <!-- Pricing and Offers -->
                 <div class="flex items-center space-x-4 mb-4">
                     <div class="text-2xl text-[#601042] font-bold">₹{{$finalPrice}}</div>
-                    <div class="text-gray-500 line-through">₹{{$product->price}}</div>
+                    <div class="text-gray-500 line-through">₹{{$variation->price}}</div>
                     <div class="text-[#9d6e2a] text-sm bg-[#fef5e4] rounded-full px-2 py-1">You Save ₹{{$discountPrice}}</div>
                 </div>
 
@@ -72,16 +71,20 @@
 {{--                    Sales ends in <strong>49 Days : 13 Hours : 07 Minutes : 15 Seconds</strong>--}}
 {{--                </div>--}}
 
-{{--                <!-- Dropdown Selections -->--}}
-{{--                <div class="grid grid-cols-2 gap-6 mb-4">--}}
-{{--                    <div>--}}
-{{--                        <label for="metal_purity" class="block text-sm font-medium text-gray-700">Metal Purity</label>--}}
-{{--                        <select id="metal_purity"--}}
-{{--                            class="mt-1 block w-full border-[#9d6e2a] rounded-md shadow-sm focus:ring-[#601042] focus:border-[#601042]">--}}
-{{--                            <option>22KT</option>--}}
-{{--                            <option>18KT</option>--}}
-{{--                        </select>--}}
-{{--                    </div>--}}
+                <!-- Dropdown Selections -->
+                <div class="grid grid-cols-2 gap-6 mb-4">
+
+                    @foreach($product->variations as $variation)
+                        <div class="flex gap-2">
+                            <a href="{{route('productdetail', ['product' => $product->id, 'variation' => $variation->id])}}" class="w-full">
+                                <button class="w-24 py-3 text-black-50 rounded-md hover:bg-gray-600 hover:text-white shadow-md transition-shadow">
+                                    {{$variation->carat}}K
+                                </button>
+                            </a>
+                        </div>
+
+                    @endforeach
+
 {{--                    <div>--}}
 {{--                        <label for="metal_type" class="block text-sm font-medium text-gray-700">Metal Type</label>--}}
 {{--                        <select id="metal_type"--}}
@@ -90,7 +93,7 @@
 {{--                            <option>White Gold</option>--}}
 {{--                        </select>--}}
 {{--                    </div>--}}
-{{--                </div>--}}
+                </div>
 
 {{--                <!-- Pincode Input -->--}}
 {{--                <div class="mt-4 mb-4">--}}
@@ -143,7 +146,7 @@
 
                 <!-- Action Buttons -->
                 <div class="flex space-x-4 mt-6 mb-8">
-                    <a href="{{route('addToCart', ['product' => $product->id])}}" class="w-full">
+                    <a href="{{route('addToCart', ['product' => $product->id , 'variation' => $variation->id])}}" class="w-full">
                         <button class="w-full py-3 bg-gray-800 text-white rounded-md hover:bg-gray-900 shadow-md transition-shadow">
                             <i class="fas fa-shopping-cart mr-2"></i>ADD TO CART
                         </button>

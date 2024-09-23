@@ -279,11 +279,11 @@
                         </div>
                     </a>
                     @php
-                        $discountPrice = $product->price - ($product->price * $product->discount)/100;
+                        $discountPrice = $product->variation->price - ($product->variation->price * $product->discount)/100;
                     @endphp
                     <div class="p-4 bg-gradient-to-b from-gray-50 to-white">
                         <p class="text-lg font-semibold text-gray-800">₹{{$discountPrice}} <span
-                                class="text-red-600 line-through">₹{{$product->price}}</span></p>
+                                class="text-red-600 line-through">₹{{$product->variation->price}}</span></p>
                         <p class="text-sm text-gray-600">{{$product->title}}</p>
                     </div>
                     <button

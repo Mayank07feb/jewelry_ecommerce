@@ -66,7 +66,7 @@
                                                                                     loading="lazy"></a>
                                     </div>
                                     @php
-                                        $discountPrice = $product->price - ($product->price * $product->discount)/100;
+                                        $discountPrice = $product->variation->price - ($product->variation->price * $product->discount)/100;
                                     @endphp
                                     <div class="p-4">
                                         <h2 class="text-2xl font-bold text-gray-900 mb-2">₹{{$discountPrice}}</h2>
