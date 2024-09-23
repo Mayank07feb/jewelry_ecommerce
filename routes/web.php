@@ -141,7 +141,8 @@ Route::middleware('auth')->group(function(){
             Route::get('edit/{product}', [ProductController::class, 'edit'])->name('edit');
             Route::post('update/{product}', [ProductController::class, 'update'])->name('update');
             Route::post('destroy/{product}', [ProductController::class, 'delete'])->name('destroy');
-            Route::post('image/delete/{image}', [ProductController::class, 'imageDelete'])->name('image.delete');
+            Route::get('image/delete/{image}', [ProductController::class, 'imageDelete'])->name('image.delete');
+            Route::get('variation/delete/{variation}', [ProductController::class, 'variationDelete'])->name('variation.delete');
         });
 
          //post category

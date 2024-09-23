@@ -69,18 +69,32 @@ class ProductController extends Controller
     }
 
     public function update(ProductRequest $request, Product $product){
-        $status = $product->update($request->except('photo'));
+        $status = $product->update($request->all());
 
-        if ($request->file('photo')){
-            if($product->photo){
-                $filePath = public_path('storage/'. $product->photo);
-                if(file_exists($filePath)){
-                    unlink($filePath);
-                }
+        if ($request->file('images')){
+            $images = $request->file('images');
+            foreach ($images as $image){
+                $file = $image->store('public/productImage');
+                ProductImage::create(['product_id' => $product->id, 'image' => str_replace('public/', '', $file)]);
             }
-            $file = $request->file('photo')->store('public/product');
-            $product->photo = str_replace('public/', '', $file);
-            $product->save();
+//            $product->photo = str_replace('public/', '', $file);
+        }
+        $carats = $request->carats;
+        foreach ($carats as $key=>$val){
+            if (isset($request->variationIds[$key])){
+                $variation = ProductVariation::find($request->variationIds[$key])->first();
+                $variation->update([
+                    'carat' => $val,
+                    'price' => $request->prices[$key],
+                ]);
+            }else{
+                ProductVariation::create([
+                    'product_id' => $product->id,
+                    'carat' => $val,
+                    'price' => $request->prices[$key],
+                ]);
+            }
+
         }
 
         if($status){
@@ -125,4 +139,13 @@ class ProductController extends Controller
         return back();
     }
 
+    public function variationDelete(ProductVariation $variation){
+        $status = $variation->delete();
+            if($status){
+                request()->session()->flash('success', 'Variation deleted successfully');
+            }else{
+                \request()->session()->flash('error', 'failed, try again!');
+            }
+            return back();
+    }
 }
