@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Banner;
 use App\Models\Cart;
+use App\Models\CartItem;
 use App\Models\Product;
 use App\Models\ProductVariation;
 use Illuminate\Http\Request;
@@ -89,7 +90,8 @@ class HomeController extends Controller
 
     public function cart()
     {
-        $items = auth()->user()->carts;
+        $cartIds = Cart::where('user_id', auth()->user()->id)->pluck('id');
+        $items = CartItem::whereIn('cart_id', $cartIds)->get();
         return view('frontend.cart', compact('items'));
     }
 

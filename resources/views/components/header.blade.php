@@ -131,7 +131,7 @@
         <div class="bg-[#601042] text-white text-sm hidden lg:flex">
             <div class="container mx-auto flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <a href="#"
+                    <a href="https://wa.me/7081327477" target="_blank"
                         class="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300">
                         <i class="fab fa-whatsapp text-xl"></i>
                         <span class="hidden sm:inline">WhatsApp</span>
