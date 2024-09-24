@@ -13,8 +13,8 @@
                     <p class="text-gray-600 mt-2">Thank you for your payment. Your transaction was successful.</p>
 
                     <div class="mt-6">
-                        <h3 class="text-lg font-semibold text-[#601042]">Order Number: #123456789</h3>
-                        <p class="text-gray-600 mt-2">Amount: ₹33,728</p>
+                        <h3 class="text-lg font-semibold text-[#601042]">Order Number: #123456</h3>
+                        <p class="text-gray-600 mt-2">Amount: ₹23,666</p>
                         <p class="text-gray-600">Payment Method: Credit Card</p>
                     </div>
                     

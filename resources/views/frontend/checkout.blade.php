@@ -97,7 +97,7 @@
                             </div>
                             <a href="{{ route('orderconfirmation') }}">
                                 <button
-                                    class="w-full bg-gradient-to-r from-[#9d6e2a] to-[#601042] text-white py-3 px-4 rounded-lg hover:opacity-90 transition duration-300 font-semibold">
+                                    class="w-full bg-[#601042] text-white py-3 px-4 rounded-lg hover:opacity-90 transition duration-300 font-semibold">
                                     SAVE AND CONTINUE
                                 </button>
                             </a>

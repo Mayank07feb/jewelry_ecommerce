@@ -83,7 +83,7 @@
 
             <!-- Place Order Button -->
             <div class="mt-6 flex justify-center">
-                <a href="{{ route('paymentconfirmation') }}" class="w-full">
+                <a href="{{ route('thankyou') }}" class="w-full">
                     <button class="bg-[#601042] text-white w-full py-3 px-4 rounded-md font-semibold hover:bg-[#4b0a2c] transition duration-300">
                         Place Order
                     </button>
