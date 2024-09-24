@@ -16,12 +16,13 @@
                                 class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 pb-6 border-b border-gray-200">
                                 <div
                                     class="w-full sm:w-32 h-32 bg-[#f0e7da] rounded-lg overflow-hidden flex-shrink-0 shadow-md">
-                                    <img src="{{ asset('asset/img/gem3.png') }}" alt="Product image"
+                                    <img src="{{asset('asset/img/daimond.png')}}" alt="Product image"
                                         class="w-full h-full object-contain">
                                 </div>
                                 <div class="flex-1 space-y-2 w-full">
-                                    <h3 class="text-lg sm:text-xl font-semibold text-gray-900">Elegant Gold Necklace</h3>
+                                    <h3 class="text-lg sm:text-xl font-semibold text-gray-900">Elegant Gold Ring</h3>
                                     <div class="flex flex-wrap gap-2 text-xs sm:text-sm text-gray-600">
+                                        <span class="bg-gray-100 px-2 py-1 rounded">Product Code: GN20907</span>
                                         <span class="bg-gray-100 px-2 py-1 rounded">18K Gold</span>
                                         <span class="bg-gray-100 px-2 py-1 rounded">Metal Type: Gold</span>
                                         <span class="bg-gray-100 px-2 py-1 rounded">Weight: 10g</span>
@@ -104,11 +105,14 @@
                             </div>
                         </div>
                         <div class="px-6 py-6 bg-gray-50">
-                            <button type="submit"
-                                class="w-full bg-[#601042] border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-[#601042] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#601042] transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 flex items-center justify-center">
-                                <i class="material-icons mr-2">shopping_bag</i>
-                                Place Order
-                            </button>
+                            <a href="{{route('checkout')}}">
+                                <button type="submit"
+                                    class="w-full bg-[#601042] border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-[#740e4d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#601042] transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 flex items-center justify-center">
+                                    Check Out
+                                    <i class="fa fa-arrow-right ml-2"></i>
+                                </button>
+                            </a>
+                            
                             <p class="mt-4 text-center text-xs sm:text-sm text-gray-500">By placing your order, you agree to
                                 our <a href="#" class="font-medium text-[#9d6e2a] hover:text-[#601042]">Terms and
                                     Conditions</a>.</p>
