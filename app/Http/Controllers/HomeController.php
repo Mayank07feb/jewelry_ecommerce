@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Banner;
 use App\Models\Cart;
 use App\Models\CartItem;
+use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductVariation;
 use Illuminate\Http\Request;
@@ -25,7 +26,8 @@ class HomeController extends Controller
             ->take(5)
             ->pluck('product_id');
         $bestSellingProducts = Product::whereIn('id', $bestSellingProductsIds)->get();
-        return view('frontend.index', compact('banners', 'newProducts', 'bestSellingProducts'));
+        $categories = Category::where('is_parent', 1)->get();
+        return view('frontend.index', compact('banners', 'newProducts', 'bestSellingProducts', 'categories'));
     }
 
     public function contact()
