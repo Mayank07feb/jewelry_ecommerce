@@ -171,30 +171,6 @@
 {{--                    </button></a>--}}
 {{--            </div>--}}
 
-            <!-- Bullions Category -->
-            <div
-                class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
-                <a href="{{ route('diamondjewellery') }}"><img src="{{ asset('asset/img/bullions.png') }}"
-                        alt="Bullions" class="w-40 h-56 object-contain mb-4"></a>
-                <h3 class="text-lg font-semibold mb-1">Bullions</h3>
-                <p class="text-sm text-gray-600 mb-3 text-center">For auspicious occasions!</p>
-                <a href="{{ route('diamondjewellery') }}"><button
-                        class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
-                        DISCOVER MORE
-                    </button></a>
-            </div>
-
-            <!-- Silver Category -->
-            <div
-                class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
-                <a href="{{ route('diamondjewellery') }}"><img src="{{ asset('asset/img/sliver.png') }}" alt="Silver"
-                        class="w-40 h-56 object-contain mb-4"></a> <h3 class="text-lg font-semibold mb-1">Silver</h3>
-                <p class="text-sm text-gray-600 mb-3 text-center">For everyday elegance!</p>
-                <a href="{{ route('diamondjewellery') }}"><button
-                        class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
-                        DISCOVER MORE
-                    </button></a>
-            </div>
         </div>
     </div>
 
