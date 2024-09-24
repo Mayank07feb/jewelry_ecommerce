@@ -142,30 +142,34 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 px-6 lg:px-20 py-8 lg:py-12">
             <!-- Diamond Category -->
-            <div
-                class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
-                <a href="{{ route('diamondjewellery') }}"><img src="{{ asset('asset/img/daimond.png') }}"
-                        alt="Diamond" class="w-40 h-56 object-contain mb-4"></a>
-                <h3 class="text-lg font-semibold mb-1">Diamond</h3>
-                <p class="text-sm text-gray-600 mb-3 text-center">For the most awaited moment!</p>
-                <a href="{{ route('diamondjewellery') }}"><button
-                        class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
-                        DISCOVER MORE
-                    </button></a>
-            </div>
+            @foreach($categories as $category)
 
-            <!-- Gold Category -->
             <div
                 class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
-                <a href="{{ route('diamondjewellery') }}"><img src="{{ asset('asset/img/gold.png') }}" alt="Gold"
-                        class="w-40 h-56 object-contain mb-4"></a>
-                <h3 class="text-lg font-semibold mb-1">Gold</h3>
-                <p class="text-sm text-gray-600 mb-3 text-center">For the beauty and the bliss!</p>
-                <a href="{{ route('diamondjewellery') }}"><button
+                <a href="{{ route('alljewellery') }}"><img src="{{ asset('storage/'. $category->image) }}"
+                        alt="Diamond" class="w-40 h-56 object-contain mb-4"></a>
+                <h3 class="text-lg font-semibold mb-1">{{$category->title}}</h3>
+                <p class="text-sm text-gray-600 mb-3 text-center">{{$category->description}}</p>
+                <a href="{{ route('alljewellery') }}"><button
                         class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
                         DISCOVER MORE
                     </button></a>
             </div>
+            @endforeach
+
+
+{{--            <!-- Gold Category -->--}}
+{{--            <div--}}
+{{--                class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">--}}
+{{--                <a href="{{ route('diamondjewellery') }}"><img src="{{ asset('asset/img/gold.png') }}" alt="Gold"--}}
+{{--                        class="w-40 h-56 object-contain mb-4"></a>--}}
+{{--                <h3 class="text-lg font-semibold mb-1">Gold</h3>--}}
+{{--                <p class="text-sm text-gray-600 mb-3 text-center">For the beauty and the bliss!</p>--}}
+{{--                <a href="{{ route('diamondjewellery') }}"><button--}}
+{{--                        class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">--}}
+{{--                        DISCOVER MORE--}}
+{{--                    </button></a>--}}
+{{--            </div>--}}
 
             <!-- Bullions Category -->
             <div
