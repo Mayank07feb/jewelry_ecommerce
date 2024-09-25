@@ -529,7 +529,7 @@
                                 <a href="{{ route('profile') }}"
                                     class="text-sm font-medium text-gray-700 hover:text-[#d4af37] flex items-center space-x-2">
                                     <i class="fas fa-user text-lg"></i>
-                                    <span>Account</span>
+                                    <span>{{auth()->check() ? auth()->user()->first_name.' '.auth()->user()->last_name : 'Account'}}</span>
                                 </a>
 
                                 <!-- Hidden content to show on hover -->

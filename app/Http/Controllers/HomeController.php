@@ -7,6 +7,7 @@ use App\Models\CartItem;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductVariation;
+use App\Models\UserAddress;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -157,8 +158,33 @@ class HomeController extends Controller
         return view('frontend.checkout');
     }
 
-    public function orderconfirmation()
+    public function orderconfirmation(Request $request)
     {
+        $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required',
+            'pincode' => 'required',
+            'country' => 'required',
+            'address1' => 'required',
+            'address2' => '',
+            'phone' => 'required',
+
+        ]);
+
+        UserAddress::updateOrCreate(
+            ['user_id' => auth()->user()->id],
+            [
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'email' => $request->email,
+                'pincode' => $request->pincode,
+                'country' => $request->country,
+                'address1' => $request->address1,
+                'address2' => $request->address2,
+                'phone' => $request->phone,
+            ],
+        );
         return view('frontend.orderconfirmation');
     }
 
@@ -181,7 +207,7 @@ class HomeController extends Controller
     {
         return view('frontend.track');
     }
-    
+
     public function storelocator()
     {
         return view('frontend.storelocator');

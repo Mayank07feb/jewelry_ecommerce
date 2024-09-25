@@ -11,6 +11,7 @@ use \App\Http\Middleware\AdminMiddleware;
 use \App\Http\Controllers\BrandController;
 use \App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -59,8 +60,6 @@ Route::get('/productdetail/{product}/{variation?}', [HomeController::class, 'pro
 
 Route::get('/cancel', [HomeController::class, 'cancel'])->name('cancel');
 
-Route::get('/orderconfirmation', [HomeController::class, 'orderconfirmation'])->name('orderconfirmation');
-
 
 // New Routes
 Route::get('/ordersummary', [HomeController::class, 'ordersummary'])->name('ordersummary');
@@ -98,6 +97,11 @@ Route::middleware('auth')->group(function(){
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 //    Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
     Route::get('addToCart/{product}/{variation}', [CartController::class, 'addToCart'])->name('addToCart');
+    Route::post('/orderconfirmation', [HomeController::class, 'orderconfirmation'])->name('orderconfirmation');
+
+    Route::prefix('order')->name('order.')->group(function(){
+       Route::post('place', [OrderController::class, 'placeOrder'])->name('place');
+    });
 
     Route::prefix('cart')->name('cart')->group(function(){
        Route::get('/', [HomeController::class, 'cart']);
