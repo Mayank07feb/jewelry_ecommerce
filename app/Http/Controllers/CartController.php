@@ -57,4 +57,27 @@ class CartController extends Controller
         }
         return back();
     }
+
+    public function update(CartItem $item, $type){
+        if ($type == 'increase'){
+            $status = $item->update(['quantity' => ($item->quantity + 1)]);
+        }
+        else
+        {
+            if ($item->quantity != 1){
+                $status = $item->update(['quantity' => $item->quantity - 1]);
+            }else{
+                $status = '';
+            }
+        }
+        if ($status){
+            request()->session()->flash('success', 'Cart Update successfully');
+        }
+        else
+        {
+            request()->session()->flash('error', 'Failed, Try again!');
+        }
+
+        return back();
+    }
 }

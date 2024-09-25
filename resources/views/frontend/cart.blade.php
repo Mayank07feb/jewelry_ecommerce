@@ -12,48 +12,49 @@
                 <div class="lg:w-2/3 mb-8 lg:mb-0">
                     <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
                         <div class="p-4 sm:p-6">
+                            @foreach($items as $item)
                             <div
                                 class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 pb-6 border-b border-gray-200">
                                 <div
                                     class="w-full sm:w-32 h-32 bg-[#f0e7da] rounded-lg overflow-hidden flex-shrink-0 shadow-md">
-                                    <img src="{{asset('asset/img/daimond.png')}}" alt="Product image"
+                                    <img src="{{asset('storage/'. $item->product->image->image)}}" alt="Product image"
                                         class="w-full h-full object-contain">
                                 </div>
                                 <div class="flex-1 space-y-2 w-full">
-                                    <h3 class="text-lg sm:text-xl font-semibold text-gray-900">Elegant Gold Ring</h3>
+                                    <h3 class="text-lg sm:text-xl font-semibold text-gray-900">{{$item->product->title}}</h3>
                                     <div class="flex flex-wrap gap-2 text-xs sm:text-sm text-gray-600">
-                                        <span class="bg-gray-100 px-2 py-1 rounded">Product Code: GN20907</span>
-                                        <span class="bg-gray-100 px-2 py-1 rounded">18K Gold</span>
-                                        <span class="bg-gray-100 px-2 py-1 rounded">Metal Type: Gold</span>
-                                        <span class="bg-gray-100 px-2 py-1 rounded">Weight: 10g</span>
+{{--                                        <span class="bg-gray-100 px-2 py-1 rounded">Product Code: GN20907</span>--}}
+                                        <span class="bg-gray-100 px-2 py-1 rounded">{{$item->variation->carat}}K {{ucfirst($item->product->material)}}</span>
+                                        <span class="bg-gray-100 px-2 py-1 rounded">Metal Type: {{ucfirst($item->product->material)}}</span>
+                                        <span class="bg-gray-100 px-2 py-1 rounded">Weight: {{$item->product->weight}}g</span>
                                     </div>
                                     <div
                                         class="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-4 space-y-4 sm:space-y-0">
                                         <div class="flex items-center space-x-4">
                                             <div class="flex items-center border border-gray-300 rounded-md">
-                                                <button
-                                                    class="px-2 py-1 text-gray-600 hover:text-[#601042] focus:outline-none"
-                                                    onclick="updateQuantity(-1)">
+                                                <a href="{{route('cart.update', ['item' => $item->id, 'type' => 'decrease'])}}"
+                                                    class="px-2 py-1 text-gray-600 hover:text-[#601042] focus:outline-none">
                                                     <i class="material-icons">remove</i>
-                                                </button>
+                                                </a>
                                                 <span id="quantity"
-                                                    class="px-2 py-1 border-x border-gray-300 min-w-[30px] text-center">1</span>
-                                                <button
-                                                    class="px-2 py-1 text-gray-600 hover:text-[#601042] focus:outline-none"
-                                                    onclick="updateQuantity(1)">
+                                                    class="px-2 py-1 border-x border-gray-300 min-w-[30px] text-center">{{$item->quantity}}</span>
+                                                <a href="{{route('cart.update', ['item' => $item->id, 'type' => 'increase'])}}"
+                                                    class="px-2 py-1 text-gray-600 hover:text-[#601042] focus:outline-none">
                                                     <i class="material-icons">add</i>
-                                                </button>
+                                                </a>
                                             </div>
-                                            <button type="button"
+                                            <a href="{{route('cart.delete', ['cart' => $item->cart->id])}}" type="button"
                                                 class="text-sm bg-[#601042] hover:bg-[#740e4d] font-medium text-white transition duration-150 ease-in-out flex items-center px-2 py-1 rounded">
                                                 <i class="material-icons mr-1">delete</i>
                                                 Delete
-                                            </button>
+                                            </a>
                                         </div>
-                                        <p class="text-xl font-medium text-[#601042]">₹23,666</p>
+                                        <p class="text-xl font-medium text-[#601042]">₹{{$item->price * $item->quantity}}</p>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
+
                         </div>
                     </div>
                 </div>
@@ -112,7 +113,7 @@
                                     <i class="fa fa-arrow-right ml-2"></i>
                                 </button>
                             </a>
-                            
+
                             <p class="mt-4 text-center text-xs sm:text-sm text-gray-500">By placing your order, you agree to
                                 our <a href="#" class="font-medium text-[#9d6e2a] hover:text-[#601042]">Terms and
                                     Conditions</a>.</p>
