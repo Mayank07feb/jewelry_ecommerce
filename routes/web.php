@@ -102,6 +102,7 @@ Route::middleware('auth')->group(function(){
     Route::prefix('cart')->name('cart')->group(function(){
        Route::get('/', [HomeController::class, 'cart']);
        Route::post('delete/{cart}', [CartController::class, 'delete'])->name('.delete');
+       Route::get('update/{item}/{type}', [CartController::class, 'update'])->name('.update');
     });
     Route::get('addToWishlist/{product}', [App\Http\Controllers\WishlistController::class, 'addToWishlist'])->name('addToWishlist');
 
