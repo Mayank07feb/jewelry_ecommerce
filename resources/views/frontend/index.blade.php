@@ -721,65 +721,54 @@
         </div>
 
 
-        <div class="container py-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-0">
-
+        <div class="container my-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 <!-- Slider 1 -->
-                <div id="celebrity-slider-1" class="w-full overflow-hidden mb-0 relative">
-                    <div class="flex transition-transform duration-300 ease-in-out">
-                        <div class="max-w-full flex-shrink-0">
-                            <img src="{{ asset('asset\img\s1-a.webp') }}" alt="Slider 1 Image 1"
-                                class="w-full h-full object-cover">
+                <div id="celebrity-slider-1" class="w-full h-full overflow-hidden relative">
+                    <div class="flex transition-transform duration-300 ease-in-out h-full">
+                        <div class="w-full flex-shrink-0">
+                            <img src="{{ asset('asset/img/s1-a.webp') }}" alt="Slider 1 Image 1" class="w-full h-full object-cover">
                         </div>
-                        <div class="max-w-full flex-shrink-0">
-                            <img src="{{ asset('asset\img\s1b.webp') }}" alt="Slider 1 Image 2"
-                                class="w-full h-full object-cover">
+                        <div class="w-full flex-shrink-0">
+                            <img src="{{ asset('asset/img/s1b.webp') }}" alt="Slider 1 Image 2" class="w-full h-full object-cover">
                         </div>
-                        <div class="max-w-full flex-shrink-0">
-                            <img src="{{ asset('asset\img\s1-c.webp') }}" alt="Slider 1 Image 3"
-                                class="w-full h-full object-cover">
+                        <div class="w-full flex-shrink-0">
+                            <img src="{{ asset('asset/img/s1-c.webp') }}" alt="Slider 1 Image 3" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
-
-                <div>
+        
+                <div class="flex flex-col">
                     <!-- Slider 2 -->
-                    <div id="celebrity-slider-2" class="w-full overflow-hidden mb-0 relative">
-                        <div class="flex transition-transform duration-300 ease-in-out">
-                            <div class="min-w-full flex-shrink-0">
-                                <img src="{{ asset('asset\img\s2A.webp') }}" alt="Slider 2 Image 1"
-                                    class="w-full h-72 object-cover">
+                    <div id="celebrity-slider-2" class="w-full h-1/2 overflow-hidden relative">
+                        <div class="flex transition-transform duration-300 ease-in-out h-full">
+                            <div class="w-full flex-shrink-0">
+                                <img src="{{ asset('asset/img/s2A.webp') }}" alt="Slider 2 Image 1" class="w-full h-full object-cover">
                             </div>
-                            <div class="min-w-full flex-shrink-0">
-                                <img src="{{ asset('asset\img\s2-C.webp') }}" alt="Slider 2 Image 2"
-                                    class="w-full h-72 object-cover">
+                            <div class="w-full flex-shrink-0">
+                                <img src="{{ asset('asset/img/s2-C.webp') }}" alt="Slider 2 Image 2" class="w-full h-full object-cover">
                             </div>
-                            <div class="min-w-full flex-shrink-0">
-                                <img src="{{ asset('asset\img\s2-C.webp') }}" alt="Slider 2 Image 3"
-                                    class="w-full h-72 object-cover">
+                            <div class="w-full flex-shrink-0">
+                                <img src="{{ asset('asset/img/s2-C.webp') }}" alt="Slider 2 Image 3" class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
-
+        
                     <!-- Slider 3 -->
-                    <div id="celebrity-slider-3" class="w-full overflow-hidden relative">
-                        <div class="flex transition-transform duration-300 ease-in-out">
-                            <div class="min-w-full flex-shrink-0">
-                                <img src="{{ asset('asset\img\s3A.webp') }}" alt="Slider 3 Image 1"
-                                    class="w-full h-72 object-cover">
+                    <div id="celebrity-slider-3" class="w-full h-1/2 overflow-hidden relative">
+                        <div class="flex transition-transform duration-300 ease-in-out h-full">
+                            <div class="w-full flex-shrink-0">
+                                <img src="{{ asset('asset/img/s3A.webp') }}" alt="Slider 3 Image 1" class="w-full h-full object-cover">
                             </div>
-                            <div class="min-w-full flex-shrink-0">
-                                <img src="{{ asset('asset\img\s3B.webp') }}" alt="Slider 3 Image 2"
-                                    class="w-full h-72 object-cover">
+                            <div class="w-full flex-shrink-0">
+                                <img src="{{ asset('asset/img/s3B.webp') }}" alt="Slider 3 Image 2" class="w-full h-full object-cover">
                             </div>
-                            <div class="min-w-full flex-shrink-0">
-                                <img src="{{ asset('asset\img\s3A.webp') }}" alt="Slider 3 Image 3"
-                                    class="w-full h-72 object-cover">
+                            <div class="w-full flex-shrink-0">
+                                <img src="{{ asset('asset/img/s3A.webp') }}" alt="Slider 3 Image 3" class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
