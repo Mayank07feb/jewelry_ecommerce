@@ -45,7 +45,7 @@
                 <a href="{{ route('home') }}" class="bg-[#601042] text-white py-3 px-8 rounded-full hover:bg-[#7a1654] transition duration-300 inline-block text-center transform hover:scale-105">
                     <i class="fas fa-home mr-2"></i> Return to Home
                 </a>
-                <a href="#" class="bg-[#9d6e2a] text-white py-3 px-8 rounded-full hover:bg-[#b88632] transition duration-300 inline-block text-center transform hover:scale-105">
+                <a href="{{route('track')}}" class="bg-[#9d6e2a] text-white py-3 px-8 rounded-full hover:bg-[#b88632] transition duration-300 inline-block text-center transform hover:scale-105">
                     <i class="fas fa-truck mr-2"></i> Track Your Order
                 </a>
             </div>

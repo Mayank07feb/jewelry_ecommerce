@@ -69,6 +69,8 @@ Route::get('/paymentconfirmation', [HomeController::class, 'paymentconfirmation'
 
 Route::get('/thankyou', [HomeController::class, 'thankyou'])->name('thankyou');
 
+Route::get('/track', [HomeController::class, 'track'])->name('track');
+
 Route::get('/storelocator',[HomeController::class,'storelocator'])->name('storelocator');
 
 Route::get('/franchise', [HomeController::class, 'franchise'])->name('franchise');
