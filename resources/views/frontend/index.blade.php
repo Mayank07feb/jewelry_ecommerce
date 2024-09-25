@@ -726,64 +726,54 @@
         <div class="container my-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 <!-- Slider 1 -->
-                <div id="celebrity-slider-1" class="w-full h-full overflow-hidden relative border-4 border-[#9d6e2a]">
+                <div id="celebrity-slider-1" class="w-full h-full overflow-hidden relative border-4 border-[rgba(96,16,66,0.5)]"> <!-- Light transparent color -->
                     <div class="flex transition-transform duration-300 ease-in-out h-full">
-                        <div class="w-full flex-shrink-0 border-r-4 border-[#9d6e2a]">
-                            <img src="{{ asset('asset/img/s1-a.webp') }}" alt="Slider 1 Image 1"
-                                class="w-full h-full object-cover">
+                        <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
+                            <img src="{{ asset('asset/img/s1-a.webp') }}" alt="Slider 1 Image 1" class="w-full h-full object-cover">
                         </div>
-                        <div class="w-full flex-shrink-0 border-r-4 border-[#9d6e2a]">
-                            <img src="{{ asset('asset/img/s1b.webp') }}" alt="Slider 1 Image 2"
-                                class="w-full h-full object-cover">
+                        <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
+                            <img src="{{ asset('asset/img/s1b.webp') }}" alt="Slider 1 Image 2" class="w-full h-full object-cover">
                         </div>
                         <div class="w-full flex-shrink-0">
-                            <img src="{{ asset('asset/img/s1-c.webp') }}" alt="Slider 1 Image 3"
-                                class="w-full h-full object-cover">
+                            <img src="{{ asset('asset/img/s1-c.webp') }}" alt="Slider 1 Image 3" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
-
+        
                 <div class="flex flex-col">
                     <!-- Slider 2 -->
-                    <div id="celebrity-slider-2"
-                        class="w-full h-1/2 overflow-hidden relative border-4 border-b-2 border-[#9d6e2a] hidden lg:flex">
+                    <div id="celebrity-slider-2" class="w-full h-1/2 overflow-hidden relative border-4 border-b-2 border-[rgba(96,16,66,0.5)] hidden lg:flex">
                         <div class="flex transition-transform duration-300 ease-in-out h-full">
-                            <div class="w-full flex-shrink-0 border-r-4 border-[#9d6e2a]">
-                                <img src="{{ asset('asset/img/s2A.webp') }}" alt="Slider 2 Image 1"
-                                    class="w-full h-full object-cover">
+                            <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
+                                <img src="{{ asset('asset/img/s2A.webp') }}" alt="Slider 2 Image 1" class="w-full h-full object-cover">
                             </div>
-                            <div class="w-full flex-shrink-0 border-r-4 border-[#9d6e2a]">
-                                <img src="{{ asset('asset/img/s2-C.webp') }}" alt="Slider 2 Image 2"
-                                    class="w-full h-full object-cover">
+                            <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
+                                <img src="{{ asset('asset/img/s2-C.webp') }}" alt="Slider 2 Image 2" class="w-full h-full object-cover">
                             </div>
                             <div class="w-full flex-shrink-0">
-                                <img src="{{ asset('asset/img/s2-C.webp') }}" alt="Slider 2 Image 3"
-                                    class="w-full h-full object-cover">
+                                <img src="{{ asset('asset/img/s2-C.webp') }}" alt="Slider 2 Image 3" class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
-
+        
                     <!-- Slider 3 -->
-                    <div id="celebrity-slider-3"
-                        class="w-full h-1/2 overflow-hidden relative border-4 border-t-2 border-[#9d6e2a] hidden lg:flex">
+                    <div id="celebrity-slider-3" class="w-full h-1/2 overflow-hidden relative border-4 border-t-2 border-[rgba(96,16,66,0.5)] hidden lg:flex">
                         <div class="flex transition-transform duration-300 ease-in-out h-full">
-                            <div class="w-full flex-shrink-0 border-r-4 border-[#9d6e2a]">
-                                <img src="{{ asset('asset/img/s3A.webp') }}" alt="Slider 3 Image 1"
-                                    class="w-full h-full object-cover">
+                            <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
+                                <img src="{{ asset('asset/img/s3A.webp') }}" alt="Slider 3 Image 1" class="w-full h-full object-cover">
                             </div>
-                            <div class="w-full flex-shrink-0 border-r-4 border-[#9d6e2a]">
-                                <img src="{{ asset('asset/img/s3B.webp') }}" alt="Slider 3 Image 2"
-                                    class="w-full h-full object-cover">
+                            <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
+                                <img src="{{ asset('asset/img/s3B.webp') }}" alt="Slider 3 Image 2" class="w-full h-full object-cover">
                             </div>
                             <div class="w-full flex-shrink-0">
-                                <img src="{{ asset('asset/img/s3A.webp') }}" alt="Slider 3 Image 3"
-                                    class="w-full h-full object-cover">
+                                <img src="{{ asset('asset/img/s3A.webp') }}" alt="Slider 3 Image 3" class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
 
 
@@ -859,29 +849,7 @@
                     slider.querySelector('.flex').style.transform = `translateX(${offset}%)`;
                 }
 
-                let interval = setInterval(moveToNextSlide, 3000); // Change slide every 3 seconds
-
-                // Pause the slider on hover
-                slider.addEventListener('mouseover', () => {
-                    clearInterval(interval);
-                });
-
-                slider.addEventListener('mouseout', () => {
-                    interval = setInterval(moveToNextSlide, 3000);
-                });
-
-                // Responsive handling for visibility
-                function handleVisibility() {
-                    const isMobile = window.innerWidth < 1024; // Assuming 1024px as the breakpoint
-                    if (isMobile) {
-                        slider.style.display = 'none'; // Hide slider on mobile
-                    } else {
-                        slider.style.display = 'block'; // Show slider on larger screens
-                    }
-                }
-
-                window.addEventListener('resize', handleVisibility);
-                handleVisibility(); // Initial check on page load
+                setInterval(moveToNextSlide, 4000); // Change slide every 3 seconds
             });
         });
     </script>
