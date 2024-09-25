@@ -176,6 +176,12 @@ class HomeController extends Controller
     {
         return view('frontend.thank-you');
     }
+
+    public function track()
+    {
+        return view('frontend.track');
+    }
+    
     public function storelocator()
     {
         return view('frontend.storelocator');
