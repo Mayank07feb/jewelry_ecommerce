@@ -9,10 +9,10 @@
             <!-- Slides Wrapper -->
             <div id="sliderWrapper" class="slider-wrapper flex transition-transform duration-700 ease-in-out">
                 <!-- Slide 1 -->
-                @foreach($banners as $banner)
+                @foreach ($banners as $banner)
                     <div class="slider-slide w-full h-full flex-shrink-0 relative">
-                        <a href="{{ route('gold') }}"><img src="{{ asset('storage/'. $banner->photo) }}" alt="Diamond Collection"
-                                class="w-full h-full object-cover"></a>
+                        <a href="{{ route('gold') }}"><img src="{{ asset('storage/' . $banner->photo) }}"
+                                alt="Diamond Collection" class="w-full h-full object-cover"></a>
                         {{-- <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-center justify-center">
                         <div class="text-center text-white p-4 md:p-10">
                             <h1 class="text-xl md:text-3xl lg:text-5xl font-bold drop-shadow-lg">Exclusive Diamond Collection</h1>
@@ -55,21 +55,24 @@
                 <ul class="glide__slides">
                     <!-- Example Slide -->
 
-                    @foreach($newProducts as $product)
+                    @foreach ($newProducts as $product)
                         <!-- Product cards -->
                         <div class="item">
                             <div class="w-full lg:w-full flex-shrink-0 p-2">
                                 <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
                                     <div class="relative">
-                                        <a href="{{ route('productdetail', ['product' => $product->id]) }}"><img src="{{ asset('storage/'. $product->image?->image) }}"
-                                                                                    alt="Maharashtrian Himali Gold Nath" class="w-full h-60 object-cover"
-                                                                                    loading="lazy"></a>
+                                        <a href="{{ route('productdetail', ['product' => $product->id]) }}"><img
+                                                src="{{ asset('storage/' . $product->image?->image) }}"
+                                                alt="Maharashtrian Himali Gold Nath" class="w-full h-60 object-cover"
+                                                loading="lazy"></a>
                                     </div>
                                     @php
-                                        $discountPrice = $product->variation->price - ($product->variation->price * $product->discount)/100;
+                                        $discountPrice =
+                                            $product->variation->price -
+                                            ($product->variation->price * $product->discount) / 100;
                                     @endphp
                                     <div class="p-4">
-                                        <h2 class="text-2xl font-bold text-gray-900 mb-2">₹{{$discountPrice}}</h2>
+                                        <h2 class="text-2xl font-bold text-gray-900 mb-2">₹{{ $discountPrice }}</h2>
                                         <h3 class="text-lg font-medium text-gray-800">Maharashtrian Himali Gold Nath</h3>
                                     </div>
                                 </div>
@@ -96,20 +99,20 @@
                 <ul class="glide__slides">
                     <!-- Example Slide -->
                     <!-- Example product card -->
-                    @foreach( $bestSellingProducts as $product)
-
-                    <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
-                        <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                            <div class="relative">
-                                <a href="{{ route('productdetail', ['product' => $product]) }}"><img src="{{ asset('storage/'. $product->image?->image) }}"
-                                        alt="Best Seller 1" class="w-full h-48 object-cover" loading="lazy"></a>
-                            </div>
-                            <div class="p-4">
-                                <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
+                    @foreach ($bestSellingProducts as $product)
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
+                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+                                <div class="relative">
+                                    <a href="{{ route('productdetail', ['product' => $product]) }}"><img
+                                            src="{{ asset('storage/' . $product->image?->image) }}" alt="Best Seller 1"
+                                            class="w-full h-48 object-cover" loading="lazy"></a>
+                                </div>
+                                <div class="p-4">
+                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
+                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     @endforeach
 
                 </ul>
@@ -142,34 +145,33 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 px-6 lg:px-20 py-8 lg:py-12">
             <!-- Diamond Category -->
-            @foreach($categories as $category)
-
-            <div
-                class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
-                <a href="{{ route('alljewellery') }}"><img src="{{ asset('storage/'. $category->image) }}"
-                        alt="Diamond" class="w-40 h-56 object-contain mb-4"></a>
-                <h3 class="text-lg font-semibold mb-1">{{$category->title}}</h3>
-                <p class="text-sm text-gray-600 mb-3 text-center">{{$category->description}}</p>
-                <a href="{{ route('alljewellery') }}"><button
-                        class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
-                        DISCOVER MORE
-                    </button></a>
-            </div>
+            @foreach ($categories as $category)
+                <div
+                    class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
+                    <a href="{{ route('alljewellery') }}"><img src="{{ asset('storage/' . $category->image) }}"
+                            alt="Diamond" class="w-40 h-56 object-contain mb-4"></a>
+                    <h3 class="text-lg font-semibold mb-1">{{ $category->title }}</h3>
+                    <p class="text-sm text-gray-600 mb-3 text-center">{{ $category->description }}</p>
+                    <a href="{{ route('alljewellery') }}"><button
+                            class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">
+                            DISCOVER MORE
+                        </button></a>
+                </div>
             @endforeach
 
 
-{{--            <!-- Gold Category -->--}}
-{{--            <div--}}
-{{--                class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">--}}
-{{--                <a href="{{ route('diamondjewellery') }}"><img src="{{ asset('asset/img/gold.png') }}" alt="Gold"--}}
-{{--                        class="w-40 h-56 object-contain mb-4"></a>--}}
-{{--                <h3 class="text-lg font-semibold mb-1">Gold</h3>--}}
-{{--                <p class="text-sm text-gray-600 mb-3 text-center">For the beauty and the bliss!</p>--}}
-{{--                <a href="{{ route('diamondjewellery') }}"><button--}}
-{{--                        class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm">--}}
-{{--                        DISCOVER MORE--}}
-{{--                    </button></a>--}}
-{{--            </div>--}}
+            {{--            <!-- Gold Category --> --}}
+            {{--            <div --}}
+            {{--                class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4"> --}}
+            {{--                <a href="{{ route('diamondjewellery') }}"><img src="{{ asset('asset/img/gold.png') }}" alt="Gold" --}}
+            {{--                        class="w-40 h-56 object-contain mb-4"></a> --}}
+            {{--                <h3 class="text-lg font-semibold mb-1">Gold</h3> --}}
+            {{--                <p class="text-sm text-gray-600 mb-3 text-center">For the beauty and the bliss!</p> --}}
+            {{--                <a href="{{ route('diamondjewellery') }}"><button --}}
+            {{--                        class="px-4 py-2 mb-4 bg-transparent border-black border-2 text-black hover:bg-[#601042] hover:text-white transition-colors text-sm"> --}}
+            {{--                        DISCOVER MORE --}}
+            {{--                    </button></a> --}}
+            {{--            </div> --}}
 
         </div>
     </div>
@@ -440,77 +442,56 @@
     </div>
 
     {{-- video :::::::: Crafted Elegance::::::: --}}
-    <div>
-        <div>
-            <!-- Parallax Section -->
-            <div
-                class="relative w-full h-[80vh] min-h-[600px] justify-center items-center overflow-hidden cursor-pointer flex">
-                <div id="mouse-parallax-container"
-                    class="relative ltr:left-[5%] rtl:right-[5%] ltr:right-0 rtl:left-0 top-auto bottom-auto flex items-center w-[95%] h-[90%]"
-                    style="transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);">
+    <div class="relative w-full h-[80vh] min-h-[600px] justify-center items-center overflow-hidden cursor-pointer flex">
+        <div id="mouse-parallax-container"
+            class="relative ltr:left-[5%] rtl:right-[5%] ltr:right-0 rtl:left-0 top-auto bottom-auto flex items-center w-[95%] h-[90%]"
+            style="transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);">
 
-                    <!-- Dark Title Wrapper -->
-                    <div class="absolute inset-0 -z-[3] w-full h-full">
-                        <div
-                            class="static ltr:left-auto rtl:right-auto ltr:right-0 rtl:left-0 inset-y-0 flex justify-end items-center ltr:text-right rtl:text-left w-[80vw] h-[80vh]">
-                            <div class="title text-black text-[40px] md:text-[60px] lg:text-[95px] font-light uppercase whitespace-nowrap static ltr:-ml-2 rtl:-mr-2"
-                                style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
-                                Crafted Elegance
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Video Section -->
-                    <div class="absolute inset-0 -z-[1] w-full md:w-[55vw] justify-start cursor-pointer video-wrapper"
+            <!-- Dark Title Wrapper for Desktop -->
+            <div class="absolute inset-0 -z-[3] w-full h-full">
+                <div
+                    class="static ltr:left-auto rtl:right-auto ltr:right-0 rtl:left-0 inset-y-0 flex justify-end items-center ltr:text-right rtl:text-left w-[80vw] h-[80vh]">
+                    <div class="title text-black text-[40px] md:text-[60px] lg:text-[95px] font-light uppercase whitespace-nowrap static ltr:-ml-2 rtl:-mr-2 hidden md:block"
                         style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
-                        <div class="relative h-full">
-                            <video width="100%" height="100%" loop muted autoplay
-                                class="w-full h-full object-cover object-right"
-                                src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/widgets/video_1682089105_1691241930.mp4"></video>
-                            <div class="inline-flex cursor-pointer absolute bottom-0 ltr:right-0 rtl:left-0 m-4">
-                            </div>
-                        </div>
+                        Crafted Elegance
                     </div>
+                </div>
+            </div>
 
-                    <!-- White Title Wrapper -->
-                    <div
-                        class="absolute ltr:left-auto rtl:right-auto ltr:right-0 rtl:left-0 inset-y-0 -z-[1] w-full h-full">
-                        <div
-                            class="static overflow-hidden w-full md:w-[55vw] justify-end items-center origin-[0%_50%] object-fill">
-                            <div class="static flex justify-end items-center w-[80vw] h-[80vh]">
-                                <div class="title text-white text-[40px] md:text-[60px] lg:text-[95px] font-light uppercase whitespace-nowrap static"
-                                    style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
-                                    Crafted Elegance
-                                </div>
-                            </div>
+            <!-- Video Section -->
+            <div class="absolute inset-0 -z-[1] w-full md:w-[55vw] justify-start cursor-pointer video-wrapper"
+                style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
+                <div class="relative h-full">
+                    <video width="100%" height="100%" loop muted autoplay
+                        class="w-full h-full object-cover object-right"
+                        src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/widgets/video_1682089105_1691241930.mp4"></video>
+                    <div class="inline-flex cursor-pointer absolute bottom-0 ltr:right-0 rtl:left-0 m-4">
+                    </div>
+                </div>
+            </div>
+
+            <!-- White Title Wrapper for Desktop -->
+            <div class="absolute ltr:left-auto rtl:right-auto ltr:right-0 rtl:left-0 inset-y-0 -z-[1] w-full h-full">
+                <div
+                    class="static overflow-hidden w-full md:w-[55vw] justify-end items-center origin-[0%_50%] object-fill">
+                    <div class="static flex justify-end items-center w-[80vw] h-[80vh]">
+                        <div class="title text-white text-[40px] md:text-[60px] lg:text-[95px] font-light uppercase whitespace-nowrap static hidden md:block"
+                            style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
+                            Crafted Elegance
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-</div>
-{{-- video ::::mobile screen only:::: Crafted Elegance:::::::--}}
-{{-- <div class="flex lg:hidden justify-center items-center overflow-hidden hover:cursor-pointer px-6 md:px-28 py-12">
-    <div id="mouse-parallax-container" class="relative w-full h-full">
-
-        <!-- Background Video -->
-        <div class="relative w-[80vw]  h-[50vh] lg:h-[70vh] overflow-hidden">
-            <video width="100%" height="100%" loop muted autoplay class="w-full h-full object-cover">
-                <source src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/widgets/video_1682089105_1691241930.mp4" type="video/mp4">
-            </video>
-
-            <!-- Parallax Title -->
-            <div class="absolute inset-0 flex justify-end items-center w-full h-full">
-                <div class="text-white text-[8vw] md:text-[10vw] lg:text-[85px] font-light uppercase whitespace-nowrap">
-                    Crafted <span class="text-white">Elegance</span>
+            <!-- Text for Mobile (Visible on mobile only) -->
+            <div class="absolute bottom-5 left-0 right-0 text-center md:hidden px-4">
+                <div
+                    class="inline-block bg-black/50 backdrop-blur-md text-white text-[20px] font-semibold uppercase tracking-wider px-4 py-2 rounded-lg shadow-lg">
+                    Crafted Elegance
                 </div>
             </div>
         </div>
     </div>
-</div> --}}
-
 
 
     <!-- COLLECTIONS -->
@@ -579,10 +560,10 @@
             </div>
         </div>
         <div class="flex justify-center p-4 mt-8">
-           <a href="{{route('collection')}}"> <button
-            class="hover:bg-[#601042] border-2 border-black hover:text-white font-semibold py-2 px-6 bg-white text-[#601042] focus:outline-none focus:ring-4 focus:ring-[#601042]/50 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
-            Discover More
-        </button></a>
+            <a href="{{ route('collection') }}"> <button
+                    class="hover:bg-[#601042] border-2 border-black hover:text-white font-semibold py-2 px-6 bg-white text-[#601042] focus:outline-none focus:ring-4 focus:ring-[#601042]/50 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                    Discover More
+                </button></a>
         </div>
     </div>
 
@@ -721,67 +702,70 @@
         </div>
 
 
-        <div class="container py-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-0">
-
+        <div class="container my-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 <!-- Slider 1 -->
-                <div id="celebrity-slider-1" class="w-full overflow-hidden mb-0 relative">
-                    <div class="flex transition-transform duration-300 ease-in-out">
-                        <div class="max-w-full flex-shrink-0">
-                            <img src="{{ asset('asset\img\s1-a.webp') }}" alt="Slider 1 Image 1"
+                <div id="celebrity-slider-1"
+                    class="w-full h-full overflow-hidden relative border-4 border-[rgba(96,16,66,0.5)]">
+                    <!-- Light transparent color -->
+                    <div class="flex transition-transform duration-300 ease-in-out h-full">
+                        <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
+                            <img src="{{ asset('asset/img/s1-a.webp') }}" alt="Slider 1 Image 1"
                                 class="w-full h-full object-cover">
                         </div>
-                        <div class="max-w-full flex-shrink-0">
-                            <img src="{{ asset('asset\img\s1b.webp') }}" alt="Slider 1 Image 2"
+                        <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
+                            <img src="{{ asset('asset/img/s1b.webp') }}" alt="Slider 1 Image 2"
                                 class="w-full h-full object-cover">
                         </div>
-                        <div class="max-w-full flex-shrink-0">
-                            <img src="{{ asset('asset\img\s1-c.webp') }}" alt="Slider 1 Image 3"
+                        <div class="w-full flex-shrink-0">
+                            <img src="{{ asset('asset/img/s1-c.webp') }}" alt="Slider 1 Image 3"
                                 class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
 
-                <div>
+                <div class="flex flex-col">
                     <!-- Slider 2 -->
-                    <div id="celebrity-slider-2" class="w-full overflow-hidden mb-0 relative">
-                        <div class="flex transition-transform duration-300 ease-in-out">
-                            <div class="min-w-full flex-shrink-0">
-                                <img src="{{ asset('asset\img\s2A.webp') }}" alt="Slider 2 Image 1"
-                                    class="w-full h-72 object-cover">
+                    <div id="celebrity-slider-2"
+                        class="w-full h-1/2 overflow-hidden relative border-4 border-b-2 border-[rgba(96,16,66,0.5)] hidden lg:flex">
+                        <div class="flex transition-transform duration-300 ease-in-out h-full">
+                            <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
+                                <img src="{{ asset('asset/img/s2A.webp') }}" alt="Slider 2 Image 1"
+                                    class="w-full h-full object-cover">
                             </div>
-                            <div class="min-w-full flex-shrink-0">
-                                <img src="{{ asset('asset\img\s2-C.webp') }}" alt="Slider 2 Image 2"
-                                    class="w-full h-72 object-cover">
+                            <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
+                                <img src="{{ asset('asset/img/s2-C.webp') }}" alt="Slider 2 Image 2"
+                                    class="w-full h-full object-cover">
                             </div>
-                            <div class="min-w-full flex-shrink-0">
-                                <img src="{{ asset('asset\img\s2-C.webp') }}" alt="Slider 2 Image 3"
-                                    class="w-full h-72 object-cover">
+                            <div class="w-full flex-shrink-0">
+                                <img src="{{ asset('asset/img/s2-C.webp') }}" alt="Slider 2 Image 3"
+                                    class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
 
                     <!-- Slider 3 -->
-                    <div id="celebrity-slider-3" class="w-full overflow-hidden relative">
-                        <div class="flex transition-transform duration-300 ease-in-out">
-                            <div class="min-w-full flex-shrink-0">
-                                <img src="{{ asset('asset\img\s3A.webp') }}" alt="Slider 3 Image 1"
-                                    class="w-full h-72 object-cover">
+                    <div id="celebrity-slider-3"
+                        class="w-full h-1/2 overflow-hidden relative border-4 border-t-2 border-[rgba(96,16,66,0.5)] hidden lg:flex">
+                        <div class="flex transition-transform duration-300 ease-in-out h-full">
+                            <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
+                                <img src="{{ asset('asset/img/s3A.webp') }}" alt="Slider 3 Image 1"
+                                    class="w-full h-full object-cover">
                             </div>
-                            <div class="min-w-full flex-shrink-0">
-                                <img src="{{ asset('asset\img\s3B.webp') }}" alt="Slider 3 Image 2"
-                                    class="w-full h-72 object-cover">
+                            <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
+                                <img src="{{ asset('asset/img/s3B.webp') }}" alt="Slider 3 Image 2"
+                                    class="w-full h-full object-cover">
                             </div>
-                            <div class="min-w-full flex-shrink-0">
-                                <img src="{{ asset('asset\img\s3A.webp') }}" alt="Slider 3 Image 3"
-                                    class="w-full h-72 object-cover">
+                            <div class="w-full flex-shrink-0">
+                                <img src="{{ asset('asset/img/s3A.webp') }}" alt="Slider 3 Image 3"
+                                    class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
+
     </div>
 
 
@@ -834,8 +818,21 @@
                 const items = slider.querySelectorAll('.flex > div');
                 const totalItems = items.length;
 
+                // Initialize styles for the first item
+                items[currentIndex].style.opacity = 1; // Show the first slide
+
                 function moveToNextSlide() {
-                    currentIndex = (currentIndex + 1) % totalItems;
+                    // Fade out the current item
+                    items[currentIndex].style.transition = 'opacity 0.5s ease-in-out';
+                    items[currentIndex].style.opacity = 0;
+
+                    currentIndex = (currentIndex + 1) % totalItems; // Move to the next slide
+
+                    // Fade in the next item
+                    items[currentIndex].style.transition = 'opacity 0.5s ease-in-out';
+                    items[currentIndex].style.opacity = 1;
+
+                    // Update the transform property for horizontal sliding
                     updateSlider();
                 }
 
@@ -844,7 +841,7 @@
                     slider.querySelector('.flex').style.transform = `translateX(${offset}%)`;
                 }
 
-                setInterval(moveToNextSlide, 3000); // Change slide every 3 seconds
+                setInterval(moveToNextSlide, 4000); // Change slide every 3 seconds
             });
         });
     </script>

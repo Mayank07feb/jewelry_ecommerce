@@ -46,7 +46,7 @@
                         My Stuff
                     </li>
                     <li class="ml-6">
-                        <a href="#" class="text-gray-600 hover:text-[#601042] flex items-center">
+                        <a href="{{route('wishlist')}}" class="text-gray-600 hover:text-[#601042] flex items-center">
                             <i class="fas fa-heart mr-2"></i> My Wishlist
                         </a>
                     </li>
