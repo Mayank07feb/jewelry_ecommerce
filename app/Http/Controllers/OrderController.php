@@ -33,7 +33,6 @@ class OrderController extends Controller
         }
 
         $order = Order::create([
-            'order_number' => 'ORD-' . str_pad(auth()->user()->id, 8, '0', STR_PAD_LEFT),
             'user_id' => auth()->user()->id,
             'sub_total' => $totalAmount,
             'total_amount' => $totalAmount,
@@ -46,6 +45,8 @@ class OrderController extends Controller
             'address2' => $request->address2,
             'phone' => $request->phone,
         ]);
+
+        $order->update(['order_number' => 'ORD-' . str_pad($order->id, 8, '0', STR_PAD_LEFT),]);
 
         foreach ($items as $item){
             OrderItem::create([

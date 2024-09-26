@@ -90,7 +90,6 @@ Route::get('/gemstone', [HomeController::class, 'gemstone'])->name('gemstone');
 
 
 Route::middleware('auth')->group(function(){
-    Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
     Route::get('/orderhistory', [HomeController::class, 'orderhistory'])->name('orderhistory');
     Route::get('/wishlist', [HomeController::class, 'wishlist'])->name('wishlist');
     Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
@@ -98,6 +97,12 @@ Route::middleware('auth')->group(function(){
 //    Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
     Route::get('addToCart/{product}/{variation}', [CartController::class, 'addToCart'])->name('addToCart');
     Route::post('/orderconfirmation', [HomeController::class, 'orderconfirmation'])->name('orderconfirmation');
+
+    Route::prefix('profile')->name('profile')->group(function(){
+        Route::get('/', [HomeController::class, 'profile']);
+        Route::post('update/{user}', [HomeController::class, 'updateProfile'])->name('.update');
+    });
+
 
     Route::prefix('order')->name('order.')->group(function(){
        Route::post('place', [OrderController::class, 'placeOrder'])->name('place');

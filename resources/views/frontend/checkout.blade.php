@@ -134,24 +134,33 @@
                 <div class="w-full md:w-1/3">
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <h2 class="text-xl font-semibold text-[#601042] mb-6">Order Summary</h2>
-                        <div class="flex space-x-4 mb-4">
-                            <img src="{{ asset('asset/img/daimond.png') }}" alt="Product"
-                                class="w-20 h-20 object-cover rounded-md">
-                            <div class="flex flex-col justify-center">
-                                <h3 class="font-semibold text-[#601042]">Elegant Gold Ring</h3>
-                                <p class="text-sm text-gray-600">Metal Purity: 18 KT</p>
-                                <p class="text-sm text-gray-600">Metal Type: Gold</p>
-                                <p class="text-sm text-gray-600">Weight: 10.0 g</p>
-                                <p class="text-sm text-gray-600">Product Code: GN20907</p>
-                                <div class="mt-2">
-                                    <span class="font-semibold text-gray-900">₹23,666</span>
+                        @php
+                            $price = 0;
+                        @endphp
+                        @foreach($items as $item)
+                            <div class="flex space-x-4 mb-4">
+                                <img src="{{ asset('storage/'. $item->product->image->image) }}" alt="Product"
+                                     class="w-20 h-20 object-cover rounded-md">
+                                <div class="flex flex-col justify-center">
+                                    <h3 class="font-semibold text-[#601042]">{{$item->product->name}}</h3>
+                                    <p class="text-sm text-gray-600">Metal Purity: {{$item->variation->carat}} KT</p>
+                                    <p class="text-sm text-gray-600">Metal Type: {{ucfirst($item->product->material)}}</p>
+                                    <p class="text-sm text-gray-600">Weight: {{$item->product->weight}} g</p>
+{{--                                    <p class="text-sm text-gray-600">Product Code: GN20907</p>--}}
+                                    @php
+                                        $price += $item->price * $item->quantity;
+                                    @endphp
+                                    <div class="mt-2">
+                                        <span class="font-semibold text-gray-900">₹{{$price}}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
+
                         <div class="space-y-2">
                             <div class="flex justify-between py-2">
                                 <span class="text-gray-600">Total Price:</span>
-                                <span class="text-gray-900 font-semibold">₹23,666</span>
+                                <span class="text-gray-900 font-semibold">₹{{$price}}</span>
                             </div>
                             <div class="flex justify-between py-2">
                                 <dt class="text-gray-600">Delivery Charge:</dt>
@@ -164,7 +173,7 @@
                             <hr class="my-2">
                             <div class="flex justify-between font-semibold text-gray-900">
                                 <span>Order Total:</span>
-                                <span>₹23,666</span>
+                                <span>₹{{$price}}</span>
                             </div>
                         </div>
                     </div>

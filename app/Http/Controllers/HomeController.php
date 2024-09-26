@@ -5,11 +5,14 @@ use App\Models\Banner;
 use App\Models\Cart;
 use App\Models\CartItem;
 use App\Models\Category;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\ProductVariation;
+use App\Models\User;
 use App\Models\UserAddress;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 
 
@@ -140,12 +143,14 @@ class HomeController extends Controller
 
     public function profile()
     {
-        return view('frontend.profile');
+        $user = auth()->user();
+        return view('frontend.profile', compact('user'));
     }
 
     public function orderhistory()
     {
-        return view('frontend.orderhistory');
+        $orders = Order::where('user_id', auth()->user()->id)->orderBy('created_at', 'desc')->get();
+        return view('frontend.orderhistory', compact('orders'));
     }
 
     public function cancel()
@@ -155,7 +160,9 @@ class HomeController extends Controller
 
     public function checkout()
     {
-        return view('frontend.checkout');
+        $cartIds = Cart::where('user_id', auth()->user()->id)->pluck('id');
+        $items = CartItem::whereIn('cart_id', $cartIds)->get();
+        return view('frontend.checkout', compact('items'));
     }
 
     public function orderconfirmation(Request $request)
@@ -245,4 +252,39 @@ class HomeController extends Controller
     public function gemstone(){
         return view('frontend.gemstone');
     }
+
+    public function updateProfile(Request $request, User $user)
+    {
+        // First, validate the other fields
+        $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|email',
+            'mobile' => 'required',
+            'password' => 'nullable|min:8',
+            'confirm_password' => 'same:password',
+        ]);
+
+        // Now check the current password manually
+        if (!Hash::check($request->current_password, $user->password)) {
+            return back()->withErrors(['current_password' => 'Current password is incorrect']);
+        }
+
+        // Update the user's profile
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->email = $request->email;
+        $user->mobile = $request->mobile;
+
+        // Update the password if provided
+        if ($request->filled('password')) {
+            $user->password = Hash::make($request->password);
+        }
+
+        // Save the user
+        $user->save();
+
+        return redirect()->back()->with('success', 'Profile updated successfully');
+    }
+
 }
