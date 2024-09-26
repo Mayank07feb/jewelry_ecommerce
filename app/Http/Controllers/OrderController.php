@@ -6,8 +6,10 @@ use App\Models\Cart;
 use App\Models\CartItem;
 use App\Models\Order;
 use App\Models\OrderItem;
+use App\Models\ReturnOrder;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+
+
 
 
 class OrderController extends Controller
@@ -46,7 +48,7 @@ class OrderController extends Controller
             'phone' => $request->phone,
         ]);
 
-        $order->update(['order_number' => 'ORD-' . str_pad($order->id, 8, '0', STR_PAD_LEFT),]);
+        $order->update(['order_number' => 'ORD-' . date('Ymdis')]);
 
         foreach ($items as $item){
             OrderItem::create([
@@ -60,5 +62,30 @@ class OrderController extends Controller
         Cart::whereIn('id', $cartIds)->delete();
 
         return view('frontend.thank-you');
+    }
+
+    public function orderStatus(Request $request, Order $order){
+        $order->update(['status' => $request->status]);
+        return back()->with('success', 'order '.$request->status . ' successfully');
+    }
+
+    public function returnForm(Order $order){
+        return view('frontend.returnForm', compact('order'));
+    }
+
+    public function returnOrder(Request $request, Order $order){
+        if ($order->status != 'delivered' || $order->is_returned) {
+            return back()->with('error', 'Order cannot be returned.');
+        }
+
+        // Create return request
+        ReturnOrder::create([
+            'order_id' => $order->id,
+            'user_id' => auth()->id(),
+            'reason' => $request->reason,
+        ]);
+
+        $order->update(['is_returned' => true, 'return_requested_at' => now()]);
+        return redirect('orderhistory')->with('success', 'Return request created successfully');
     }
 }

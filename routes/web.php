@@ -106,6 +106,9 @@ Route::middleware('auth')->group(function(){
 
     Route::prefix('order')->name('order.')->group(function(){
        Route::post('place', [OrderController::class, 'placeOrder'])->name('place');
+       Route::post('status/{order}', [OrderController::class, 'orderStatus'])->name('status');
+       Route::get('returnForm/{order}', [OrderController::class, 'returnForm'])->name('returnForm');
+       Route::post('return/{order}', [OrderController::class, 'returnOrder'])->name('return');
     });
 
     Route::prefix('cart')->name('cart')->group(function(){
