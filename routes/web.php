@@ -161,6 +161,11 @@ Route::middleware('auth')->group(function(){
             Route::get('variation/delete/{variation}', [ProductController::class, 'variationDelete'])->name('variation.delete');
         });
 
+        Route::prefix('orders')->name('orders.')->group(function(){
+           Route::get('/', [OrderController::class, 'index'])->name('index');
+           Route::get('status/{order}/{status}', [OrderController::class, 'order_status'])->name('status');
+        });
+
          //post category
 
         Route::get('postCategory/index',[PostCategoryController::class,'index'])->name('postCategory.index');

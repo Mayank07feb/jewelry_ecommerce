@@ -8,12 +8,18 @@ use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\ReturnOrder;
 use Illuminate\Http\Request;
-
-
+use function Symfony\Component\String\b;
 
 
 class OrderController extends Controller
 {
+
+    public function index(){
+        $orders = Order::orderBy('created_at', 'desc')->paginate(100);
+
+        return view('backend.order.index', compact('orders'));
+    }
+
     public function placeOrder(Request $request){
         $request->validate([
             'first_name' => 'required',
@@ -87,5 +93,10 @@ class OrderController extends Controller
 
         $order->update(['is_returned' => true, 'return_requested_at' => now()]);
         return redirect('orderhistory')->with('success', 'Return request created successfully');
+    }
+
+    public function order_status(Order $order, $status){
+        $order->update(['status' => $status]);
+        return back()->with('success', 'Status changed successfully');
     }
 }
