@@ -95,7 +95,7 @@ Route::middleware('auth')->group(function(){
     Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 //    Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
-    Route::get('addToCart/{product}/{variation}', [CartController::class, 'addToCart'])->name('addToCart');
+    Route::get('addToCart/{product}/{variation}/{wishlist?}', [CartController::class, 'addToCart'])->name('addToCart');
     Route::post('/orderconfirmation', [HomeController::class, 'orderconfirmation'])->name('orderconfirmation');
 
     Route::prefix('profile')->name('profile')->group(function(){
@@ -163,7 +163,13 @@ Route::middleware('auth')->group(function(){
 
         Route::prefix('orders')->name('orders.')->group(function(){
            Route::get('/', [OrderController::class, 'index'])->name('index');
-           Route::get('status/{order}/{status}', [OrderController::class, 'order_status'])->name('status');
+           Route::post('status/{order}', [OrderController::class, 'order_status'])->name('status');
+        });
+
+        // return routes
+        Route::prefix('return')->name('return.')->group(function(){
+           Route::get('/', [\App\Http\Controllers\ReturnOrderController::class, 'index'])->name('index');
+           Route::post('/status/{return}', [\App\Http\Controllers\ReturnOrderController::class, 'returnStatus'])->name('status');
         });
 
          //post category

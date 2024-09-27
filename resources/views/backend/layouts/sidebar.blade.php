@@ -122,6 +122,14 @@
         </a>
     </li>
 
+    <!--Orders -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('return.index')}}">
+            <i class="fas fa-hammer fa-chart-area"></i>
+            <span>Returns</span>
+        </a>
+    </li>
+
     <!-- Reviews -->
     <li class="nav-item">
         <a class="nav-link" href="#">

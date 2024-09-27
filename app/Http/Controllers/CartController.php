@@ -6,11 +6,12 @@ use App\Models\Cart;
 use App\Models\CartItem;
 use App\Models\Product;
 use App\Models\ProductVariation;
+use App\Models\Wishlist;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
-    public function addToCart(Product $product, ProductVariation $variation){
+    public function addToCart(Product $product, ProductVariation $variation, Wishlist $wishlist = null){
         $price = $variation->price - ($variation->price * $product->discount)/100;
         $existingCart = Cart::where(['product_id' => $product->id, 'user_id' => auth()->user()->id])->first();
         if ($existingCart){
@@ -37,6 +38,10 @@ class CartController extends Controller
                 'product_variation_id' => $variation->id,
                 'price' => $price,
             ]);
+        }
+
+        if ($wishlist){
+            $wishlist->delete();
         }
 
 

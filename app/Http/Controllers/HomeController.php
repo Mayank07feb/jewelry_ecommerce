@@ -10,6 +10,7 @@ use App\Models\Product;
 use App\Models\ProductVariation;
 use App\Models\User;
 use App\Models\UserAddress;
+use App\Models\Wishlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -116,7 +117,8 @@ class HomeController extends Controller
 
     public function wishlist()
     {
-        return view('frontend.wishlist');
+        $wishlists = Wishlist::where('user_id', auth()->user()->id)->get();
+        return view('frontend.wishlist', compact('wishlists'));
     }
 
     // Method for login page

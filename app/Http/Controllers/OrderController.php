@@ -95,8 +95,8 @@ class OrderController extends Controller
         return redirect('orderhistory')->with('success', 'Return request created successfully');
     }
 
-    public function order_status(Order $order, $status){
-        $order->update(['status' => $status]);
+    public function order_status(Request $request, Order $order){
+        $order->update(['status' => $request->status]);
         return back()->with('success', 'Status changed successfully');
     }
 }
