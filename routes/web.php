@@ -92,6 +92,7 @@ Route::get('/gemstone', [HomeController::class, 'gemstone'])->name('gemstone');
 Route::middleware('auth')->group(function(){
     Route::get('/orderhistory', [HomeController::class, 'orderhistory'])->name('orderhistory');
     Route::get('/wishlist', [HomeController::class, 'wishlist'])->name('wishlist');
+    Route::get('wishlist/delete/{wishlist}', [\App\Http\Controllers\WishlistController::class, 'delete'])->name('wishlist.delete');
     Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 //    Route::get('/cart', [HomeController::class, 'cart'])->name('cart');

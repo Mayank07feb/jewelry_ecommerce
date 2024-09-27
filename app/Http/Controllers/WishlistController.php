@@ -20,4 +20,9 @@ class WishlistController extends Controller
         }
         return back();
     }
+
+    public function delete(Wishlist $wishlist){
+        $wishlist->delete();
+        return back()->with('success', 'Wishlist removed successfully');
+    }
 }
