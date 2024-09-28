@@ -35,29 +35,29 @@
                             <p class="text-gray-600">{!! $policy->description !!}</p>
                         </div>
 
-                        <!-- Terms of Service Section -->
-                        <div id="terms-of-service" class="faq-section hidden">
-                            <h2 class="text-3xl font-semibold text-[#601042] mb-8">Terms of Service</h2>
-                            <p class="text-gray-600">By accessing and using our services...</p>
-                        </div>
+{{--                        <!-- Terms of Service Section -->--}}
+{{--                        <div id="terms-of-service" class="faq-section hidden">--}}
+{{--                            <h2 class="text-3xl font-semibold text-[#601042] mb-8">Terms of Service</h2>--}}
+{{--                            <p class="text-gray-600">By accessing and using our services...</p>--}}
+{{--                        </div>--}}
 
-                        <!-- Return Policy Section -->
-                        <div id="return-policy" class="faq-section hidden">
-                            <h2 class="text-3xl font-semibold text-[#601042] mb-8">Return Policy</h2>
-                            <p class="text-gray-600">Our return policy lasts 30 days...</p>
-                        </div>
+{{--                        <!-- Return Policy Section -->--}}
+{{--                        <div id="return-policy" class="faq-section hidden">--}}
+{{--                            <h2 class="text-3xl font-semibold text-[#601042] mb-8">Return Policy</h2>--}}
+{{--                            <p class="text-gray-600">Our return policy lasts 30 days...</p>--}}
+{{--                        </div>--}}
 
-                        <!-- Shipping Policy Section -->
-                        <div id="shipping-policy" class="faq-section hidden">
-                            <h2 class="text-3xl font-semibold text-[#601042] mb-8">Shipping Policy</h2>
-                            <p class="text-gray-600">We offer various shipping methods to ensure your purchase reaches you...</p>
-                        </div>
+{{--                        <!-- Shipping Policy Section -->--}}
+{{--                        <div id="shipping-policy" class="faq-section hidden">--}}
+{{--                            <h2 class="text-3xl font-semibold text-[#601042] mb-8">Shipping Policy</h2>--}}
+{{--                            <p class="text-gray-600">We offer various shipping methods to ensure your purchase reaches you...</p>--}}
+{{--                        </div>--}}
 
-                        <!-- Payment Policy Section -->
-                        <div id="payment-policy" class="faq-section hidden">
-                            <h2 class="text-3xl font-semibold text-[#601042] mb-8">Payment Policy</h2>
-                            <p class="text-gray-600">We accept various methods of payment...</p>
-                        </div>
+{{--                        <!-- Payment Policy Section -->--}}
+{{--                        <div id="payment-policy" class="faq-section hidden">--}}
+{{--                            <h2 class="text-3xl font-semibold text-[#601042] mb-8">Payment Policy</h2>--}}
+{{--                            <p class="text-gray-600">We accept various methods of payment...</p>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
@@ -80,11 +80,11 @@
             const linkItems = document.querySelectorAll('.faq-link-item');
             const sections = document.querySelectorAll('.faq-section');
 
-            // // Show the first section by default
-            // if (sections.length > 0) {
-            //     sections[0].classList.remove('hidden');
-            //     linkItems[0].querySelector('a').classList.add('bg-[#601042]', 'text-white');
-            // }
+            // Show the first section by default
+            if (sections.length > 0) {
+                sections[0].classList.remove('hidden');
+                // linkItems[0].querySelector('a').classList.add('bg-[#601042]', 'text-white');
+            }
 
             // // Sidebar section toggle
             // linkItems.forEach(item => {

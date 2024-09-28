@@ -33,7 +33,7 @@ Route::get('/reset-password', [HomeController::class, 'showResetPasswordForm'])-
 
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
-Route::get('/alljewellery/{material?}', [HomeController::class, 'alljewellery'])->name('alljewellery');
+Route::get('/alljewellery/{material?}/{category?}', [HomeController::class, 'alljewellery'])->name('alljewellery');
 
 Route::get('/diamondjewellery', [HomeController::class, 'diamondjewellery'])->name('diamondjewellery');
 

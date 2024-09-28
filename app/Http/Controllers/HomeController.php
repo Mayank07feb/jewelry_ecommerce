@@ -41,14 +41,38 @@ class HomeController extends Controller
         return view('frontend.contact');
     }
 
-    public function alljewellery($material = null)
+    public function alljewellery(Request $request, $material = null, $category = null)
     {
-        if ($material){
-            $products = Product::where('material', $material)->get();
-        }else{
-            $products = Product::all();
+        $query = Product::query();
+        if ($request->price){
+            $values = explode('-', $request->price);
+            if ($values[0] == 'under'){
+                $productIds = ProductVariation::where('price', '<=', $values[1])->pluck('product_id');
+            }elseif ($values[0] == 'above'){
+                $productIds = ProductVariation::where('price', '>=', $values[0])->pluck('product_id');
+            }else{
+                $productIds = ProductVariation::where('price', '>=', $values[0])->where('price', '<=', $values[1])->pluck('product_id');
+            }
+            $query = $query->whereIn('id', $productIds);
         }
-        return view('frontend.alljewellery', compact('products'));
+        if ($request->metal){
+            $query = $query->where('material', $request->metal);
+        }
+        if ($request->shopfor){
+            $query = $query->where('product_for', $request->shopfor)->orWhere('summary', 'LIKE', $request->shopfor);
+        }
+        if ($request->gifts){
+            $query = $query->where('description', 'LIKE', $request->gifts);
+        }
+
+        $products = $query->get();
+
+//        if ($material){
+//            $products = Product::where('material', $material)->get();
+//        }else{
+//            $products = Product::all();
+//        }
+        return view('frontend.alljewellery', compact('products', 'material', 'category'));
     }
 
     public function diamondjewellery()

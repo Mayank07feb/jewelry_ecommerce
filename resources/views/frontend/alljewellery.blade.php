@@ -28,175 +28,181 @@
             </ol>
         </nav>
         {{-- Web View Filter --}}
-        <div class="hidden lg:block bg-[#601042] w-full h-auto z-10">
-            <div class="container px-4 lg:overflow-visible">
-                <div class="lg:bg-primary lg:flex">
-                    <!-- Filter Categories for Desktop -->
-                    <div class="flex w-full flex-wrap">
-                        <!-- Price Filter -->
-                        <div class="lg:max-w-[270px] flex-auto">
-                            <div class="relative z-40">
-                                <div id="price-filter-button"
-                                    class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
-                                    <span class="material-icons text-white mr-2">tune</span>
-                                    <span class="inline-block capitalize">Price</span>
-                                    <span class="ml-auto">
+        <form action="{{route('alljewellery', ['material' => $material, 'category' => $category?->id])}}">
+{{--            @csrf--}}
+            <div class="hidden lg:block bg-[#601042] w-full h-auto z-10">
+                <div class="container px-4 lg:overflow-visible">
+                    <div class="lg:bg-primary lg:flex">
+                        <!-- Filter Categories for Desktop -->
+                        <div class="flex w-full flex-wrap">
+                            <!-- Price Filter -->
+                            <div class="lg:max-w-[270px] flex-auto">
+                                <div class="relative z-40">
+                                    <div id="price-filter-button"
+                                         class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
+                                        <span class="material-icons text-white mr-2">tune</span>
+                                        <span class="inline-block capitalize">Price</span>
+                                        <span class="ml-auto">
                                         <span
                                             class="material-icons transform transition-transform duration-500">expand_more</span>
                                     </span>
-                                </div>
-                                <!-- Dropdown -->
-                                <div id="price-dropdown" class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
-                                    <ul class="text-sm">
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="radio" id="under500" name="price" value="under500"
-                                                class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="under500" class="ml-2">Under $500</label>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="radio" id="500-1000" name="price" value="500-1000"
-                                                class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="500-1000" class="ml-2">$500 - $1000</label>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="radio" id="1000-5000" name="price" value="1000-5000"
-                                                class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="1000-5000" class="ml-2">$1000 - $5000</label>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="radio" id="above5000" name="price" value="above5000"
-                                                class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="above5000" class="ml-2">Above $5000</label>
-                                        </li>
-                                    </ul>
+                                    </div>
+                                    <!-- Dropdown -->
+                                    <div id="price-dropdown" class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
+                                        <ul class="text-sm">
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="radio" id="under500" name="price" value="under-500"
+                                                       class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="under500" class="ml-2">Under $500</label>
+                                            </li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="radio" id="500-1000" name="price" value="500-1000"
+                                                       class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="500-1000" class="ml-2">$500 - $1000</label>
+                                            </li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="radio" id="1000-5000" name="price" value="1000-5000"
+                                                       class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="1000-5000" class="ml-2">$1000 - $5000</label>
+                                            </li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="radio" id="above5000" name="price" value="above5000"
+                                                       class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="above5000" class="ml-2">Above $5000</label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Metal Type Filter -->
-                        <div class="lg:max-w-[270px] flex-auto">
-                            <div class="relative z-40">
-                                <div id="metal-filter-button"
-                                    class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
-                                    <span class="inline-block capitalize">Metal Type</span>
-                                    <span class="ml-auto">
+                            <!-- Metal Type Filter -->
+                            <div class="lg:max-w-[270px] flex-auto">
+                                <div class="relative z-40">
+                                    <div id="metal-filter-button"
+                                         class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
+                                        <span class="inline-block capitalize">Metal Type</span>
+                                        <span class="ml-auto">
                                         <span
                                             class="material-icons transform transition-transform duration-500">expand_more</span>
                                     </span>
-                                </div>
-                                <!-- Dropdown -->
-                                <div id="metal-dropdown" class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
-                                    <ul class="text-sm">
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="checkbox" id="gold" name="metal" value="gold"
-                                                class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="gold" class="ml-2">Gold</label>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="checkbox" id="silver" name="metal" value="silver"
-                                                class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="silver" class="ml-2">Silver</label>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="checkbox" id="platinum" name="metal" value="platinum"
-                                                class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="platinum" class="ml-2">Platinum</label>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="checkbox" id="mixed" name="metal" value="mixed"
-                                                class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="mixed" class="ml-2">Mixed Metals</label>
-                                        </li>
-                                    </ul>
+                                    </div>
+                                    <!-- Dropdown -->
+                                    <div id="metal-dropdown" class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
+                                        <ul class="text-sm">
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="checkbox" id="gold" name="metal" value="gold"
+                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="gold" class="ml-2">Gold</label>
+                                            </li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="checkbox" id="silver" name="metal" value="silver"
+                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="silver" class="ml-2">Silver</label>
+                                            </li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="checkbox" id="platinum" name="metal" value="platinum"
+                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="platinum" class="ml-2">Platinum</label>
+                                            </li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="checkbox" id="mixed" name="metal" value="mixed"
+                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="mixed" class="ml-2">Mixed Metals</label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Shop For Filter -->
-                        <div class="lg:max-w-[270px] flex-auto">
-                            <div class="relative z-40">
-                                <div id="shopfor-filter-button"
-                                    class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
-                                    <span class="inline-block capitalize">Shop For</span>
-                                    <span class="ml-auto">
+                            <!-- Shop For Filter -->
+                            <div class="lg:max-w-[270px] flex-auto">
+                                <div class="relative z-40">
+                                    <div id="shopfor-filter-button"
+                                         class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
+                                        <span class="inline-block capitalize">Shop For</span>
+                                        <span class="ml-auto">
                                         <span
                                             class="material-icons transform transition-transform duration-500">expand_more</span>
                                     </span>
-                                </div>
-                                <!-- Dropdown -->
-                                <div id="shopfor-dropdown"
-                                    class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
-                                    <ul class="text-sm">
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="checkbox" id="men" name="shopfor" value="men"
-                                                class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="men" class="ml-2">Men</label>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="checkbox" id="women" name="shopfor" value="women"
-                                                class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="women" class="ml-2">Women</label>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="checkbox" id="children" name="shopfor" value="children"
-                                                class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="children" class="ml-2">Children</label>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="checkbox" id="unisex" name="shopfor" value="unisex"
-                                                class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="unisex" class="ml-2">Unisex</label>
-                                        </li>
-                                    </ul>
+                                    </div>
+                                    <!-- Dropdown -->
+                                    <div id="shopfor-dropdown"
+                                         class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
+                                        <ul class="text-sm">
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="checkbox" id="men" name="shopfor" value="men"
+                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="men" class="ml-2">Men</label>
+                                            </li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="checkbox" id="women" name="shopfor" value="women"
+                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="women" class="ml-2">Women</label>
+                                            </li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="checkbox" id="children" name="shopfor" value="children"
+                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="children" class="ml-2">Children</label>
+                                            </li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="checkbox" id="unisex" name="shopfor" value="unisex"
+                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="unisex" class="ml-2">Unisex</label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Gifts Filter -->
-                        <div class="lg:max-w-[270px] flex-auto">
-                            <div class="relative z-40">
-                                <div id="gifts-filter-button"
-                                    class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
-                                    <span class="inline-block capitalize">Gifts</span>
-                                    <span class="ml-auto">
+                            <!-- Gifts Filter -->
+                            <div class="lg:max-w-[270px] flex-auto">
+                                <div class="relative z-40">
+                                    <div id="gifts-filter-button"
+                                         class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
+                                        <span class="inline-block capitalize">Gifts</span>
+                                        <span class="ml-auto">
                                         <span
                                             class="material-icons transform transition-transform duration-500">expand_more</span>
                                     </span>
-                                </div>
-                                <!-- Dropdown -->
-                                <div id="gifts-dropdown"
-                                    class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
-                                    <ul class="text-sm">
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="checkbox" id="forhim" name="gifts" value="forhim"
-                                                class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="forhim" class="ml-2">For Him</label>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="checkbox" id="forher" name="gifts" value="forher"
-                                                class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="forher" class="ml-2">For Her</label>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="checkbox" id="forkids" name="gifts" value="forkids"
-                                                class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="forkids" class="ml-2">For Kids</label>
-                                        </li>
-                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                            <input type="checkbox" id="specialoccasions" name="gifts"
-                                                value="specialoccasions"
-                                                class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                            <label for="specialoccasions" class="ml-2">Special Occasions</label>
-                                        </li>
-                                    </ul>
+                                    </div>
+                                    <!-- Dropdown -->
+                                    <div id="gifts-dropdown"
+                                         class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
+                                        <ul class="text-sm">
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="checkbox" id="forhim" name="gifts" value="forhim"
+                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="forhim" class="ml-2">For Him</label>
+                                            </li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="checkbox" id="forher" name="gifts" value="forher"
+                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="forher" class="ml-2">For Her</label>
+                                            </li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="checkbox" id="forkids" name="gifts" value="forkids"
+                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="forkids" class="ml-2">For Kids</label>
+                                            </li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                <input type="checkbox" id="specialoccasions" name="gifts"
+                                                       value="specialoccasions"
+                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                <label for="specialoccasions" class="ml-2">Special Occasions</label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
+
+
+                            <input type="submit" value="Apply" class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
+        </form>
         {{-- Web View Sort --}}
         <div class="bg-gradient-to-r from-[#F5F5DC] to-[#601042] lg:py-2 relative z-10 sm:hidden lg:block">
             <div class="container lg:pb-3">
