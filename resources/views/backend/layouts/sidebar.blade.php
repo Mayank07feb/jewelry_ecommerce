@@ -227,9 +227,9 @@
 
     <!-- Page-->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('page.index')}}">
             <i class="fas fa-cog"></i>
-            <span>Page</span></a>
+            <span>Pages</span></a>
     </li>
 
     <!-- Sidebar Toggler (Sidebar) -->

@@ -12,6 +12,7 @@ use \App\Http\Controllers\BrandController;
 use \App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PageController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -48,7 +49,7 @@ Route::get('/blog-details', [HomeController::class, 'showBlogDetails'])->name('b
 
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 
-Route::get('/policies', [HomeController::class, 'policies'])->name('policies');
+Route::get('/policies/{slug?}', [HomeController::class, 'policies'])->name('policies');
 
 Route::get('/giritra-promises', [HomeController::class, 'giritraPromises'])->name('giritra.promises');
 
@@ -171,6 +172,16 @@ Route::middleware('auth')->group(function(){
         Route::prefix('return')->name('return.')->group(function(){
            Route::get('/', [\App\Http\Controllers\ReturnOrderController::class, 'index'])->name('index');
            Route::post('/status/{return}', [\App\Http\Controllers\ReturnOrderController::class, 'returnStatus'])->name('status');
+        });
+
+        //pages routes
+        Route::prefix('page')->name('page.')->group(function(){
+           Route::get('/', [PageCOntroller::class, 'index'])->name('index');
+           Route::get('create', [PageController::class, 'create'])->name('create');
+           Route::post('store', [PageController::class, 'store'])->name('store');
+           Route::get('edit/{page}', [PageController::class, 'edit'])->name('edit');
+           Route::post('update/{page}', [PageController::class, 'update'])->name('update');
+           Route::post('delete/{page}', [PageController::class, 'delete'])->name('delete');
         });
 
          //post category

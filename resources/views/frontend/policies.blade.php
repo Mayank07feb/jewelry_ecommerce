@@ -7,39 +7,41 @@
                 <h1 class="text-4xl lg:text-5xl font-bold text-[#601042] mb-4">Our Policies</h1>
                 <p class="text-xl text-gray-600">Read the important policies of Gititra Jewellers</p>
             </div>
-            
+
             <div class="lg:flex lg:space-x-8">
                 <!-- Sidebar Navigation -->
                 <div class="lg:w-1/4 mb-8 lg:mb-0">
                     <div class="lg:sticky lg:top-24">
                         <nav class="bg-white rounded-lg shadow-lg overflow-hidden">
                             <ul class="flex flex-nowrap lg:flex-col overflow-x-auto lg:overflow-x-visible whitespace-nowrap lg:whitespace-normal">
-                                <li class="faq-link-item flex-shrink-0" data-target="#privacy-policy">
-                                    <a href="javascript:void(0)" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">
-                                        Privacy Policy
-                                    </a>
-                                </li>
-                                <li class="faq-link-item flex-shrink-0" data-target="#terms-of-service">
-                                    <a href="javascript:void(0)" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">
-                                        Terms of Service
-                                    </a>
-                                </li>
-                                <li class="faq-link-item flex-shrink-0" data-target="#return-policy">
-                                    <a href="javascript:void(0)" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">
-                                        Return Policy
-                                    </a>
-                                </li>
-                                <li class="faq-link-item flex-shrink-0" data-target="#shipping-policy">
-                                    <a href="javascript:void(0)" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">
-                                        Shipping Policy
-                                    </a>
-                                </li>
-                                <li class="faq-link-item flex-shrink-0" data-target="#payment-policy">
-                                    <a href="javascript:void(0)" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">
-                                        Payment Policy
-                                    </a>
-                                </li>
-                            </ul>
+                                @foreach($pages as $page)
+                                    <li class="faq-link-item flex-shrink-0" data-target="#privacy-policy">
+                                        <a href="{{route('policies', ['slug' => $page->slug])}}" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">
+                                            {{$page->title}}
+                                        </a>
+                                    </li>
+                                @endforeach
+{{--                                <li class="faq-link-item flex-shrink-0" data-target="#terms-of-service">--}}
+{{--                                    <a href="javascript:void(0)" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">--}}
+{{--                                        Terms of Service--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                                <li class="faq-link-item flex-shrink-0" data-target="#return-policy">--}}
+{{--                                    <a href="javascript:void(0)" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">--}}
+{{--                                        Return Policy--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                                <li class="faq-link-item flex-shrink-0" data-target="#shipping-policy">--}}
+{{--                                    <a href="javascript:void(0)" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">--}}
+{{--                                        Shipping Policy--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                                <li class="faq-link-item flex-shrink-0" data-target="#payment-policy">--}}
+{{--                                    <a href="javascript:void(0)" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">--}}
+{{--                                        Payment Policy--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
                         </nav>
                     </div>
                 </div>
@@ -49,8 +51,8 @@
                     <div class="bg-white rounded-lg shadow-lg p-8">
                         <!-- Privacy Policy Section -->
                         <div id="privacy-policy" class="faq-section hidden">
-                            <h2 class="text-3xl font-semibold text-[#601042] mb-8">Privacy Policy</h2>
-                            <p class="text-gray-600">At Gititra Jewellers, we prioritize your privacy...</p>
+                            <h2 class="text-3xl font-semibold text-[#601042] mb-8">{{$policy->title}}</h2>
+                            <p class="text-gray-600">{!! $policy->description !!}</p>
                         </div>
 
                         <!-- Terms of Service Section -->
@@ -108,7 +110,7 @@
             linkItems.forEach(item => {
                 item.addEventListener('click', function() {
                     const target = this.dataset.target;
-                    
+
                     // Hide all sections
                     sections.forEach(section => section.classList.add('hidden'));
 

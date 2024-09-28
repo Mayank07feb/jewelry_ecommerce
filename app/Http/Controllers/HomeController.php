@@ -6,6 +6,7 @@ use App\Models\Cart;
 use App\Models\CartItem;
 use App\Models\Category;
 use App\Models\Order;
+use App\Models\Page;
 use App\Models\Product;
 use App\Models\ProductVariation;
 use App\Models\User;
@@ -85,9 +86,15 @@ class HomeController extends Controller
         return view('frontend.faq');
     }
 
-    public function policies()
+    public function policies($slug = null)
     {
-        return view('frontend.policies');
+        $pages = Page::all();
+        if ($slug){
+            $policy = Page::where('slug', $slug)->first();
+        }else{
+            $policy = Page::first();
+        }
+        return view('frontend.policies', compact('pages', 'policy'));
     }
 
     public function giritraPromises()
