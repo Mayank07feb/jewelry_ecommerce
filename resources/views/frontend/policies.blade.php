@@ -16,32 +16,12 @@
                             <ul class="flex flex-nowrap lg:flex-col overflow-x-auto lg:overflow-x-visible whitespace-nowrap lg:whitespace-normal">
                                 @foreach($pages as $page)
                                     <li class="faq-link-item flex-shrink-0" data-target="#privacy-policy">
-                                        <a href="{{route('policies', ['slug' => $page->slug])}}" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">
+                                        <a href="{{route('policies', ['slug' => $page->slug])}}" class="block px-6 py-4 {{$policy->id == $page->id ? 'bg-[#601042] text-white' : ''}} text-[#601042] hover:bg-gray-100 hover:text-[#601042] transition-colors duration-200">
                                             {{$page->title}}
                                         </a>
                                     </li>
                                 @endforeach
-{{--                                <li class="faq-link-item flex-shrink-0" data-target="#terms-of-service">--}}
-{{--                                    <a href="javascript:void(0)" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">--}}
-{{--                                        Terms of Service--}}
-{{--                                    </a>--}}
-{{--                                </li>--}}
-{{--                                <li class="faq-link-item flex-shrink-0" data-target="#return-policy">--}}
-{{--                                    <a href="javascript:void(0)" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">--}}
-{{--                                        Return Policy--}}
-{{--                                    </a>--}}
-{{--                                </li>--}}
-{{--                                <li class="faq-link-item flex-shrink-0" data-target="#shipping-policy">--}}
-{{--                                    <a href="javascript:void(0)" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">--}}
-{{--                                        Shipping Policy--}}
-{{--                                    </a>--}}
-{{--                                </li>--}}
-{{--                                <li class="faq-link-item flex-shrink-0" data-target="#payment-policy">--}}
-{{--                                    <a href="javascript:void(0)" class="block px-6 py-4 text-[#601042] hover:bg-gray-100 transition-colors duration-200">--}}
-{{--                                        Payment Policy--}}
-{{--                                    </a>--}}
-{{--                                </li>--}}
-{{--                            </ul>--}}
+                            </ul>
                         </nav>
                     </div>
                 </div>
@@ -100,37 +80,37 @@
             const linkItems = document.querySelectorAll('.faq-link-item');
             const sections = document.querySelectorAll('.faq-section');
 
-            // Show the first section by default
-            if (sections.length > 0) {
-                sections[0].classList.remove('hidden');
-                linkItems[0].querySelector('a').classList.add('bg-[#601042]', 'text-white');
-            }
+            // // Show the first section by default
+            // if (sections.length > 0) {
+            //     sections[0].classList.remove('hidden');
+            //     linkItems[0].querySelector('a').classList.add('bg-[#601042]', 'text-white');
+            // }
 
-            // Sidebar section toggle
-            linkItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const target = this.dataset.target;
-
-                    // Hide all sections
-                    sections.forEach(section => section.classList.add('hidden'));
-
-                    // Show the clicked section
-                    const targetSection = document.querySelector(target);
-                    if (targetSection) {
-                        targetSection.classList.remove('hidden');
-                    }
-
-                    // Update active state of links
-                    linkItems.forEach(li => {
-                        const link = li.querySelector('a');
-                        link.classList.remove('bg-[#601042]', 'text-white');
-                        link.classList.add('text-[#601042]');
-                    });
-                    const clickedLink = this.querySelector('a');
-                    clickedLink.classList.remove('text-[#601042]');
-                    clickedLink.classList.add('bg-[#601042]', 'text-white');
-                });
-            });
+            // // Sidebar section toggle
+            // linkItems.forEach(item => {
+            //     item.addEventListener('click', function() {
+            //         const target = this.dataset.target;
+            //
+            //         // Hide all sections
+            //         sections.forEach(section => section.classList.add('hidden'));
+            //
+            //         // Show the clicked section
+            //         const targetSection = document.querySelector(target);
+            //         if (targetSection) {
+            //             targetSection.classList.remove('hidden');
+            //         }
+            //
+            //         // Update active state of links
+            //         linkItems.forEach(li => {
+            //             const link = li.querySelector('a');
+            //             link.classList.remove('bg-[#601042]', 'text-white');
+            //             link.classList.add('text-[#601042]');
+            //         });
+            //         const clickedLink = this.querySelector('a');
+            //         clickedLink.classList.remove('text-[#601042]');
+            //         clickedLink.classList.add('bg-[#601042]', 'text-white');
+            //     });
+            // });
         });
     </script>
 @endsection
