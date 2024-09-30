@@ -194,9 +194,7 @@
                                     </div>
                                 </div>
                             </div>
-
-
-                            <input type="submit" value="Apply" class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                            <input type="submit" value="Apply" class="bg-white text-[#601042] border border-[#601042] px-4 py-2 rounded-md cursor-pointer hover:bg-[#88185d] hover:text-white transition ease-in-out duration-300">
                         </div>
                     </div>
                 </div>
