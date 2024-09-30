@@ -199,8 +199,8 @@
                             <div class="flex space-x-4">
                                 <input type="submit" value="Apply"
                                     class="bg-[#601042] text-white border border-[#601042] px-4 cursor-pointer hover:bg-white hover:text-[#601042] transition-colors duration-300 ease-in-out">
-                                <input type="button" value="Clear Filters"
-                                    class="bg-[#601042] text-white border border-[#601042] px-4 cursor-pointer hover:bg-white hover:text-[#601042] transition-colors duration-300 ease-in-out">
+                                <a href="{{route('alljewellery', ['material' => $material, 'category' => $category?->id])}}" class="bg-[#601042] text-white border border-[#601042] px-4 cursor-pointer hover:bg-white hover:text-[#601042] transition-colors duration-300 ease-in-out">clear</a>
+
                             </div>
                         </div>
                     </div>
