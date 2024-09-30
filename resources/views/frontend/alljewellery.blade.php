@@ -28,8 +28,8 @@
             </ol>
         </nav>
         {{-- Web View Filter --}}
-        <form action="{{route('alljewellery', ['material' => $material, 'category' => $category?->id])}}">
-{{--            @csrf--}}
+        <form action="{{ route('alljewellery', ['material' => $material, 'category' => $category?->id]) }}">
+            {{--            @csrf --}}
             <div class="hidden lg:block bg-[#601042] w-full h-auto z-10">
                 <div class="container px-4 lg:overflow-visible">
                     <div class="lg:bg-primary lg:flex">
@@ -39,35 +39,36 @@
                             <div class="lg:max-w-[270px] flex-auto">
                                 <div class="relative z-40">
                                     <div id="price-filter-button"
-                                         class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
+                                        class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
                                         <span class="material-icons text-white mr-2">tune</span>
                                         <span class="inline-block capitalize">Price</span>
                                         <span class="ml-auto">
-                                        <span
-                                            class="material-icons transform transition-transform duration-500">expand_more</span>
-                                    </span>
+                                            <span
+                                                class="material-icons transform transition-transform duration-500">expand_more</span>
+                                        </span>
                                     </div>
                                     <!-- Dropdown -->
-                                    <div id="price-dropdown" class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
+                                    <div id="price-dropdown"
+                                        class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
                                         <ul class="text-sm">
                                             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                                 <input type="radio" id="under500" name="price" value="under-500"
-                                                       class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                    class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                                 <label for="under500" class="ml-2">Under $500</label>
                                             </li>
                                             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                                 <input type="radio" id="500-1000" name="price" value="500-1000"
-                                                       class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                    class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                                 <label for="500-1000" class="ml-2">$500 - $1000</label>
                                             </li>
                                             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                                 <input type="radio" id="1000-5000" name="price" value="1000-5000"
-                                                       class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                    class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                                 <label for="1000-5000" class="ml-2">$1000 - $5000</label>
                                             </li>
                                             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                                 <input type="radio" id="above5000" name="price" value="above5000"
-                                                       class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                    class="form-radio text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                                 <label for="above5000" class="ml-2">Above $5000</label>
                                             </li>
                                         </ul>
@@ -79,34 +80,35 @@
                             <div class="lg:max-w-[270px] flex-auto">
                                 <div class="relative z-40">
                                     <div id="metal-filter-button"
-                                         class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
+                                        class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
                                         <span class="inline-block capitalize">Metal Type</span>
                                         <span class="ml-auto">
-                                        <span
-                                            class="material-icons transform transition-transform duration-500">expand_more</span>
-                                    </span>
+                                            <span
+                                                class="material-icons transform transition-transform duration-500">expand_more</span>
+                                        </span>
                                     </div>
                                     <!-- Dropdown -->
-                                    <div id="metal-dropdown" class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
+                                    <div id="metal-dropdown"
+                                        class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
                                         <ul class="text-sm">
                                             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                                 <input type="checkbox" id="gold" name="metal" value="gold"
-                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                    class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                                 <label for="gold" class="ml-2">Gold</label>
                                             </li>
                                             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                                 <input type="checkbox" id="silver" name="metal" value="silver"
-                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                    class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                                 <label for="silver" class="ml-2">Silver</label>
                                             </li>
                                             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                                 <input type="checkbox" id="platinum" name="metal" value="platinum"
-                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                    class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                                 <label for="platinum" class="ml-2">Platinum</label>
                                             </li>
                                             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                                 <input type="checkbox" id="mixed" name="metal" value="mixed"
-                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                    class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                                 <label for="mixed" class="ml-2">Mixed Metals</label>
                                             </li>
                                         </ul>
@@ -118,35 +120,35 @@
                             <div class="lg:max-w-[270px] flex-auto">
                                 <div class="relative z-40">
                                     <div id="shopfor-filter-button"
-                                         class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
+                                        class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
                                         <span class="inline-block capitalize">Shop For</span>
                                         <span class="ml-auto">
-                                        <span
-                                            class="material-icons transform transition-transform duration-500">expand_more</span>
-                                    </span>
+                                            <span
+                                                class="material-icons transform transition-transform duration-500">expand_more</span>
+                                        </span>
                                     </div>
                                     <!-- Dropdown -->
                                     <div id="shopfor-dropdown"
-                                         class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
+                                        class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
                                         <ul class="text-sm">
                                             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                                 <input type="checkbox" id="men" name="shopfor" value="men"
-                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                    class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                                 <label for="men" class="ml-2">Men</label>
                                             </li>
                                             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                                 <input type="checkbox" id="women" name="shopfor" value="women"
-                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                    class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                                 <label for="women" class="ml-2">Women</label>
                                             </li>
                                             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                                 <input type="checkbox" id="children" name="shopfor" value="children"
-                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                    class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                                 <label for="children" class="ml-2">Children</label>
                                             </li>
                                             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                                 <input type="checkbox" id="unisex" name="shopfor" value="unisex"
-                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
+                                                    class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
                                                 <label for="unisex" class="ml-2">Unisex</label>
                                             </li>
                                         </ul>
@@ -158,43 +160,48 @@
                             <div class="lg:max-w-[270px] flex-auto">
                                 <div class="relative z-40">
                                     <div id="gifts-filter-button"
-                                         class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
+                                        class="flex items-center cursor-pointer px-4 py-3 w-full text-sm bg-primary-light text-white font-light uppercase tracking-wider">
                                         <span class="inline-block capitalize">Gifts</span>
                                         <span class="ml-auto">
-                                        <span
-                                            class="material-icons transform transition-transform duration-500">expand_more</span>
-                                    </span>
+                                            <span
+                                                class="material-icons transform transition-transform duration-500">expand_more</span>
+                                        </span>
                                     </div>
                                     <!-- Dropdown -->
                                     <div id="gifts-dropdown"
-                                         class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
-{{--                                        <ul class="text-sm">--}}
-{{--                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">--}}
-{{--                                                <input type="checkbox" id="forhim" name="gifts" value="him"--}}
-{{--                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">--}}
-{{--                                                <label for="forhim" class="ml-2">For Him</label>--}}
-{{--                                            </li>--}}
-{{--                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">--}}
-{{--                                                <input type="checkbox" id="forher" name="gifts" value="her"--}}
-{{--                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">--}}
-{{--                                                <label for="forher" class="ml-2">For Her</label>--}}
-{{--                                            </li>--}}
-{{--                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">--}}
-{{--                                                <input type="checkbox" id="forkids" name="gifts" value="kids"--}}
-{{--                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">--}}
-{{--                                                <label for="forkids" class="ml-2">For Kids</label>--}}
-{{--                                            </li>--}}
-{{--                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">--}}
-{{--                                                <input type="checkbox" id="specialoccasions" name="gifts"--}}
-{{--                                                       value="specialoccasions"--}}
-{{--                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">--}}
-{{--                                                <label for="specialoccasions" class="ml-2">Special Occasions</label>--}}
-{{--                                            </li>--}}
-{{--                                        </ul>--}}
+                                        class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
+                                        {{--                                        <ul class="text-sm"> --}}
+                                        {{--                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"> --}}
+                                        {{--                                                <input type="checkbox" id="forhim" name="gifts" value="him" --}}
+                                        {{--                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]"> --}}
+                                        {{--                                                <label for="forhim" class="ml-2">For Him</label> --}}
+                                        {{--                                            </li> --}}
+                                        {{--                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"> --}}
+                                        {{--                                                <input type="checkbox" id="forher" name="gifts" value="her" --}}
+                                        {{--                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]"> --}}
+                                        {{--                                                <label for="forher" class="ml-2">For Her</label> --}}
+                                        {{--                                            </li> --}}
+                                        {{--                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"> --}}
+                                        {{--                                                <input type="checkbox" id="forkids" name="gifts" value="kids" --}}
+                                        {{--                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]"> --}}
+                                        {{--                                                <label for="forkids" class="ml-2">For Kids</label> --}}
+                                        {{--                                            </li> --}}
+                                        {{--                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"> --}}
+                                        {{--                                                <input type="checkbox" id="specialoccasions" name="gifts" --}}
+                                        {{--                                                       value="specialoccasions" --}}
+                                        {{--                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]"> --}}
+                                        {{--                                                <label for="specialoccasions" class="ml-2">Special Occasions</label> --}}
+                                        {{--                                            </li> --}}
+                                        {{--                                        </ul> --}}
                                     </div>
                                 </div>
                             </div>
-                            <input type="submit" value="Apply" class="bg-white text-[#601042] border border-[#601042] px-4 py-2 rounded-md cursor-pointer hover:bg-[#88185d] hover:text-white transition ease-in-out duration-300">
+                            <div class="flex space-x-4">
+                                <input type="submit" value="Apply"
+                                    class="bg-[#601042] text-white border border-[#601042] px-4 cursor-pointer hover:bg-white hover:text-[#601042] transition-colors duration-300 ease-in-out">
+                                <input type="button" value="Clear Filters"
+                                    class="bg-[#601042] text-white border border-[#601042] px-4 cursor-pointer hover:bg-white hover:text-[#601042] transition-colors duration-300 ease-in-out">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -272,60 +279,60 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <!-- Card 1 Start -->
-                @foreach($products as $product)
-
-                <div
-                    class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl  bg-white transform hover:-translate-y-2 transition-transform duration-300">
-                    <a href="{{ route('productdetail', ['product' => $product->id]) }}">
-                        <div class="overflow-hidden">
-                            <img src="{{ asset('storage/'. $product->image?->image) }}" alt="{{$product->title}}"
-                                class="w-full h-64 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-110">
+                @foreach ($products as $product)
+                    <div
+                        class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl  bg-white transform hover:-translate-y-2 transition-transform duration-300">
+                        <a href="{{ route('productdetail', ['product' => $product->id]) }}">
+                            <div class="overflow-hidden">
+                                <img src="{{ asset('storage/' . $product->image?->image) }}" alt="{{ $product->title }}"
+                                    class="w-full h-64 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-110">
+                            </div>
+                        </a>
+                        @php
+                            $discountPrice =
+                                $product->variation->price - ($product->variation->price * $product->discount) / 100;
+                        @endphp
+                        <div class="p-4 bg-gradient-to-b from-gray-50 to-white">
+                            <p class="text-lg font-semibold text-gray-800">₹{{ $discountPrice }} <span
+                                    class="text-red-600 line-through">₹{{ $product->variation->price }}</span></p>
+                            <p class="text-sm text-gray-600">{{ $product->title }}</p>
                         </div>
-                    </a>
-                    @php
-                        $discountPrice = $product->variation->price - ($product->variation->price * $product->discount)/100;
-                    @endphp
-                    <div class="p-4 bg-gradient-to-b from-gray-50 to-white">
-                        <p class="text-lg font-semibold text-gray-800">₹{{$discountPrice}} <span
-                                class="text-red-600 line-through">₹{{$product->variation->price}}</span></p>
-                        <p class="text-sm text-gray-600">{{$product->title}}</p>
+                        <a href="{{ route('addToWishlist', ['product' => $product->id]) }}"
+                            class="wishlist-btn absolute top-2 right-2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-all duration-300 ease-in-out transform hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 hover:text-red-500"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                        </a>
                     </div>
-                    <a href="{{route('addToWishlist', ['product' => $product->id])}}"
-                        class="wishlist-btn absolute top-2 right-2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-all duration-300 ease-in-out transform hover:scale-110">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 hover:text-red-500"
-                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                    </a>
-                </div>
-                <!-- Card 1 End -->
+                    <!-- Card 1 End -->
                 @endforeach
 
-{{--                <!-- Card 2 Start -->--}}
-{{--                <div--}}
-{{--                    class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl bg-white transform hover:-translate-y-2 transition-transform duration-300">--}}
-{{--                    <a href="{{ route('productdetail') }}">--}}
-{{--                        <div class="overflow-hidden">--}}
-{{--                            <img src="{{ asset('asset/img/new.jpg') }}" alt="Golden Radiance Necklace Set"--}}
-{{--                                class="w-full h-64 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-110">--}}
-{{--                        </div>--}}
-{{--                    </a>--}}
-{{--                    <div class="p-4 bg-gradient-to-b from-gray-50 to-white">--}}
-{{--                        <p class="text-lg font-semibold text-gray-800">₹15,999 <span--}}
-{{--                                class="text-red-600 line-through">₹18,499</span></p>--}}
-{{--                        <p class="text-sm text-gray-600">Golden Radiance Necklace Set</p>--}}
-{{--                    </div>--}}
-{{--                    <button--}}
-{{--                        class="wishlist-btn absolute top-2 right-2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-all duration-300 ease-in-out transform hover:scale-110">--}}
-{{--                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 hover:text-red-500"--}}
-{{--                            fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
-{{--                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"--}}
-{{--                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />--}}
-{{--                        </svg>--}}
-{{--                    </button>--}}
-{{--                </div>--}}
-{{--                <!-- Card 2 End -->--}}
+                {{--                <!-- Card 2 Start --> --}}
+                {{--                <div --}}
+                {{--                    class="relative border border-gray-200 rounded-lg shadow-md hover:shadow-xl bg-white transform hover:-translate-y-2 transition-transform duration-300"> --}}
+                {{--                    <a href="{{ route('productdetail') }}"> --}}
+                {{--                        <div class="overflow-hidden"> --}}
+                {{--                            <img src="{{ asset('asset/img/new.jpg') }}" alt="Golden Radiance Necklace Set" --}}
+                {{--                                class="w-full h-64 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-110"> --}}
+                {{--                        </div> --}}
+                {{--                    </a> --}}
+                {{--                    <div class="p-4 bg-gradient-to-b from-gray-50 to-white"> --}}
+                {{--                        <p class="text-lg font-semibold text-gray-800">₹15,999 <span --}}
+                {{--                                class="text-red-600 line-through">₹18,499</span></p> --}}
+                {{--                        <p class="text-sm text-gray-600">Golden Radiance Necklace Set</p> --}}
+                {{--                    </div> --}}
+                {{--                    <button --}}
+                {{--                        class="wishlist-btn absolute top-2 right-2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-all duration-300 ease-in-out transform hover:scale-110"> --}}
+                {{--                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 hover:text-red-500" --}}
+                {{--                            fill="none" viewBox="0 0 24 24" stroke="currentColor"> --}}
+                {{--                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" --}}
+                {{--                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /> --}}
+                {{--                        </svg> --}}
+                {{--                    </button> --}}
+                {{--                </div> --}}
+                {{--                <!-- Card 2 End --> --}}
 
                 <!-- Add more cards here as needed -->
             </div>
