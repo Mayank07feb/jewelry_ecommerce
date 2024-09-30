@@ -31,6 +31,7 @@ class ProductRequest extends FormRequest
             'brand_id'=>'nullable|exists:brands,id',
             'child_cat_id'=>'nullable|exists:categories,id',
             'is_featured'=>'sometimes|in:1',
+            'is_collection'=>'sometimes|in:1',
             'status'=>'required|in:active,inactive',
             'weight' => 'required|numeric',
 //            'carat' => 'nullable|numeric',

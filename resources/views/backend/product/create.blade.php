@@ -41,6 +41,11 @@
                     <label for="is_featured">Is Featured</label><br>
                     <input type="checkbox" name='is_featured' id='is_featured' value='1' checked> Yes
                 </div>
+
+                <div class="form-group">
+                    <label for="is_collection">Is Collection</label><br>
+                    <input type="checkbox" name='is_collection' id='is_collection' value='1' checked> Yes
+                </div>
                 {{-- {{$categories}} --}}
 
                 <div class="form-group">

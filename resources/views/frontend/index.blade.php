@@ -505,58 +505,18 @@
             <!-- Collection Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
                 <!-- Collection 1 -->
-                <div class="group relative overflow-hidden rounded-lg shadow-lg p-auto">
-                    <img src="{{ asset('asset\img\col1.webp') }}" alt="Collection 1"
-                        class="object-cover w-full h-full transition duration-300 group-hover:scale-110">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-80 transition duration-300">
-                    </div>
-                </div>
+                @foreach($collections as $collection)
 
-                <!-- Collection 2 -->
                 <div class="group relative overflow-hidden rounded-lg shadow-lg p-auto">
-                    <img src="{{ asset('asset\img\col2.webp') }}" alt="Collection 2"
-                        class="object-cover w-full h-full transition duration-300 group-hover:scale-110">
+                    <img src="{{ asset('storage/'.$collection->image->image ) }}" alt="Collection 1"
+                         class="object-cover w-full h-full transition duration-300 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-80 transition duration-300">
                     </div>
                 </div>
+                @endforeach
 
-                <!-- Collection 3 -->
-                <div class="group relative overflow-hidden rounded-lg shadow-lg p-auto">
-                    <img src="{{ asset('asset\img\col3.webp') }}" alt="Collection 3"
-                        class="object-cover w-full h-full transition duration-300 group-hover:scale-110">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-80 transition duration-300">
-                    </div>
-                </div>
 
-                <!-- Collection 4 -->
-                <div class="group relative overflow-hidden rounded-lg shadow-lg p-auto">
-                    <img src="{{ asset('asset\img\col4.webp') }}" alt="Collection 4"
-                        class="object-cover w-full h-full transition duration-300 group-hover:scale-110">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-80 transition duration-300">
-                    </div>
-                </div>
-
-                <!-- Collection 5 -->
-                <div class="group relative overflow-hidden rounded-lg shadow-lg p-auto">
-                    <img src="{{ asset('asset\img\col5.webp') }}" alt="Collection 5"
-                        class="object-cover w-full h-full transition duration-300 group-hover:scale-110">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-80 transition duration-300">
-                    </div>
-                </div>
-
-                <!-- Collection 6 -->
-                <div class="group relative overflow-hidden rounded-lg shadow-lg p-auto">
-                    <img src="{{ asset('asset\img\col6.webp') }}" alt="Collection 6"
-                        class="object-cover w-full h-full transition duration-300 group-hover:scale-110">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-80 transition duration-300">
-                    </div>
-                </div>
             </div>
         </div>
         <div class="flex justify-center p-4 mt-8">

@@ -33,7 +33,8 @@ class HomeController extends Controller
             ->pluck('product_id');
         $bestSellingProducts = Product::whereIn('id', $bestSellingProductsIds)->get();
         $categories = Category::where('is_parent', 1)->get();
-        return view('frontend.index', compact('banners', 'newProducts', 'bestSellingProducts', 'categories'));
+        $collections = Product::where('is_collection', 1)->get();
+        return view('frontend.index', compact('banners', 'newProducts', 'collections', 'bestSellingProducts', 'categories'));
     }
 
     public function contact()
@@ -65,13 +66,10 @@ class HomeController extends Controller
             $query = $query->where('summary', 'LIKE', '%'.$request->giftfor.'%')->orWhere('description', 'LIKE', '%'.$request->giftfor.'%');
         }
 
+        if ($material){
+            $query = Product::where('material', $material);
+        }
         $products = $query->get();
-
-//        if ($material){
-//            $products = Product::where('material', $material)->get();
-//        }else{
-//            $products = Product::all();
-//        }
         return view('frontend.alljewellery', compact('products', 'material', 'category'));
     }
 
@@ -92,7 +90,10 @@ class HomeController extends Controller
 
     public function bullions()
     {
-        return view('frontend.bullions');
+        $catIds = Category::where('title', 'LIKE', '%coin%')->pluck('id');
+        $products = Product::whereIN('cat_id', $catIds)->orWhereIn('child_cat_id', $catIds)->get();
+//        dd($products);
+        return view('frontend.bullions', compact('products'));
     }
 
     public function showBlogs()
