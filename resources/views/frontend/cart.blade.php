@@ -12,6 +12,9 @@
                 <div class="lg:w-2/3 mb-8 lg:mb-0">
                     <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
                         <div class="p-4 sm:p-6">
+                            @php
+                                $amount = 0;
+                            @endphp
                             @foreach($items as $item)
                             <div
                                 class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 pb-6 border-b border-gray-200">
@@ -49,6 +52,9 @@
                                                 Delete
                                             </a>
                                         </div>
+                                        @php
+                                            $amount += $item->price * $item->quantity;
+                                        @endphp
                                         <p class="text-xl font-medium text-[#601042]">₹{{$item->price * $item->quantity}}</p>
                                     </div>
                                 </div>
@@ -69,41 +75,41 @@
                             </h2>
                             <div class="flow-root">
                                 <dl class="-my-4 text-sm divide-y divide-gray-200">
-                                    <div class="py-4 flex items-center justify-between">
-                                        <dt class="text-gray-600">Subtotal</dt>
-                                        <dd id="subtotal" class="font-medium text-gray-900">₹23,666</dd>
-                                    </div>
+{{--                                    <div class="py-4 flex items-center justify-between">--}}
+{{--                                        <dt class="text-gray-600">Subtotal</dt>--}}
+{{--                                        <dd id="subtotal" class="font-medium text-gray-900">₹23,666</dd>--}}
+{{--                                    </div>--}}
                                     <div class="py-4 flex items-center justify-between">
                                         <dt class="text-gray-600">Delivery Charge</dt>
                                         <dd class="font-medium text-green-600">Free</dd>
                                     </div>
-                                    <div class="py-4 flex items-center justify-between">
-                                        <dt class="text-gray-600">Discount</dt>
-                                        <dd id="discount" class="font-medium text-gray-900">- ₹0</dd>
-                                    </div>
+{{--                                    <div class="py-4 flex items-center justify-between">--}}
+{{--                                        <dt class="text-gray-600">Discount</dt>--}}
+{{--                                        <dd id="discount" class="font-medium text-gray-900">- ₹0</dd>--}}
+{{--                                    </div>--}}
                                     <div class="py-4 flex items-center justify-between">
                                         <dt class="text-lg font-medium text-gray-900">Total</dt>
-                                        <dd id="total" class="text-lg font-medium text-[#601042]">₹23,666</dd>
+                                        <dd id="total" class="text-lg font-medium text-[#601042]">₹{{$amount}}</dd>
                                     </div>
                                 </dl>
                             </div>
 
                             <!-- Coupon Section -->
-                            <div class="mt-6">
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Available Coupons</h3>
-                                <div id="couponList" class="space-y-2"></div>
-                                <div class="mt-4">
-                                    <div class="flex items-center border border-gray-300 rounded-md">
-                                        <input type="text" id="coupon"
-                                            class="flex-grow border-none rounded-l-md p-2 focus:ring-2 focus:ring-[#601042]"
-                                            placeholder="Enter coupon code">
-                                        <button onclick="applyCoupon()"
-                                            class="bg-[#601042] text-white px-4 py-2 rounded-r-md hover:bg-[#740e4d] transition">
-                                            Apply
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+{{--                            <div class="mt-6">--}}
+{{--                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Available Coupons</h3>--}}
+{{--                                <div id="couponList" class="space-y-2"></div>--}}
+{{--                                <div class="mt-4">--}}
+{{--                                    <div class="flex items-center border border-gray-300 rounded-md">--}}
+{{--                                        <input type="text" id="coupon"--}}
+{{--                                            class="flex-grow border-none rounded-l-md p-2 focus:ring-2 focus:ring-[#601042]"--}}
+{{--                                            placeholder="Enter coupon code">--}}
+{{--                                        <button onclick="applyCoupon()"--}}
+{{--                                            class="bg-[#601042] text-white px-4 py-2 rounded-r-md hover:bg-[#740e4d] transition">--}}
+{{--                                            Apply--}}
+{{--                                        </button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                         </div>
                         <div class="px-6 py-6 bg-gray-50">
                             <a href="{{route('checkout')}}">

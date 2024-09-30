@@ -528,10 +528,19 @@
                                 <!-- Account Link -->
                                 <a href="{{ route('profile') }}"
                                     class="text-sm font-medium text-gray-700 hover:text-[#d4af37] flex items-center space-x-2">
-                                    <i class="fas fa-user text-lg"></i>
-                                    <span>Account</span>
-                                </a>
+                                    <!-- Avatar Image -->
+                                    @if (auth()->check() && auth()->user()->avatar)
+                                        <img src="{{ auth()->user()->avatar }}" alt="Avatar"
+                                            class="w-8 h-8 rounded-full object-cover">
+                                    @else
+                                        <div
+                                            class="w-8 h-8 bg-[#601042] text-white rounded-full flex items-center justify-center">
+                                            <span>{{ strtoupper(substr(auth()->user()->first_name, 0, 1)) . strtoupper(substr(auth()->user()->last_name, 0, 1)) }}</span>
+                                        </div>
+                                    @endif
 
+                                    <span>{{ auth()->check() ? auth()->user()->first_name . ' ' . auth()->user()->last_name : 'Account' }}</span>
+                                </a>
                                 <!-- Hidden content to show on hover -->
                                 <div class="popup-content">
                                     <h3 class="font-semibold text-lg text-gray-800 border-b pb-2">Your Account</h3>
@@ -559,11 +568,11 @@
                                 <i class="fas fa-heart text-lg"></i>
                                 <span class="ml-2">Wishlist</span>
 
-                                @if (auth()->user() && auth()->user()->carts->count() > 0)
+                                @if (auth()->user() && auth()->user()->wishlists->count() > 0)
                                     <!-- Badge Counter -->
                                     <span
                                         class="absolute -top-3 -right-3 bg-[#601042] text-white text-[10px] lg:text-xs font-bold rounded-full h-5 w-5 lg:h-6 lg:w-6 flex items-center justify-center">
-                                        {{ auth()->user()->carts->count() }}
+                                        {{ auth()->user()->wishlists->count() }}
                                     </span>
                                 @endif
                             </a>

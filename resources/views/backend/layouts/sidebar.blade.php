@@ -115,9 +115,17 @@
 
     <!--Orders -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('orders.index')}}">
             <i class="fas fa-hammer fa-chart-area"></i>
             <span>Orders</span>
+        </a>
+    </li>
+
+    <!--Orders -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('return.index')}}">
+            <i class="fas fa-hammer fa-chart-area"></i>
+            <span>Returns</span>
         </a>
     </li>
 
@@ -218,9 +226,9 @@
 
     <!-- Page-->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('page.index')}}">
             <i class="fas fa-cog"></i>
-            <span>Page</span></a>
+            <span>Pages</span></a>
     </li>
 
     <!-- Sidebar Toggler (Sidebar) -->

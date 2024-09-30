@@ -74,9 +74,12 @@
 
                     <!-- Logout Section -->
                     <li class="mt-6 ml-6">
-                        <a href="#" class="text-gray-600 hover:text-[#601042] flex items-center">
+                        <form action="{{route('logout')}}" method="post">
+                            @csrf
+                        <button type="submit" class="text-gray-600 hover:text-[#601042] flex items-center">
                             <i class="fas fa-sign-out-alt mr-2"></i> Logout
-                        </a>
+                        </button>
+                        </form>
                     </li>
                 </ul>
             </div>

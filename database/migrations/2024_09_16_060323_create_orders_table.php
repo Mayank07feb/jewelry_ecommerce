@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('order_number')->unique();
+            $table->string('order_number')->nullable()->unique();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->float('sub_total')->nullable();
             $table->unsignedBigInteger('shipping_id')->nullable();
@@ -32,6 +32,8 @@ return new class extends Migration
             $table->string('post_code')->nullable();
             $table->text('address1');
             $table->text('address2')->nullable();
+            $table->boolean('is_returned')->default(false);
+            $table->dateTime('return_requested_at')->nullable();
             $table->timestamps();
         });
     }

@@ -5,10 +5,17 @@ use App\Models\Banner;
 use App\Models\Cart;
 use App\Models\CartItem;
 use App\Models\Category;
+use App\Models\Order;
+use App\Models\OrderItem;
+use App\Models\Page;
 use App\Models\Product;
 use App\Models\ProductVariation;
+use App\Models\User;
+use App\Models\UserAddress;
+use App\Models\Wishlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 
 
@@ -18,9 +25,8 @@ class HomeController extends Controller
     public function index()
     {
         $banners = Banner::where('status', 'active')->get();
-
         $newProducts = Product::orderBy('created_at', 'desc')->limit(5)->get();
-        $bestSellingProductsIds = Cart::select('product_id', DB::raw('COUNT(product_id) as total_sales'))
+        $bestSellingProductsIds = OrderItem::select('product_id', DB::raw('COUNT(product_id) as total_sales'))
             ->groupBy('product_id')
             ->orderBy('total_sales', 'DESC')
             ->take(5)
@@ -35,14 +41,38 @@ class HomeController extends Controller
         return view('frontend.contact');
     }
 
-    public function alljewellery($material = null)
+    public function alljewellery(Request $request, $material = null, $category = null)
     {
-        if ($material){
-            $products = Product::where('material', $material)->get();
-        }else{
-            $products = Product::all();
+        $query = Product::query();
+        if ($request->price){
+            $values = explode('-', $request->price);
+            if ($values[0] == 'under'){
+                $productIds = ProductVariation::where('price', '<=', $values[1])->pluck('product_id');
+            }elseif ($values[0] == 'above'){
+                $productIds = ProductVariation::where('price', '>=', $values[0])->pluck('product_id');
+            }else{
+                $productIds = ProductVariation::where('price', '>=', $values[0])->where('price', '<=', $values[1])->pluck('product_id');
+            }
+            $query = $query->whereIn('id', $productIds);
         }
-        return view('frontend.alljewellery', compact('products'));
+        if ($request->metal){
+            $query = $query->where('material', $request->metal);
+        }
+        if ($request->shopfor){
+            $query = $query->where('summary', 'LIKE', '%'.$request->shopfor.'%')->orWhere('description', 'LIKE', '%'.$request->shopfor.'%');
+        }
+        if ($request->gifts){
+            $query = $query->where('summary', 'LIKE', '%'.$request->giftfor.'%')->orWhere('description', 'LIKE', '%'.$request->giftfor.'%');
+        }
+
+        $products = $query->get();
+
+//        if ($material){
+//            $products = Product::where('material', $material)->get();
+//        }else{
+//            $products = Product::all();
+//        }
+        return view('frontend.alljewellery', compact('products', 'material', 'category'));
     }
 
     public function diamondjewellery()
@@ -80,9 +110,15 @@ class HomeController extends Controller
         return view('frontend.faq');
     }
 
-    public function policies()
+    public function policies($slug = null)
     {
-        return view('frontend.policies');
+        $pages = Page::all();
+        if ($slug){
+            $policy = Page::where('slug', $slug)->first();
+        }else{
+            $policy = Page::first();
+        }
+        return view('frontend.policies', compact('pages', 'policy'));
     }
 
     public function giritraPromises()
@@ -112,7 +148,8 @@ class HomeController extends Controller
 
     public function wishlist()
     {
-        return view('frontend.wishlist');
+        $wishlists = Wishlist::where('user_id', auth()->user()->id)->get();
+        return view('frontend.wishlist', compact('wishlists'));
     }
 
     // Method for login page
@@ -139,12 +176,14 @@ class HomeController extends Controller
 
     public function profile()
     {
-        return view('frontend.profile');
+        $user = auth()->user();
+        return view('frontend.profile', compact('user'));
     }
 
     public function orderhistory()
     {
-        return view('frontend.orderhistory');
+        $orders = Order::where('user_id', auth()->user()->id)->orderBy('created_at', 'desc')->get();
+        return view('frontend.orderhistory', compact('orders'));
     }
 
     public function cancel()
@@ -154,11 +193,38 @@ class HomeController extends Controller
 
     public function checkout()
     {
-        return view('frontend.checkout');
+        $cartIds = Cart::where('user_id', auth()->user()->id)->pluck('id');
+        $items = CartItem::whereIn('cart_id', $cartIds)->get();
+        return view('frontend.checkout', compact('items'));
     }
 
-    public function orderconfirmation()
+    public function orderconfirmation(Request $request)
     {
+        $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required',
+            'pincode' => 'required',
+            'country' => 'required',
+            'address1' => 'required',
+            'address2' => '',
+            'phone' => 'required',
+
+        ]);
+
+        UserAddress::updateOrCreate(
+            ['user_id' => auth()->user()->id],
+            [
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'email' => $request->email,
+                'pincode' => $request->pincode,
+                'country' => $request->country,
+                'address1' => $request->address1,
+                'address2' => $request->address2,
+                'phone' => $request->phone,
+            ],
+        );
         return view('frontend.orderconfirmation');
     }
 
@@ -181,7 +247,7 @@ class HomeController extends Controller
     {
         return view('frontend.track');
     }
-    
+
     public function storelocator()
     {
         return view('frontend.storelocator');
@@ -219,4 +285,39 @@ class HomeController extends Controller
     public function gemstone(){
         return view('frontend.gemstone');
     }
+
+    public function updateProfile(Request $request, User $user)
+    {
+        // First, validate the other fields
+        $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|email',
+            'mobile' => 'required',
+            'password' => 'nullable|min:8',
+            'confirm_password' => 'same:password',
+        ]);
+
+        // Now check the current password manually
+        if (!Hash::check($request->current_password, $user->password)) {
+            return back()->withErrors(['current_password' => 'Current password is incorrect']);
+        }
+
+        // Update the user's profile
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->email = $request->email;
+        $user->mobile = $request->mobile;
+
+        // Update the password if provided
+        if ($request->filled('password')) {
+            $user->password = Hash::make($request->password);
+        }
+
+        // Save the user
+        $user->save();
+
+        return redirect()->back()->with('success', 'Profile updated successfully');
+    }
+
 }

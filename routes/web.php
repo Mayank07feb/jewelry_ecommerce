@@ -13,6 +13,8 @@ use \App\Http\Middleware\AdminMiddleware;
 use \App\Http\Controllers\BrandController;
 use \App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PageController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -33,7 +35,7 @@ Route::get('/reset-password', [HomeController::class, 'showResetPasswordForm'])-
 
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
-Route::get('/alljewellery/{material?}', [HomeController::class, 'alljewellery'])->name('alljewellery');
+Route::get('/alljewellery/{material?}/{category?}', [HomeController::class, 'alljewellery'])->name('alljewellery');
 
 Route::get('/diamondjewellery', [HomeController::class, 'diamondjewellery'])->name('diamondjewellery');
 
@@ -49,7 +51,7 @@ Route::get('/blog-details', [HomeController::class, 'showBlogDetails'])->name('b
 
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 
-Route::get('/policies', [HomeController::class, 'policies'])->name('policies');
+Route::get('/policies/{slug?}', [HomeController::class, 'policies'])->name('policies');
 
 Route::get('/giritra-promises', [HomeController::class, 'giritraPromises'])->name('giritra.promises');
 
@@ -60,8 +62,6 @@ Route::get('/productdetail/{product}/{variation?}', [HomeController::class, 'pro
 
 
 Route::get('/cancel', [HomeController::class, 'cancel'])->name('cancel');
-
-Route::get('/orderconfirmation', [HomeController::class, 'orderconfirmation'])->name('orderconfirmation');
 
 
 // New Routes
@@ -93,13 +93,27 @@ Route::get('/gemstone', [HomeController::class, 'gemstone'])->name('gemstone');
 Route::post('contact/store',[ContactController::class,'store'])->name('contact.store');
 
 Route::middleware('auth')->group(function(){
-    Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
     Route::get('/orderhistory', [HomeController::class, 'orderhistory'])->name('orderhistory');
     Route::get('/wishlist', [HomeController::class, 'wishlist'])->name('wishlist');
+    Route::get('wishlist/delete/{wishlist}', [\App\Http\Controllers\WishlistController::class, 'delete'])->name('wishlist.delete');
     Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 //    Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
-    Route::get('addToCart/{product}/{variation}', [CartController::class, 'addToCart'])->name('addToCart');
+    Route::get('addToCart/{product}/{variation}/{wishlist?}', [CartController::class, 'addToCart'])->name('addToCart');
+    Route::post('/orderconfirmation', [HomeController::class, 'orderconfirmation'])->name('orderconfirmation');
+
+    Route::prefix('profile')->name('profile')->group(function(){
+        Route::get('/', [HomeController::class, 'profile']);
+        Route::post('update/{user}', [HomeController::class, 'updateProfile'])->name('.update');
+    });
+
+
+    Route::prefix('order')->name('order.')->group(function(){
+       Route::post('place', [OrderController::class, 'placeOrder'])->name('place');
+       Route::post('status/{order}', [OrderController::class, 'orderStatus'])->name('status');
+       Route::get('returnForm/{order}', [OrderController::class, 'returnForm'])->name('returnForm');
+       Route::post('return/{order}', [OrderController::class, 'returnOrder'])->name('return');
+    });
 
     Route::prefix('cart')->name('cart')->group(function(){
        Route::get('/', [HomeController::class, 'cart']);
@@ -149,6 +163,27 @@ Route::middleware('auth')->group(function(){
             Route::post('destroy/{product}', [ProductController::class, 'delete'])->name('destroy');
             Route::get('image/delete/{image}', [ProductController::class, 'imageDelete'])->name('image.delete');
             Route::get('variation/delete/{variation}', [ProductController::class, 'variationDelete'])->name('variation.delete');
+        });
+
+        Route::prefix('orders')->name('orders.')->group(function(){
+           Route::get('/', [OrderController::class, 'index'])->name('index');
+           Route::post('status/{order}', [OrderController::class, 'order_status'])->name('status');
+        });
+
+        // return routes
+        Route::prefix('return')->name('return.')->group(function(){
+           Route::get('/', [\App\Http\Controllers\ReturnOrderController::class, 'index'])->name('index');
+           Route::post('/status/{return}', [\App\Http\Controllers\ReturnOrderController::class, 'returnStatus'])->name('status');
+        });
+
+        //pages routes
+        Route::prefix('page')->name('page.')->group(function(){
+           Route::get('/', [PageCOntroller::class, 'index'])->name('index');
+           Route::get('create', [PageController::class, 'create'])->name('create');
+           Route::post('store', [PageController::class, 'store'])->name('store');
+           Route::get('edit/{page}', [PageController::class, 'edit'])->name('edit');
+           Route::post('update/{page}', [PageController::class, 'update'])->name('update');
+           Route::post('delete/{page}', [PageController::class, 'delete'])->name('delete');
         });
 
          //post category

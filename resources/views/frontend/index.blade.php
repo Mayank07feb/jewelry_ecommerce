@@ -442,77 +442,56 @@
     </div>
 
     {{-- video :::::::: Crafted Elegance::::::: --}}
-    <div>
-        <div>
-            <!-- Parallax Section -->
-            <div
-                class="relative w-full h-[80vh] min-h-[600px] justify-center items-center overflow-hidden cursor-pointer flex">
-                <div id="mouse-parallax-container"
-                    class="relative ltr:left-[5%] rtl:right-[5%] ltr:right-0 rtl:left-0 top-auto bottom-auto flex items-center w-[95%] h-[90%]"
-                    style="transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);">
+    <div class="relative w-full h-[80vh] min-h-[600px] justify-center items-center overflow-hidden cursor-pointer flex">
+        <div id="mouse-parallax-container"
+            class="relative ltr:left-[5%] rtl:right-[5%] ltr:right-0 rtl:left-0 top-auto bottom-auto flex items-center w-[95%] h-[90%]"
+            style="transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);">
 
-                    <!-- Dark Title Wrapper -->
-                    <div class="absolute inset-0 -z-[3] w-full h-full">
-                        <div
-                            class="static ltr:left-auto rtl:right-auto ltr:right-0 rtl:left-0 inset-y-0 flex justify-end items-center ltr:text-right rtl:text-left w-[80vw] h-[80vh]">
-                            <div class="title text-black text-[40px] md:text-[60px] lg:text-[95px] font-light uppercase whitespace-nowrap static ltr:-ml-2 rtl:-mr-2"
-                                style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
-                                Crafted Elegance
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Video Section -->
-                    <div class="absolute inset-0 -z-[1] w-full md:w-[55vw] justify-start cursor-pointer video-wrapper"
+            <!-- Dark Title Wrapper for Desktop -->
+            <div class="absolute inset-0 -z-[3] w-full h-full">
+                <div
+                    class="static ltr:left-auto rtl:right-auto ltr:right-0 rtl:left-0 inset-y-0 flex justify-end items-center ltr:text-right rtl:text-left w-[80vw] h-[80vh]">
+                    <div class="title text-black text-[40px] md:text-[60px] lg:text-[95px] font-light uppercase whitespace-nowrap static ltr:-ml-2 rtl:-mr-2 hidden md:block"
                         style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
-                        <div class="relative h-full">
-                            <video width="100%" height="100%" loop muted autoplay
-                                class="w-full h-full object-cover object-right"
-                                src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/widgets/video_1682089105_1691241930.mp4"></video>
-                            <div class="inline-flex cursor-pointer absolute bottom-0 ltr:right-0 rtl:left-0 m-4">
-                            </div>
-                        </div>
+                        Crafted Elegance
                     </div>
+                </div>
+            </div>
 
-                    <!-- White Title Wrapper -->
-                    <div
-                        class="absolute ltr:left-auto rtl:right-auto ltr:right-0 rtl:left-0 inset-y-0 -z-[1] w-full h-full">
-                        <div
-                            class="static overflow-hidden w-full md:w-[55vw] justify-end items-center origin-[0%_50%] object-fill">
-                            <div class="static flex justify-end items-center w-[80vw] h-[80vh]">
-                                <div class="title text-white text-[40px] md:text-[60px] lg:text-[95px] font-light uppercase whitespace-nowrap static"
-                                    style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
-                                    Crafted Elegance
-                                </div>
-                            </div>
+            <!-- Video Section -->
+            <div class="absolute inset-0 -z-[1] w-full md:w-[55vw] justify-start cursor-pointer video-wrapper"
+                style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
+                <div class="relative h-full">
+                    <video width="100%" height="100%" loop muted autoplay
+                        class="w-full h-full object-cover object-right"
+                        src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/widgets/video_1682089105_1691241930.mp4"></video>
+                    <div class="inline-flex cursor-pointer absolute bottom-0 ltr:right-0 rtl:left-0 m-4">
+                    </div>
+                </div>
+            </div>
+
+            <!-- White Title Wrapper for Desktop -->
+            <div class="absolute ltr:left-auto rtl:right-auto ltr:right-0 rtl:left-0 inset-y-0 -z-[1] w-full h-full">
+                <div
+                    class="static overflow-hidden w-full md:w-[55vw] justify-end items-center origin-[0%_50%] object-fill">
+                    <div class="static flex justify-end items-center w-[80vw] h-[80vh]">
+                        <div class="title text-white text-[40px] md:text-[60px] lg:text-[95px] font-light uppercase whitespace-nowrap static hidden md:block"
+                            style="transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);">
+                            Crafted Elegance
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    </div>
-    {{-- video ::::mobile screen only:::: Crafted Elegance::::::: --}}
-    {{-- <div class="flex lg:hidden justify-center items-center overflow-hidden hover:cursor-pointer px-6 md:px-28 py-12">
-    <div id="mouse-parallax-container" class="relative w-full h-full">
-
-        <!-- Background Video -->
-        <div class="relative w-[80vw]  h-[50vh] lg:h-[70vh] overflow-hidden">
-            <video width="100%" height="100%" loop muted autoplay class="w-full h-full object-cover">
-                <source src="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/widgets/video_1682089105_1691241930.mp4" type="video/mp4">
-            </video>
-
-            <!-- Parallax Title -->
-            <div class="absolute inset-0 flex justify-end items-center w-full h-full">
-                <div class="text-white text-[8vw] md:text-[10vw] lg:text-[85px] font-light uppercase whitespace-nowrap">
-                    Crafted <span class="text-white">Elegance</span>
+            <!-- Text for Mobile (Visible on mobile only) -->
+            <div class="absolute bottom-5 left-0 right-0 text-center md:hidden px-4">
+                <div
+                    class="inline-block bg-black/50 backdrop-blur-md text-white text-[20px] font-semibold uppercase tracking-wider px-4 py-2 rounded-lg shadow-lg">
+                    Crafted Elegance
                 </div>
             </div>
         </div>
     </div>
-</div> --}}
-
 
 
     <!-- COLLECTIONS -->
@@ -726,54 +705,67 @@
         <div class="container my-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 <!-- Slider 1 -->
-                <div id="celebrity-slider-1" class="w-full h-full overflow-hidden relative border-4 border-[rgba(96,16,66,0.5)]"> <!-- Light transparent color -->
+                <div id="celebrity-slider-1"
+                    class="w-full h-full overflow-hidden relative border-4 border-[rgba(96,16,66,0.5)]">
+                    <!-- Light transparent color -->
                     <div class="flex transition-transform duration-300 ease-in-out h-full">
                         <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
-                            <img src="{{ asset('asset/img/s1-a.webp') }}" alt="Slider 1 Image 1" class="w-full h-full object-cover">
+                            <img src="{{ asset('asset/img/s1-a.webp') }}" alt="Slider 1 Image 1"
+                                class="w-full h-full object-cover">
                         </div>
                         <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
-                            <img src="{{ asset('asset/img/s1b.webp') }}" alt="Slider 1 Image 2" class="w-full h-full object-cover">
+                            <img src="{{ asset('asset/img/s1b.webp') }}" alt="Slider 1 Image 2"
+                                class="w-full h-full object-cover">
                         </div>
                         <div class="w-full flex-shrink-0">
-                            <img src="{{ asset('asset/img/s1-c.webp') }}" alt="Slider 1 Image 3" class="w-full h-full object-cover">
+                            <img src="{{ asset('asset/img/s1-c.webp') }}" alt="Slider 1 Image 3"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
-        
+
                 <div class="flex flex-col">
                     <!-- Slider 2 -->
-                    <div id="celebrity-slider-2" class="w-full h-1/2 overflow-hidden relative border-4 border-b-2 border-[rgba(96,16,66,0.5)] hidden lg:flex">
+                    <div id="celebrity-slider-2"
+                        class="w-full h-1/2 overflow-hidden relative border-4 border-b-2 border-[rgba(96,16,66,0.5)] hidden lg:flex">
                         <div class="flex transition-transform duration-300 ease-in-out h-full">
                             <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
-                                <img src="{{ asset('asset/img/s2A.webp') }}" alt="Slider 2 Image 1" class="w-full h-full object-cover">
+                                <img src="{{ asset('asset/img/s2A.webp') }}" alt="Slider 2 Image 1"
+                                    class="w-full h-full object-cover">
                             </div>
                             <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
-                                <img src="{{ asset('asset/img/s2-C.webp') }}" alt="Slider 2 Image 2" class="w-full h-full object-cover">
+                                <img src="{{ asset('asset/img/s2-C.webp') }}" alt="Slider 2 Image 2"
+                                    class="w-full h-full object-cover">
                             </div>
                             <div class="w-full flex-shrink-0">
-                                <img src="{{ asset('asset/img/s2-C.webp') }}" alt="Slider 2 Image 3" class="w-full h-full object-cover">
+                                <img src="{{ asset('asset/img/s2-C.webp') }}" alt="Slider 2 Image 3"
+                                    class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- Slider 3 -->
-                    <div id="celebrity-slider-3" class="w-full h-1/2 overflow-hidden relative border-4 border-t-2 border-[rgba(96,16,66,0.5)] hidden lg:flex">
+                    <div id="celebrity-slider-3"
+                        class="w-full h-1/2 overflow-hidden relative border-4 border-t-2 border-[rgba(96,16,66,0.5)] hidden lg:flex">
                         <div class="flex transition-transform duration-300 ease-in-out h-full">
                             <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
-                                <img src="{{ asset('asset/img/s3A.webp') }}" alt="Slider 3 Image 1" class="w-full h-full object-cover">
+                                <img src="{{ asset('asset/img/s3A.webp') }}" alt="Slider 3 Image 1"
+                                    class="w-full h-full object-cover">
                             </div>
                             <div class="w-full flex-shrink-0 border-r-4 border-[rgba(96,16,66,0.5)]">
-                                <img src="{{ asset('asset/img/s3B.webp') }}" alt="Slider 3 Image 2" class="w-full h-full object-cover">
+                                <img src="{{ asset('asset/img/s3B.webp') }}" alt="Slider 3 Image 2"
+                                    class="w-full h-full object-cover">
                             </div>
                             <div class="w-full flex-shrink-0">
-                                <img src="{{ asset('asset/img/s3A.webp') }}" alt="Slider 3 Image 3" class="w-full h-full object-cover">
+                                <img src="{{ asset('asset/img/s3A.webp') }}" alt="Slider 3 Image 3"
+                                    class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
 
 

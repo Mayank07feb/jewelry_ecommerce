@@ -25,29 +25,40 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
                         <!-- Single Order Row Example -->
-                        <tr>
-                            <td class="px-4 py-4 text-sm text-gray-900">ORD123456</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">2024-09-10</td>
-                            <td class="px-4 py-4 text-sm">
-                                <span class="px-2 py-1 rounded-full bg-green-100 text-green-700">Delivered</span>
-                            </td>
-                            <td class="px-4 py-4 text-sm text-gray-700">₹2,499.00</td>
-                            <td class="px-4 py-4 text-sm">
-                                <a href="#" class="text-[#601042] hover:underline">View Details</a>
-                            </td>
-                        </tr>
+                        @foreach($orders as $order)
+                            <tr>
+                                <td class="px-4 py-4 text-sm text-gray-900">{{$order->order_number}}</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">{{$order->created_at->format('d-m-Y')}}</td>
+                                <td class="px-4 py-4 text-sm">
+                                    <span class="px-2 py-1 rounded-full bg-{{$order->status == 'delivered' ? 'green' : ($order->status == 'processing' ? 'yellow' : (($order->status == 'cancel') ? 'red' : '')) }}-100 text-{{$order->status == 'delivered' ? 'green' : ($order->status == 'processing' ? 'yellow' : (($order->status == 'cancel') ? 'red' : '')) }}-700">{{ucfirst($order->status)}}</span>
+                                </td>
+                                <td class="px-4 py-4 text-sm text-gray-700">₹{{$order->total_amount}}</td>
+                                <td class="px-4 py-4 text-sm">
+                                    <a href="#" class="text-[#601042] hover:underline">View Details</a>
+                                    <form action="{{route('order.status', ['order' => $order->id])}}" method="post">
+                                        @csrf
+                                        <input type="hidden" name="status" value="cancel">
+                                    <button type="submit" class="text-[#601042] hover:underline">Cancel</button>
+                                    </form>
+                                    @if($order->status == 'delivered')
+                                        <a href="{{route('order.returnForm', ['order' => $order->id])}}" class="text-[#601042] hover:underline">Return</a>
+                                    @endif
+                                </td>
+                            </tr>
+                        @endforeach
+
                         <!-- More Orders -->
-                        <tr>
-                            <td class="px-4 py-4 text-sm text-gray-900">ORD123457</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">2024-08-20</td>
-                            <td class="px-4 py-4 text-sm">
-                                <span class="px-2 py-1 rounded-full bg-yellow-100 text-yellow-700">Shipped</span>
-                            </td>
-                            <td class="px-4 py-4 text-sm text-gray-700">₹1,899.00</td>
-                            <td class="px-4 py-4 text-sm">
-                                <a href="#" class="text-[#601042] hover:underline">View Details</a>
-                            </td>
-                        </tr>
+{{--                        <tr>--}}
+{{--                            <td class="px-4 py-4 text-sm text-gray-900">ORD123457</td>--}}
+{{--                            <td class="px-4 py-4 text-sm text-gray-700">2024-08-20</td>--}}
+{{--                            <td class="px-4 py-4 text-sm">--}}
+{{--                                <span class="px-2 py-1 rounded-full bg-yellow-100 text-yellow-700">Shipped</span>--}}
+{{--                            </td>--}}
+{{--                            <td class="px-4 py-4 text-sm text-gray-700">₹1,899.00</td>--}}
+{{--                            <td class="px-4 py-4 text-sm">--}}
+{{--                                <a href="#" class="text-[#601042] hover:underline">View Details</a>--}}
+{{--                            </td>--}}
+{{--                        </tr>--}}
                         <!-- Repeat for other orders -->
                     </tbody>
                 </table>
