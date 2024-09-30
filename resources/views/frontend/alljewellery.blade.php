@@ -168,29 +168,29 @@
                                     <!-- Dropdown -->
                                     <div id="gifts-dropdown"
                                          class="hidden absolute bg-white text-black w-full shadow-lg mt-2">
-                                        <ul class="text-sm">
-                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                                <input type="checkbox" id="forhim" name="gifts" value="forhim"
-                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                                <label for="forhim" class="ml-2">For Him</label>
-                                            </li>
-                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                                <input type="checkbox" id="forher" name="gifts" value="forher"
-                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                                <label for="forher" class="ml-2">For Her</label>
-                                            </li>
-                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                                <input type="checkbox" id="forkids" name="gifts" value="forkids"
-                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                                <label for="forkids" class="ml-2">For Kids</label>
-                                            </li>
-                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                                <input type="checkbox" id="specialoccasions" name="gifts"
-                                                       value="specialoccasions"
-                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">
-                                                <label for="specialoccasions" class="ml-2">Special Occasions</label>
-                                            </li>
-                                        </ul>
+{{--                                        <ul class="text-sm">--}}
+{{--                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">--}}
+{{--                                                <input type="checkbox" id="forhim" name="gifts" value="him"--}}
+{{--                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">--}}
+{{--                                                <label for="forhim" class="ml-2">For Him</label>--}}
+{{--                                            </li>--}}
+{{--                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">--}}
+{{--                                                <input type="checkbox" id="forher" name="gifts" value="her"--}}
+{{--                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">--}}
+{{--                                                <label for="forher" class="ml-2">For Her</label>--}}
+{{--                                            </li>--}}
+{{--                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">--}}
+{{--                                                <input type="checkbox" id="forkids" name="gifts" value="kids"--}}
+{{--                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">--}}
+{{--                                                <label for="forkids" class="ml-2">For Kids</label>--}}
+{{--                                            </li>--}}
+{{--                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">--}}
+{{--                                                <input type="checkbox" id="specialoccasions" name="gifts"--}}
+{{--                                                       value="specialoccasions"--}}
+{{--                                                       class="form-checkbox text-[#601042] focus:outline-none focus:ring-2 focus:ring-[#601042]">--}}
+{{--                                                <label for="specialoccasions" class="ml-2">Special Occasions</label>--}}
+{{--                                            </li>--}}
+{{--                                        </ul>--}}
                                     </div>
                                 </div>
                             </div>

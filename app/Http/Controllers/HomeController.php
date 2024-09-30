@@ -59,10 +59,10 @@ class HomeController extends Controller
             $query = $query->where('material', $request->metal);
         }
         if ($request->shopfor){
-            $query = $query->where('product_for', $request->shopfor)->orWhere('summary', 'LIKE', $request->shopfor);
+            $query = $query->where('summary', 'LIKE', $request->shopfor)->orWhere('description', 'LIKE', $request->shopfor);
         }
         if ($request->gifts){
-            $query = $query->where('description', 'LIKE', $request->gifts);
+            $query = $query->where('summary', 'LIKE', $request->giftfor)->orWhere('description', 'LIKE', $request->giftfor);
         }
 
         $products = $query->get();
