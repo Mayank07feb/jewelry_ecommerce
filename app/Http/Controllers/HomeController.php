@@ -6,6 +6,7 @@ use App\Models\Cart;
 use App\Models\CartItem;
 use App\Models\Category;
 use App\Models\Order;
+use App\Models\OrderItem;
 use App\Models\Page;
 use App\Models\Product;
 use App\Models\ProductVariation;
@@ -24,9 +25,8 @@ class HomeController extends Controller
     public function index()
     {
         $banners = Banner::where('status', 'active')->get();
-
         $newProducts = Product::orderBy('created_at', 'desc')->limit(5)->get();
-        $bestSellingProductsIds = Cart::select('product_id', DB::raw('COUNT(product_id) as total_sales'))
+        $bestSellingProductsIds = OrderItem::select('product_id', DB::raw('COUNT(product_id) as total_sales'))
             ->groupBy('product_id')
             ->orderBy('total_sales', 'DESC')
             ->take(5)

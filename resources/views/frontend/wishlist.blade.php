@@ -13,6 +13,7 @@
     </div>
 
     <!-- Wishlist Items Container -->
+    @if($wishlists->count() > 0)
     <div class="space-y-8 wishlist-items">
         <!-- Single Wish List Item -->
         @foreach($wishlists as $wishlist)
@@ -53,9 +54,10 @@
         @endforeach
 
     </div>
+    @else
 
     <!-- Empty Wishlist Message -->
-    <div class="mt-16 text-center bg-gradient-to-b from-gray-50 to-white p-12 rounded-2xl shadow-md border border-gray-100 empty-message" style="display: none;">
+    <div class="mt-16 text-center bg-gradient-to-b from-gray-50 to-white p-12 rounded-2xl shadow-md border border-gray-100 empty-message" >
         <svg class="w-24 h-24 mx-auto mb-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
         </svg>
@@ -69,6 +71,7 @@
             </svg>
         </a>
     </div>
+    @endif
 </div>
 
  {{-- horizontal line --}}

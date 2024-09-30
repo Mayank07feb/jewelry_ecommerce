@@ -559,11 +559,11 @@
                                 <i class="fas fa-heart text-lg"></i>
                                 <span class="ml-2">Wishlist</span>
 
-                                @if (auth()->user() && auth()->user()->carts->count() > 0)
+                                @if (auth()->user() && auth()->user()->wishlists->count() > 0)
                                     <!-- Badge Counter -->
                                     <span
                                         class="absolute -top-3 -right-3 bg-[#601042] text-white text-[10px] lg:text-xs font-bold rounded-full h-5 w-5 lg:h-6 lg:w-6 flex items-center justify-center">
-                                        {{ auth()->user()->carts->count() }}
+                                        {{ auth()->user()->wishlists->count() }}
                                     </span>
                                 @endif
                             </a>
