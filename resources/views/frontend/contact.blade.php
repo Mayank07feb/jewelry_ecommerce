@@ -10,15 +10,27 @@
                 to custom designs and expert advice, our team at Giritra Jewellers is here to make your jewelry dreams come
                 true.</p>
         </div>
-
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <div class="max-w-4xl mx-auto px-4 lg:pb-20 pb-12">
-            <form action="#" class="grid grid-cols-12 lg:gap-8 gap-6 text-sm bg-white p-8 rounded-lg shadow-xl">
+            <form action="{{route('contact.store')}}" method="post" class="grid grid-cols-12 lg:gap-8 gap-6 text-sm bg-white p-8 rounded-lg shadow-xl">
+               @csrf
                 <div class="col-span-12 sm:col-span-6 pb-2.5">
                     <label class="block text-sm font-semibold text-gray-800 tracking-wide mb-2">Full Name <span
                             class="text-[#D4AF37]">*</span></label>
-                    <input name="fullName" id="fullName" type="text"
+                    <input name="name" id="fullName" type="text"
                         class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                         placeholder="Enter Full Name">
+                    @error('name')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-span-12 sm:col-span-6 pb-2.5">
                     <label class="block text-sm font-semibold text-gray-800 tracking-wide mb-2">Email Address <span
@@ -26,6 +38,9 @@
                     <input name="email" id="email" type="email"
                         class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                         placeholder="Enter Email Address">
+                    @error('email')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-span-12 sm:col-span-6 pb-2.5">
                     <label class="block text-sm font-semibold text-gray-800 tracking-wide mb-2">Phone Number <span
@@ -33,11 +48,14 @@
                     <input name="phone" id="phone" type="tel"
                         class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                         placeholder="Enter Phone Number">
+                    @error('phone')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-span-12 sm:col-span-6 pb-2.5">
                     <label class="block text-sm font-semibold text-gray-800 tracking-wide mb-2">Enquiry Type <span
                             class="text-[#D4AF37]">*</span></label>
-                    <select name="enquiryType" id="enquiryType"
+                    <select name="type" id="enquiryType"
                         class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37]">
                         <option value="" disabled selected>Select Enquiry Type</option>
                         <option value="general">General Inquiry</option>
@@ -45,13 +63,19 @@
                         <option value="custom">Custom Design</option>
                         <option value="appointment">Book Appointment</option>
                     </select>
+                    @error('type')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-span-12 pb-2.5">
                     <label class="block text-sm font-semibold text-gray-800 tracking-wide mb-2">Message <span
                             class="text-[#D4AF37]">*</span></label>
-                    <textarea name="message" id="message" rows="4"
+                    <textarea name="msg" id="message" rows="4"
                         class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                         placeholder="Enter your message here..."></textarea>
+                    @error('msg')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="col-span-12 pb-2.5">
                     <div class="flex items-center">

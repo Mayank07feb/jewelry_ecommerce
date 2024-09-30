@@ -7,11 +7,10 @@
       </div>
       <div class="sidebar-brand-text mx-3">Admin</div>
     </a>
-
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
-
     <!-- Nav Item - Dashboard -->
+
     <li class="nav-item active">
       <a class="nav-link" href="{{route('dashboard')}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -192,11 +191,11 @@
         </div>
     </li>
 
-      <!-- Comments -->
+      <!-- content -->
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="{{route('contact.index')}}">
             <i class="fas fa-comments fa-chart-area"></i>
-            <span>Comments</span>
+            <span>contact</span>
         </a>
       </li>
 

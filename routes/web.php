@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostCategoryController;
 use App\Http\Controllers\PostCommentController;
@@ -88,7 +90,7 @@ Route::get('/jewellerycareguide', [HomeController::class, 'jewellerycareguide'])
 
 Route::get('/gemstone', [HomeController::class, 'gemstone'])->name('gemstone');
 
-
+Route::post('contact/store',[ContactController::class,'store'])->name('contact.store');
 
 Route::middleware('auth')->group(function(){
     Route::get('/orderhistory', [HomeController::class, 'orderhistory'])->name('orderhistory');
@@ -204,6 +206,14 @@ Route::middleware('auth')->group(function(){
         Route::get('post/duplicate/{post}',[PostController::class,'duplicate'])->name('post.duplicate');
         Route::post('post/update/{post}',[PostController::class,'update'])->name('post.update');
 
+
+        Route::get('contact/index',[ContactController::class,'index'])->name('contact.index');
+        Route::get('contact/create',[ContactController::class,'create'])->name('contact.create');
+
+        Route::get('contact/edit/{contact}',[ContactController::class,'edit'])->name('contact.edit');
+        Route::get('contact/delete/{contact}',[ContactController::class,'delete'])->name('contact.delete');
+        Route::get('contact/duplicate/{contact}',[ContactController::class,'duplicate'])->name('contact.duplicate');
+        Route::post('contact/update/{contact}',[ContactController::class,'update'])->name('contact.update');
 
 
 
