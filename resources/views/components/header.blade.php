@@ -535,7 +535,7 @@
                                     @else
                                         <div
                                             class="w-8 h-8 bg-[#601042] text-white rounded-full flex items-center justify-center">
-                                            <span>{{ strtoupper(substr(auth()->user()->first_name, 0, 1)) . strtoupper(substr(auth()->user()->last_name, 0, 1)) }}</span>
+                                            <span>{{ auth()->check() ? (strtoupper(substr(auth()->user()->first_name, 0, 1)) . strtoupper(substr(auth()->user()->last_name, 0, 1))) : '' }}</span>
                                         </div>
                                     @endif
 

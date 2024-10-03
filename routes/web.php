@@ -168,6 +168,7 @@ Route::middleware('auth')->group(function(){
         Route::prefix('orders')->name('orders.')->group(function(){
            Route::get('/', [OrderController::class, 'index'])->name('index');
            Route::post('status/{order}', [OrderController::class, 'order_status'])->name('status');
+           Route::get('items/{order}', [OrderController::class, 'order_items'])->name('items');
         });
 
         // return routes

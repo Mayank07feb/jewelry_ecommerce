@@ -148,7 +148,7 @@
             @foreach ($categories as $category)
                 <div
                     class="flex flex-col items-center hover:shadow-md hover:bg-[#f1ede6] shadow-[#d6ba94] shadow-inner rounded-lg p-4">
-                    <a href="{{ route('alljewellery') }}"><img src="{{ asset('storage/' . $category->image) }}"
+                    <a href="{{ route('alljewellery') }}"><img src="{{ asset('storage/' . $category->photo) }}"
                             alt="Diamond" class="w-40 h-56 object-contain mb-4"></a>
                     <h3 class="text-lg font-semibold mb-1">{{ $category->title }}</h3>
                     <p class="text-sm text-gray-600 mb-3 text-center">{{ $category->description }}</p>

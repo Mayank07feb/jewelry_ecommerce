@@ -99,4 +99,9 @@ class OrderController extends Controller
         $order->update(['status' => $request->status]);
         return back()->with('success', 'Status changed successfully');
     }
+
+    public function order_items(Order $order){
+        $items = $order->items;
+        return view('backend.order.items', compact('items', 'order'));
+    }
 }

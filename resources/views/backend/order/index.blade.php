@@ -67,6 +67,7 @@
                                             </button>
                                         </div>
                                     </form>
+                                    <a href="{{route('orders.items', ['order' => $order->id])}}" class="btn btn-primary">Order Items</a>
                                 </td>
                             </tr>
                         @endforeach
